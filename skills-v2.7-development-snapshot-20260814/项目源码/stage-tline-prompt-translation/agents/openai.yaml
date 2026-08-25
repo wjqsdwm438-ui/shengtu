@@ -1,0 +1,6 @@
+interface:
+  display_name: "V2.7 T线 GPT Image 提示词翻译"
+  short_description: "将 B线交接卡翻译为 GPT Image 中文专用单提示词。"
+  default_prompt: "使用 V2.7 T线把 B线首选方案翻译为一套 GPT Image 中文执行提示词，不输出英文版或多平台版本。"
+policy:
+  allow_implicit_invocation: false

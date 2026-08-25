@@ -1,0 +1,476 @@
+{
+  "snapshot_name": "skills-v2.7-development-snapshot-20260814",
+  "status": "development_incomplete",
+  "built_at": "2026-08-14T23:00:04+08:00",
+  "source_business_files_modified": false,
+  "source_file_count": 86,
+  "handoff_document_count": 5,
+  "excluded": [
+    "empty .git",
+    "empty .agents",
+    "__pycache__",
+    "*.pyc",
+    "temporary build directories"
+  ],
+  "notes": [
+    "This is an unfinished development snapshot, not a portable or production release.",
+    "Existing hard-coded paths, metadata inconsistencies, and historical log encodings are preserved in source."
+  ],
+  "files": [
+    {
+      "path": "交接资料/00_先读_开发中快照.md",
+      "bytes": 3009,
+      "sha256": "2732cbfac70db0caebd32057d11dbd123141948e6bf7a318b13bddbeb050b383"
+    },
+    {
+      "path": "交接资料/01_本阶段使用说明.md",
+      "bytes": 3556,
+      "sha256": "9f8f39628733235d32086d05230a9d7aa4522e6a33b5bd5adbefa7581ed310f5"
+    },
+    {
+      "path": "交接资料/02_已知问题与待改进.md",
+      "bytes": 1910,
+      "sha256": "c270181a25dea5b3e6fa3bb300de732792986040a4370fdc39f192dfe9d9de6b"
+    },
+    {
+      "path": "交接资料/03_下一阶段优化与开发方向.md",
+      "bytes": 2659,
+      "sha256": "88bb868ab3c078c4d1d89f0307e5513580d253dbdca67850f0e3b9be05f32344"
+    },
+    {
+      "path": "交接资料/04_快照验证记录.md",
+      "bytes": 1399,
+      "sha256": "89653dd0723f8f827b0621086a453b12a75129c58e2a40fe0f641ae469cb87e7"
+    },
+    {
+      "path": "项目源码/_shared/algorithm-lite-rules.md",
+      "bytes": 2584,
+      "sha256": "9d00732769518723e8a7f2599eb0c10108f1557611e1500c52024094aca699ac"
+    },
+    {
+      "path": "项目源码/_shared/course-visual-production-v2.7.md",
+      "bytes": 3239,
+      "sha256": "3def2eea73f303afabbc7838fca24c96106c0df6282d09f66b4a6af5d0ae8a66"
+    },
+    {
+      "path": "项目源码/_shared/failure-diagnosis-rules.md",
+      "bytes": 882,
+      "sha256": "a00a54ffe92e2d85f6945e2f843dafe462785a0c02c11c8862d7c24d8be3b95c"
+    },
+    {
+      "path": "项目源码/_shared/legacy-v2.6-migration.md",
+      "bytes": 819,
+      "sha256": "24a60e8d2e590d55991ce6c4f49d96c24f9944dd3148fb3691837541e0e39e69"
+    },
+    {
+      "path": "项目源码/_shared/page_preset_bank.md",
+      "bytes": 905,
+      "sha256": "5d47a55456757cb2b9d330b21bd290ec28db1df890faccc1be4ae5c2cc7b4436"
+    },
+    {
+      "path": "项目源码/_shared/project-design-system.md",
+      "bytes": 850,
+      "sha256": "11791e1d1e57ab324a408ad22dc4f3eb1cb87de5fa0a668add5064c2ea05975c"
+    },
+    {
+      "path": "项目源码/_shared/reference-image-inheritance-rules.md",
+      "bytes": 1054,
+      "sha256": "0ec88c19d2c3e2f81e37ea2e7d3419877b0c2387f1a671ad28473c47afc00cc9"
+    },
+    {
+      "path": "项目源码/_shared/task-run-manifest-rules.md",
+      "bytes": 714,
+      "sha256": "2a1d5e56fe46f297b43ab4c6962e3bfa4b61ef477733657002c2d66dc8dd437b"
+    },
+    {
+      "path": "项目源码/_shared/visual-sample-state-rules.md",
+      "bytes": 683,
+      "sha256": "70c487f98190a6ec2a0fd7de2656cd095fb80aa49d480f9631059210a402d241"
+    },
+    {
+      "path": "项目源码/scripts/build_srt_index.py",
+      "bytes": 5600,
+      "sha256": "b407e7c3503f4c502bd72217019cdb139d6feb99c2b282bd58a5af64d56ffbb0"
+    },
+    {
+      "path": "项目源码/scripts/check_layout_skeleton.py",
+      "bytes": 1877,
+      "sha256": "af4a428b8e3eb41623ccd0c21778eaca73dac51f4408865eb032ae4628ae9b9a"
+    },
+    {
+      "path": "项目源码/scripts/check_text_budget.py",
+      "bytes": 1432,
+      "sha256": "b67de9b76e81c9759aa86bd4bda3b53be0e1b68be207292a9bb9968eb90b6582"
+    },
+    {
+      "path": "项目源码/scripts/score_page_complexity.py",
+      "bytes": 2615,
+      "sha256": "c2019b3d16fa6c6f17b87caa8499fdf026bdc38dc7f595508a8dd39289ec43c7"
+    },
+    {
+      "path": "项目源码/stage-algorithm-lite-companion/agents/openai.yaml",
+      "bytes": 334,
+      "sha256": "b89acd942fc800dcfb1df0b1f68ca89e8e9b1625423e974b755a8d0f74757c53"
+    },
+    {
+      "path": "项目源码/stage-algorithm-lite-companion/anti_examples/companion_overrides_stage_failure.md",
+      "bytes": 251,
+      "sha256": "e90a8fe168c7d24c6bdab8ed318298d70d5978e15286f98b839cfcfc4f48932b"
+    },
+    {
+      "path": "项目源码/stage-algorithm-lite-companion/anti_examples/editable_layout_spec_restored_failure.md",
+      "bytes": 257,
+      "sha256": "1f7212546a8c8737235632a52535d76ab283ae983877f524b1f721e026b6dd8b"
+    },
+    {
+      "path": "项目源码/stage-algorithm-lite-companion/examples/a01_skeleton_check_success.md",
+      "bytes": 305,
+      "sha256": "ca777644b3c6c31c84a6eb65be22f1454ad0b4570f5d39cbec5e842942a42022"
+    },
+    {
+      "path": "项目源码/stage-algorithm-lite-companion/examples/srt_index_companion_success.md",
+      "bytes": 340,
+      "sha256": "5a588f813963e4c894f60938e935d90fd422ddbf98074df377c32900ad5163e3"
+    },
+    {
+      "path": "项目源码/stage-algorithm-lite-companion/references/algorithm_companion_rules.md",
+      "bytes": 507,
+      "sha256": "bbc494e6869317a5c05b351fb3c91362aa80c5234d059f3fc1d4fef12b83eaed"
+    },
+    {
+      "path": "项目源码/stage-algorithm-lite-companion/references/b01_feasibility_checklist.md",
+      "bytes": 493,
+      "sha256": "c17ed7f7d1da9b5dc591f9c5afcc700a2e6ea0d1a70e8c1db91eaea9069799bd"
+    },
+    {
+      "path": "项目源码/stage-algorithm-lite-companion/references/c01_failure_classifier_template.md",
+      "bytes": 406,
+      "sha256": "9917a0b63050cba38a28c9cb293face8ab061abdec2b9af8755251a331fc3859"
+    },
+    {
+      "path": "项目源码/stage-algorithm-lite-companion/SKILL.md",
+      "bytes": 2381,
+      "sha256": "08600d898a077bed4aad9d7f6240b9b2df0a016ed0f61098cb8f3ebe1b6f1957"
+    },
+    {
+      "path": "项目源码/stage-algorithm-lite-companion/templates/algorithm_test_log.md",
+      "bytes": 273,
+      "sha256": "ffcb9aba3725c14527ef2143cd70b87e8f04eb0cc3e1b0fe5e1822ac3983b30e"
+    },
+    {
+      "path": "项目源码/stage-aline-course-visual-routing/agents/openai.yaml",
+      "bytes": 318,
+      "sha256": "f855475fd66acae52f024db109eece976eeb75d195ea77c1129aac5dde13cbe9"
+    },
+    {
+      "path": "项目源码/stage-aline-course-visual-routing/anti_examples/no_text_layout_as_empty_background_failure.md",
+      "bytes": 206,
+      "sha256": "16f057fbbb0ce02ebbe301febab955d44edb3f1d83e845c6fc6942b4429510fa"
+    },
+    {
+      "path": "项目源码/stage-aline-course-visual-routing/anti_examples/ppt_like_card_failure.md",
+      "bytes": 125,
+      "sha256": "323e4f0ef0970be9df41f5eb5aa252f7ad0d1452613a16f41de63602d2fc2330"
+    },
+    {
+      "path": "项目源码/stage-aline-course-visual-routing/anti_examples/reference_image_full_copy_failure.md",
+      "bytes": 135,
+      "sha256": "6208a9643e956fdab99b41b168ccee9b9db11a89bdac12acdd4bc2d2042fc290"
+    },
+    {
+      "path": "项目源码/stage-aline-course-visual-routing/anti_examples/text_overload_failure.md",
+      "bytes": 128,
+      "sha256": "39781976f7610a73c12651d65eef7c99211b4fa7d155a717d899824eda1bcab6"
+    },
+    {
+      "path": "项目源码/stage-aline-course-visual-routing/examples/atmosphere_plus_text_layer_success.md",
+      "bytes": 138,
+      "sha256": "343080ce03334cb89606b52f05aeab386742e9793c1b766e87eb2aa1876af983"
+    },
+    {
+      "path": "项目源码/stage-aline-course-visual-routing/examples/material_retention_outer_packaging_success.md",
+      "bytes": 168,
+      "sha256": "28661e511f1bf296a55047a006ecb295011b81afc36e62478a3554c7117644a4"
+    },
+    {
+      "path": "项目源码/stage-aline-course-visual-routing/examples/no_text_layout_skeleton_success.md",
+      "bytes": 281,
+      "sha256": "851d2232eef4aea08e4c6a7b2f721d01f88efcdfb0480b3dc12a91be1cd852c8"
+    },
+    {
+      "path": "项目源码/stage-aline-course-visual-routing/references/layout_decoupling_rules.md",
+      "bytes": 381,
+      "sha256": "d3f132797ba02a019ac9f87b475ee0c07c9dbe3ef0963899d85e1c3698307cdd"
+    },
+    {
+      "path": "项目源码/stage-aline-course-visual-routing/references/material_retention_rules.md",
+      "bytes": 235,
+      "sha256": "814fe828454f19f2c97ef6edad45c848056ad002d347ec482fde96551e4343dc"
+    },
+    {
+      "path": "项目源码/stage-aline-course-visual-routing/references/no_text_layout_skeleton_rules.md",
+      "bytes": 326,
+      "sha256": "70e7b78696b807a826c5daba33ded0b326efa615bda70fafb5b806cad16e9197"
+    },
+    {
+      "path": "项目源码/stage-aline-course-visual-routing/references/onscreen_text_rules.md",
+      "bytes": 349,
+      "sha256": "02d75d1df813fa807372507ccee27e1ccb0e59ba893369253a06516488ec0200"
+    },
+    {
+      "path": "项目源码/stage-aline-course-visual-routing/references/page_type_rules.md",
+      "bytes": 1546,
+      "sha256": "ae4d031033178c5b7b9b4a4ed4dee8d29465a8b7f3a1d574cece511ce31387b9"
+    },
+    {
+      "path": "项目源码/stage-aline-course-visual-routing/SKILL.md",
+      "bytes": 4753,
+      "sha256": "787a0d1428ada4c2594138f92f8d313f0c4f5e3c77ba9b9aabc5eb13f7636608"
+    },
+    {
+      "path": "项目源码/stage-aline-course-visual-routing/templates/a_line_page_handoff_card.md",
+      "bytes": 1703,
+      "sha256": "8696a637ca86d374253499f156e0631ade869986124f48e3b2746a66d461c181"
+    },
+    {
+      "path": "项目源码/stage-aline-course-visual-routing/templates/a_review_report.md",
+      "bytes": 477,
+      "sha256": "359712f98a120dad44990ff3f9a163363ee78713ce1eb80b0922e8acbfbfa3bc"
+    },
+    {
+      "path": "项目源码/stage-bline-production-handoff/agents/openai.yaml",
+      "bytes": 321,
+      "sha256": "760005af64e85f09e24f29f4f41767d2a4fb8a0fe0fb1a065a437f7ff775b2cc"
+    },
+    {
+      "path": "项目源码/stage-bline-production-handoff/anti_examples/bline_synonym_candidates_failure.md",
+      "bytes": 247,
+      "sha256": "48cda7b7c78513043bc9a1ab4ccfb88b075c927f2c74171d028cf72c7e7282eb"
+    },
+    {
+      "path": "项目源码/stage-bline-production-handoff/examples/bline_two_candidate_success.md",
+      "bytes": 268,
+      "sha256": "7bcfa52ebd8b98466b7dc2e92abeaf7fcfb6bc3ec76afda4fa022766d55ec21f"
+    },
+    {
+      "path": "项目源码/stage-bline-production-handoff/references/production_handoff_rules.md",
+      "bytes": 742,
+      "sha256": "e909f6f839d6ebdc0133e9a0f12319979830e65b27334403ac5599e42741d71a"
+    },
+    {
+      "path": "项目源码/stage-bline-production-handoff/SKILL.md",
+      "bytes": 2761,
+      "sha256": "59cf39ad9e11681d49405cfa0a7f39d6502ee611ea8b4a6e83e5c2aed12fb22d"
+    },
+    {
+      "path": "项目源码/stage-bline-production-handoff/templates/b_line_production_card.md",
+      "bytes": 1523,
+      "sha256": "ed37a6f8e46ebb6733a811ac199ffefe3ed734974de88720620bae85c5997d82"
+    },
+    {
+      "path": "项目源码/stage-cline-image2-execution-feedback/agents/openai.yaml",
+      "bytes": 304,
+      "sha256": "bd2e2faf587aea6681623777d14fe0248bb0c8b521cc656345047c12ab986b69"
+    },
+    {
+      "path": "项目源码/stage-cline-image2-execution-feedback/anti_examples/local_edit_overreach_failure.md",
+      "bytes": 213,
+      "sha256": "1992ea131f08440b66fb90540fdcb4bba2ba0147ff69084c8ff7a2e3257da8f1"
+    },
+    {
+      "path": "项目源码/stage-cline-image2-execution-feedback/anti_examples/visual_sample_misnamed_as_final_failure.md",
+      "bytes": 193,
+      "sha256": "aa346ebb5de256fb133d24314e2b6e4e55d994f5566c22de58f5edd421e637eb"
+    },
+    {
+      "path": "项目源码/stage-cline-image2-execution-feedback/examples/cline_revision_contract_success.md",
+      "bytes": 262,
+      "sha256": "2de5bed833b0c943e5fdbb1d54c06be65d9dfe4cd501445eaf0f1a505924338a"
+    },
+    {
+      "path": "项目源码/stage-cline-image2-execution-feedback/references/failure_diagnosis_rules.md",
+      "bytes": 254,
+      "sha256": "1f8a3e941ab8c38b7d2f112138c349a2f3ee049b30db70f2e85a114079e23d42"
+    },
+    {
+      "path": "项目源码/stage-cline-image2-execution-feedback/SKILL.md",
+      "bytes": 2509,
+      "sha256": "304b1acb1dc4e4641282ae0d671980793d35449df54b75a7cb73f8766748846c"
+    },
+    {
+      "path": "项目源码/stage-cline-image2-execution-feedback/templates/c_line_feedback_card.md",
+      "bytes": 646,
+      "sha256": "b0850fd4bb0824babb811fccb710ba5ef79b2dae016c4db159517565b2fe826d"
+    },
+    {
+      "path": "项目源码/stage-sline-srt-media-routing/agents/openai.yaml",
+      "bytes": 305,
+      "sha256": "2c910eded22afe7612bd7c0c457ba759bb5e9dfbbdeb96469383816b9b62010c"
+    },
+    {
+      "path": "项目源码/stage-sline-srt-media-routing/anti_examples/srt_over_split_failure.md",
+      "bytes": 244,
+      "sha256": "e5a03524fa53d41158281c421cb152c3a22a28ddbcae53a096825ccf03819336"
+    },
+    {
+      "path": "项目源码/stage-sline-srt-media-routing/examples/srt_to_s07_course_page_example.md",
+      "bytes": 402,
+      "sha256": "5be272b6f2bbacf48ab2cb42bec9d887a9bf738144b678c6b44d4482c43768b7"
+    },
+    {
+      "path": "项目源码/stage-sline-srt-media-routing/references/srt_media_routing_rules.md",
+      "bytes": 1091,
+      "sha256": "7fcfeb9f318a14a993206df78b78be7000d656689507991440f85aa319346148"
+    },
+    {
+      "path": "项目源码/stage-sline-srt-media-routing/SKILL.md",
+      "bytes": 3137,
+      "sha256": "bce01d7af10db8dff6d6304aad2cbf48f7ab7e0b626a13aad0bf8645740f511d"
+    },
+    {
+      "path": "项目源码/stage-sline-srt-media-routing/templates/s_line_segment_card.md",
+      "bytes": 665,
+      "sha256": "0cda40209b7af358d44af7fb5885a92a6f2938b4f98667c0c6a87b5bfa63dc44"
+    },
+    {
+      "path": "项目源码/stage-tline-prompt-translation/agents/openai.yaml",
+      "bytes": 338,
+      "sha256": "cd4dcd898014c38daff0dd3f3909842d4e692935a902e4d451e08bd613c25f06"
+    },
+    {
+      "path": "项目源码/stage-tline-prompt-translation/anti_examples/missing_revision_template_failure.md",
+      "bytes": 537,
+      "sha256": "2f4fa63f5d3011f2443bfcd7ebbae4018a56215d5e63490913ba231a17ccc550"
+    },
+    {
+      "path": "项目源码/stage-tline-prompt-translation/examples/three_platform_prompt_success.md",
+      "bytes": 594,
+      "sha256": "4032ddc22ed85f9fa98c5ce13a01c4a6cbe321c6bacff9dcfcf107fee46d7c06"
+    },
+    {
+      "path": "项目源码/stage-tline-prompt-translation/references/platform_prompt_rules.md",
+      "bytes": 1389,
+      "sha256": "25688b1d499f19bfd59527435c0ad531a8f73955ce55835e97270b874b698169"
+    },
+    {
+      "path": "项目源码/stage-tline-prompt-translation/SKILL.md",
+      "bytes": 3409,
+      "sha256": "be981f610527517b26110e0758767bb4f02576d19fc814a57acd8312611d7462"
+    },
+    {
+      "path": "项目源码/stage-tline-prompt-translation/templates/t_line_platform_prompts.md",
+      "bytes": 1471,
+      "sha256": "939611b088a036e95191ec3fb6e7b065cca195cecba072c4dad0632884f94011"
+    },
+    {
+      "path": "项目源码/test_logs/build_srt_index.stdout.json",
+      "bytes": 732,
+      "sha256": "a1107b9aa421e7506788b66cc7fef0b8b9158df1c113da2a9d5056252379f9da"
+    },
+    {
+      "path": "项目源码/test_logs/complexity_high.stdout.json",
+      "bytes": 790,
+      "sha256": "adafa53145f98c8185b22ca90c9bef8d51153db7d865ac680652e2511cf727dd"
+    },
+    {
+      "path": "项目源码/test_logs/complexity_low.stdout.json",
+      "bytes": 304,
+      "sha256": "aed0d04512633226baa5df1110af58e76873695a578e31dc54a54ab42932df9f"
+    },
+    {
+      "path": "项目源码/test_logs/layout_skeleton_fail.stdout.json",
+      "bytes": 408,
+      "sha256": "e6f0200f52c8fff2bf1df8bb3c36c638a2f68293782b806c40427557cb033162"
+    },
+    {
+      "path": "项目源码/test_logs/layout_skeleton_pass.stdout.json",
+      "bytes": 486,
+      "sha256": "6350a0a8bc5a93c88d91b5e88d4308845c9350f9eb6d191169ff07f4130a80fe"
+    },
+    {
+      "path": "项目源码/test_logs/srt_sample/sample_short.srt_index.md",
+      "bytes": 1132,
+      "sha256": "b01d26f616ef1e274d2ae69538100c37e9e9178f26ffb190a11c6ce6b6439bb6"
+    },
+    {
+      "path": "项目源码/test_logs/srt_sample/sample_short.timeline.jsonl",
+      "bytes": 859,
+      "sha256": "10f7adf5847e9dcfaffcb73b8b5c972c0a4aa206abdf12a2c9c0048549f8a4bd"
+    },
+    {
+      "path": "项目源码/test_logs/srt_sample/sample_short.timeline.md",
+      "bytes": 774,
+      "sha256": "385f412a05e185a9b846b64c96c62a286beb414f245a8e05fe83ce4643055b2f"
+    },
+    {
+      "path": "项目源码/test_logs/text_budget_high.stdout.json",
+      "bytes": 442,
+      "sha256": "c6ad5457233878478e1c29849f5835e86f48a2699c3670a43de88a831ec44b25"
+    },
+    {
+      "path": "项目源码/test_logs/text_budget_low.stdout.json",
+      "bytes": 376,
+      "sha256": "048744ffc090ab080cb5e1bd63b4a2aca7478fc4f68d123f9d946017a72ad115"
+    },
+    {
+      "path": "项目源码/test_logs/text_budget_medium.stdout.json",
+      "bytes": 418,
+      "sha256": "f4abe81f04750bfb371aa087b9e748a5075adf7ca8146ce1e9152969236336d7"
+    },
+    {
+      "path": "项目源码/test_logs/text_budget_over_180.stdout.json",
+      "bytes": 438,
+      "sha256": "777f138bff404f04946ec636c17d1d5462681f5aae2e7a1093dc2ac391efb3bf"
+    },
+    {
+      "path": "项目源码/test_logs/verify_srt_utf8.stdout.json",
+      "bytes": 338,
+      "sha256": "fb9de003d71ecfe6892f5196efa4c76310aa1ad01a7f7d937be8c48886d0cebf"
+    },
+    {
+      "path": "项目源码/tests/complexity_high.json",
+      "bytes": 212,
+      "sha256": "d535a23ca84ad5c7725e4b6c849a017760389354bb490bc19a83c032135c418a"
+    },
+    {
+      "path": "项目源码/tests/complexity_low.json",
+      "bytes": 212,
+      "sha256": "60bc4b23e44f73f90adf032d26a9523a8930a72c5bd2ef4fe5e984b88c7874e9"
+    },
+    {
+      "path": "项目源码/tests/layout_skeleton_fail.json",
+      "bytes": 240,
+      "sha256": "0527ff708a0ea8fb2ecc062ab241ec2683be04637058e7c0fd27c20751517544"
+    },
+    {
+      "path": "项目源码/tests/layout_skeleton_pass.json",
+      "bytes": 478,
+      "sha256": "1cc4b6ddf914cf82e25550abf24f5d56e9fdc4a577dd323cc0f54d55f24c063f"
+    },
+    {
+      "path": "项目源码/tests/sample_short.srt",
+      "bytes": 411,
+      "sha256": "50eace4d9c2a7ce9232d462f9e610489d60e995835957287db7c0f5d54ae4909"
+    },
+    {
+      "path": "项目源码/tests/text_budget_high.txt",
+      "bytes": 522,
+      "sha256": "ad6ea4bc845dbdf9257a1092bafa4414df5aac1a42504d414a7ded5619e72691"
+    },
+    {
+      "path": "项目源码/tests/text_budget_low.txt",
+      "bytes": 21,
+      "sha256": "31d7fb31b7e85056cc27fa8148cc8300f4907489416894179f0982bb991441b2"
+    },
+    {
+      "path": "项目源码/tests/text_budget_medium.txt",
+      "bytes": 315,
+      "sha256": "1d59d75f52fa39cc4baa05d3b91eec8861f9467fe24b06f0061919a47a65dcdd"
+    },
+    {
+      "path": "项目源码/tests/text_budget_over_180.txt",
+      "bytes": 999,
+      "sha256": "0d753a98ecc55fd7d1a4a5db57d95d6bae30fd40f99a9de7d4270c52dad7cc5f"
+    }
+  ]
+}

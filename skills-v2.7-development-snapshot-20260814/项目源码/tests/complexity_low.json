@@ -1,0 +1,9 @@
+﻿{
+  "on_screen_text_chars": 48,
+  "image_count": 1,
+  "info_layer_count": 1,
+  "reference_image_count": 1,
+  "reference_conflict": false,
+  "material_retention_need": false,
+  "text_generation_risk": "low"
+}

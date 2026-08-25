@@ -1,0 +1,7 @@
+{
+  "char_count_no_space": 174,
+  "text_budget_level": "高",
+  "risk": "high",
+  "recommendation": "visual_sample_allowed_but_post_edit_required",
+  "final_decision": "recommendation_only_not_a_frozen_item"
+}

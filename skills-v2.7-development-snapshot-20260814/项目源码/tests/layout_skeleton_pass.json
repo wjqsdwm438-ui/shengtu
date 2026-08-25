@@ -1,0 +1,11 @@
+﻿{
+  "light_region_summary": {
+    "title_area": "upper left clean blank title reserve",
+    "body_area": "right side grouped information area for 3-4 bullets",
+    "image_area": "large case image carrier on lower left",
+    "info_layer": "thin translucent annotation band above image carrier",
+    "safe_margin": "consistent 8 percent outer margin",
+    "visual_text_priority": "image first, title second, body third",
+    "post_text_method": "PPT or Figma post text"
+  }
+}

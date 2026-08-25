@@ -1,0 +1,15 @@
+{
+  "check": "A01_light_region_summary",
+  "pass": false,
+  "missing_fields": [
+    "title_area",
+    "body_area",
+    "info_layer",
+    "safe_margin",
+    "visual_text_priority",
+    "post_text_method"
+  ],
+  "empty_background_risk": true,
+  "suggestion": "return_to_A_line_or_manual_confirm",
+  "note": "This checks light_region_summary only; it does not restore editable_layout_spec."
+}

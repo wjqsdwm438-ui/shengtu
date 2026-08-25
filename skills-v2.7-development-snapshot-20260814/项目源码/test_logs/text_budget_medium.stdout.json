@@ -1,0 +1,7 @@
+{
+  "char_count_no_space": 105,
+  "text_budget_level": "中",
+  "risk": "medium",
+  "recommendation": "sample_allowed_with_post_check",
+  "final_decision": "recommendation_only_not_a_frozen_item"
+}
