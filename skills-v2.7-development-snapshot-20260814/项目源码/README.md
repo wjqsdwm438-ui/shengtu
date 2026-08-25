@@ -45,6 +45,16 @@ Algorithm Lite 是伴随检查层，不替代 S/A/A审/B/T/C 的业务判断，�
 - 素材层、人物或物体抠图、可叠加组件等任务可按需请求透明背景，并使用支持 Alpha 的 PNG 或 WebP。透明背景能力按当前合同标记为 preview，不应表述为所有任务的默认能力。
 - 即梦、nanobanana 与旧三平台提示材料已降级为历史证据，位于 `legacy/platform-prompts-v2.7.0/`，不属于当前 T线运行依赖。
 
+## 参考锁定带字页与Remotion资产
+
+- 参考文件夹可作为正式输入；B线选择一张主版式参考和最多两张辅助参考，并由用户确认一次后冻结到系列任务。
+- 固定版式任务路由为 `A16_既有母版套新内容型`，使用单一 `方案A_参考锁定版`，不强制生成探索版。
+- T/C线必须保留并实际附加选定参考图的真实路径，禁止只凭“参考原图”文字重构或自动带入历史会话图片。
+- 第一版由 GPT Image 直接生成完整带字画布；文字必须逐字准确，初次生成后最多进行两次局部修订，不使用确定性文字覆盖。
+- 通过检查的完整页先进入 `full_page_candidate`，只有用户确认后才成为 `final_course_visual`。
+- 项目可为外部Remotion流程准备透明前景和按需拆层合同，但不生成Remotion代码或执行视频渲染。
+- 透明前景只能从已确认成品派生并经过显性Gate；Alpha失败不得降级为不透明图。
+
 ## 本地检查
 
 在本目录中运行：
@@ -59,7 +69,7 @@ python run_all_checks.py
 python run_all_checks.py --update-evidence
 ```
 
-检查范围包括现有四个 Python 工具及正反例、Skill frontmatter、`agents/openai.yaml` 最小 schema、渐进式读取入口约束、固定旧路径、当前 GPT Image 契约、历史目录边界和 UTF-8 编码。任何失败均应返回非零退出码。
+检查范围包括现有四个 Python 工具及正反例、Skill frontmatter、`agents/openai.yaml` 最小 schema、渐进式读取入口约束、参考锁定/Remotion合同用例、固定旧路径、当前 GPT Image 契约、历史目录边界和 UTF-8 编码。任何失败均应返回非零退出码。
 
 ## 版本与回滚
 

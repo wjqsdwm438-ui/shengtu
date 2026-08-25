@@ -9,6 +9,11 @@
 - inheritance_failure: reference image inherited wrong parts.
 - scope_failure: local edit became full-image redraw.
 - model_boundary_failure: request exceeds stable model capability.
+- reference_input_missing: selected real reference path was not attached to generation.
+- reference_context_leak: unselected, historical, or conversation images affected execution.
+- text_generation_failure: exact visible text still fails after the allowed local revisions.
+- alpha_generation_failure: required real Alpha still fails after the allowed local revisions; opaque fallback is forbidden.
+- remotion_alignment_failure: transparent or split assets changed canvas, origin, scale, or position.
 
 ## revision_contract
 ```yaml

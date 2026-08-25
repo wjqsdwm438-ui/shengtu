@@ -346,6 +346,99 @@ def check_progressive_reading_contracts(report: Report) -> None:
             report.check(False, f"reading:progressive_entrypoint:{dirname}", str(exc))
 
 
+def check_reference_remotion_contracts(report: Report) -> None:
+    """Validate reference-locked full-page and Remotion handoff invariants."""
+    fixture = ROOT / "tests" / "reference_remotion_contract_cases.json"
+    try:
+        data = json.loads(load_utf8(fixture))
+        cases = {case["id"]: case for case in data.get("cases", [])}
+        required_ids = {
+            "reference_locked_full_page",
+            "flattened_png_requires_gate",
+            "remotion_transparent_foreground",
+            "split_layers_require_second_gate",
+        }
+        report.check(
+            data.get("schema_version") == 1 and set(cases) == required_ids,
+            "contract:reference_remotion_fixture",
+            f"cases={sorted(cases)}",
+        )
+
+        full_page = cases["reference_locked_full_page"]["expected"]
+        full_page_ok = (
+            full_page.get("page_type") == "A16_既有母版套新内容型"
+            and full_page.get("candidate_policy") == "reference_locked_single_candidate"
+            and full_page.get("output_target") == "full_page_with_text"
+            and full_page.get("text_generation_strategy") == "带字"
+            and full_page.get("reference_attachment_required") is True
+            and full_page.get("text_only_execution_forbidden") is True
+            and full_page.get("maximum_local_text_revisions") == 2
+            and full_page.get("deterministic_text_overlay_forbidden") is True
+        )
+        report.check(full_page_ok, "contract:reference_locked_full_page_case", repr(full_page))
+
+        fallback = cases["flattened_png_requires_gate"]["expected"]
+        fallback_ok = (
+            fallback.get("fidelity_level") == "strong_visual_lock"
+            and fallback.get("user_confirmation") == "pending"
+            and fallback.get("pixel_identity_claim") is False
+        )
+        report.check(fallback_ok, "contract:flattened_png_gate_case", repr(fallback))
+
+        alpha = cases["remotion_transparent_foreground"]["expected"]
+        alpha_ok = (
+            alpha.get("derived_from_confirmed_final") is True
+            and alpha.get("background") == "transparent"
+            and alpha.get("format") == "png"
+            and alpha.get("alpha_required") is True
+            and alpha.get("opaque_fallback_forbidden") is True
+            and alpha.get("coordinate_origin") == "top_left"
+            and alpha.get("crop_to_content_forbidden") is True
+            and alpha.get("maximum_local_alpha_revisions") == 2
+        )
+        report.check(alpha_ok, "contract:remotion_alpha_case", repr(alpha))
+
+        split = cases["split_layers_require_second_gate"]["expected"]
+        split_ok = (
+            split.get("second_user_gate_required") is True
+            and split.get("full_canvas_required") is True
+            and split.get("coordinate_origin") == "top_left"
+            and split.get("crop_to_content_forbidden") is True
+        )
+        report.check(split_ok, "contract:remotion_split_gate_case", repr(split))
+    except (OSError, UnicodeError, ValueError, KeyError, TypeError, json.JSONDecodeError) as exc:
+        report.check(False, "contract:reference_remotion_fixture", str(exc))
+
+    contract_files = {
+        ROOT / "_shared" / "reference-image-inheritance-rules.md": (
+            "reference_set:", "A16_既有母版套新内容型", "strong_visual_lock", "template_identity:"
+        ),
+        ROOT / "_shared" / "remotion-asset-handoff-rules.md": (
+            "transparent_foreground_gate:", "final_course_visual", "opaque", "split_layer_pending_gate"
+        ),
+        ROOT / "stage-bline-production-handoff" / "templates" / "b_line_production_card.md": (
+            "reference_locked_single_candidate", "方案A_参考锁定版", "must_show_text_verbatim:"
+        ),
+        ROOT / "stage-tline-prompt-translation" / "templates" / "t_line_gpt_image_prompt.md": (
+            "reference_inputs:", "text_only_execution_forbidden", "maximum_local_text_revisions: 2"
+        ),
+        ROOT / "stage-cline-gpt-image-execution-feedback" / "templates" / "c_line_feedback_card.md": (
+            "reference_paths_actually_attached:", "full_page_candidate", "alpha_generation_failure"
+        ),
+    }
+    for path, markers in contract_files.items():
+        try:
+            text = load_utf8(path)
+            missing = [marker for marker in markers if marker not in text]
+            report.check(
+                not missing,
+                f"contract:reference_remotion_markers:{path.parent.name}/{path.name}",
+                f"missing={missing}",
+            )
+        except (OSError, UnicodeError, ValueError) as exc:
+            report.check(False, f"contract:reference_remotion_markers:{path.name}", str(exc))
+
+
 def iter_active_text_files():
     roots = [ROOT / "scripts", ROOT / "_shared"]
     roots.extend(ROOT / name for name in SKILL_DIRS)
@@ -531,6 +624,7 @@ def main() -> int:
         evidence, srt_files = check_algorithm_examples(report, Path(temp))
     check_skill_contracts(report)
     check_progressive_reading_contracts(report)
+    check_reference_remotion_contracts(report)
     check_active_contract_text(report)
     check_encoding(report)
     check_legacy_archive(report)

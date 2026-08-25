@@ -19,6 +19,7 @@ description: V2.7 Stage A-line course visual page routing for Stage Activity Pla
 - 已选择 A01 或正在判断“空背景”风险：读 `references/no_text_layout_skeleton_rules.md`。
 - 用户提供必须保留的真实素材：读 `references/material_retention_rules.md`。
 - 存在参考图：读 `_shared/reference-image-inheritance-rules.md`；没有参考图时不得读取。
+- 用户要求Remotion适配、透明前景或动画拆层：只读 `_shared/remotion-asset-handoff-rules.md` 的相关Gate。
 - 只有需要正式 A线交接卡或 A审报告时，分别读取对应 template。
 - examples/anti_examples 只在对应判断仍不稳定或已出现同类失败时读取一个直接匹配项。
 
@@ -32,7 +33,7 @@ A线交接或 Gate 结论完成后停止，不自动读取 B/T/C。页面不应�
 A-line only handles content admitted by S-line as `S07_AI课程视觉页型`. It predicts page direction, explains the page problem in user-readable language, proposes three user-facing options, freezes a handoff card, and may run A-review. It does not write platform prompts and does not generate images.
 
 ## Inputs
-S-line S07 segment card, V2.7 page content, migrated V2.6 page card, or user-confirmed A-line target.
+S-line S07 segment card, V2.7 page content, migrated V2.6 page card, user-confirmed A-line target, single reference image, or reference folder.
 
 ## Required Workflow
 S0 input recognition -> S1 material boundary -> S2 teaching action -> S3 page/density -> S4 content relation -> S5 on-screen text -> S6 visual carrier interface -> S7 foreground/background layer relation -> S8 risk blocking -> S9 key Gate -> S10 user-readable options -> S11 frozen handoff.
@@ -59,6 +60,13 @@ Count only planned on-screen text. <=60 low, 61-120 medium, 121-180 high but sam
 
 ## A01/A02
 A01 is a no-text layout skeleton with visible title/body/image/info regions, frame, separator, safe margin, and visual focus. It is not empty background. A02 is pure atmosphere background for opener/transition/teacher background/light title only; never use it for formal multi-text course pages.
+
+## Reference-Locked Series Page
+If the user provides a reference folder and asks to preserve its layout while replacing course content, choose `A16_既有母版套新内容型` as Top1 and A15 as the adjacent choice. A17 is Top1 only when layout redesign is allowed.
+
+Freeze `reference_folder`, master package availability, template identity, template layer manifest, exact visible text, and `text_generation_strategy: 带字`. The primary deliverable is a single-canvas full page; do not redirect it to no-text skeleton or post-text composition without a user Gate.
+
+When PSD is unavailable, return the one-time flattened-PNG fallback Gate from `_shared/reference-image-inheritance-rules.md`. Do not claim pixel locking.
 
 ## Must Output
 用户可读诊断或 Gate 只输出当前任务需要的字段，不读取模板。只有需要正式 A线交接卡时，才读取 `templates/a_line_page_handoff_card.md`，并包含 user-readable judgment, problem diagnosis, three options, selection advice, internal page type fields, title strategy, on-screen text, text budget, first/second visual focus, material policy, reference inheritance fields, frozen items, risk, Gate result, and `light_region_summary`。

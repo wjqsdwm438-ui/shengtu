@@ -9,6 +9,7 @@ Use this as a small first-version bank of page carriers. It reduces blank-page i
 - teaching-excerpt-units: for several teaching judgments with grouped text units and supporting visuals.
 - conclusion-anchor: for core judgment or summary anchor pages.
 - no-text-layout-skeleton: for A01 structured blank layout with title/body/image/info regions.
+- reference-locked-full-page-with-text: for A16 tasks that use a confirmed reference set, one complete canvas, exact visible text, and strong visual locking.
 
 ## Rule
 B-line should reuse a preset when suitable. If no preset fits, create a candidate and mark it `待沉淀`, not as a new global default.

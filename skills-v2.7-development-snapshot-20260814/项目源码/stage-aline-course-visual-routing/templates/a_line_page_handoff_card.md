@@ -62,12 +62,50 @@ internal_handoff:
     visual_text_priority:
     post_text_method:
   reference_role:
+  reference_source:
+    folder_path:
+    layered_master_available: yes/no
+    psd_path:
+    master_preview_path:
+    discovered_images:
+  reference_set_id:
+  primary_layout_reference:
+  secondary_references:
+  reference_selection_confirmation: pending / confirmed
+  template_identity:
+    template_id:
+    template_version:
+    psd_hash:
+    preview_hash:
+    reference_set_hash:
+    layer_manifest_hash:
+  template_layer_manifest:
+    fixed_master:
+    variable_content:
+    optional_animation_layers:
+    user_confirmation: pending / confirmed
   reference_inherit:
   reference_forbid_inherit:
   keep_real_material: yes/no
   allow_ai_redraw_subject: yes/no
   need_no_text_layout_skeleton: yes/no
+  output_target: full_page_with_text / transparent_asset
+  production_mode: reference_locked / standard / style_transfer
   text_generation_strategy: 带字 / 无字版式骨架 / 后期补字
+  must_show_text_verbatim:
+    title:
+    subtitle:
+    lead:
+    section_titles:
+    body:
+    labels:
+    numbers:
+    english_terms:
+    punctuation:
+  flattened_png_fallback_gate:
+    required: yes/no
+    known_limitations:
+    user_confirmation: pending / confirmed / not_applicable
   material_strategy: 保留 / 包装 / 替换 / 风格迁移
   frozen_items:
   risk_level:

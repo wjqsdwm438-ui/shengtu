@@ -6,6 +6,11 @@
 - 新增 `_shared/progressive-reading-protocol.md`，规定单步扩展、术语确认、阶段边界和用户 Gate 的区别。
 - 移除共享总控、整组 references、模板与示例的默认预读，避免 S07 等阶段结果自动触发下一阶段读取。
 - 在 `run_all_checks.py` 中加入渐进式读取合同检查，防止入口重新退化为 eager reading。
+- 新增参考文件夹、PSD优先母版包、主参考图一次确认、A16单候选和模板版本合同。
+- T/C线强制传递并实际附加选定参考路径，隔离历史会话图片，完整带字页最多进行两次GPT局部修字。
+- 新增 `full_page_candidate -> final_course_visual` 用户确认状态，以及Remotion透明前景和二次拆层Gate。
+- 新增Alpha硬验收：透明前景禁止不透明降级、保持完整画布和统一左上角原点。
+- 增加 `tests/reference_remotion_contract_cases.json` 与统一合同回归检查。
 
 ## V2.7.1 — 开发基线收口
 

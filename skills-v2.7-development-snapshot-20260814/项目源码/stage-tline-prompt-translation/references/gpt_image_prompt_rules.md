@@ -3,6 +3,20 @@
 ## 单一输出
 T线默认且唯一的当前输出是单个首选方案的一套中文 GPT Image 合同。中文执行提示词应简洁、可直接用于图像生产，并忠实继承 B线的版式、视觉焦点、素材政策、文字政策、参考图继承关系和样张状态边界。
 
+## Reference Inputs
+For a reference-locked task, copy the selected real file paths exactly. C-line must attach them as image inputs. Never write only `参考原图`, never attach every image in the folder, and never use recent conversation images as an implicit substitute.
+
+```yaml
+reference_inputs:
+  primary_layout_reference:
+  secondary_references:
+  reference_attachment_required: yes
+  text_only_execution_forbidden: yes
+```
+
+## Verbatim Text
+Copy all `must_show_text_verbatim` fields without paraphrase. GPT Image renders the text directly. Initial generation plus at most two local text revisions is allowed; deterministic text overlay is forbidden for this contract.
+
 ## 模型字段
 - `目标能力`：写 `GPT Image`，表示稳定的业务能力名称。
 - `请求模型`：写 `gpt-image-2`，表示期望的执行目标。
@@ -15,6 +29,7 @@ T线默认且唯一的当前输出是单个首选方案的一套中文 GPT Image
 - 完整课程视觉页默认 `opaque`。
 - `transparent` 仅用于明确需要 Alpha 的素材层、抠图对象或叠加组件，格式必须是 `png` 或 `webp`。
 - 透明背景属于预览能力，执行合同应允许不透明降级。
+- Exception: user-confirmed Remotion transparent foreground requires real Alpha and forbids opaque fallback.
 - `auto` 只在背景不影响交付合同且无需预先锁定时使用。
 
 ## 中文局部修改模板

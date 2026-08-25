@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "reference_locked_full_page",
+      "input": {
+        "reference_folder": "F:/reference-set",
+        "fixed_layout_requested": true,
+        "with_text_requested": true
+      },
+      "expected": {
+        "page_type": "A16_既有母版套新内容型",
+        "candidate_policy": "reference_locked_single_candidate",
+        "output_target": "full_page_with_text",
+        "text_generation_strategy": "带字",
+        "reference_attachment_required": true,
+        "text_only_execution_forbidden": true,
+        "maximum_local_text_revisions": 2,
+        "deterministic_text_overlay_forbidden": true
+      }
+    },
+    {
+      "id": "flattened_png_requires_gate",
+      "input": {
+        "layered_master_available": false,
+        "flattened_png_available": true
+      },
+      "expected": {
+        "fidelity_level": "strong_visual_lock",
+        "user_confirmation": "pending",
+        "pixel_identity_claim": false
+      }
+    },
+    {
+      "id": "remotion_transparent_foreground",
+      "input": {
+        "full_page_state": "final_course_visual",
+        "trigger": "animation_structure_risk",
+        "user_confirmation": "confirmed"
+      },
+      "expected": {
+        "derived_from_confirmed_final": true,
+        "background": "transparent",
+        "format": "png",
+        "alpha_required": true,
+        "opaque_fallback_forbidden": true,
+        "coordinate_origin": "top_left",
+        "crop_to_content_forbidden": true,
+        "maximum_local_alpha_revisions": 2
+      }
+    },
+    {
+      "id": "split_layers_require_second_gate",
+      "input": {
+        "transparent_foreground_available": true,
+        "split_layers_requested": true
+      },
+      "expected": {
+        "second_user_gate_required": true,
+        "full_canvas_required": true,
+        "coordinate_origin": "top_left",
+        "crop_to_content_forbidden": true
+      }
+    }
+  ]
+}
