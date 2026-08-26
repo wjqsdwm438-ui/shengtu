@@ -30,6 +30,8 @@ user_facing_output:
       视觉结果:
   三版怎么选:
   我建议的优先选择:
+  用户确认的最终方案:
+  最终方案确认依据:
 internal_handoff:
   source_segment_id:
   page_function:
@@ -75,10 +77,6 @@ internal_handoff:
   template_identity:
     template_id:
     template_version:
-    psd_hash:
-    preview_hash:
-    reference_set_hash:
-    layer_manifest_hash:
   template_layer_manifest:
     fixed_master:
     variable_content:

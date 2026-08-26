@@ -1,46 +1,33 @@
-﻿# Task Run Manifest Rules
+# Task Run Record Rules
 
-## Purpose
-Record each V2.7 task so decisions, samples, reference images, and user confirmations do not drift across turns.
+## 适用边界
 
-## Standard Manifest
-```yaml
-task_run_id:
-created_at:
-input_type:
-source_material:
-segment_time_metadata:
-sline_result:
-aline_result:
-a_review_result:
-bline_result:
-tline_result:
-cline_result:
-reference_images:
-reference_set:
-reference_selection_confirmation:
-template_identity:
-template_layer_manifest:
-inheritance_rules:
-context_isolation:
-must_show_text_verbatim:
-text_accuracy_attempts:
-full_page_candidate:
-final_course_visual:
-transparent_foreground_gate:
-transparent_foreground_result:
-split_layer_gate:
-remotion_asset_handoff:
-alpha_verification:
-text_budget:
-risk_score:
-visual_sample_state: not_generated
-user_gate_status:
-revision_history:
-final_user_decision:
-```
+普通任务不强制建立统一 Manifest、固定目录、跨阶段总文件或新的状态系统。只有用户明确要求保存任务记录，或现有项目已经把任务记录列为正式交付时，才使用本规则。
 
-## State Rules
-The manifest must distinguish sample generation from user confirmation. Never set `visual_sample_state` to final automatically. Record every local revision with the `revision_contract` used.
+任务记录只用于帮助后续回看决定，不是 S/A/B/T/C 正文的汇总容器，也不得成为各阶段不断追加内容的单文件。
 
-Pin every page to a confirmed reference set and template version. Record real reference paths and hashes when available. A template change must not silently migrate existing pages. Record transparent-foreground and split-layer Gates separately from full-page confirmation.
+## 最小自然语言记录
+
+确需记录时，使用简短的自然语言清单，只保留与当前任务直接有关的项目：
+
+- 当前阶段和当前产物；
+- 输入材料的真实路径；
+- 已确认的参考图及其角色；
+- 必须保持的冻结项；
+- 用户已经明确确认或拒绝的单项决定；
+- 视觉样张是否已生成以及用户是否确认；
+- 与当前产物直接有关的修订结论。
+
+不要预填无关阶段，不复制上游全文、生产卡、提示词、验证日志或下一阶段内容。视觉样张生成和用户最终确认必须分别描述；不得把“已生成”写成“已最终确认”。
+
+## 非哈希记录
+
+哈希属于绝对禁止项。不得计算、记录、传递或建议文件哈希、内容哈希、摘要、指纹或变相校验值。若现有输入要求哈希，停止该做法，只问：`是否改用非哈希方式记录和核对资产？`
+
+用户确认后，仅记录参考编号、真实路径、文件名、尺寸、模板版本、参考角色和用户确认结果。模板或参考资产发生变化时，说明变化事实并向用户提出一个确认问题；不得自动迁移既有页面。
+
+## 写入与停止
+
+写入任务记录前，先说明准备记录什么、写到哪个文件、是否修改已有文件，以及哪些内容明确不写入；随后只问：`是否按上述产物与交接方案执行？`
+
+用户确认后只完成这一个记录产物，完成即停止。不得把该授权扩大为写入其他阶段产物、进入下一阶段或继续生图。

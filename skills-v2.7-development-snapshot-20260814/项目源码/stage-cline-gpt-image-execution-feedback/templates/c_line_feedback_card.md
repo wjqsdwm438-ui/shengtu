@@ -7,6 +7,12 @@
 请求模型: gpt-image-2
 实际执行模型: 未报告
 使用的中文提示词:
+本次执行确认:
+  抽样页:
+  抽样页用户确认: pending / confirmed
+  提示词版本:
+  提示词版本用户确认: pending / confirmed
+  本次生图用户授权: pending / confirmed
 执行类型: standard / reference_locked_full_page / remotion_transparent_foreground / remotion_split_layer
 reference_preflight:
   reference_set_id:
@@ -111,3 +117,5 @@ remotion_asset_handoff:
   template_id:
   template_version:
 ```
+
+> 三项确认必须按顺序分别取得；确认提示词不等于授权生图。`本次生图用户授权` 只覆盖当前一张图，生成完成后即失效，不得自动生成下一张或开始下一轮。

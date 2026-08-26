@@ -12,9 +12,9 @@ import argparse
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
-import tempfile
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -290,7 +290,7 @@ def check_progressive_reading_contracts(report: Report) -> None:
             "## 单步扩展循环",
             "## 快速确认",
             "## 停止规则",
-            "reading_checkpoint:",
+            "这不是可持久化状态、Schema 或统一工作流字段",
             "每次只扩展一个",
             "阶段边界",
         )
@@ -411,7 +411,7 @@ def check_reference_remotion_contracts(report: Report) -> None:
 
     contract_files = {
         ROOT / "_shared" / "reference-image-inheritance-rules.md": (
-            "reference_set:", "A16_既有母版套新内容型", "strong_visual_lock", "template_identity:"
+            "固定外层母版", "失败诊断图", "非哈希参考清单", "A16_既有母版套新内容型"
         ),
         ROOT / "_shared" / "remotion-asset-handoff-rules.md": (
             "transparent_foreground_gate:", "final_course_visual", "opaque", "split_layer_pending_gate"
@@ -620,8 +620,15 @@ def main() -> int:
 
     report = Report()
     check_script_syntax(report)
-    with tempfile.TemporaryDirectory(prefix="v271-checks-") as temp:
-        evidence, srt_files = check_algorithm_examples(report, Path(temp))
+    work_dir = ROOT / ".run_all_checks_tmp"
+    if work_dir.exists():
+        shutil.rmtree(work_dir)
+    work_dir.mkdir(parents=True, exist_ok=False)
+    try:
+        evidence, srt_files = check_algorithm_examples(report, work_dir)
+    finally:
+        if work_dir.exists():
+            shutil.rmtree(work_dir)
     check_skill_contracts(report)
     check_progressive_reading_contracts(report)
     check_reference_remotion_contracts(report)

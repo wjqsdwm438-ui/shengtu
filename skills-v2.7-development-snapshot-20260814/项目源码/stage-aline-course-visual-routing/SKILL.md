@@ -8,7 +8,8 @@ description: V2.7 Stage A-line course visual page routing for Stage Activity Pla
 ## 渐进式读取
 
 ### 必读
-- 当前 `SKILL.md`，以及已确认的 S07 片段卡；用户明确指定 A线时可使用其单页内容代替 S07 卡。
+- 当前 `SKILL.md`、已经由用户确认的版式分类，以及已确认的 S07 片段卡；用户明确指定 A线时可使用其单页内容代替 S07 卡。
+- 先查看确认过的版式、母版、母版预览和参考图分类，再读取页面内容并做设计判断。不得自行改变上游已确认的类别或参考角色；分类尚未确认时，先返回当前唯一未决类别的单问题确认。
 - 不默认重读 S线、共享总控、全部页型表、模板或示例。
 
 ### 按需读取路由
@@ -21,7 +22,7 @@ description: V2.7 Stage A-line course visual page routing for Stage Activity Pla
 - 存在参考图：读 `_shared/reference-image-inheritance-rules.md`；没有参考图时不得读取。
 - 用户要求Remotion适配、透明前景或动画拆层：只读 `_shared/remotion-asset-handoff-rules.md` 的相关Gate。
 - 只有需要正式 A线交接卡或 A审报告时，分别读取对应 template。
-- examples/anti_examples 只在对应判断仍不稳定或已出现同类失败时读取一个直接匹配项。
+- examples/anti_examples 只在对应判断仍不稳定或已出现同类失败时读取一个直接匹配项；已经出现“推荐后直接冻结”时读取 `anti_examples/assistant_freezes_visual_direction_failure.md`。
 
 ### 快速确认
 每次读取后立即确认：教学动作、必显文字、内容关系、主载体、Top1/Top2 页型及唯一未决 Gate。Top1 有直接证据且新增资料不会改变决定时停止读取。
@@ -29,13 +30,26 @@ description: V2.7 Stage A-line course visual page routing for Stage Activity Pla
 ### 停止规则
 A线交接或 Gate 结论完成后停止，不自动读取 B/T/C。页面不应进入 A线时立即退回 S线，不通过继续读取 A线资料来挽救错误路由。
 
+## 单问题确认顺序
+
+- 本地版式和内容材料能够消除的信息差先通过只读检查消除；只有本地无法确定、且确实需要用户决定的事项才追问。
+- 按顺序分别确认：设计方向、母版角色、参考图继承范围、文字策略、最终方案。一次回复只允许出现一个待确认问题；当前项未确认，不得询问下一项或冻结后续字段。
+- 可以给出分析、三版方案和单一推荐，但推荐不等于用户选择。用户必须明确选定最终方案；不得把“继续”、索要下一步内容或未反对解释为确认。
+- 任何新出现的视觉选择都回到当前单问题确认；不得由执行助手以评分、风险或默认值替用户完成设计决定。
+
+## 正式产物与交接
+
+写入正式产物前，先用自然语言说明：本线准备生成什么、准备写到哪个文件、是否会修改已有文件、下一线实际需要接收什么、哪些分析或验证记录不属于正式交付。说明后只问：`是否按上述产物与交接方案执行？`
+
+只有用户明确确认后才写入；一次确认只授权一个已说明的产物。写完立即停止，不得顺带生成 B/T/C 内容、进入下一线，或向 S线输入文件追加 A线交付。用户要求调整时，一次只追问一个修改方向。
+
 ## Responsibility
 A-line only handles content admitted by S-line as `S07_AI课程视觉页型`. It predicts page direction, explains the page problem in user-readable language, proposes three user-facing options, freezes a handoff card, and may run A-review. It does not write platform prompts and does not generate images.
 
 ## Inputs
 S-line S07 segment card, V2.7 page content, migrated V2.6 page card, user-confirmed A-line target, single reference image, or reference folder.
 
-## Required Workflow
+## Internal Analysis Order
 S0 input recognition -> S1 material boundary -> S2 teaching action -> S3 page/density -> S4 content relation -> S5 on-screen text -> S6 visual carrier interface -> S7 foreground/background layer relation -> S8 risk blocking -> S9 key Gate -> S10 user-readable options -> S11 frozen handoff.
 
 ## User-Facing Output
@@ -49,6 +63,8 @@ Default user-facing A-line output must use this structure instead of leading wit
    - `方案三：现代重排版`
 4. For each option, include `适合方向`, `核心思路`, `具体改法`, and `视觉结果`.
 5. End with `三版怎么选` and `我建议的优先选择`.
+
+三版方案与推荐仅用于帮助用户决定，不得在用户明确选择前生成 `S11 frozen handoff`、标记方案已冻结或授权进入 B线。
 
 Do not use A01-A21 type names as the primary user-facing expression unless the user asks for internal routing details.
 
@@ -79,6 +95,8 @@ Do not process S01-S06 material as A-line. Do not output exact PPT/Figma coordin
 
 ## Failure / Return
 Return to S-line if the segment should not have entered A-line. Return to user Gate if page type, must-show text, reference role, material redraw permission, or over-180 text Gate is unresolved.
+
+PSD 不可用时，不得静默退化为扁平 PNG；必须先说明这一项限制，并只询问是否接受该降级。用户回答前不得继续冻结交接。
 
 ## Minimal Example
 Examples are evidence-only. A01 判断不稳定时最多读取一个成功或失败示例，不得连读整个 examples/anti_examples 目录。

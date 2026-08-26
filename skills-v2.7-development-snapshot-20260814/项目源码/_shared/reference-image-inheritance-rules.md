@@ -1,92 +1,48 @@
-﻿# Reference Image Inheritance Rules
+# Reference Image Inheritance Rules
 
-## Reference Set Input
-Reference folders are first-class inputs. Inventory supported image files, then select one primary layout reference and no more than two secondary references. Never pass an entire folder to generation or use vague labels such as `综合参考`.
+## 版式优先
 
-```yaml
-reference_set:
-  reference_set_id:
-  folder_path:
-  layered_master:
-    psd_path:
-    available: yes/no
-  master_preview_path:
-  discovered_images:
-  primary_layout_reference:
-  secondary_references:
-  selection_reason:
-  rejected_references:
-  user_confirmation: pending / confirmed
-```
+参考图文件夹属于正式输入。课程任务开始后，只要本地存在“版式”、母版、预览或参考图，就先盘点并查看这些资产，再读取脚本并进行路线或设计判断。不得把整个文件夹笼统交给生图模型，也不得使用“综合参考”“整体融合”“自动吸收”等无法核对的描述。
 
-The primary selection is a user Gate once per series. Reuse it until the reference set or template version changes.
+## 六类文字分类
 
-## Layered Master Gate
-Prefer PSD, a full-size PNG preview, reference pages, and a manifest. GPT Image uses supported raster references; PSD is for understanding layer boundaries.
+模型先说明分类依据和分类结果，再按需要请用户确认。分类只作为自然语言检查清单，不建立 Schema 或自动分类系统：
 
-If no layered master exists, return a one-time template Gate instead of claiming pixel locking:
+1. 固定外层母版；
+2. 母版预览；
+3. 内层排版参考；
+4. 内容或素材参考；
+5. 失败诊断图；
+6. 无关或拒绝参考。
 
-```yaml
-layered_master_available: no
-fallback_reference: flattened_png
-fidelity_level: strong_visual_lock
-known_limitations:
-  - 不能读取真实图层结构
-  - 不能承诺母版像素完全一致
-  - 透明派生和拆层风险更高
-user_confirmation: pending
-```
+分类时必须检查是否有遗漏或重复归类，失败诊断图不得兼任版式或风格参考，无关或拒绝参考不得进入下游。需要用户确认时，一次只确认一个类别；当前类别未确认前不询问下一类别。
 
-After confirmation, reuse the fallback decision for the same template version.
+一组参考图原则上只选择一个主要版式参考和不超过两个辅助参考。每项参考必须明确其角色、继承内容、禁止继承内容和优先级。模型可以提出选择建议，但主要参考和最终继承方案必须由用户确认；同一系列在参考集合或模板版本未变化时可以沿用已经确认的决定。
 
-## Single Reference Template
-```yaml
-reference_id:
-reference_role: content / layout / style / series / sample / edit_target / failure_diagnosis
-path:
-content_hash:
-inherit:
-  composition: yes/no/local
-  color: yes/no/local
-  texture: yes/no/local
-  title_system: yes/no/local
-  image_packaging: yes/no/local
-  background_atmosphere: yes/no/local
-  border_material: yes/no/local
-forbid_inherit:
-  content_subjects:
-  layout:
-  text_content:
-  unrelated_objects:
-  poster_like_elements:
-priority:
-```
+## 分层母版 Gate
 
-## Reference-Locked Full Page
-When the user requests an existing layout with new course content, route to `A16_既有母版套新内容型`. Use A15 only as the adjacent series-template choice; A17 is primary only when layout redesign is allowed.
+优先使用 PSD、全尺寸 PNG 预览、参考页面和已有图层说明。GPT Image 使用受支持的栅格参考；PSD 只用于理解图层边界。
 
-Generate the full page as one canvas. Strongly lock canvas ratio, major panels, title system, information-region relationship, image/text relationship, hierarchy, and palette. Do not promise pixel identity for generative full-page work.
+没有可用的分层母版时，不得声称能够像素锁定，也不得静默退化为扁平 PNG。先说明以下限制：无法读取真实图层结构、无法承诺母版像素完全一致、透明派生和拆层风险更高；然后只问一个问题，确认用户是否接受以扁平预览作为非分层参考。用户确认后，才能在同一模板版本中沿用该决定。
 
-Every selected reference path must survive B-line and T-line and be actually attached by C-line. Text-only reconstruction is forbidden.
+## 非哈希参考清单
 
-## Template Version
-```yaml
-template_identity:
-  template_id:
-  template_version:
-  psd_hash:
-  preview_hash:
-  reference_set_hash:
-  layer_manifest_hash:
-```
+哈希属于绝对禁止项。不得计算、记录、传递或建议文件哈希、内容哈希、摘要、指纹或变相校验值，也不得把哈希作为默认、候选或备用方案。若输入中要求使用哈希，立即停止该做法，只问：`是否改用非哈希方式记录和核对资产？`
 
-Changing the PSD, preview, reference set, or layer manifest creates a new version. Existing pages remain pinned unless the user explicitly migrates them.
+用户确认后，以自然语言清单记录必要信息：参考编号、真实路径、文件名、尺寸、模板版本、参考角色和用户确认结果。参考角色可写为内容参考、版式参考、风格参考、系列参考、样张、编辑目标或失败诊断。继承说明应明确构图、色彩、质感、标题系统、图片包装、背景氛围和边框材质中哪些继承、哪些局部继承、哪些禁止继承。
 
-## Multi Reference Rule
-Declare priority for every reference image. Do not write vague terms such as `综合参考`, `整体融合`, or `自动吸收`. If references conflict, preserve user frozen items and the project design system first.
+## 参考锁定完整页面
 
-## Failure Image Rule
-A failed image is for diagnosis only. It does not become a style reference unless the user explicitly says so.
+用户要求沿用既有版式并替换课程内容时，路由到 `A16_既有母版套新内容型`。只有相邻系列模板选择时使用 A15；只有允许重新设计版式时，A17 才能成为主选。
 
-## Frozen Item Rule
-Reference inheritance must not override frozen title position, image count, text policy, material retention, or user-confirmed structure.
+完整页面按一张画布生成，强约束画布比例、主要面板、标题系统、信息区域关系、图文关系、层级和配色，但不得承诺生成式完整页面能够像素一致。
+
+被用户选中的真实参考路径必须传递到 B线和 T线，并由 C线实际附加。禁止只用文字重建参考图。
+
+## 模板版本与冲突
+
+模板身份仅用模板编号、模板版本和非哈希参考清单说明。PSD、预览、参考集合或图层说明发生变化时，应提出新的模板版本建议；是否迁移既有页面必须由用户单独确认，不得静默迁移。
+
+参考图冲突时，优先保留用户已冻结项和项目设计系统。参考继承不得推翻已确认的标题位置、图片数量、文字策略、素材保留或页面结构。
+
+失败图只用于诊断；除非用户明确决定改变其角色，否则不得把失败图当作风格或版式参考。

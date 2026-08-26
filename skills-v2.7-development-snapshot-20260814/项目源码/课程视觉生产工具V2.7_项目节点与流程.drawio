@@ -1,182 +1,414 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <mxfile host="app.diagrams.net" modified="2026-08-23T00:00:00.000Z" agent="Codex" version="24.7.17" type="device" compressed="false">
   <diagram id="project-overview" name="项目节点总览">
     <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
       <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
         <mxCell id="ov-title" value="课程视觉生产工具 V2.7｜项目节点总览" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=26;fontStyle=1;fontColor=#1F2937;" vertex="1" parent="1">
-          <mxGeometry x="250" y="20" width="1100" height="50" as="geometry"/>
+          <mxGeometry x="250" y="20" width="1100" height="50" as="geometry" />
         </mxCell>
         <mxCell id="ov-subtitle" value="生产主链、共享规则、证据辅助与项目资产的关系" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=14;fontColor=#64748B;" vertex="1" parent="1">
-          <mxGeometry x="400" y="70" width="800" height="30" as="geometry"/>
+          <mxGeometry x="400" y="70" width="800" height="30" as="geometry" />
         </mxCell>
-
-        <mxCell id="ov-input" value="输入材料&#xa;SRT｜脚本｜单页内容&#xa;参考图｜失败样张｜局部修改" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2FE;strokeColor=#0284C7;strokeWidth=2;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="40" y="170" width="180" height="105" as="geometry"/>
+        <mxCell id="ov-input" value="输入材料（版式优先）&#10;先看版式 / 母版 / 预览 / 参考图&#10;再读 SRT / 脚本 / 单页内容" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2FE;strokeColor=#0284C7;strokeWidth=2;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="170" width="180" height="105" as="geometry" />
         </mxCell>
-        <mxCell id="ov-shared" value="共享总控&#xa;course-visual-production-v2.7.md&#xa;&#xa;定义主流程、阶段职责、Gate 与禁止项" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2FF;strokeColor=#4F46E5;strokeWidth=2;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="260" y="130" width="260" height="150" as="geometry"/>
+        <mxCell id="ov-shared" value="共享最小规则&#10;course-visual-production-v2.7.md&#10;&#10;版式优先｜一次一个问题｜用户确认后产出" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2FF;strokeColor=#4F46E5;strokeWidth=2;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="260" y="130" width="260" height="150" as="geometry" />
         </mxCell>
-
-        <mxCell id="ov-s" value="S线｜媒介分流&#xa;S01–S08&#xa;仅 S07 默认进入 A线" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="580" y="150" width="170" height="105" as="geometry"/>
+        <mxCell id="ov-s" value="S线｜媒介分流&#10;缺音频 / 时长 / 时间码时分别追问&#10;确认处理范围、Non-A、A线清单与分页" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="580" y="150" width="170" height="105" as="geometry" />
         </mxCell>
-        <mxCell id="ov-a" value="A线｜课程视觉路由&#xa;A01–A21 页面类型判断&#xa;三版方案＋冻结交接卡" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#16A34A;strokeWidth=2;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="790" y="150" width="190" height="105" as="geometry"/>
+        <mxCell id="ov-a" value="A线｜课程视觉路由&#10;三版只提议、不自动冻结&#10;用户逐项确认后才形成交接" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#16A34A;strokeWidth=2;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="790" y="150" width="190" height="105" as="geometry" />
         </mxCell>
-        <mxCell id="ov-ar" value="A审｜质量 Gate&#xa;通过｜局部补卡&#xa;退回 A线" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=2;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="1020" y="145" width="150" height="115" as="geometry"/>
+        <mxCell id="ov-ar" value="A审｜质量 Gate&#10;通过｜局部补卡&#10;退回 A线" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=2;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="145" width="150" height="115" as="geometry" />
         </mxCell>
-        <mxCell id="ov-b" value="B线｜生产交接&#xa;方案A 稳妥版&#xa;方案B 探索版" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E8FF;strokeColor=#9333EA;strokeWidth=2;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="1210" y="150" width="160" height="105" as="geometry"/>
+        <mxCell id="ov-b" value="B线｜生产交接&#10;方案A 稳妥版 / 方案B 探索版&#10;只比较与建议，由用户确认首选" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E8FF;strokeColor=#9333EA;strokeWidth=2;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="150" width="160" height="105" as="geometry" />
         </mxCell>
-        <mxCell id="ov-t" value="T线｜GPT Image 中文专用提示词&#xa;当前请求模型 gpt-image-2&#xa;中文执行提示词包" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE7F3;strokeColor=#DB2777;strokeWidth=2;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="1410" y="150" width="160" height="105" as="geometry"/>
+        <mxCell id="ov-t" value="T线｜中文生图执行提示词&#10;只转译用户已确认的方案&#10;新增视觉判断先提议、后确认" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE7F3;strokeColor=#DB2777;strokeWidth=2;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1410" y="150" width="160" height="105" as="geometry" />
         </mxCell>
-        <mxCell id="ov-c" value="C线｜GPT Image 视觉样张反馈&#xa;偏差预测＋视觉样张&#xa;失败诊断＋局部修改" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE4E6;strokeColor=#E11D48;strokeWidth=2;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="1410" y="320" width="160" height="115" as="geometry"/>
+        <mxCell id="ov-c" value="C线｜生图执行反馈&#10;抽样页、提示词版本、每次生图分别确认&#10;生图后再确认视觉样张" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE4E6;strokeColor=#E11D48;strokeWidth=2;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1410" y="320" width="160" height="115" as="geometry" />
         </mxCell>
-        <mxCell id="ov-user-gate" value="用户确认 Gate&#xa;视觉样张确认后&#xa;才允许交付准备" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFEDD5;strokeColor=#EA580C;strokeWidth=2;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="1210" y="320" width="160" height="120" as="geometry"/>
+        <mxCell id="ov-user-gate" value="用户确认 Gate&#10;每次只问一个问题&#10;当前回答前不询问下一项&#10;当前授权不自动延伸到下一步" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFEDD5;strokeColor=#EA580C;strokeWidth=2;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="320" width="160" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="ov-state" value="视觉样张状态&#xa;not_generated → generated&#xa;→ confirmed / rejected&#xa;→ delivery_preparation_allowed" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7ED;strokeColor=#F97316;strokeWidth=2;fontSize=13;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="1000" y="330" width="180" height="105" as="geometry"/>
+        <mxCell id="ov-state" value="最小执行边界（纯文字规则）&#10;默认只读分析与提议&#10;一次明确授权只覆盖一个产物&#10;完成后立即停止" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7ED;strokeColor=#F97316;strokeWidth=2;fontSize=13;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="330" width="180" height="105" as="geometry" />
         </mxCell>
-
-        <mxCell id="ov-alg" value="Algorithm Lite｜伴随证据链（不替代阶段决策）&#xa;ALG-S01 字幕索引｜ALG-A02 文字预算/骨架｜ALG-A03 复杂度评分&#xa;ALG-B01、ALG-C01 当前为规则清单，尚未脚本化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#475569;strokeWidth=2;dashed=1;fontSize=14;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="580" y="330" width="380" height="105" as="geometry"/>
+        <mxCell id="ov-alg" value="Algorithm Lite｜伴随证据链（不替代阶段决策）&#10;ALG-S01 字幕索引｜ALG-A02 文字预算/骨架｜ALG-A03 复杂度评分&#10;ALG-B01、ALG-C01 当前为规则清单，尚未脚本化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#475569;strokeWidth=2;dashed=1;fontSize=14;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="580" y="330" width="380" height="105" as="geometry" />
         </mxCell>
-        <mxCell id="ov-manifest" value="Task Run Manifest｜贯穿全程&#xa;记录输入、阶段结果、风险、参考图、用户 Gate、样张状态与修改历史" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;dashed=1;fontSize=14;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="260" y="330" width="280" height="105" as="geometry"/>
+        <mxCell id="ov-manifest" value="产物与交接提议（不设统一 Manifest）&#10;写入前说明产物、路径、是否改旧文件与下游所需&#10;用户确认后才写；不自动追加上游文件" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;dashed=1;fontSize=14;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="260" y="330" width="280" height="105" as="geometry" />
         </mxCell>
-        <mxCell id="ov-cross" value="跨阶段共享规则&#xa;参考图继承｜设计系统｜素材保留&#xa;失败诊断｜视觉样张状态｜页面预设库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#64748B;strokeWidth=2;fontSize=13;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="40" y="330" width="180" height="105" as="geometry"/>
+        <mxCell id="ov-cross" value="跨阶段最小规则&#10;版式六类检查｜用户最终决策&#10;不自动追加上游｜哈希方案绝对禁止" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#64748B;strokeWidth=2;fontSize=13;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="330" width="180" height="105" as="geometry" />
         </mxCell>
-
         <mxCell id="ov-artifacts" value="项目资产层" style="swimlane;html=1;rounded=1;startSize=34;fillColor=#F8FAFC;swimlaneFillColor=#FFFFFF;strokeColor=#94A3B8;fontSize=15;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="40" y="510" width="1530" height="245" as="geometry"/>
+          <mxGeometry x="40" y="510" width="1530" height="245" as="geometry" />
         </mxCell>
-        <mxCell id="ov-asset-skills" value="6 个 Skill 目录&#xa;S / A / B / T / C&#xa;＋ Algorithm Lite" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2FF;strokeColor=#6366F1;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="ov-artifacts">
-          <mxGeometry x="30" y="65" width="200" height="125" as="geometry"/>
+        <mxCell id="ov-asset-skills" value="6 个 Skill 目录&#10;S / A / B / T / C&#10;＋ Algorithm Lite" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2FF;strokeColor=#6366F1;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="ov-artifacts">
+          <mxGeometry x="30" y="65" width="200" height="125" as="geometry" />
         </mxCell>
-        <mxCell id="ov-asset-shared" value="_shared&#xa;总控、设计系统、预设库&#xa;继承/状态/失败/Manifest 规则" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFEFF;strokeColor=#0891B2;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="ov-artifacts">
-          <mxGeometry x="270" y="65" width="230" height="125" as="geometry"/>
+        <mxCell id="ov-asset-shared" value="_shared&#10;总控、设计系统、预设库&#10;继承、失败诊断与最小文字规则" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFEFF;strokeColor=#0891B2;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="ov-artifacts">
+          <mxGeometry x="270" y="65" width="230" height="125" as="geometry" />
         </mxCell>
-        <mxCell id="ov-asset-content" value="阶段内容&#xa;templates｜references&#xa;examples｜anti_examples&#xa;agents/openai.yaml" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FDF4;strokeColor=#16A34A;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="ov-artifacts">
-          <mxGeometry x="540" y="65" width="220" height="125" as="geometry"/>
+        <mxCell id="ov-asset-content" value="阶段内容&#10;templates｜references&#10;examples｜anti_examples&#10;agents/openai.yaml" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FDF4;strokeColor=#16A34A;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="ov-artifacts">
+          <mxGeometry x="540" y="65" width="220" height="125" as="geometry" />
         </mxCell>
-        <mxCell id="ov-asset-scripts" value="4 个 Python 脚本&#xa;SRT 索引｜文字预算&#xa;A01 骨架｜复杂度评分" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEFCE8;strokeColor=#CA8A04;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="ov-artifacts">
-          <mxGeometry x="800" y="65" width="220" height="125" as="geometry"/>
+        <mxCell id="ov-asset-scripts" value="4 个 Python 脚本&#10;SRT 索引｜文字预算&#10;A01 骨架｜复杂度评分" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEFCE8;strokeColor=#CA8A04;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="ov-artifacts">
+          <mxGeometry x="800" y="65" width="220" height="125" as="geometry" />
         </mxCell>
-        <mxCell id="ov-asset-tests" value="验证资产&#xa;tests 固定样例&#xa;test_logs 历史证据&#xa;尚非完整回归框架" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7ED;strokeColor=#EA580C;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="ov-artifacts">
-          <mxGeometry x="1060" y="65" width="200" height="125" as="geometry"/>
+        <mxCell id="ov-asset-tests" value="验证资产&#10;tests 固定样例&#10;test_logs 历史证据&#10;尚非完整回归框架" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7ED;strokeColor=#EA580C;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="ov-artifacts">
+          <mxGeometry x="1060" y="65" width="200" height="125" as="geometry" />
         </mxCell>
-        <mxCell id="ov-todo" value="V2.7.1 已收口&#xa;共享总控、模板、示例与 UI 元数据已统一：&#xa;T线｜GPT Image 中文专用提示词&#xa;C线｜GPT Image 视觉样张反馈" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#F43F5E;strokeWidth=2;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="ov-artifacts">
-          <mxGeometry x="1300" y="55" width="200" height="145" as="geometry"/>
+        <mxCell id="ov-todo" value="本轮最小规则收口&#10;版式优先｜原子追问｜先提议后确认&#10;中文执行提示词｜产物不自动追加上游" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#F43F5E;strokeWidth=2;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="ov-artifacts">
+          <mxGeometry x="1300" y="55" width="200" height="145" as="geometry" />
         </mxCell>
-
-        <mxCell id="ov-e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#475569;" edge="1" parent="1" source="ov-input" target="ov-shared"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="ov-e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#475569;" edge="1" parent="1" source="ov-shared" target="ov-s"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="ov-e3" value="S07" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#2563EB;fontStyle=1;" edge="1" parent="1" source="ov-s" target="ov-a"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="ov-e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#16A34A;" edge="1" parent="1" source="ov-a" target="ov-ar"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="ov-e5" value="通过" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#D97706;fontStyle=1;" edge="1" parent="1" source="ov-ar" target="ov-b"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="ov-e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#9333EA;" edge="1" parent="1" source="ov-b" target="ov-t"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="ov-e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#DB2777;" edge="1" parent="1" source="ov-t" target="ov-c"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1490" y="285"/></Array></mxGeometry></mxCell>
-        <mxCell id="ov-e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#E11D48;" edge="1" parent="1" source="ov-c" target="ov-user-gate"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="ov-e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#EA580C;" edge="1" parent="1" source="ov-user-gate" target="ov-state"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="ov-e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=open;strokeColor=#64748B;" edge="1" parent="1" source="ov-alg" target="ov-s"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="ov-e11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=open;strokeColor=#64748B;" edge="1" parent="1" source="ov-alg" target="ov-a"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="ov-e12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=open;strokeColor=#64748B;" edge="1" parent="1" source="ov-alg" target="ov-b"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="ov-e13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=open;strokeColor=#64748B;" edge="1" parent="1" source="ov-alg" target="ov-c"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="ov-e14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=open;strokeColor=#059669;" edge="1" parent="1" source="ov-manifest" target="ov-shared"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ov-e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#475569;" edge="1" parent="1" source="ov-input" target="ov-shared">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#475569;" edge="1" parent="1" source="ov-shared" target="ov-s">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-e3" value="S07" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#2563EB;fontStyle=1;" edge="1" parent="1" source="ov-s" target="ov-a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#16A34A;" edge="1" parent="1" source="ov-a" target="ov-ar">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-e5" value="通过" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#D97706;fontStyle=1;" edge="1" parent="1" source="ov-ar" target="ov-b">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#9333EA;" edge="1" parent="1" source="ov-b" target="ov-t">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#DB2777;" edge="1" parent="1" source="ov-t" target="ov-c">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1490" y="285" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ov-e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#E11D48;" edge="1" parent="1" source="ov-c" target="ov-user-gate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#EA580C;" edge="1" parent="1" source="ov-user-gate" target="ov-state">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-e10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=open;strokeColor=#64748B;" edge="1" parent="1" source="ov-alg" target="ov-s">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-e11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=open;strokeColor=#64748B;" edge="1" parent="1" source="ov-alg" target="ov-a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-e12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=open;strokeColor=#64748B;" edge="1" parent="1" source="ov-alg" target="ov-b">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-e13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=open;strokeColor=#64748B;" edge="1" parent="1" source="ov-alg" target="ov-c">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ov-e14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=open;strokeColor=#059669;" edge="1" parent="1" source="ov-manifest" target="ov-shared">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="business-flow" name="完整业务流程">
     <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1300" math="0" shadow="0">
       <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
         <mxCell id="fl-title" value="课程视觉生产工具 V2.7｜完整业务流程" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=26;fontStyle=1;fontColor=#1F2937;" vertex="1" parent="1">
-          <mxGeometry x="300" y="20" width="1200" height="50" as="geometry"/>
+          <mxGeometry x="300" y="20" width="1200" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="fl-legend" value="实线：主生产流程　　虚线：辅助证据或回退　　菱形：Gate / 判断　　所有 GPT Image 输出均为视觉样张" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontSize=13;fontColor=#475569;align=center;verticalAlign=middle;" vertex="1" parent="1">
-          <mxGeometry x="430" y="75" width="940" height="38" as="geometry"/>
+        <mxCell id="fl-legend" value="实线：主生产流程　　虚线：辅助证据或回退　　菱形：Gate / 判断　　所有用户 Gate 一次只问一个问题" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontSize=13;fontColor=#475569;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="430" y="75" width="940" height="38" as="geometry" />
         </mxCell>
-
-        <mxCell id="fl-start" value="开始&#xa;接收任务输入" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E0F2FE;strokeColor=#0284C7;strokeWidth=2;fontSize=14;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="40" y="150" width="130" height="70" as="geometry"/></mxCell>
-        <mxCell id="fl-recognize" value="输入类型识别&#xa;SRT / 脚本 / 单页内容&#xa;参考图 / 失败样张 / 局部修改" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2FE;strokeColor=#0284C7;strokeWidth=2;fontSize=13;" vertex="1" parent="1"><mxGeometry x="210" y="140" width="190" height="90" as="geometry"/></mxCell>
-        <mxCell id="fl-smerge" value="S线：语义合并&#xa;保留时间范围与来源行&#xa;不按字幕句逐页切分" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2;fontSize=13;" vertex="1" parent="1"><mxGeometry x="450" y="140" width="190" height="90" as="geometry"/></mxCell>
-        <mxCell id="fl-sroute" value="S01–S08&#xa;媒介路由判断" style="rhombus;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2;fontSize=14;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="690" y="130" width="160" height="110" as="geometry"/></mxCell>
-        <mxCell id="fl-nona" value="S01–S06&#xa;有效的非 A线生产路线&#xa;教师出镜 / 现成素材 / 录屏&#xa;字幕标注与后期包装" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#60A5FA;strokeWidth=2;fontSize=13;" vertex="1" parent="1"><mxGeometry x="660" y="300" width="220" height="115" as="geometry"/></mxCell>
-        <mxCell id="fl-s08" value="S08&#xa;媒介证据不足或高歧义&#xa;询问缺失决定" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=2;fontSize=13;" vertex="1" parent="1"><mxGeometry x="430" y="305" width="170" height="110" as="geometry"/></mxCell>
-        <mxCell id="fl-s07" value="S07&#xa;AI 课程视觉页型&#xa;默认进入 A线" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#16A34A;strokeWidth=2;fontSize=14;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="920" y="140" width="175" height="90" as="geometry"/></mxCell>
-
-        <mxCell id="fl-abound" value="A线：材料边界与教学动作&#xa;页面密度、内容关系、文字策略&#xa;视觉载体、前后景与风险阻断" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#16A34A;strokeWidth=2;fontSize=13;" vertex="1" parent="1"><mxGeometry x="1140" y="135" width="225" height="100" as="geometry"/></mxCell>
-        <mxCell id="fl-atype" value="A01–A21&#xa;页面类型判断&#xa;Top1 / Top2 / 风险 / Gate" style="rhombus;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#16A34A;strokeWidth=2;fontSize=13;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="1415" y="125" width="180" height="120" as="geometry"/></mxCell>
-        <mxCell id="fl-agate" value="关键条件明确？&#xa;页面含义 / 必须上屏文字&#xa;参考图角色 / 素材授权&#xa;超过 180 字处理方式" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=2;fontSize=12;" vertex="1" parent="1"><mxGeometry x="1420" y="300" width="180" height="135" as="geometry"/></mxCell>
-        <mxCell id="fl-userclarify" value="用户 Gate&#xa;只询问缺失或冲突的决定&#xa;确认后返回当前阶段" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#F59E0B;strokeWidth=2;fontSize=13;" vertex="1" parent="1"><mxGeometry x="1160" y="320" width="200" height="95" as="geometry"/></mxCell>
-        <mxCell id="fl-aoutput" value="A线输出&#xa;当前判断＋主要问题＋三版方案&#xa;冻结交接卡＋light_region_summary" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;fontSize=13;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="1640" y="310" width="130" height="120" as="geometry"/></mxCell>
-
-        <mxCell id="fl-areview" value="A审质量 Gate" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=2;fontSize=14;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="1435" y="500" width="150" height="100" as="geometry"/></mxCell>
-        <mxCell id="fl-localcard" value="局部补卡&#xa;补齐缺失字段后复审" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#F59E0B;fontSize=13;" vertex="1" parent="1"><mxGeometry x="1190" y="505" width="175" height="90" as="geometry"/></mxCell>
-        <mxCell id="fl-bline" value="B线：四 Gate＋六项检查&#xa;生成方案A 稳妥版&#xa;与方案B 探索版" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E8FF;strokeColor=#9333EA;strokeWidth=2;fontSize=13;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="1620" y="505" width="155" height="100" as="geometry"/></mxCell>
-        <mxCell id="fl-bgate" value="能否保留冻结字段？&#xa;文字 / 参考图 / 素材政策&#xa;生产可行性是否通过？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F3E8FF;strokeColor=#9333EA;strokeWidth=2;fontSize=12;" vertex="1" parent="1"><mxGeometry x="1425" y="665" width="175" height="125" as="geometry"/></mxCell>
-        <mxCell id="fl-select" value="标记 recommend_to_T_line&#xa;若两案均通过，确定首选候选" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAF5FF;strokeColor=#A855F7;strokeWidth=2;fontSize=13;" vertex="1" parent="1"><mxGeometry x="1630" y="680" width="145" height="95" as="geometry"/></mxCell>
-
-        <mxCell id="fl-tline" value="T线：GPT Image 中文专用提示词&#xa;当前请求模型 gpt-image-2&#xa;中文执行提示＋负面提示&#xa;＋局部修改模板" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE7F3;strokeColor=#DB2777;strokeWidth=2;fontSize=13;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="1630" y="850" width="145" height="120" as="geometry"/></mxCell>
-        <mxCell id="fl-tgate" value="提示词能否保留&#xa;B线冻结基础？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FCE7F3;strokeColor=#DB2777;strokeWidth=2;fontSize=13;" vertex="1" parent="1"><mxGeometry x="1425" y="855" width="170" height="110" as="geometry"/></mxCell>
-        <mxCell id="fl-predict" value="C线执行前偏差预测&#xa;识别可能漂移、禁止表达&#xa;与必须保留项" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE4E6;strokeColor=#E11D48;strokeWidth=2;fontSize=13;" vertex="1" parent="1"><mxGeometry x="1160" y="860" width="205" height="100" as="geometry"/></mxCell>
-        <mxCell id="fl-gpt-image" value="GPT Image 执行或准备执行&#xa;生成视觉样张&#xa;state = visual_sample_generated" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE4E6;strokeColor=#E11D48;strokeWidth=2;fontSize=13;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="900" y="860" width="205" height="100" as="geometry"/></mxCell>
-        <mxCell id="fl-confirm" value="用户确认视觉样张？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFEDD5;strokeColor=#EA580C;strokeWidth=2;fontSize=14;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="680" y="855" width="165" height="110" as="geometry"/></mxCell>
-        <mxCell id="fl-delivery" value="是&#xa;visual_sample_confirmed&#xa;允许后期文字修正或交付准备" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#16A34A;strokeWidth=2;fontSize=13;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="430" y="850" width="195" height="120" as="geometry"/></mxCell>
-        <mxCell id="fl-diagnose" value="否 / 需要修改&#xa;失败分类：内容、结构、审美、文字&#xa;素材、继承、范围、模型边界" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#F43F5E;strokeWidth=2;fontSize=13;" vertex="1" parent="1"><mxGeometry x="680" y="1015" width="220" height="105" as="geometry"/></mxCell>
-        <mxCell id="fl-revision" value="局部修改合同&#xa;keep_items / change_only_items&#xa;forbidden_changes / minimal prompt" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#F43F5E;strokeWidth=2;fontSize=13;" vertex="1" parent="1"><mxGeometry x="955" y="1015" width="220" height="105" as="geometry"/></mxCell>
-        <mxCell id="fl-return" value="缺陷属于哪一层？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=2;fontSize=13;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="1225" y="1015" width="165" height="105" as="geometry"/></mxCell>
-
-        <mxCell id="fl-manifest" value="Task Run Manifest&#xa;每个真实任务持续记录：输入、S/A/A审/B/T/C 结果、文字预算、风险、参考图、样张状态、用户 Gate 与修改历史" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;dashed=1;fontSize=13;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="500" width="350" height="115" as="geometry"/></mxCell>
-        <mxCell id="fl-alg" value="Algorithm Lite｜按需调用、仅提供证据&#xa;ALG-S01 SRT 索引&#xa;ALG-A02 文字预算 / A01 骨架&#xa;ALG-A03 页面复杂度&#xa;ALG-B01 / C01 当前为人工规则清单" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#475569;strokeWidth=2;dashed=1;fontSize=13;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="670" width="350" height="145" as="geometry"/></mxCell>
-        <mxCell id="fl-todo" value="V2.7.1 已收口&#xa;共享总控、模板、示例和 UI 元数据已统一；当前请求模型 gpt-image-2。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7ED;strokeColor=#F97316;strokeWidth=2;fontSize=13;align=center;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="1010" width="540" height="110" as="geometry"/></mxCell>
-
-        <mxCell id="fl-e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#475569;" edge="1" parent="1" source="fl-start" target="fl-recognize"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#475569;" edge="1" parent="1" source="fl-recognize" target="fl-smerge"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#2563EB;" edge="1" parent="1" source="fl-smerge" target="fl-sroute"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e4" value="S01–S06" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#2563EB;fontStyle=1;" edge="1" parent="1" source="fl-sroute" target="fl-nona"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e5" value="S08" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#D97706;fontStyle=1;" edge="1" parent="1" source="fl-sroute" target="fl-s08"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e6" value="S07" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#16A34A;fontStyle=1;" edge="1" parent="1" source="fl-sroute" target="fl-s07"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#16A34A;" edge="1" parent="1" source="fl-s07" target="fl-abound"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#16A34A;" edge="1" parent="1" source="fl-abound" target="fl-atype"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#16A34A;" edge="1" parent="1" source="fl-atype" target="fl-agate"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e10" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#D97706;fontStyle=1;" edge="1" parent="1" source="fl-agate" target="fl-userclarify"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e11" value="确认后" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#D97706;" edge="1" parent="1" source="fl-userclarify" target="fl-atype"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1260" y="270"/><mxPoint x="1505" y="270"/></Array></mxGeometry></mxCell>
-        <mxCell id="fl-e12" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#16A34A;fontStyle=1;" edge="1" parent="1" source="fl-agate" target="fl-aoutput"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#059669;" edge="1" parent="1" source="fl-aoutput" target="fl-areview"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1705" y="550"/></Array></mxGeometry></mxCell>
-        <mxCell id="fl-e14" value="局部补卡" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#D97706;" edge="1" parent="1" source="fl-areview" target="fl-localcard"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e15" value="复审" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#D97706;" edge="1" parent="1" source="fl-localcard" target="fl-areview"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1275" y="625"/><mxPoint x="1510" y="625"/></Array></mxGeometry></mxCell>
-        <mxCell id="fl-e16" value="退回 A线" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#DC2626;" edge="1" parent="1" source="fl-areview" target="fl-abound"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1510" y="465"/><mxPoint x="1250" y="465"/></Array></mxGeometry></mxCell>
-        <mxCell id="fl-e17" value="通过" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#9333EA;fontStyle=1;" edge="1" parent="1" source="fl-areview" target="fl-bline"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#9333EA;" edge="1" parent="1" source="fl-bline" target="fl-bgate"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e19" value="否：退回 A线" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#DC2626;" edge="1" parent="1" source="fl-bgate" target="fl-abound"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1375" y="725"/><mxPoint x="1120" y="725"/><mxPoint x="1120" y="185"/></Array></mxGeometry></mxCell>
-        <mxCell id="fl-e20" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#9333EA;fontStyle=1;" edge="1" parent="1" source="fl-bgate" target="fl-select"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#DB2777;" edge="1" parent="1" source="fl-select" target="fl-tline"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#DB2777;" edge="1" parent="1" source="fl-tline" target="fl-tgate"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e23" value="否：退回 B线" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#DC2626;" edge="1" parent="1" source="fl-tgate" target="fl-bline"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1510" y="820"/><mxPoint x="1700" y="820"/></Array></mxGeometry></mxCell>
-        <mxCell id="fl-e24" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#E11D48;fontStyle=1;" edge="1" parent="1" source="fl-tgate" target="fl-predict"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#E11D48;" edge="1" parent="1" source="fl-predict" target="fl-gpt-image"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#E11D48;" edge="1" parent="1" source="fl-gpt-image" target="fl-confirm"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e27" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#16A34A;fontStyle=1;" edge="1" parent="1" source="fl-confirm" target="fl-delivery"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e28" value="否 / 修改" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#F43F5E;fontStyle=1;" edge="1" parent="1" source="fl-confirm" target="fl-diagnose"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#F43F5E;" edge="1" parent="1" source="fl-diagnose" target="fl-revision"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#F43F5E;" edge="1" parent="1" source="fl-revision" target="fl-return"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e31" value="局部修复：回 C线" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#E11D48;" edge="1" parent="1" source="fl-return" target="fl-predict"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1305" y="985"/><mxPoint x="1260" y="985"/></Array></mxGeometry></mxCell>
-        <mxCell id="fl-e32" value="策略缺陷：回 B线" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#9333EA;" edge="1" parent="1" source="fl-return" target="fl-bline"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1410" y="1065"/><mxPoint x="1790" y="1065"/><mxPoint x="1790" y="555"/></Array></mxGeometry></mxCell>
-        <mxCell id="fl-e33" value="含义/授权冲突：回 A线" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#16A34A;" edge="1" parent="1" source="fl-return" target="fl-abound"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1305" y="1145"/><mxPoint x="1100" y="1145"/><mxPoint x="1100" y="185"/></Array></mxGeometry></mxCell>
-        <mxCell id="fl-e34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=open;strokeColor=#059669;" edge="1" parent="1" source="fl-manifest" target="fl-recognize"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="190" y="460"/><mxPoint x="305" y="460"/></Array></mxGeometry></mxCell>
-        <mxCell id="fl-e35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=open;strokeColor=#475569;" edge="1" parent="1" source="fl-alg" target="fl-smerge"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="415" y="740"/><mxPoint x="545" y="740"/></Array></mxGeometry></mxCell>
-        <mxCell id="fl-e36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=open;strokeColor=#475569;" edge="1" parent="1" source="fl-alg" target="fl-atype"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="415" y="760"/><mxPoint x="1505" y="760"/></Array></mxGeometry></mxCell>
-        <mxCell id="fl-e37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=open;strokeColor=#475569;" edge="1" parent="1" source="fl-alg" target="fl-bgate"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="fl-e38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=open;strokeColor=#475569;" edge="1" parent="1" source="fl-alg" target="fl-diagnose"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="fl-start" value="开始&#10;默认只读分析与计划" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E0F2FE;strokeColor=#0284C7;strokeWidth=2;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="150" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-recognize" value="版式优先读取与分类&#10;先看版式 / 母版 / 预览 / 参考图&#10;按六类输出分类依据与结果&#10;再读取课程内容" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2FE;strokeColor=#0284C7;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="210" y="140" width="190" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-smerge" value="S线：读取内容与语义合并&#10;保留时间范围与来源行&#10;不按字幕句逐页切分" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="450" y="140" width="190" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-sroute" value="S01–S08&#10;媒介路由判断" style="rhombus;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="130" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-nona" value="S01–S06&#10;有效的非 A线生产路线&#10;教师出镜 / 现成素材 / 录屏&#10;字幕标注与后期包装" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#60A5FA;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="660" y="300" width="220" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-s08" value="S线用户 Gate&#10;依次检查：音频→时长→时间码→处理片段&#10;→Non-A→进入A线清单→分页&#10;缺一项只问一个问题，确认前停止" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="430" y="305" width="170" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-s07" value="S07&#10;AI 课程视觉页型&#10;仅在用户确认进入A线后继续" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#16A34A;strokeWidth=2;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="140" width="175" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-abound" value="A线：材料边界与教学动作&#10;页面密度、内容关系、文字策略&#10;视觉载体、前后景与风险阻断" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#16A34A;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="135" width="225" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-atype" value="A01–A21&#10;页面类型判断&#10;Top1 / Top2 / 风险 / Gate" style="rhombus;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#16A34A;strokeWidth=2;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1415" y="125" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-agate" value="A线关键条件明确？&#10;设计方向 / 母版角色 / 参考继承&#10;文字策略 / 最终方案&#10;每项都须用户确认" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="300" width="180" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-userclarify" value="原子追问 Gate&#10;先读本地材料消除信息差&#10;一次只问一个问题&#10;回答前不询问下一项" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#F59E0B;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="320" width="200" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-aoutput" value="A线方案提议（非冻结）&#10;当前判断＋主要问题＋三版方案&#10;等待用户逐项选择" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1640" y="310" width="130" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-areview" value="A审质量 Gate" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=2;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1435" y="500" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-localcard" value="局部补卡&#10;补齐缺失字段后复审" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#F59E0B;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="505" width="175" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-bline" value="B线：四 Gate＋六项检查&#10;生成方案A 稳妥版&#10;与方案B 探索版" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E8FF;strokeColor=#9333EA;strokeWidth=2;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1620" y="505" width="155" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-bgate" value="能否保留冻结字段？&#10;文字 / 参考图 / 素材政策&#10;生产可行性是否通过？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F3E8FF;strokeColor=#9333EA;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1425" y="665" width="175" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-select" value="B线首选方案用户 Gate&#10;模型只比较与建议，不自动决定&#10;双方案由用户选择；单候选也需确认依据" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAF5FF;strokeColor=#A855F7;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1630" y="680" width="145" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-tline" value="T线：中文生图执行提示词&#10;只转译一个已确认方案&#10;中文执行提示＋负面提示&#10;＋局部修改模板" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE7F3;strokeColor=#DB2777;strokeWidth=2;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1630" y="850" width="145" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-tgate" value="T线用户与完整性 Gate&#10;新增视觉判断已单独确认？&#10;尺寸、母版、主视觉完整且无占位符？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FCE7F3;strokeColor=#DB2777;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1425" y="855" width="170" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-predict" value="C线执行前提议&#10;说明抽样页、提示词版本&#10;偏差风险与必须保留项" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE4E6;strokeColor=#E11D48;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="860" width="205" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-gpt-image" value="生图执行&#10;仅执行本次已明确授权的一张视觉样张" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE4E6;strokeColor=#E11D48;strokeWidth=2;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="860" width="205" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-confirm" value="用户确认本次视觉样张？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFEDD5;strokeColor=#EA580C;strokeWidth=2;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="855" width="165" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-delivery" value="是&#10;本次样张确认&#10;允许约定范围内的后续处理&#10;当前动作结束并停止" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#16A34A;strokeWidth=2;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="850" width="195" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-diagnose" value="否 / 需要修改&#10;失败分类：内容、结构、审美、文字&#10;素材、继承、范围、模型边界" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#F43F5E;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="680" y="1015" width="220" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-revision" value="局部修改合同&#10;keep_items / change_only_items&#10;forbidden_changes / minimal prompt" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#F43F5E;strokeWidth=2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="955" y="1015" width="220" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-return" value="缺陷属于哪一层？" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=2;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1225" y="1015" width="165" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-manifest" value="产物与交接方案用户 Gate（无 Manifest）&#10;写入前先说明：产物、路径、是否修改旧文件、下游所需、非交付记录&#10;用户确认后才写；不自动追加上游文件" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;dashed=1;fontSize=13;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="500" width="350" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-alg" value="Algorithm Lite｜按需调用、仅提供证据&#10;ALG-S01 SRT 索引&#10;ALG-A02 文字预算 / A01 骨架&#10;ALG-A03 页面复杂度&#10;ALG-B01 / C01 当前为人工规则清单" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#475569;strokeWidth=2;dashed=1;fontSize=13;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="670" width="350" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-todo" value="硬性禁止&#10;不使用哈希方案｜不自动追加上游文件&#10;不把建议当确认｜不代替用户冻结设计方向" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7ED;strokeColor=#F97316;strokeWidth=2;fontSize=13;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1010" width="540" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#475569;" edge="1" parent="1" source="fl-start" target="fl-recognize">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#475569;" edge="1" parent="1" source="fl-recognize" target="fl-layout-confirm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#2563EB;" edge="1" parent="1" source="fl-smerge" target="fl-s08">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e4" value="S01–S06" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#2563EB;fontStyle=1;" edge="1" parent="1" source="fl-sroute" target="fl-nona">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e5" value="逐项确认后" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#D97706;fontStyle=1;" edge="1" parent="1" source="fl-s08" target="fl-sroute">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e6" value="S07" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#16A34A;fontStyle=1;" edge="1" parent="1" source="fl-sroute" target="fl-s07">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#16A34A;" edge="1" parent="1" source="fl-s07" target="fl-abound">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#16A34A;" edge="1" parent="1" source="fl-abound" target="fl-atype">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#16A34A;" edge="1" parent="1" source="fl-atype" target="fl-agate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e10" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#D97706;fontStyle=1;" edge="1" parent="1" source="fl-agate" target="fl-userclarify">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e11" value="确认后" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#D97706;" edge="1" parent="1" source="fl-userclarify" target="fl-atype">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1260" y="270" />
+              <mxPoint x="1505" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fl-e12" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#16A34A;fontStyle=1;" edge="1" parent="1" source="fl-agate" target="fl-aoutput">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#059669;" edge="1" parent="1" source="fl-aoutput" target="fl-a-confirm">
+          <mxGeometry relative="1" as="geometry">
+            </mxGeometry>
+        </mxCell>
+        <mxCell id="fl-e14" value="局部补卡" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#D97706;" edge="1" parent="1" source="fl-areview" target="fl-localcard">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e15" value="复审" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#D97706;" edge="1" parent="1" source="fl-localcard" target="fl-areview">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1275" y="625" />
+              <mxPoint x="1510" y="625" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fl-e16" value="退回 A线" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#DC2626;" edge="1" parent="1" source="fl-areview" target="fl-abound">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1510" y="465" />
+              <mxPoint x="1250" y="465" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fl-e17" value="通过" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#9333EA;fontStyle=1;" edge="1" parent="1" source="fl-areview" target="fl-bline">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#9333EA;" edge="1" parent="1" source="fl-bline" target="fl-bgate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e19" value="否：退回 A线" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#DC2626;" edge="1" parent="1" source="fl-bgate" target="fl-abound">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1375" y="725" />
+              <mxPoint x="1120" y="725" />
+              <mxPoint x="1120" y="185" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fl-e20" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#9333EA;fontStyle=1;" edge="1" parent="1" source="fl-bgate" target="fl-select">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#DB2777;" edge="1" parent="1" source="fl-select" target="fl-tline">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#DB2777;" edge="1" parent="1" source="fl-tline" target="fl-tgate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e23" value="否：退回 B线" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#DC2626;" edge="1" parent="1" source="fl-tgate" target="fl-bline">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1510" y="820" />
+              <mxPoint x="1700" y="820" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fl-e24" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#E11D48;fontStyle=1;" edge="1" parent="1" source="fl-tgate" target="fl-predict">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#E11D48;" edge="1" parent="1" source="fl-predict" target="fl-c-pregen-confirm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#E11D48;" edge="1" parent="1" source="fl-gpt-image" target="fl-confirm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e27" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#16A34A;fontStyle=1;" edge="1" parent="1" source="fl-confirm" target="fl-delivery">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e28" value="否 / 修改" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#F43F5E;fontStyle=1;" edge="1" parent="1" source="fl-confirm" target="fl-diagnose">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#F43F5E;" edge="1" parent="1" source="fl-diagnose" target="fl-revision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#F43F5E;" edge="1" parent="1" source="fl-revision" target="fl-return">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e31" value="局部修复：回 C线" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#E11D48;" edge="1" parent="1" source="fl-return" target="fl-predict">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1305" y="985" />
+              <mxPoint x="1260" y="985" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fl-e32" value="策略缺陷：回 B线" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#9333EA;" edge="1" parent="1" source="fl-return" target="fl-bline">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1410" y="1065" />
+              <mxPoint x="1790" y="1065" />
+              <mxPoint x="1790" y="555" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fl-e33" value="含义/授权冲突：回 A线" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#16A34A;" edge="1" parent="1" source="fl-return" target="fl-abound">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1305" y="1145" />
+              <mxPoint x="1100" y="1145" />
+              <mxPoint x="1100" y="185" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fl-e34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=open;strokeColor=#059669;" edge="1" parent="1" source="fl-manifest" target="fl-recognize">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="460" />
+              <mxPoint x="305" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fl-e35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=open;strokeColor=#475569;" edge="1" parent="1" source="fl-alg" target="fl-smerge">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="415" y="740" />
+              <mxPoint x="545" y="740" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fl-e36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=open;strokeColor=#475569;" edge="1" parent="1" source="fl-alg" target="fl-atype">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="415" y="760" />
+              <mxPoint x="1505" y="760" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fl-e37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=open;strokeColor=#475569;" edge="1" parent="1" source="fl-alg" target="fl-bgate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;strokeWidth=2;endArrow=open;strokeColor=#475569;" edge="1" parent="1" source="fl-alg" target="fl-diagnose">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-layout-confirm" value="版式分类用户 Gate&#10;固定外层母版 / 母版预览 / 内层排版参考&#10;内容素材 / 失败诊断 / 无关拒绝&#10;一次只确认一个类别；当前类别未确认不继续&#10;PSD 不可用时单独说明并询问，不静默退化" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="210" y="255" width="200" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-a-confirm" value="A线方案用户 Gate&#10;逐项确认；一次一个问题&#10;全部确认后才冻结" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1610" y="440" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-c-pregen-confirm" value="C线生图前用户 Gate&#10;抽样页、提示词版本、每次生图分别确认&#10;确认提示词不等于授权生图" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFEDD5;strokeColor=#EA580C;strokeWidth=2;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="725" width="205" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e2b" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#475569;" edge="1" parent="1" source="fl-layout-confirm" target="fl-smerge" value="逐类确认后">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e13b" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#475569;" edge="1" parent="1" source="fl-a-confirm" target="fl-areview" value="逐项确认后">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fl-e25b" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeWidth=2;endArrow=block;endFill=1;strokeColor=#475569;" edge="1" parent="1" source="fl-c-pregen-confirm" target="fl-gpt-image" value="分别确认后">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

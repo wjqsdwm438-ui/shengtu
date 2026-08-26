@@ -16,5 +16,7 @@ Use this file to record the course series design system. It borrows only lightwe
 ## Priority
 User current explicit request > confirmed project design system > current page teaching function > reference image inheritance fields > platform default aesthetics.
 
+The model may compare options and recommend one, but the user makes the final decision on layout, visual direction, reference inheritance, text policy, prompt direction, and image-generation choice. A recommendation is never an automatic freeze. Ask only one decision question at a time.
+
 ## Conflict Rule
 When a reference image conflicts with the series design system, do not fully inherit the reference image. State which series items stay frozen and which reference items may migrate.

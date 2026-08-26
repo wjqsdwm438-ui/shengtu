@@ -26,4 +26,10 @@ The two schemes must differ in at least one of: structure, material policy, comp
 Return to A-line when frozen items are missing, reference inheritance is unclear, text budget Gate is unresolved, material preservation conflicts with AI redraw, or ALG-B01 says a candidate cannot preserve the A-line basis.
 
 ## Handoff To T-Line
-Only candidates marked `recommend_to_T_line: yes` enter T-line. B-line does not write platform prompts.
+B-line may compare the candidates and state a recommendation, but scoring, risk, or a recommendation never selects for the user. Only the candidate explicitly selected by the user enters T-line. A reference-locked single candidate also requires explicit user confirmation. B-line does not write platform prompts.
+
+## Artifact Proposal And Stop
+Before writing a formal B-line artifact, state the proposed artifact, target file, whether an existing file changes, what T-line receives, and which analysis or validation records stay outside the handoff. Then ask only: `是否按上述产物与交接方案执行？` One authorization covers one artifact. Write it, stop, and never append B/T content to an upstream file by implication.
+
+## Absolute Hash Ban
+Do not calculate, store, transmit, recommend, or normalize hashes, digests, or fingerprints. If an input requests one, stop and ask only whether to use a non-hash list instead. The list uses reference ID, real path, file name, dimensions, template version, reference role, and user confirmation.

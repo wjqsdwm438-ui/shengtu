@@ -22,10 +22,17 @@ description: V2.7 Stage B-line production handoff for course visuals. Use after 
 - 两方案差异仍不真实时，读取一个直接匹配的成功或失败示例。
 
 ### 快速确认
-先确认冻结项完整性、四 Gate 结果、两方案的真实差异维度和首选候选。以上信息足够时停止读取；缺失字段直接退回 A线，不通过读取更多预设猜测。
+先确认冻结项完整性、四 Gate 结果、两方案的真实差异维度和用户已确认的候选。以上信息足够时停止读取；缺失字段直接退回 A线，不通过读取更多预设猜测。
 
 ### 停止规则
-B线卡或退回报告完成后停止，不自动进入 T线，也不为“备用”目的提前读取提示词规则。
+B线卡或退回报告完成后立即停止；一次授权只覆盖当前一个产物，不自动进入 T线，也不为“备用”目的提前读取提示词规则。
+
+## 本阶段的追问与写入纪律
+- 标准双方案只做差异比较并可给出模型建议，不得依据评分、风险或建议替用户选定首选；一次只询问用户是否选择当前某一个候选，得到回答前不得冻结或交给 T线。
+- 固定母版单方案也必须有用户对该方案的明确确认；“只有一个候选”不等于用户已经选择。
+- 信息不足时先读取本阶段可用的 A线卡、A审结果、已确认版式和参考材料；本地材料仍不能消除的信息差，才按依赖顺序一次追问一个问题。不得把两个决策写进同一问句或相邻上下段等待一次回答。
+- 写正式 B线卡或退回报告前，先说明本线准备生成什么、写到哪个文件、是否修改已有文件、T线需要接收什么，以及哪些分析或验证记录不属于正式交付；随后只问：`是否按上述产物与交接方案执行？`
+- 未获这一次明确授权不得写入。用户要求调整时，一次只追问一个修改方向。不得把“输入交接文件”理解为继续向上游文件追加，也不得复制上游全文、验证日志或后续 T线内容。
 
 ## Responsibility
 B-line receives a passed A-line handoff and runs four gates and six checks. Standard tasks output `方案A_稳妥版` and `方案B_探索版`; an explicit fixed-master A16 task outputs one `方案A_参考锁定版`. It does not re-split source text, add course knowledge, overwrite frozen items, or write platform prompts.
@@ -47,13 +54,13 @@ A-line frozen handoff card and A-review pass/local补卡 completion. If A-review
 - Hard bans are 3-5 items only.
 - For `A16_既有母版套新内容型` with `production_mode: reference_locked`, use `candidate_policy: reference_locked_single_candidate`; do not create an exploration candidate.
 - Inventory the reference folder, select one primary layout reference and no more than two secondary references, explain rejected candidates, and obtain one user confirmation per reference set.
-- Carry real paths, exact visible text, template identity, layer manifest, and flattened-PNG fallback Gate. Do not replace them with descriptive summaries.
+- Carry a non-hash reference list containing reference ID, real path, file name, dimensions, template version, reference role, and user confirmation; also carry exact visible text, template identity, layer manifest, and flattened-PNG fallback Gate. Do not replace real paths with descriptive summaries.
 
 ## Output Contract
-Gate 未通过时直接输出退回依据，不读取生产卡模板。正式标准交接输出两个方案；正式参考锁定交接只输出一个 `方案A_参考锁定版`。所有正式交接必须给出唯一首选 T线候选。
+Gate 未通过时先按本阶段写入纪律提议退回产物，获确认后输出退回依据，不读取生产卡模板。标准任务先提出两个方案供比较，用户明确选择后，正式交接记录该用户选择；正式参考锁定交接只输出一个 `方案A_参考锁定版`，也必须记录用户明确确认。没有用户选择或确认时不得形成面向 T线的正式交接。
 
 ## Prohibitions
-Do not write GPT Image execution prompts or any historical-platform prompts. Do not bypass text Gate or reference inheritance. Do not erase A-line frozen items. Do not output pseudo-final prompts.
+Do not write GPT Image execution prompts or any historical-platform prompts. Do not bypass text Gate or reference inheritance. Do not erase A-line frozen items. Do not output pseudo-final prompts. 哈希不得作为正常候选、默认方案或备用方案，也不得计算、传递或用摘要/指纹变相替代；上游提出哈希时停止，只问是否改用非哈希方式。
 
 ## Failure / Return
 If frozen fields are missing, reference inheritance is vague, text Gate unresolved, or ALG-B01 says production cannot preserve the A-line basis, output B-line gate report and return to A-line. Do not output pseudo-final prompts.

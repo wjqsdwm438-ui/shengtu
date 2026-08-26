@@ -4,7 +4,7 @@
 状态: T线GPT Image中文提示词已就绪
 模式: GPT Image 中文单提示词
 候选方案ID: 方案A_稳妥版 / 方案B_探索版 / 方案A_参考锁定版
-选择理由:
+用户选择记录:
 GPT_Image中文合同:
   目标能力: GPT Image
   请求模型: gpt-image-2
@@ -20,10 +20,14 @@ GPT_Image中文合同:
   template_identity:
     template_id:
     template_version:
-    psd_hash:
-    preview_hash:
-    reference_set_hash:
-    layer_manifest_hash:
+  非哈希参考清单:
+    - 参考编号:
+      真实路径:
+      文件名:
+      尺寸:
+      模板版本:
+      参考角色:
+      用户确认结果:
   context_isolation:
     explicit_reference_paths_only: yes/no
     include_previous_conversation_images: no
@@ -43,6 +47,8 @@ GPT_Image中文合同:
     must_be_verbatim: yes/no
     deterministic_text_overlay_forbidden: yes/no
     maximum_local_text_revisions: 2
+  母版描述:
+  主视觉描述:
   中文执行提示词:
   中文负面约束:
   输出设置:
@@ -64,6 +70,12 @@ remotion_asset_handoff:
   coordinate_origin: top_left
   crop_to_content: forbidden
 ```
+
+## 交付前最小检查
+- `输出设置.尺寸` 必须是完整的具体值。
+- `母版描述` 与 `主视觉描述` 必须明确、完整，并与 `中文执行提示词` 一致。
+- 不得残留占位符、空句、截断句或未经用户确认的视觉方向。
+- 任一项不通过时停止，不得交给 C线补全。
 
 ## 背景规则
 - 完整课程视觉页：默认 `背景: opaque`。

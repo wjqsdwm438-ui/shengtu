@@ -15,10 +15,14 @@ reference_selection:
 template_identity:
   template_id:
   template_version:
-  psd_hash:
-  preview_hash:
-  reference_set_hash:
-  layer_manifest_hash:
+non_hash_reference_list:
+  - reference_id:
+    real_path:
+    file_name:
+    dimensions:
+    template_version:
+    reference_role:
+    user_confirmation: pending / confirmed
 template_layer_manifest:
   fixed_master:
   variable_content:
@@ -68,7 +72,7 @@ six_checks:
   post_text_fix_cost:
   failure_risk:
   feasibility_score:
-  recommend_to_T_line: yes/no
+  model_recommendation: yes/no
 方案A_参考锁定版:
   production_goal: 固定版式带字课程成品
   page_type: A16_既有母版套新内容型
@@ -102,7 +106,8 @@ six_checks:
   hard_bans:
   failure_risk:
   feasibility_score:
-  recommend_to_T_line: yes
+  model_recommendation: yes
+  user_confirmation: pending / confirmed
 方案B_探索版:
   production_goal:
   page_type:
@@ -126,8 +131,11 @@ six_checks:
   post_text_fix_cost:
   failure_risk:
   feasibility_score:
-  recommend_to_T_line: yes/no
-preferred_T_line_candidate:
-preferred_reason:
+  model_recommendation: yes/no
+user_selected_T_line_candidate:
+user_selection_confirmation: pending / confirmed
+model_recommendation_reason:
 remotion_asset_handoff_required: yes/no
 ```
+
+> 双方案中的 `model_recommendation` 只供用户比较，不产生自动选择。`user_selection_confirmation` 未确认时，本卡不得交给 T线；固定母版单方案同样需要 `user_confirmation: confirmed`。
