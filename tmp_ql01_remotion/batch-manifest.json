@@ -1,0 +1,562 @@
+{
+  "transparent": [
+    {
+      "page": "QL-02",
+      "filename": "企业全流程_QL-02_L01_收货场景_通道.png"
+    },
+    {
+      "page": "QL-02",
+      "filename": "企业全流程_QL-02_L02_定义文字_通道.png"
+    },
+    {
+      "page": "QL-02",
+      "filename": "企业全流程_QL-02_L03_核心边界_通道.png"
+    },
+    {
+      "page": "QL-02",
+      "filename": "企业全流程_QL-02_插图文字_通道合并版.png"
+    },
+    {
+      "page": "QL-03",
+      "filename": "企业全流程_QL-03_L01_五步作业链_通道.png"
+    },
+    {
+      "page": "QL-03",
+      "filename": "企业全流程_QL-03_L02_结果_通道.png"
+    },
+    {
+      "page": "QL-03",
+      "filename": "企业全流程_QL-03_插图文字_通道合并版.png"
+    },
+    {
+      "page": "QL-04",
+      "filename": "企业全流程_QL-04_L01_盲目采购_通道.png"
+    },
+    {
+      "page": "QL-04",
+      "filename": "企业全流程_QL-04_L02_物资积压_通道.png"
+    },
+    {
+      "page": "QL-04",
+      "filename": "企业全流程_QL-04_L03_物料短缺_通道.png"
+    },
+    {
+      "page": "QL-04",
+      "filename": "企业全流程_QL-04_L04_验收低效_通道.png"
+    },
+    {
+      "page": "QL-04",
+      "filename": "企业全流程_QL-04_插图文字_通道合并版.png"
+    },
+    {
+      "page": "QL-05",
+      "filename": "企业全流程_QL-05_L01_供应协同完整场景_通道.png"
+    },
+    {
+      "page": "QL-05",
+      "filename": "企业全流程_QL-05_L02_结果_通道.png"
+    },
+    {
+      "page": "QL-05",
+      "filename": "企业全流程_QL-05_插图文字_通道合并版.png"
+    },
+    {
+      "page": "QL-06",
+      "filename": "企业全流程_QL-06_L01_核心口诀图文_通道.png"
+    },
+    {
+      "page": "QL-06",
+      "filename": "企业全流程_QL-06_插图文字_通道合并版.png"
+    },
+    {
+      "page": "QL-07",
+      "filename": "企业全流程_QL-07_L01_企业内部说明_通道.png"
+    },
+    {
+      "page": "QL-07",
+      "filename": "企业全流程_QL-07_L02_原料仓出库_通道.png"
+    },
+    {
+      "page": "QL-07",
+      "filename": "企业全流程_QL-07_L03_搬运_通道.png"
+    },
+    {
+      "page": "QL-07",
+      "filename": "企业全流程_QL-07_L04_工序流转_通道.png"
+    },
+    {
+      "page": "QL-07",
+      "filename": "企业全流程_QL-07_L05_半成品暂存_通道.png"
+    },
+    {
+      "page": "QL-07",
+      "filename": "企业全流程_QL-07_L06_组装_通道.png"
+    },
+    {
+      "page": "QL-07",
+      "filename": "企业全流程_QL-07_L07_成品入库_通道.png"
+    },
+    {
+      "page": "QL-07",
+      "filename": "企业全流程_QL-07_L08_路线层_通道.png"
+    },
+    {
+      "page": "QL-07",
+      "filename": "企业全流程_QL-07_L09_底部定义_通道.png"
+    },
+    {
+      "page": "QL-07",
+      "filename": "企业全流程_QL-07_L10_价值结论_通道.png"
+    },
+    {
+      "page": "QL-07",
+      "filename": "企业全流程_QL-07_插图文字_通道合并版.png"
+    },
+    {
+      "page": "QL-08",
+      "filename": "企业全流程_QL-08_L01_库存原料按需出库_通道.png"
+    },
+    {
+      "page": "QL-08",
+      "filename": "企业全流程_QL-08_L02_车间智能转运_通道.png"
+    },
+    {
+      "page": "QL-08",
+      "filename": "企业全流程_QL-08_L03_各工序加工流转_通道.png"
+    },
+    {
+      "page": "QL-08",
+      "filename": "企业全流程_QL-08_L04_半成品临时仓储_通道.png"
+    },
+    {
+      "page": "QL-08",
+      "filename": "企业全流程_QL-08_L05_成品组装质检_通道.png"
+    },
+    {
+      "page": "QL-08",
+      "filename": "企业全流程_QL-08_L06_成品入库_通道.png"
+    },
+    {
+      "page": "QL-08",
+      "filename": "企业全流程_QL-08_插图文字_通道合并版.png"
+    },
+    {
+      "page": "QL-09",
+      "filename": "企业全流程_QL-09_L01_动线混乱_通道.png"
+    },
+    {
+      "page": "QL-09",
+      "filename": "企业全流程_QL-09_L02_物料堆积_通道.png"
+    },
+    {
+      "page": "QL-09",
+      "filename": "企业全流程_QL-09_L03_人工搬运低效_通道.png"
+    },
+    {
+      "page": "QL-09",
+      "filename": "企业全流程_QL-09_L04_工序衔接断层_通道.png"
+    },
+    {
+      "page": "QL-09",
+      "filename": "企业全流程_QL-09_L05_结果_通道.png"
+    },
+    {
+      "page": "QL-09",
+      "filename": "企业全流程_QL-09_插图文字_通道合并版.png"
+    },
+    {
+      "page": "QL-10",
+      "filename": "企业全流程_QL-10_L01_AGV搬运机器人_通道.png"
+    },
+    {
+      "page": "QL-10",
+      "filename": "企业全流程_QL-10_L02_智能动线规划_通道.png"
+    },
+    {
+      "page": "QL-10",
+      "filename": "企业全流程_QL-10_L03_数字化生产调度_通道.png"
+    },
+    {
+      "page": "QL-10",
+      "filename": "企业全流程_QL-10_L04_结果_通道.png"
+    },
+    {
+      "page": "QL-10",
+      "filename": "企业全流程_QL-10_插图文字_通道合并版.png"
+    },
+    {
+      "page": "QL-11",
+      "filename": "企业全流程_QL-11_L01_核心口诀图文_通道.png"
+    },
+    {
+      "page": "QL-11",
+      "filename": "企业全流程_QL-11_插图文字_通道合并版.png"
+    },
+    {
+      "page": "QL-12",
+      "filename": "企业全流程_QL-12_L01_业务场景_通道.png"
+    },
+    {
+      "page": "QL-12",
+      "filename": "企业全流程_QL-12_L02_定义文字_通道.png"
+    },
+    {
+      "page": "QL-12",
+      "filename": "企业全流程_QL-12_L03_核心价值_通道.png"
+    },
+    {
+      "page": "QL-12",
+      "filename": "企业全流程_QL-12_插图文字_通道合并版.png"
+    },
+    {
+      "page": "QL-13",
+      "filename": "企业全流程_QL-13_L01_接收客户订单_通道.png"
+    },
+    {
+      "page": "QL-13",
+      "filename": "企业全流程_QL-13_L02_成品拣货打包_通道.png"
+    },
+    {
+      "page": "QL-13",
+      "filename": "企业全流程_QL-13_L03_智能分拣出库_通道.png"
+    },
+    {
+      "page": "QL-13",
+      "filename": "企业全流程_QL-13_L04_干线运输或同城配送_通道.png"
+    },
+    {
+      "page": "QL-13",
+      "filename": "企业全流程_QL-13_L05_终端交付签收_通道.png"
+    },
+    {
+      "page": "QL-13",
+      "filename": "企业全流程_QL-13_L06_订单闭环_通道.png"
+    },
+    {
+      "page": "QL-13",
+      "filename": "企业全流程_QL-13_L07_客户体验结论_通道.png"
+    },
+    {
+      "page": "QL-13",
+      "filename": "企业全流程_QL-13_插图文字_通道合并版.png"
+    },
+    {
+      "page": "QL-14",
+      "filename": "企业全流程_QL-14_L01_人工分拣低效_通道.png"
+    },
+    {
+      "page": "QL-14",
+      "filename": "企业全流程_QL-14_L02_配送时效不稳_通道.png"
+    },
+    {
+      "page": "QL-14",
+      "filename": "企业全流程_QL-14_L03_订单轨迹不透明_通道.png"
+    },
+    {
+      "page": "QL-14",
+      "filename": "企业全流程_QL-14_L04_错发漏发_通道.png"
+    },
+    {
+      "page": "QL-14",
+      "filename": "企业全流程_QL-14_L05_结果_通道.png"
+    },
+    {
+      "page": "QL-14",
+      "filename": "企业全流程_QL-14_插图文字_通道合并版.png"
+    },
+    {
+      "page": "QL-15",
+      "filename": "企业全流程_QL-15_L01_TMS统一运输调度_通道.png"
+    },
+    {
+      "page": "QL-15",
+      "filename": "企业全流程_QL-15_L02_智能分拣设备_通道.png"
+    },
+    {
+      "page": "QL-15",
+      "filename": "企业全流程_QL-15_L03_AI路径规划_通道.png"
+    },
+    {
+      "page": "QL-15",
+      "filename": "企业全流程_QL-15_L04_可视化追踪_通道.png"
+    },
+    {
+      "page": "QL-15",
+      "filename": "企业全流程_QL-15_L05_结果_通道.png"
+    },
+    {
+      "page": "QL-15",
+      "filename": "企业全流程_QL-15_插图文字_通道合并版.png"
+    },
+    {
+      "page": "QL-16",
+      "filename": "企业全流程_QL-16_L01_上部口诀_通道.png"
+    },
+    {
+      "page": "QL-16",
+      "filename": "企业全流程_QL-16_L02_下部MG场景_通道.png"
+    },
+    {
+      "page": "QL-16",
+      "filename": "企业全流程_QL-16_L03_解释文字_通道.png"
+    },
+    {
+      "page": "QL-16",
+      "filename": "企业全流程_QL-16_插图文字_通道合并版.png"
+    },
+    {
+      "page": "QL-17",
+      "filename": "企业全流程_QL-17_L01_回收业务场景_通道.png"
+    },
+    {
+      "page": "QL-17",
+      "filename": "企业全流程_QL-17_L02_定义文字_通道.png"
+    },
+    {
+      "page": "QL-17",
+      "filename": "企业全流程_QL-17_L03_五类对象组_通道.png"
+    },
+    {
+      "page": "QL-17",
+      "filename": "企业全流程_QL-17_L04_职责结论_通道.png"
+    },
+    {
+      "page": "QL-17",
+      "filename": "企业全流程_QL-17_插图文字_通道合并版.png"
+    },
+    {
+      "page": "QL-18",
+      "filename": "企业全流程_QL-18_L01_三步处置主线_通道.png"
+    },
+    {
+      "page": "QL-18",
+      "filename": "企业全流程_QL-18_L02_完好商品重新入库_通道.png"
+    },
+    {
+      "page": "QL-18",
+      "filename": "企业全流程_QL-18_L03_瑕疵商品维修复用_通道.png"
+    },
+    {
+      "page": "QL-18",
+      "filename": "企业全流程_QL-18_L04_破损商品合规报废_通道.png"
+    },
+    {
+      "page": "QL-18",
+      "filename": "企业全流程_QL-18_L05_生产废料回收再利用_通道.png"
+    },
+    {
+      "page": "QL-18",
+      "filename": "企业全流程_QL-18_L06_关键动作_通道.png"
+    },
+    {
+      "page": "QL-18",
+      "filename": "企业全流程_QL-18_插图文字_通道合并版.png"
+    },
+    {
+      "page": "QL-19",
+      "filename": "企业全流程_QL-19_L01_流程混乱_通道.png"
+    },
+    {
+      "page": "QL-19",
+      "filename": "企业全流程_QL-19_L02_处理缓慢_通道.png"
+    },
+    {
+      "page": "QL-19",
+      "filename": "企业全流程_QL-19_L03_资源浪费_通道.png"
+    },
+    {
+      "page": "QL-19",
+      "filename": "企业全流程_QL-19_L04_经营后果_通道.png"
+    },
+    {
+      "page": "QL-19",
+      "filename": "企业全流程_QL-19_L05_共同根因_通道.png"
+    },
+    {
+      "page": "QL-19",
+      "filename": "企业全流程_QL-19_插图文字_通道合并版.png"
+    },
+    {
+      "page": "QL-20",
+      "filename": "企业全流程_QL-20_L01_平台底座_通道.png"
+    },
+    {
+      "page": "QL-20",
+      "filename": "企业全流程_QL-20_L02_全程溯源_通道.png"
+    },
+    {
+      "page": "QL-20",
+      "filename": "企业全流程_QL-20_L03_智能质检_通道.png"
+    },
+    {
+      "page": "QL-20",
+      "filename": "企业全流程_QL-20_L04_自动回仓_通道.png"
+    },
+    {
+      "page": "QL-20",
+      "filename": "企业全流程_QL-20_L05_结果_通道.png"
+    },
+    {
+      "page": "QL-20",
+      "filename": "企业全流程_QL-20_插图文字_通道合并版.png"
+    },
+    {
+      "page": "QL-21",
+      "filename": "企业全流程_QL-21_L01_主口诀文字_通道.png"
+    },
+    {
+      "page": "QL-21",
+      "filename": "企业全流程_QL-21_L02_三行处置文字_通道.png"
+    },
+    {
+      "page": "QL-21",
+      "filename": "企业全流程_QL-21_L03_右侧MG场景_通道.png"
+    },
+    {
+      "page": "QL-21",
+      "filename": "企业全流程_QL-21_插图文字_通道合并版.png"
+    },
+    {
+      "page": "QL-22",
+      "filename": "企业全流程_QL-22_L01_供应物流_通道.png"
+    },
+    {
+      "page": "QL-22",
+      "filename": "企业全流程_QL-22_L02_生产物流_通道.png"
+    },
+    {
+      "page": "QL-22",
+      "filename": "企业全流程_QL-22_L03_销售物流_通道.png"
+    },
+    {
+      "page": "QL-22",
+      "filename": "企业全流程_QL-22_L04_回收物流_通道.png"
+    },
+    {
+      "page": "QL-22",
+      "filename": "企业全流程_QL-22_L05_判断方法_通道.png"
+    },
+    {
+      "page": "QL-22",
+      "filename": "企业全流程_QL-22_插图文字_通道合并版.png"
+    },
+    {
+      "page": "QL-23",
+      "filename": "企业全流程_QL-23_L01_供应物流分工文字_通道.png"
+    },
+    {
+      "page": "QL-23",
+      "filename": "企业全流程_QL-23_L02_生产物流分工文字_通道.png"
+    },
+    {
+      "page": "QL-23",
+      "filename": "企业全流程_QL-23_L03_销售物流分工文字_通道.png"
+    },
+    {
+      "page": "QL-23",
+      "filename": "企业全流程_QL-23_L04_回收物流分工文字_通道.png"
+    },
+    {
+      "page": "QL-23",
+      "filename": "企业全流程_QL-23_L05_数字场域场景_通道.png"
+    },
+    {
+      "page": "QL-23",
+      "filename": "企业全流程_QL-23_L06_升级结论_通道.png"
+    },
+    {
+      "page": "QL-23",
+      "filename": "企业全流程_QL-23_插图文字_通道合并版.png"
+    }
+  ],
+  "checkerboards": [
+    {
+      "page": "QL-02",
+      "filename": "企业全流程_QL-02_羽化棋盘审核图.png"
+    },
+    {
+      "page": "QL-03",
+      "filename": "企业全流程_QL-03_羽化棋盘审核图.png"
+    },
+    {
+      "page": "QL-04",
+      "filename": "企业全流程_QL-04_羽化棋盘审核图.png"
+    },
+    {
+      "page": "QL-05",
+      "filename": "企业全流程_QL-05_羽化棋盘审核图.png"
+    },
+    {
+      "page": "QL-06",
+      "filename": "企业全流程_QL-06_羽化棋盘审核图.png"
+    },
+    {
+      "page": "QL-07",
+      "filename": "企业全流程_QL-07_羽化棋盘审核图.png"
+    },
+    {
+      "page": "QL-08",
+      "filename": "企业全流程_QL-08_羽化棋盘审核图.png"
+    },
+    {
+      "page": "QL-09",
+      "filename": "企业全流程_QL-09_羽化棋盘审核图.png"
+    },
+    {
+      "page": "QL-10",
+      "filename": "企业全流程_QL-10_羽化棋盘审核图.png"
+    },
+    {
+      "page": "QL-11",
+      "filename": "企业全流程_QL-11_羽化棋盘审核图.png"
+    },
+    {
+      "page": "QL-12",
+      "filename": "企业全流程_QL-12_羽化棋盘审核图.png"
+    },
+    {
+      "page": "QL-13",
+      "filename": "企业全流程_QL-13_羽化棋盘审核图.png"
+    },
+    {
+      "page": "QL-14",
+      "filename": "企业全流程_QL-14_羽化棋盘审核图.png"
+    },
+    {
+      "page": "QL-15",
+      "filename": "企业全流程_QL-15_羽化棋盘审核图.png"
+    },
+    {
+      "page": "QL-16",
+      "filename": "企业全流程_QL-16_羽化棋盘审核图.png"
+    },
+    {
+      "page": "QL-17",
+      "filename": "企业全流程_QL-17_羽化棋盘审核图.png"
+    },
+    {
+      "page": "QL-18",
+      "filename": "企业全流程_QL-18_羽化棋盘审核图.png"
+    },
+    {
+      "page": "QL-19",
+      "filename": "企业全流程_QL-19_羽化棋盘审核图.png"
+    },
+    {
+      "page": "QL-20",
+      "filename": "企业全流程_QL-20_羽化棋盘审核图.png"
+    },
+    {
+      "page": "QL-21",
+      "filename": "企业全流程_QL-21_羽化棋盘审核图.png"
+    },
+    {
+      "page": "QL-22",
+      "filename": "企业全流程_QL-22_羽化棋盘审核图.png"
+    },
+    {
+      "page": "QL-23",
+      "filename": "企业全流程_QL-23_羽化棋盘审核图.png"
+    }
+  ]
+}

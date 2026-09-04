@@ -1,0 +1,199 @@
+# 《企业内部全流程物流体系》B线逐页生产交接
+
+## 1. 当前状态
+
+- `status`：B线逐页确认中。
+- `source_A_line_card`：`E:\shengtu\skills-v2.7-development-snapshot-20260814\企业全流程_A线页面方向预判.md`。
+- 页面范围：QL-01～QL-23；不合并、不拆分、不重排。
+- `candidate_policy`：`reference_locked_single_candidate`。
+- 唯一候选：`方案A_参考锁定版`。
+- 当前已处理：QL-01～QL-02。
+- T线交接状态：未开放；须待23页逐页确认完成。
+- 阶段边界：不进入T/C线，不写提示词，不生成图像。
+
+## 2. QL-01｜企业四大物流闭环
+
+```yaml
+status: B线单页确认完成
+source_segment_id: EF-02
+page_id: QL-01
+candidate_policy: reference_locked_single_candidate
+page_user_confirmation: confirmed_2026-08-27_by_direct_execution
+template_identity:
+  template_id: WL-L1
+  template_version: WL-L1-EnterpriseFlow-v2.0
+  layered_master_available: yes
+non_hash_reference_list:
+  - reference_id: QL01_PRIMARY
+    real_path: E:\shengtu\智能物流\样片版式\版式1.psd
+    file_name: 版式1.psd
+    dimensions: 1920x1080
+    template_version: WL-L1-EnterpriseFlow-v2.0
+    reference_role: 固定外层母版
+    user_confirmation: confirmed
+  - reference_id: QL01_LOCAL
+    real_path: E:\shengtu\智能物流\生图输出\参考\KP-22_方案A_一体化物流全景_v02.png
+    file_name: KP-22_方案A_一体化物流全景_v02.png
+    dimensions: 1920x1080
+    template_version: local_layout_reference
+    reference_role: 只继承单一企业物流全景的空间组织与图文比例
+    user_confirmation: confirmed
+context_isolation:
+  explicit_reference_paths_only: yes
+  include_previous_conversation_images: no
+  include_failed_images_automatically: no
+  include_entire_reference_folder: no
+方案A_参考锁定版:
+  production_goal: 固定版式带字课程成品
+  page_type: A16_既有母版套新内容型
+  production_mode: reference_locked
+  output_target: full_page_with_text
+  primary_layout_reference: E:\shengtu\智能物流\样片版式\版式1.psd
+  secondary_references:
+    - E:\shengtu\智能物流\生图输出\参考\KP-22_方案A_一体化物流全景_v02.png
+  reference_attachment_required_in_C: yes
+  text_only_execution_forbidden: yes
+  internal_knowledge_display: 单一企业全景中的四个业务区域，不绘制闭环关系图
+  composition:
+    main_scene: 横向企业物流全景，连续呈现供应接收区、厂内生产区、销售出库区和回收处置区
+    relation_method: 四个区域共处同一企业场景，以空间位置和贴近场景的文字锚点完成识别，不用圆环、复杂箭头或中央关系图
+    center_region: 企业生产与仓配场景本身，不放闭环图形
+    conclusion_region: 主体框底部设置一条简洁总结带，承载共同经营结果
+  first_visual_focus: 单一企业全景及其中四个可辨识业务区域
+  second_visual_focus: 四个区域对应的冻结正文和底部共同结果
+  must_show_text_verbatim:
+    title: 企业四大物流闭环
+    body:
+      - 供应物流：源头进货，保障生产
+      - 生产物流：内部流转，提质降本
+      - 销售物流：终端出货，链接市场
+      - 回收物流：逆向闭环，盘活资源
+      - 四者环环相扣，共同影响生产成本、交付效率与资源利用率
+    extra_text_forbidden: yes
+  text_hierarchy:
+    title: 顶部固定标题区，标题不计入正文预算
+    body: 四条业务说明分别靠近对应场景
+    conclusion: 最后一条正文独立置于底部总结带
+    labels: 不另造流程节点或关系标签
+  material_policy: 使用无品牌的供应收货、厂内生产、成品出库和回收处置物流场景；参考图只提供空间组织，不提供课程事实
+  reference_inherit: 固定标题、外框、浅蓝课程身份、安全边距，以及局部样张的全景空间组织和图文比例
+  reference_forbid_inherit: 参考页原文字、原知识、原产品组合、圆形闭环、复杂路径、教师窗、字幕、播放器与生成瑕疵
+  difference_from_other_scheme: 固定母版单候选任务，不设置探索候选
+  hard_bans:
+    - 禁止在画面中央设置闭环关系图
+    - 禁止圆环、环形箭头和圆形节点系统
+    - 禁止复杂折线路径或强行解释四类物流的先后顺序
+    - 禁止四张等大卡片及参考图原内容照搬
+  failure_risk: 四个业务区域被再次画成关系图，或场景分区不清导致文字失去对应对象
+  risk_control: 坚持一个横向企业全景，用场景差异和就近文字锚点区分四类物流；只在底部给出共同结果
+  feasibility_score: 0.94
+  model_recommendation: yes
+  user_confirmation: confirmed
+four_gates:
+  aesthetic_tone: 通过；固定母版不变，主体为清爽的单一企业物流全景
+  learning_task: 通过；完整识别四类物流及共同经营影响，不强加复杂关系模型
+  student_load: 通过；标题、四条业务说明和一条总结分层承载，正文82字不堆叠
+  media_division: 通过；画面承担四类业务对象识别，口播承担相互作用的解释
+six_checks:
+  page_type_stable: 通过；保持A16固定母版页
+  aesthetic_clear: 通过；本课浅蓝物流课程身份明确
+  information_producible: 通过；单场景四区域可直接生产
+  single_main_visual: 通过；唯一主视觉为企业物流全景
+  text_layer_post_editable: 通过；标题、业务说明和总结带分层明确
+  generation_stability: 通过；取消圆环和复杂箭头后，结构歧义与生成风险降低
+T_line_entry:
+  allowed: no
+  reason: 须等待QL-01～QL-23全部逐页确认
+```
+
+## 3. QL-02｜供应物流管什么
+
+```yaml
+status: B线单页确认完成
+source_segment_id: EF-03
+page_id: QL-02
+candidate_policy: reference_locked_single_candidate
+page_user_confirmation: confirmed_2026-08-27
+template_identity:
+  template_id: WL-L1
+  template_version: WL-L1-EnterpriseFlow-v2.0
+  layered_master_available: yes
+non_hash_reference_list:
+  - reference_id: QL02_PRIMARY
+    real_path: E:\shengtu\智能物流\样片版式\版式1.psd
+    file_name: 版式1.psd
+    dimensions: 1920x1080
+    template_version: WL-L1-EnterpriseFlow-v2.0
+    reference_role: 固定外层母版
+    user_confirmation: confirmed
+  - reference_id: QL02_LOCAL
+    real_path: E:\shengtu\智能物流\生图输出\参考\KP-03_方案A_左图右文最终版_v04.png
+    file_name: KP-03_方案A_左图右文最终版_v04.png
+    dimensions: 1920x1080
+    template_version: local_layout_reference
+    reference_role: 只继承左场景右正文的图文比例和结论强调关系
+    user_confirmation: confirmed
+context_isolation:
+  explicit_reference_paths_only: yes
+  include_previous_conversation_images: no
+  include_failed_images_automatically: no
+  include_entire_reference_folder: no
+方案A_参考锁定版:
+  production_goal: 固定版式带字课程成品
+  page_type: A16_既有母版套新内容型
+  production_mode: reference_locked
+  output_target: full_page_with_text
+  primary_layout_reference: E:\shengtu\智能物流\样片版式\版式1.psd
+  secondary_references:
+    - E:\shengtu\智能物流\生图输出\参考\KP-03_方案A_左图右文最终版_v04.png
+  reference_attachment_required_in_C: yes
+  text_only_execution_forbidden: yes
+  internal_knowledge_display: 左侧生产前端收货场景，右侧定义与核心边界
+  composition:
+    left_scene: 供应商车辆在企业收货区卸载原材料、零部件和辅助物资
+    right_body: 完整承载供应物流对象及作业范围
+    right_conclusion: 独立蓝色结论带突出供应物流起止边界
+    relation_method: 本页只解释业务范围，不把采购、运输、验收、入库和保管绘制成流程
+  first_visual_focus: 企业生产前端的供应收货场景
+  second_visual_focus: 供应物流定义及核心边界
+  must_show_text_verbatim:
+    title: 供应物流管什么
+    body:
+      - 服务生产前端，负责原材料、零部件、辅助物资和设备耗材的采购、运输、验收、入库与仓储保管。
+      - 核心边界：从物资需求形成，到合格物资进入库存。
+    extra_text_forbidden: yes
+  text_hierarchy:
+    title: 顶部固定标题区，标题不计入正文预算
+    body: 右侧主要正文区
+    conclusion: 右下方独立蓝色结论带
+    labels: 左侧场景不增加对象标签、流程节点或说明文字
+  material_policy: 使用无品牌的供应车辆、企业收货月台和少量代表性工业物资；不展示真实企业、订单或数据
+  reference_inherit: 固定标题、外框、浅蓝课程身份、安全边距，以及局部样张的左图右文比例和结论强调方式
+  reference_forbid_inherit: 参考页原文字、米面粮油等原产品、原课程事实、黄色结论条、教师窗、字幕、播放器和生成瑕疵
+  difference_from_other_scheme: 固定母版单候选任务，不设置探索候选
+  hard_bans:
+    - 禁止把五项作业绘制成流程图
+    - 禁止堆满原材料、零部件、辅助物资和设备耗材
+    - 禁止增加价值说明、对象标签或流程节点
+    - 禁止照搬参考图原产品、原文字和黄色强调色
+  failure_risk: 左侧对象堆砌导致视觉杂乱，或右侧把定义拆成过多标签
+  risk_control: 左侧只使用少量代表性工业物资和一个收货动作；右侧严格保留两段冻结正文
+  feasibility_score: 0.96
+  model_recommendation: yes
+  user_confirmation: confirmed
+four_gates:
+  aesthetic_tone: 通过；固定母版与左图右文秩序保持稳定
+  learning_task: 通过；只回答供应物流的对象、职责和边界
+  student_load: 通过；67字正文分为主体说明和核心边界，不新增标签
+  media_division: 通过；画面承担生产前端收货场景识别，口播解释具体作业内容
+six_checks:
+  page_type_stable: 通过；保持A16固定母版页
+  aesthetic_clear: 通过；浅蓝物流课程身份明确
+  information_producible: 通过；一个收货场景加两层文字可直接生产
+  single_main_visual: 通过；唯一主视觉为生产前端收货场景
+  text_layer_post_editable: 通过；标题、主体说明和核心边界分层明确
+  generation_stability: 通过；对象数量和文字层级均已限制
+T_line_entry:
+  allowed: no
+  reason: 须等待QL-01～QL-23全部逐页确认
+```
