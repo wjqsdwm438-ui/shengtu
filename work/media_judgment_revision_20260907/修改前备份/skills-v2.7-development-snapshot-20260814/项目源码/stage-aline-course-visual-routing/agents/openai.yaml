@@ -1,0 +1,6 @@
+interface:
+  display_name: "V2.7 A线输入分析与明确分页"
+  short_description: "整理源输入，做全文教学分析、必要承载核验、明确分页与内部复核。"
+  default_prompt: "使用项目 V2.7 A线直接整理源输入与 Non-A 路由，保留原文和有效范围；从全文目标、关系、主次依赖及实际承载证据比较合理拆合方案，收敛分页后建立页面 ID，并复核整套页界、邻接合并、替代方案和正文覆盖。在现有 A 分析产物与共享简报保留证据及映射；不沿用旧 confirmed 推导页界，不新增独立 S 或固定 A审 Gate，不提前做精细视觉方案，也不把分页或设计判断交给用户补做。"
+policy:
+  allow_implicit_invocation: false

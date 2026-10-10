@@ -1,0 +1,8 @@
+{
+  "check": "B_line_qualitative_layout_regions",
+  "pass": true,
+  "missing_fields": [],
+  "empty_background_risk": false,
+  "suggestion": "pass",
+  "note": "This checks light_region_summary only; it does not restore editable_layout_spec."
+}

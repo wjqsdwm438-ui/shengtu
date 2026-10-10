@@ -1,3 +1,16 @@
-﻿# Layout Decoupling Rules
+# Teaching-Relation And Layout Decoupling
 
-Comparison is not automatically left/right columns. Three categories are not automatically three equal cards. Four steps are not automatically a four-grid. Parallel items are not automatically a uniform matrix. Closed loop is not a complex flowchart. Summary is not a bottom banner. Case is not a travel poster. Card is not a low-quality PPT module.
+A 线必须把内容关系写成教学语义，不能把布局当作关系本身。
+
+- 比较不等于左右两栏。
+- 三个类别不等于三张等大卡片。
+- 四个步骤不等于四宫格。
+- 并列项不等于均匀矩阵。
+- 闭环不等于复杂流程图。
+- 案例不等于旅游海报或一张氛围图。
+
+正确写法包含关系参与者、方向和学习者需要完成的认知动作。例如：“学习者需要对照标准化前后的两种运输状态，识别包装规格统一对换装效率的影响。”A 据此判断是否必须同屏、能否跨页、必要载体是否能承载必显内容，并把获准模板实际空间与素材限制纳入分页比较。左右/上下、容器、尺寸和具体构图仍由 B 决定。
+
+并现、页内先后状态和跨页承接是不同选择；必呈不是全时同屏，页、状态与镜头不是一一对应。总分关系允许有作用的视觉预览/回显，由A比较认知连续性、观察顺序和真实承载，而非机械认为回显就是重复或一换观察对象就换页。必要图解与观察路径必须纳入承载，不以字号测量替代；具体镜头和动态实现仍留B，未实测不写已验证。
+
+“不冻结布局”不等于“不做承载核验”。A 必须实际比较合理拆合/保留方案，从全文目标与主次依赖判断整套页界；不能沿用旧候选后等 B 才发现装不下，也不能让用户先选择页数来代替专业判断。

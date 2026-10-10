@@ -1,0 +1,126 @@
+---
+name: stage-bline-production-handoff
+description: V2.7 Stage B-line executable-design handoff for course visuals. Use after A-line/A-review passes to ground one main plan in real templates and generation evidence, organize pages into dynamic production batches, calibrate a representative page, and hand a frozen executable design to the C-line execution adapter.
+---
+
+# Stage B-Line Executable Design Handoff
+
+## 渐进式读取
+
+### 必读
+- 当前 `SKILL.md`、已通过的 A线页面简报及 A审结果。
+- 只有需要形成正式 B区时，读取 `templates/b_line_production_card.md`。
+
+### 按需读取路由
+- 一次只允许由当前唯一未决问题触发一个来源；读取后先执行快速确认，再决定是否扩展下一项。
+- 实现依据、分批、骨架继承、代表页或退回边界有歧义：读取 `references/production_handoff_rules.md` 的对应小节。
+- A区声明了参考图或固定母版：读取 `_shared/reference-image-inheritance-rules.md`；无参考图时不得为了寻找灵感而扩大读取。
+- 固定母版任务需要 Remotion 资产交接：读取 `_shared/remotion-asset-handoff-rules.md`，但不读取或生成 Remotion 代码。
+- 需要审美预设时，只定位 `_shared/page_preset_bank.md` 中与当前教学关系直接相关的条目；预设只能辅助表达，不是实现证据。
+- 只有用户或当前阶段明确要求 ALG-B01 证据时，读取对应 Algorithm Lite 规则。
+- 只有当前判断仍不清楚时，读取一个直接匹配的成功示例或反例；不得批量读取示例替代项目证据。
+
+### 快速确认
+先确认 S/A区和 A审完整、实现依据五项可填写、唯一主方案已收敛、批次四项依据成立、代表页及人工确认状态明确、骨架继承证明完整或明确不继承。若当前信息已足够，停止扩展读取；输入事实缺失则退回对应上游，不用更多预设猜测。
+
+### 停止规则
+B区、批次校准状态或退回报告完成后立即停止。一次授权只覆盖当前产物，不自动开始 C线生成；这是本阶段边界。
+
+## Responsibility
+B线回答“在现有资产与生成能力下怎样稳定实现”。它接收已通过 A审的教学语义，不重新切分原文，不改写事实，不重新定义教学关系。B线只形成一个 `main_execution_plan`，不得再创建稳妥版/探索版等多套候选，让下游或用户替 B线完成设计收敛。
+
+B线负责：
+- 查阅当前页实际可用的模板、参考素材、相关成功/失败案例及已知生成能力；
+- 记录实现依据及其边界，避免从空白外壳推导未经证明的复杂内构图；
+- 选择模板、内容容器、语义视觉载体、阅读顺序、参考图用途和一份主方案；
+- 根据实际生产机制动态组织批次，指定并校准代表页；
+- 对跨页局部骨架继承给出教学关系证明；
+- 把已确认方案追加到同一页面简报的 B区，交给 C线执行适配器。
+
+## Inputs
+必须具有：
+- S区的页面编号、原始课程序号、原文/时间码、事实与可用素材；
+- A区的教学目标、教学关系、必须呈现项、图像任务与禁止偏移项；
+- A审通过记录；
+- 当前实际可访问的模板与参考路径。路径不存在或角色不清时停止，不得凭文件名想象内容。
+
+## One Main Plan
+- 先核对并沿用匹配且已确认的设计节点产物：依次判断原样复用、仅换内容、必要局部调整，确实与 A语义不兼容才重新设计。只补未决实现项，不重新发散；成熟表达和必要组合探索都只服务这一份主方案。
+- 原路径、版本/日期、用途和确认范围可核对时沿用；新增主要参考、改变继承方式或冻结结构只确认受影响决定。若无法保留 A语义先退 A，不能先画后改。待批或禁用 AE 不进入输入。
+- 每页只输出一份主执行方案。B线必须在自身阶段完成方案收敛，不把同义改写或互斥候选交给 C线。
+- 主方案包括可核验的外层母版身份与描述、内容容器、语义视觉载体、完整主视觉描述、阅读顺序、参考映射、文字实现方式、视觉空间理由、必须保留项、允许变化项和硬性禁止项。
+- `visual_space_rationale` 用教学作用、信息关系、信息密度和可读性说明图像空间；禁止写固定图片占比或把比例区间当合规门槛。
+- 精确内框位置、对象大小、装饰、光影和次要物件只有在真实模板或已验证案例能够支持时才冻结；否则写入 `open_for_calibration`，由代表页校准。
+
+## Realization Evidence
+每页必须填写五项，缺一不得交给 C线：
+1. `asset_used`：实际资产或案例的真实路径/ID；
+2. `what_it_proves`：该证据直接证明的可实现能力；
+3. `what_it_does_not_prove`：明确不能由它推出的设计结论；
+4. `highest_risk`：当前最大实现风险；
+5. `representative_calibration_required`：是否需要代表页校准及理由。
+
+只有空白背景、标题框或内容容器时，证据只支持外壳、锚点或安全区域，不能支持复杂图表、精确图文比例或具体内构图。缺少直接证据时应减少冻结细节，或退回补充素材；不得通过新增机械规则伪造确定性。
+
+## Dynamic Batch Organization
+- 不按课程序号默认连续生产。原始课程序号必须保留，用于追溯和最终复原。
+- 不预设批次数量。B线根据全部待生产页面的实际特征形成一个或多个批次；必要时单页独立成批。
+- 同批页面必须在以下四方面都足够接近，并逐项给出证据：外层模板、教学关系、语义视觉载体、参考依赖/生成方式。
+- “同一章节”“同一课程”“看起来相似”“上一页效果好”均不能作为同批充分依据。
+- 每批指定一张 `representative_page`。代表页必须体现该批核心教学关系和典型信息密度，不得选择过度简单页或例外页。
+- 同批在同一个 C线对话连续执行，跨批隔离。`frozen_batch_core` 记录共同固定项，`within_batch_required_differences` 及各页 `allowed_to_change` 记录对象、数据、文字、图片等本页差异。更换内容不自动改结构；差异若改变四项共同机制则拆批或留 B调整。冻结后不得滚动吸收上一张生成结果。
+
+## Representative Calibration And Freeze
+- 批次初始状态为 `calibrating`。先仅生成代表页，其他成员为 `blocked_until_representative_confirmed`。实现依据中的“是否需要代表页校准”对代表页必须为 `yes`；非代表页只有在明确指向本批代表页时才可为 `no`。
+- 代表页必须获得人工明确确认。确认前不得扩批，也不得把代表页骨架称为已验证机制。
+- 代表页确认仅满足本批展开前提，由 B维护 `frozen_for_execution` 及共同基准，不由 C另写一版。它不代替其余成员列名各一次的首轮生图授权，不自动定稿或授权参考继承；共同依据/参考角色变化只重确认受影响批次。
+- 代表页失败时先判断失败归属：提示编译/素材注入等执行问题留在 C；模板、骨架、参考映射或可实现性错误退回 B。不得把失败方案扩散到整批。
+- “模型舒适区”只是通过本批校准检验的假设，不能作为分批理由或成功保证。
+
+## Cross-Page Skeleton Inheritance
+只有教学关系与语义视觉载体均相同，B线才可申请继承上一页或其他页面的局部骨架，并必须填写：
+- `source_page`；
+- `same_teaching_relation_reason`；
+- `inherited_parts`；
+- `required_changes`。
+
+任一项为空，或理由仅为“效果好、同章节、同课程、风格统一、保持连续”，均判定为 `no_inheritance`。继承只覆盖明确列出的局部骨架，不自动继承构图细节、生成图、错误或上下文。
+
+## Qualitative Visual Checks
+这是 B方案可行性检查，不是 C逐图实际验收或批后共同基准检查，不可声称已验证成图。不检查固定图片比例。提交前只确认：
+- 图像承担明确教学任务；
+- 主视觉焦点与学习目标一致；
+- 文字清晰且阅读顺序合理；
+- 教学关系能够被迅速识别；
+- 背景、装饰和参考元素不与核心内容争夺注意力；
+- 必须呈现的信息拥有足够空间。
+
+## Handoff To C-Line Adapter
+B线不写平台提示词。交接分为两个明确状态：
+- 代表页校准例外：实现依据和主方案完整、资产可用且无矛盾时，可在批次 `calibrating`、人工确认 `pending` 状态标记 `ready_for_representative_calibration`，仅满足 C线一次代表页首轮校准的交接前提，仍需该页明确生图授权；不得释放其他成员。
+- 正式扩批：代表页人工确认后，才把已冻结主方案标记为 `ready_for_C` 并交给 C线；实际执行仍须其余成员在首轮授权名单内。
+
+两种交接都必须包含真实资产路径、模板身份、参考角色、必须保留/允许变化项、开放项和技术输出规格。若字段为空（尤其母版身份/描述或主视觉描述为空）、资产不存在、设计互相矛盾，或非代表页所属批次尚未冻结，标记 `not_ready_for_C`。不得使用“由 C自行发挥”等文字把设计决策推给 C线。
+
+## Failure / Return
+- S区原文、时间码、事实或素材登记错误：退回 S线。
+- A区教学目标、教学关系、必须呈现项或语义边界错误/缺失：退回 A线。
+- 模板、骨架、参考映射、分批或实现可行性错误：留在 B线修订。
+- 只有 C适配器编译、素材注入、透明度、尺寸或已冻结骨架内的局部生成偏差，才留在 C线修正。
+- 如修正需要改变模板、教学关系或核心骨架，C线必须停止整页重抽并退回 B线。
+
+## Prohibitions
+- 不写 GPT Image 平台提示或任何历史平台提示。
+- 不创建双候选，不以评分替代设计判断，不让用户在未收敛方案之间承担 B线职责。
+- 不使用固定图片占比、固定批数或机械页面分类。
+- 不因上一页好看而继承骨架，不把一个空白模板解释为完整视觉系统。
+- 不覆盖 S/A 冻结项，不向上游文件追加独立 B/C产物。
+- 不计算、保存、传递或推荐哈希、摘要指纹；正常交接使用真实路径和非哈希引用清单。
+
+## Minimal Evidence Examples
+- 模板能力边界：`examples/template_evidence_boundary_success.md`
+- 动态分批与代表页：`examples/dynamic_batch_single_plan_success.md`
+- 固定母版主方案：`examples/reference_locked_main_plan_success.md`
+- 合法骨架继承：`examples/skeleton_inheritance_success.md`
+- 错误分批：`anti_examples/superficial_batching_failure.md`
+- 错误继承：`anti_examples/unsupported_skeleton_inheritance_failure.md`

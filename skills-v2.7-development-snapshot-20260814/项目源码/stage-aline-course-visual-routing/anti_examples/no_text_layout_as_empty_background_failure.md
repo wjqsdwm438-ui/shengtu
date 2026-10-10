@@ -1,5 +1,7 @@
-﻿# Anti Example: A01 As Empty Background
+# 反例：A 线把语义需求改写为空背景
 
-Wrong: "generate a clean elegant blank background".
+错误做法：原内容需要学习者识别三个要素的组成关系，A 线却只写“生成一张干净优雅的空背景”。
 
-Why wrong: A01 must be a course-page layout skeleton with empty text regions, not an atmosphere background.
+为什么错：这丢失了教学关系，并用视觉形式替代教学目标。
+
+正确做法：冻结三个要素如何共同构成整体、必须呈现哪些名称，以及图像必须帮助学习者看懂什么。是否使用无字骨架由 B 决定。

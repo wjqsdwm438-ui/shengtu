@@ -1,0 +1,14 @@
+# Local Codex state
+.codex/
+
+# Python and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Temporary offline-check output
+.run_all_checks_tmp-*/
+.pagination-test-*/
+.workflow-test-*/

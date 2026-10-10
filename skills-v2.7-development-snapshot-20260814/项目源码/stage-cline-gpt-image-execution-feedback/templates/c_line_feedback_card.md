@@ -1,121 +1,169 @@
-# C线 GPT Image 执行反馈卡
+# C线执行适配与反馈卡
 
 ```yaml
-状态: C线GPT Image执行反馈
-候选方案ID:
-目标能力: GPT Image
-请求模型: gpt-image-2
-实际执行模型: 未报告
-使用的中文提示词:
-本次执行确认:
-  抽样页:
-  抽样页用户确认: pending / confirmed
-  提示词版本:
-  提示词版本用户确认: pending / confirmed
-  本次生图用户授权: pending / confirmed
-执行类型: standard / reference_locked_full_page / remotion_transparent_foreground / remotion_split_layer
-reference_preflight:
-  reference_set_id:
-  primary_reference_path_exists: yes/no
-  primary_reference_readable: yes/no
-  selected_reference_paths:
-  reference_paths_actually_attached:
-  reference_attachment_verified: yes/no
-  entire_folder_attached: no
-  previous_conversation_images_included: no
-  failed_images_included_automatically: no
-  text_only_fallback_used: no
-template_identity:
-  template_id:
-  template_version:
-must_show_text_verbatim:
-  title:
-  subtitle:
-  lead:
-  section_titles:
-  body:
-  labels:
-  numbers:
-  english_terms:
-  punctuation:
-输出设置:
-  尺寸:
-  质量:
-  背景: opaque / transparent / auto
-  格式: png / webp
-  透明背景状态: 不适用 / 预览能力已请求 / Alpha已验证 / Alpha失败
-  opaque_fallback: allowed / forbidden
-执行前偏差预测:
-  可能漂移:
-  抑制结构:
-  禁止写入图像:
-  冻结项:
-reference_similarity_review:
-  canvas_ratio_preserved:
-  main_panel_structure_preserved:
-  title_system_preserved:
-  information_regions_preserved:
-  image_text_relation_preserved:
-  palette_family_preserved:
-  background_visibly_reconstructed:
-  result: pass / local_fix / reject
-text_accuracy_review:
-  all_text_complete:
-  title_exact:
-  body_exact:
-  numbers_exact:
-  english_exact:
-  punctuation_exact:
-  fake_text_absent:
+状态: C线执行适配 / 代表页待确认 / 批量首轮执行 / 局部修改 / 已退回
+页面:
+  page_id:
+  original_course_order:
+  shared_brief_path:
+批次:
+  batch_id:
+  production_order:
+  representative_page_id:
+  is_representative: yes/no
+  representative_generation_authorized: pending/confirmed/not_applicable
+  representative_result_confirmed: pending/confirmed/not_applicable
+  batch_first_pass_authorized_pages: []
+  isolated_context_id:
+
+adapter_preflight:
+  entry_mode: representative_calibration / batch_expansion / single_page
+  source_evidence_complete: yes/no
+  A_internal_review_complete: yes/no
+  a_pagination_plan_complete: yes/no # 含当前A/B分页引用与页界一致性
+  a_section_complete: yes/no
+  b_section_complete: yes/no
+  main_execution_plan_present: yes/no
+  implementation_evidence:
+    asset_used_complete: yes/no
+    excluded_assets_and_reason_checked: yes/no
+    what_it_proves_present: yes/no
+    what_it_does_not_prove_present: yes/no
+    highest_risk_present: yes/no
+    representative_calibration_required_present: yes/no
+    calibration_reason_checked: yes/no
+    calibration_covered_by_representative_page_checked: yes/no/not_applicable
+  source_batch_calibration:
+    state: calibrating / representative_generated / representative_confirmed / frozen_for_execution
+    human_confirmation: pending / confirmed
+  source_C_adapter_handoff:
+    readiness: ready_for_representative_calibration / ready_for_C / not_ready_for_C
+    selected_reference_paths_match: yes/no/not_applicable
+    preserve_items_present: yes/no
+    change_items_present: yes/no
+    unresolved_blockers_empty: yes/no
+  concrete_canvas_size_present: yes/no
+  main_execution_plan_outer_template:
+    identity_present: yes/no
+    description_present: yes/no
+    evidence_reference_id_present: yes/no
+  main_execution_plan_main_visual_description_present: yes/no
+  declared_assets_exist_and_readable: yes/no/not_applicable
+  reference_mapping_matches_attachments: yes/no/not_applicable
+  unresolved_design_open_items_absent: yes/no
+  placeholders_or_truncated_sentences_absent: yes/no
+  contradictions_absent: yes/no
+  representative_gate_passed_or_calibration_exception_valid: yes/no/not_applicable
+  result: pass / stop_return_A / stop_return_B
+  blocking_evidence:
+
+skeleton_inheritance:
+  decision: inherit_local_skeleton / no_inheritance
+  source_page_id:
+  same_teaching_relation_reason:
+  same_semantic_carrier:
+  inherited_parts:
+  required_changes:
+  validation_note:
+  evidence_complete: yes/no/not_applicable
+
+compiled_execution_contract:
+  target_capability: GPT Image
+  requested_model: gpt-image-2
+  actual_model: 未报告
+  execution_type: standard / reference_locked_full_page / remotion_transparent_foreground / remotion_split_layer
+  template_identity:
+    template_id:
+    template_version:
+    evidence_reference_id:
+    master_asset_path:
+    master_asset_exists_and_readable: yes/no
+  realization_evidence:
+    asset_proves:
+    asset_does_not_prove:
+    highest_execution_risk:
+    representative_calibration_required: yes/no
+  page_task:
+    teaching_goal:
+    teaching_relation:
+    semantic_visual_carrier:  # 引用B明确的当前实际状态与载体，不代做状态设计
+  preserve:
+    master_and_core_skeleton:
+    title_system_and_safe_area:
+    must_show_text_verbatim:  # 逐字采用B当前图子集；全部A必呈项另在B既有状态说明完整映射
+    course_style:
+  change_or_generate:
+    permitted_region:
+    subject_and_content_boundary:
+  references:
+    - path:
+      role: primary / secondary
+      must_inherit:
+      must_not_inherit:
+      exists_and_readable: yes/no
+      actually_attached: yes/no
+  context_isolation:
+    entire_folder_attached: no
+    previous_page_image_included: no
+    previous_conversation_images_included: no
+    failed_images_included: no
+    other_batch_context_included: no
+  technical_parameters:
+    size:
+    quality:
+    background: opaque / transparent
+    format: png / webp
+    opaque_fallback: allowed / forbidden
+  chinese_execution_prompt:
+  chinese_negative_constraints:
+  local_revision_boundary:
+    preserve:
+    change_only:
+    forbid_change:
+    minimum_instruction:
+
+execution_record:
+  prompt_version:
+  generation_authorization: pending/confirmed
+  reference_paths_actually_attached: []
+  output_path:
+  actual_model_receipt: 未报告
+  visual_sample_state: visual_sample_generated / full_page_candidate / final_course_visual
+  result: pass / local_fix / text_generation_failure / alpha_generation_failure / return_A / return_B
+
+result_review:
+  image_serves_teaching_task: yes/no
+  focus_matches_learning_goal: yes/no
+  text_complete_accurate_readable: yes/no # 对当前实际状态，不是所有状态同时可见
+  information_relation_and_reading_order_clear: yes/no
+  background_or_decoration_competes: yes/no
+  master_and_core_skeleton_preserved: yes/no
+  required_content_fits: yes/no # 该实际状态的必呈项及必要图解
+  mechanical_ratio_rule_used: no
+
+local_revision:
+  target_image:
+  preserve:
+  change_only:
+  forbid_change:
+  reference_basis:
+  complete_executable_prompt:
   local_revision_count: 0 / 1 / 2
-  deterministic_text_overlay_used: no
-  result: pass / local_fix / text_generation_failure
-视觉样张状态: visual_sample_generated / full_page_candidate / final_course_visual
-结果标签: 视觉样张 / 带字成品候选 / 正式课程视觉成品
-结论: 通过 / 可局部修 / 退回B线 / 退回A线
-失败类型:
-局部修改合同:
-  修订范围:
-  保留项:
-  仅修改项:
-  禁止修改项:
-  参考依据:
-  最小修改指令:
-  需要用户确认: yes / no
-用户确认状态: pending / confirmed / rejected
-transparent_foreground_gate:
-  triggered_by: animation_structure_risk / external_remotion_failure / not_applicable
-  reason:
-  recommended_foreground_scope:
-  user_confirmation: pending / confirmed / rejected / not_applicable
-transparent_foreground_result:
-  derived_from_final_visual_id:
-  canvas_size:
-  coordinate_origin: top_left
-  background: transparent
-  format: png
-  alpha_required: yes
-  alpha_verified: yes/no
-  opaque_fallback_used: no
-  crop_to_content_used: no
-  text_changed: no
-  image_position_changed: no
-  local_revision_count: 0 / 1 / 2
-  result: pass / local_fix / alpha_generation_failure / not_applicable
-split_layer_gate:
-  recommended_layers:
-  user_confirmation: pending / confirmed / rejected / not_applicable
-remotion_asset_handoff:
-  fixed_master:
-  full_page_with_text:
-  transparent_foreground_page:
-  optional_split_layers:
-  canvas_size:
-  coordinate_origin: top_left
-  layer_order:
-  animation_safe_margin:
-  template_id:
-  template_version:
+  requires_upstream_change: none / S / A / B
 ```
 
-> 三项确认必须按顺序分别取得；确认提示词不等于授权生图。`本次生图用户授权` 只覆盖当前一张图，生成完成后即失效，不得自动生成下一张或开始下一轮。
+> 空尺寸、空母版、空主视觉、缺失已声明素材、矛盾或未决设计项必须停止，不得由 C线补设计。代表页未经人工确认，不得展开该批其他页面。
+
+## 填写说明（不增加机器字段）
+
+- `adapter_preflight` 同时核对真实路径、获准项目/用途/范围与实际附件；待批、禁用、未选素材即停止，缺口写 `blocking_evidence`，不能用字段 pass 冒称已核实真实批准、教学正确或审美。纯编译/注入错误留 C修正后重新检查，现有 stop_return 值只用于确需上游处理的责任。
+- `批次.isolated_context_id` 标明同批共用的 C对话，跨批隔离。`context_isolation` 的历史图片项记录有无作为输入或隐式参考，不把“对话仍保留历史”误填成“历史均获准”。上一页/代表页图仅在 B明确选为本页骨架参考且继承证明完整时如实记录并附加；历史不是新指令或授权，固定基准不得滚动更新。
+- `representative_result_confirmed` 只记录本批展开前提；`batch_first_pass_authorized_pages` 与 `execution_record.generation_authorization` 依据真实授权单独填写，不从代表页通过推导剩余页已授权、定稿或图像继承。共同基准只引用 B维护版。
+- 可选机器镜像的 `c_section.release_ready` 只表示当前首轮放行声明：`c_section.批次` 的批次及代表标识须对应当前合同；代表校准须有本代表首轮的 `representative_generation_authorized: confirmed`，扩批或确认后的单页首轮须在 `batch_first_pass_authorized_pages` 列名。已有有效批准直接记录，不重复索批；未执行不要求虚填 `execution_record`，旧回执的confirmed也不能代替当前首轮授权。该布尔通过不批准重生或局部修订；后者仍逐次按真实授权与 `local_revision` 的具体目标/范围人工核验。机器只核声明一致，不认证授权真实性。
+- `execution_record` 按实际执行填附件、提示版本、输出与回执；未生成不虚填输出或成图状态，未报告模型保持“未报告”。只记录失败不自动重生成；仅本页失败且共享依据无误才继续其他已授权页，共因/影响不明先停相关依赖页并记录责任与范围。
+- `result_review` 必须查看实际图像、逐图对照原文与 A/B要求，核对数字术语、关系方向、文字可读及裁切遗漏。B方案自评不是本次验收；批后共同基准检查在现有反馈正文另注明代表/边界/后续页对照、必须差异、通过/问题页及影响范围，不另造评分系统，也不替代全页检查或用户定稿。
+- `local_revision` 只写获授权的目标、保留项、仅修改项与禁止项；文字首轮后最多两次局部文字修订，不能以允许次数充当修订授权。共同依据错误按最早责任回 A/B，纯执行偏差留 C；修复后只复核相关页。
+- A全页必呈项在B `reading_order`/`text_realization_strategy`/`main_visual_description` 完整映射到全部状态后，`compiled_execution_contract.preserve.must_show_text_verbatim` 逐字采用B当前图的 `must_show_text_verbatim` 子集，不能将整个任务必呈项全塞同图；当前状态或其他状态去向不明退B，不能用“动画稍后再补”掩盖文字/观察顺序空白，教学/分页问题回A。页、状态、镜头分离，不新增字段/schema或让C重新设计。
+- 反馈正文注明本次实际验收状态及未验证条件：静态样张不证明其他状态、切换/运动或跨状态阅读效果，旧记录不自动升级为已验证动态设计。完整方案效果待校准不等于未决核心设计；代表页例外、页各一次首轮及修字次数和授权不放宽。
+- 当前状态成图与全页媒体完成分开说明，单张通过不释放未验证状态或冒称整页/批次通过；输出文件可用页ID加状态后缀，不改page_id。代表页确认仅覆盖实际观察到且获准的状态/机制，追加状态图仍须具体授权。
+- 无外部资产时须同时核对B `asset_used: []`、`outer_template.evidence_reference_id: no_external_asset`，本卡 `template_identity.evidence_reference_id`/`master_asset_path` 均为 `no_external_asset`、`master_asset_exists_and_readable: no`；选定参考、编译references为空，若已有执行回执则 `reference_paths_actually_attached: []`，未执行不虚填回执；既有description/证据明确理由。token不是路径，主视觉完整与校准/授权仍必需；真实文件严检，参考锁定不能借此免除主参考。

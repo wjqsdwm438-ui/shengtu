@@ -1,0 +1,6 @@
+interface:
+  display_name: "V2.7 A线教学语义合同"
+  short_description: "冻结教学目标、内容关系、必显项与禁止语义偏移。"
+  default_prompt: "使用 V2.7 A线核对 S07 内容，只在共享页面简报中追加教学目标、教学关系、必须呈现项、图像教学任务和禁止偏移项，并执行教学与事实 A审。"
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,12 @@
+{
+  "checked_local_link_count": 22,
+  "missing_links": [],
+  "page_count": 11,
+  "state_count": 30,
+  "planned_seconds": 360,
+  "formal_page_sections": 11,
+  "complete_representative_B_sections": 2,
+  "history_R3_exactly_preserves_pre_revision_master": true,
+  "scope": "local links, structural counts and exact historical preservation only; not image or teaching-effect validation",
+  "passed": true
+}

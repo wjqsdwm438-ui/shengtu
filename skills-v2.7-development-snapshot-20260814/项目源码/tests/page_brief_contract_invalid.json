@@ -1,0 +1,589 @@
+{
+  "workflow": {
+    "stages": [
+      "S",
+      "A",
+      "A_review",
+      "B",
+      "T",
+      "C_adapter",
+      "C_generate",
+      "assembly"
+    ],
+    "batch_count_policy": "fixed",
+    "production_order_policy": "course_sequence",
+    "assembly_order_policy": "production_order",
+    "batch_count": 1
+  },
+  "batches": [
+    {
+      "batch_id": "comparison-pages",
+      "outer_template": "layout_skeleton_pass.json",
+      "teaching_relation": "before_after_comparison",
+      "semantic_visual_carrier": "paired_comparison_panels",
+      "shared_reference_and_generation_basis": "template-only full-page generation",
+      "representative_page_id": "KP-01",
+      "representative_reason": "Covers the core relation and typical information density.",
+      "representative_status": "pending"
+    }
+  ],
+  "assembly_order": [
+    "KP-02",
+    "KP-01"
+  ],
+  "schema": "course_visual_page_brief/v2.7",
+  "page_briefs": [
+    {
+      "page_brief": {
+        "page_id": "KP-01",
+        "batch_id": "comparison-pages",
+        "s_section": {
+          "status": "confirmed",
+          "segment_id": "segment-KP-01",
+          "segment_time_metadata": {
+            "source_type": "script",
+            "start_time": "not_applicable",
+            "end_time": "not_applicable",
+            "source_line_ids": [
+              1
+            ],
+            "merge_reason": "not_applicable"
+          },
+          "source_text": {
+            "verbatim": "Fixture source text.",
+            "source_path": "sample_short.srt",
+            "source_locator": "fixture"
+          },
+          "verified_facts": [],
+          "available_materials": [],
+          "visual_assistance_need": {
+            "needed": "yes",
+            "learner_difficulty_to_support": "comparison",
+            "reason": "Make the relation visible."
+          }
+        },
+        "a_section": {
+          "status": "confirmed",
+          "teaching_goal": {
+            "learner_outcome": "Compare two states accurately.",
+            "source_evidence": "fixture source"
+          },
+          "teaching_relation": {
+            "relation_kind": "before_after_comparison",
+            "participants": [
+              "Object A",
+              "Object B"
+            ],
+            "direction_or_logic": "Compare explicitly without swapping.",
+            "source_evidence": "fixture source"
+          },
+          "must_show_items": {
+            "exact_text": [
+              "Object A",
+              "Object B"
+            ],
+            "exact_numbers": [],
+            "exact_terms": [
+              "Object A",
+              "Object B"
+            ],
+            "required_real_materials": []
+          },
+          "image_pedagogical_task": {
+            "learner_should_see_or_compare": "Show the two states as a direct comparison.",
+            "task_reason": "The visual makes the teaching relation directly inspectable."
+          },
+          "forbidden_semantic_drift": [
+            "Do not swap the objects."
+          ],
+          "intentionally_not_decided_by_A": [
+            "template",
+            "layout_or_composition",
+            "image_or_text_ratio",
+            "visual_carrier",
+            "production_batch",
+            "generation_prompt"
+          ],
+          "unresolved_semantic_gate": {
+            "needed": "no",
+            "question": "not_applicable"
+          },
+          "evidence_notes": "fixture evidence",
+          "a_review_status": "passed"
+        },
+        "b_section": {
+          "implementation_evidence": {
+            "asset_used": [
+              "layout_skeleton_pass.json"
+            ],
+            "what_it_proves": "The outer shell and safe content region are available.",
+            "what_it_does_not_prove": "Inner composition still requires representative calibration.",
+            "highest_risk": "The contrasted objects may be confused.",
+            "representative_calibration_required": "yes",
+            "calibration_reason": "The representative covers the batch relation and typical density.",
+            "calibration_covered_by_representative_page": "not_applicable"
+          },
+          "main_execution_plan": {
+            "plan_id": "plan-KP-01",
+            "outer_template": {
+              "identity": "layout_skeleton_pass.json",
+              "description": "Confirmed outer shell with a title anchor and safe content region.",
+              "evidence_reference_id": "template-fixture"
+            },
+            "content_container": "safe content region",
+            "semantic_visual_carrier": "paired_comparison_panels",
+            "main_visual_description": "Two explicit objects shown as a paired comparison.",
+            "reading_order": "title, left panel, right panel, conclusion",
+            "reference_mapping": "template-fixture is outer-shell evidence only",
+            "must_show_text_verbatim": [
+              "Object A",
+              "Object B"
+            ],
+            "must_preserve": [
+              "outer shell",
+              "teaching relation"
+            ],
+            "allowed_to_change": [
+              "objects",
+              "page text"
+            ],
+            "open_for_calibration": [],
+            "hard_bans": [
+              "do not swap the compared objects"
+            ],
+            "technical_output_spec": {
+              "dimensions": "1920x1080",
+              "file_format": "png",
+              "transparency_requirement": "opaque"
+            },
+            "image_area_percentage": "40%-60%"
+          },
+          "skeleton_inheritance": {
+            "decision": "no_inheritance"
+          },
+          "batch_assignment": {
+            "batch_id": "comparison-pages",
+            "member_original_course_orders": [
+              1,
+              2
+            ],
+            "shared_outer_template_basis": "layout_skeleton_pass.json",
+            "shared_teaching_relation_basis": "before_after_comparison",
+            "shared_semantic_visual_carrier_basis": "paired_comparison_panels",
+            "shared_reference_and_generation_basis": "template-only full-page generation",
+            "within_batch_required_differences": [
+              "objects",
+              "page text"
+            ],
+            "representative_page": "KP-01",
+            "representative_selection_reason": "Covers the core relation and typical information density.",
+            "independent_C_context_required": "yes",
+            "include_other_batches_context": "no",
+            "include_previous_page_output_by_default": "no",
+            "final_assembly_order": "use_original_course_order"
+          },
+          "batch_calibration": {
+            "state": "frozen_for_execution",
+            "non_representative_pages": "released",
+            "human_confirmation": "confirmed",
+            "confirmation_record": "fixture confirmation",
+            "frozen_batch_core": [
+              "teaching relation",
+              "paired panels"
+            ]
+          },
+          "C_adapter_handoff": {
+            "readiness": "ready_for_C",
+            "selected_reference_paths": [],
+            "preserve_items": [
+              "outer shell",
+              "teaching relation"
+            ],
+            "change_items": [
+              "objects",
+              "page text"
+            ],
+            "unresolved_blockers": []
+          }
+        },
+        "c_section": {
+          "adapter_preflight": {
+            "entry_mode": "single_page",
+            "s_section_complete": "yes",
+            "a_section_complete": "yes",
+            "b_section_complete": "yes",
+            "main_execution_plan_present": "yes",
+            "concrete_canvas_size_present": "yes",
+            "main_execution_plan_outer_template": {
+              "identity_present": "yes",
+              "description_present": "yes",
+              "evidence_reference_id_present": "yes"
+            },
+            "main_execution_plan_main_visual_description_present": "yes",
+            "declared_assets_exist_and_readable": "yes",
+            "contradictions_absent": "yes",
+            "representative_gate_passed_or_calibration_exception_valid": "yes",
+            "result": "pass",
+            "blocking_evidence": []
+          },
+          "compiled_execution_contract": {
+            "target_capability": "GPT Image",
+            "requested_model": "gpt-image-2",
+            "template_identity": {
+              "template_id": "fixture",
+              "template_version": "1",
+              "master_asset_path": "layout_skeleton_pass.json",
+              "master_asset_exists_and_readable": "yes"
+            },
+            "page_task": {
+              "teaching_goal": "Compare two states accurately.",
+              "teaching_relation": "before_after_comparison",
+              "semantic_visual_carrier": "paired_comparison_panels"
+            },
+            "preserve": {
+              "master_and_core_skeleton": [
+                "outer shell"
+              ],
+              "must_show_text_verbatim": [
+                "Object A",
+                "Object B"
+              ]
+            },
+            "change_or_generate": {
+              "permitted_region": "content region",
+              "subject_and_content_boundary": "Paired comparison of two objects."
+            },
+            "references": [],
+            "technical_parameters": {
+              "size": "1920x1080",
+              "quality": "high",
+              "background": "opaque",
+              "format": "png"
+            },
+            "chinese_execution_prompt": "图片占比固定为50%。",
+            "chinese_negative_constraints": "Do not swap the compared objects.",
+            "local_revision_boundary": {
+              "preserve": [
+                "outer shell"
+              ],
+              "change_only": [
+                "objects"
+              ],
+              "forbid_change": [
+                "teaching relation"
+              ],
+              "minimum_instruction": "Only fix the named object."
+            }
+          },
+          "release_ready": true,
+          "skeleton_inheritance": {
+            "decision": "no_inheritance",
+            "source_page_id": "not_applicable",
+            "same_teaching_relation_reason": "not_applicable",
+            "same_semantic_carrier": "not_applicable",
+            "inherited_parts": "not_applicable",
+            "required_changes": "not_applicable",
+            "validation_note": "No inheritance requested by B.",
+            "evidence_complete": "not_applicable"
+          },
+          "批次": {
+            "batch_id": "comparison-pages",
+            "representative_page_id": "KP-01",
+            "representative_generation_authorized": "not_applicable",
+            "representative_result_confirmed": "pending",
+            "batch_first_pass_authorized_pages": [
+              "KP-01"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "page_brief": {
+        "page_id": "KP-02",
+        "batch_id": "comparison-pages",
+        "s_section": {
+          "status": "confirmed",
+          "segment_id": "segment-KP-02",
+          "segment_time_metadata": {
+            "source_type": "script",
+            "start_time": "not_applicable",
+            "end_time": "not_applicable",
+            "source_line_ids": [
+              1
+            ],
+            "merge_reason": "not_applicable"
+          },
+          "source_text": {
+            "verbatim": "Fixture source text.",
+            "source_path": "sample_short.srt",
+            "source_locator": "fixture"
+          },
+          "verified_facts": [],
+          "available_materials": [],
+          "visual_assistance_need": {
+            "needed": "yes",
+            "learner_difficulty_to_support": "comparison",
+            "reason": "Make the relation visible."
+          }
+        },
+        "a_section": {
+          "status": "confirmed",
+          "teaching_goal": {
+            "learner_outcome": "Compare two states accurately.",
+            "source_evidence": "fixture source"
+          },
+          "teaching_relation": {
+            "relation_kind": "sequence",
+            "participants": [
+              "Object A",
+              "Object B"
+            ],
+            "direction_or_logic": "Compare explicitly without swapping.",
+            "source_evidence": "fixture source"
+          },
+          "must_show_items": {
+            "exact_text": [
+              "Object A",
+              "Object B"
+            ],
+            "exact_numbers": [],
+            "exact_terms": [
+              "Object A",
+              "Object B"
+            ],
+            "required_real_materials": []
+          },
+          "image_pedagogical_task": {
+            "learner_should_see_or_compare": "Show the two states as a direct comparison.",
+            "task_reason": "The visual makes the teaching relation directly inspectable."
+          },
+          "forbidden_semantic_drift": [
+            "Do not swap the objects."
+          ],
+          "intentionally_not_decided_by_A": [
+            "template",
+            "layout_or_composition",
+            "image_or_text_ratio",
+            "visual_carrier",
+            "production_batch",
+            "generation_prompt"
+          ],
+          "unresolved_semantic_gate": {
+            "needed": "no",
+            "question": "not_applicable"
+          },
+          "evidence_notes": "fixture evidence",
+          "a_review_status": "passed"
+        },
+        "b_section": {
+          "implementation_evidence": {
+            "asset_used": [
+              "layout_skeleton_pass.json"
+            ],
+            "what_it_proves": "The outer shell and safe content region are available.",
+            "what_it_does_not_prove": "Inner composition still requires representative calibration.",
+            "highest_risk": "The contrasted objects may be confused.",
+            "representative_calibration_required": "no",
+            "calibration_reason": "The representative covers the batch relation and typical density.",
+            "calibration_covered_by_representative_page": "KP-01"
+          },
+          "main_execution_plan": {
+            "plan_id": "plan-KP-02",
+            "outer_template": {
+              "identity": "layout_skeleton_pass.json",
+              "description": "Confirmed outer shell with a title anchor and safe content region.",
+              "evidence_reference_id": "template-fixture"
+            },
+            "content_container": "safe content region",
+            "semantic_visual_carrier": "paired_comparison_panels",
+            "main_visual_description": "Two explicit objects shown as a paired comparison.",
+            "reading_order": "title, left panel, right panel, conclusion",
+            "reference_mapping": "template-fixture is outer-shell evidence only",
+            "must_show_text_verbatim": [
+              "Object A",
+              "Object B"
+            ],
+            "must_preserve": [
+              "outer shell",
+              "teaching relation"
+            ],
+            "allowed_to_change": [
+              "objects",
+              "page text"
+            ],
+            "open_for_calibration": [],
+            "hard_bans": [
+              "do not swap the compared objects"
+            ],
+            "technical_output_spec": {
+              "dimensions": "1920x1080",
+              "file_format": "png",
+              "transparency_requirement": "opaque"
+            }
+          },
+          "skeleton_inheritance": {
+            "decision": "inherit_local_skeleton",
+            "source_page": "KP-01",
+            "same_teaching_relation_reason": "It only looks similar.",
+            "inherited_parts": [
+              "paired panels",
+              "reading order"
+            ],
+            "required_changes": [
+              "objects",
+              "page text"
+            ]
+          },
+          "batch_assignment": {
+            "batch_id": "comparison-pages",
+            "member_original_course_orders": [
+              1,
+              2
+            ],
+            "shared_outer_template_basis": "layout_skeleton_pass.json",
+            "shared_teaching_relation_basis": "before_after_comparison",
+            "shared_semantic_visual_carrier_basis": "paired_comparison_panels",
+            "shared_reference_and_generation_basis": "template-only full-page generation",
+            "within_batch_required_differences": [
+              "objects",
+              "page text"
+            ],
+            "representative_page": "KP-01",
+            "representative_selection_reason": "Covers the core relation and typical information density.",
+            "independent_C_context_required": "yes",
+            "include_other_batches_context": "no",
+            "include_previous_page_output_by_default": "no",
+            "final_assembly_order": "use_original_course_order"
+          },
+          "batch_calibration": {
+            "state": "calibrating",
+            "non_representative_pages": "blocked_until_representative_confirmed",
+            "human_confirmation": "pending",
+            "confirmation_record": "",
+            "frozen_batch_core": []
+          },
+          "C_adapter_handoff": {
+            "readiness": "not_ready_for_C",
+            "selected_reference_paths": [],
+            "preserve_items": [
+              "outer shell",
+              "teaching relation"
+            ],
+            "change_items": [
+              "objects",
+              "page text"
+            ],
+            "unresolved_blockers": []
+          }
+        },
+        "c_section": {
+          "adapter_preflight": {
+            "entry_mode": "batch_expansion",
+            "s_section_complete": "yes",
+            "a_section_complete": "yes",
+            "b_section_complete": "yes",
+            "main_execution_plan_present": "yes",
+            "concrete_canvas_size_present": "yes",
+            "main_execution_plan_outer_template": {
+              "identity_present": "yes",
+              "description_present": "yes",
+              "evidence_reference_id_present": "yes"
+            },
+            "main_execution_plan_main_visual_description_present": "yes",
+            "declared_assets_exist_and_readable": "yes",
+            "contradictions_absent": "yes",
+            "representative_gate_passed_or_calibration_exception_valid": "yes",
+            "result": "pass",
+            "blocking_evidence": []
+          },
+          "compiled_execution_contract": {
+            "target_capability": "GPT Image",
+            "requested_model": "gpt-image-2",
+            "template_identity": {
+              "template_id": "fixture",
+              "template_version": "1",
+              "master_asset_path": "",
+              "master_asset_exists_and_readable": "yes"
+            },
+            "page_task": {
+              "teaching_goal": "Compare two states accurately.",
+              "teaching_relation": "before_after_comparison",
+              "semantic_visual_carrier": "paired_comparison_panels"
+            },
+            "preserve": {
+              "master_and_core_skeleton": [
+                "outer shell"
+              ],
+              "must_show_text_verbatim": [
+                "Object A",
+                "Object B"
+              ]
+            },
+            "change_or_generate": {
+              "permitted_region": "content region",
+              "subject_and_content_boundary": ""
+            },
+            "references": [
+              {
+                "path": "missing-reference.png",
+                "role": "primary",
+                "must_inherit": "subject",
+                "must_not_inherit": "layout",
+                "exists_and_readable": "yes",
+                "actually_attached": "yes"
+              }
+            ],
+            "technical_parameters": {
+              "size": "",
+              "quality": "high",
+              "background": "opaque",
+              "format": "png"
+            },
+            "chinese_execution_prompt": "Keep the outer shell and generate a clear paired comparison.",
+            "chinese_negative_constraints": "Do not swap the compared objects.",
+            "local_revision_boundary": {
+              "preserve": [
+                "outer shell"
+              ],
+              "change_only": [
+                "objects"
+              ],
+              "forbid_change": [
+                "teaching relation"
+              ],
+              "minimum_instruction": "Only fix the named object."
+            }
+          },
+          "release_ready": true,
+          "skeleton_inheritance": {
+            "decision": "inherit_local_skeleton",
+            "source_page_id": "KP-01",
+            "same_teaching_relation_reason": "It only looks similar.",
+            "same_semantic_carrier": "paired_comparison_panels",
+            "inherited_parts": [
+              "paired panels",
+              "reading order"
+            ],
+            "required_changes": [
+              "objects",
+              "page text"
+            ],
+            "validation_note": "B inheritance evidence mirrored without reinterpretation.",
+            "evidence_complete": "yes"
+          },
+          "批次": {
+            "batch_id": "comparison-pages",
+            "representative_page_id": "KP-01",
+            "representative_generation_authorized": "not_applicable",
+            "representative_result_confirmed": "pending",
+            "batch_first_pass_authorized_pages": [
+              "KP-02"
+            ]
+          }
+        },
+        "original_course_order": 2
+      }
+    }
+  ]
+}

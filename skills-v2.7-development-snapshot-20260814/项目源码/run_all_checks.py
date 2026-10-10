@@ -15,6 +15,7 @@ import re
 import shutil
 import subprocess
 import sys
+from uuid import uuid4
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -25,12 +26,14 @@ SCRIPTS = {
     "layout": ROOT / "scripts" / "check_layout_skeleton.py",
     "budget": ROOT / "scripts" / "check_text_budget.py",
     "complexity": ROOT / "scripts" / "score_page_complexity.py",
+    "page_brief": ROOT / "scripts" / "validate_page_brief.py",
+    "pagination": ROOT / "scripts" / "validate_pagination_plan.py",
+    "workflow_diagrams": ROOT / "scripts" / "export_workflow_diagrams.py",
 }
 SKILL_DIRS = (
     "stage-sline-srt-media-routing",
     "stage-aline-course-visual-routing",
     "stage-bline-production-handoff",
-    "stage-tline-prompt-translation",
     "stage-cline-gpt-image-execution-feedback",
     "stage-algorithm-lite-companion",
 )
@@ -73,8 +76,9 @@ def write_json_lf(path: Path, value: object) -> None:
 def run_json(script: Path, *arguments: str) -> tuple[int, dict, str]:
     env = os.environ.copy()
     env["PYTHONUTF8"] = "1"
+    env["PYTHONIOENCODING"] = "utf-8"
     completed = subprocess.run(
-        [sys.executable, str(script), *arguments],
+        [sys.executable, "-B", str(script), *arguments],
         cwd=ROOT,
         env=env,
         stdout=subprocess.PIPE,
@@ -120,6 +124,9 @@ def check_algorithm_examples(report: Report, work: Path) -> tuple[dict[str, obje
                 SCRIPTS["budget"], f"tests/text_budget_{stem}.txt"
             )
             ok = code == 0 and data.get("char_count_no_space") == count and data.get("risk") == risk
+            # Legacy risk/recommendation strings are diagnostics, never an
+            # automatic production authorization, split decision or stop Gate.
+            ok = ok and data.get("final_decision") == "recommendation_only_not_a_frozen_item"
             report.check(ok, f"example:text_budget_{stem}", stderr.strip() or repr(data))
             evidence[f"text_budget_{stem}.stdout.json"] = data
         except (OSError, RuntimeError) as exc:
@@ -144,10 +151,54 @@ def check_algorithm_examples(report: Report, work: Path) -> tuple[dict[str, obje
                 SCRIPTS["complexity"], f"tests/complexity_{stem}.json"
             )
             ok = code == 0 and data.get("risk_score") == score
+            ok = ok and data.get("final_decision") == "recommendation_only_not_a_frozen_item"
             report.check(ok, f"example:complexity_{stem}", stderr.strip() or repr(data))
             evidence[f"complexity_{stem}.stdout.json"] = data
         except (OSError, RuntimeError) as exc:
             report.check(False, f"example:complexity_{stem}", str(exc))
+
+    required_invalid_codes = {
+        "workflow.stages",
+        "workflow.independent_t",
+        "batch.dynamic",
+        "batch.fixed_count",
+        "page.original_order",
+        "b.evidence_asset",
+        "inheritance.teaching_relation",
+        "c.required_field",
+        "c.compile_mismatch",
+        "c.asset_missing",
+        "batch.representative_unconfirmed",
+        "image.fixed_share",
+    }
+    page_brief_cases = (
+        ("valid", 0, True),
+        ("representative_calibration", 0, True),
+        ("invalid", 2, False),
+    )
+    for stem, expected_code, expected_pass in page_brief_cases:
+        try:
+            code, data, stderr = run_json(
+                SCRIPTS["page_brief"], f"tests/page_brief_contract_{stem}.json"
+            )
+            ok = code == expected_code and data.get("pass") is expected_pass
+            if stem == "valid":
+                derived = data.get("derived", {})
+                ok = ok and derived.get("page_count") == 2 and derived.get("batch_count") == 1
+            elif stem == "representative_calibration":
+                derived = data.get("derived", {})
+                ok = ok and derived.get("page_count") == 1 and derived.get("batch_count") == 1
+            else:
+                actual_codes = {
+                    error.get("code")
+                    for error in data.get("errors", [])
+                    if isinstance(error, dict)
+                }
+                ok = ok and required_invalid_codes <= actual_codes
+            report.check(ok, f"example:page_brief_contract_{stem}", stderr.strip() or repr(data))
+            evidence[f"page_brief_contract_{stem}.stdout.json"] = data
+        except (OSError, RuntimeError) as exc:
+            report.check(False, f"example:page_brief_contract_{stem}", str(exc))
 
     try:
         output_dir = work / "srt_sample"
@@ -257,7 +308,7 @@ def parse_minimal_openai_yaml(text: str) -> tuple[dict[str, str], dict[str, str]
 def check_skill_contracts(report: Report) -> None:
     actual = {path.name for path in ROOT.glob("stage-*") if path.is_dir()}
     expected = set(SKILL_DIRS)
-    report.check(actual == expected, "contract:six_skill_directories", f"expected {sorted(expected)}, got {sorted(actual)}")
+    report.check(actual == expected, "contract:five_skill_directories", f"expected {sorted(expected)}, got {sorted(actual)}")
 
     for dirname in SKILL_DIRS:
         directory = ROOT / dirname
@@ -317,11 +368,10 @@ def check_progressive_reading_contracts(report: Report) -> None:
         "Read `<项目根目录>\\_shared\\course-visual-production-v2.7.md` first",
     )
     stage_boundaries = {
-        "stage-sline-srt-media-routing": "不得自动读取或执行 A线",
-        "stage-aline-course-visual-routing": "不自动读取 B/T/C",
-        "stage-bline-production-handoff": "不自动进入 T线",
-        "stage-tline-prompt-translation": "不读取 C线",
-        "stage-cline-gpt-image-execution-feedback": "不触发 A/B/T 全链重读",
+        "stage-sline-srt-media-routing": "用户只请求单独输入整理时，完成该范围后结束",
+        "stage-aline-course-visual-routing": "没有独立 S 或 A 审默认停止点",
+        "stage-bline-production-handoff": "生成必须另有当前具体页面的明确授权",
+        "stage-cline-gpt-image-execution-feedback": "一次局部失败不触发 A/B全链重读或恢复独立S",
         "stage-algorithm-lite-companion": "不继续读取生产规则",
     }
     for dirname in SKILL_DIRS:
@@ -332,9 +382,10 @@ def check_progressive_reading_contracts(report: Report) -> None:
             eager = [phrase for phrase in eager_phrases if phrase in text]
             has_stop_signal = any(
                 marker in text
-                for marker in ("阶段边界", "不自动", "停止读取", "立即执行", "立即回到调用阶段")
+                for marker in ("阶段边界", "不自动", "停止读取", "停止扩展读取", "立即执行", "立即回到调用阶段", "本入口没有默认阶段停止点")
             )
-            has_single_step = "一次只允许由当前唯一未决问题触发一个来源" in text
+            has_single_step = ("一次只允许由当前唯一未决问题触发一个来源" in text or
+                               "每次由具体未决问题读取必要来源，核对后再决定是否扩展" in text)
             has_stage_boundary = stage_boundaries[dirname] in text
             report.check(
                 not missing and not eager and has_stop_signal and has_single_step and has_stage_boundary,
@@ -366,8 +417,9 @@ def check_reference_remotion_contracts(report: Report) -> None:
 
         full_page = cases["reference_locked_full_page"]["expected"]
         full_page_ok = (
-            full_page.get("page_type") == "A16_既有母版套新内容型"
-            and full_page.get("candidate_policy") == "reference_locked_single_candidate"
+            full_page.get("legacy_page_type_used_for_design") is False
+            and full_page.get("plan_policy") == "one_main_execution_plan"
+            and full_page.get("execution_type") == "reference_locked_full_page"
             and full_page.get("output_target") == "full_page_with_text"
             and full_page.get("text_generation_strategy") == "带字"
             and full_page.get("reference_attachment_required") is True
@@ -411,19 +463,31 @@ def check_reference_remotion_contracts(report: Report) -> None:
 
     contract_files = {
         ROOT / "_shared" / "reference-image-inheritance-rules.md": (
-            "固定外层母版", "失败诊断图", "非哈希参考清单", "A16_既有母版套新内容型"
+            "固定外层母版", "失败诊断图", "非哈希参考清单", "main_execution_plan"
         ),
         ROOT / "_shared" / "remotion-asset-handoff-rules.md": (
             "transparent_foreground_gate:", "final_course_visual", "opaque", "split_layer_pending_gate"
         ),
         ROOT / "stage-bline-production-handoff" / "templates" / "b_line_production_card.md": (
-            "reference_locked_single_candidate", "方案A_参考锁定版", "must_show_text_verbatim:"
-        ),
-        ROOT / "stage-tline-prompt-translation" / "templates" / "t_line_gpt_image_prompt.md": (
-            "reference_inputs:", "text_only_execution_forbidden", "maximum_local_text_revisions: 2"
+            "implementation_evidence:", "main_execution_plan:", "skeleton_inheritance:",
+            "batch_assignment:", "batch_calibration:", "C_adapter_handoff:"
         ),
         ROOT / "stage-cline-gpt-image-execution-feedback" / "templates" / "c_line_feedback_card.md": (
+            "adapter_preflight:", "concrete_canvas_size_present:", "main_execution_plan_outer_template:",
+            "main_execution_plan_main_visual_description_present:",
+            "representative_gate_passed_or_calibration_exception_valid:", "same_teaching_relation_reason:",
+            "compiled_execution_contract:", "chinese_execution_prompt:",
             "reference_paths_actually_attached:", "full_page_candidate", "alpha_generation_failure"
+        ),
+        ROOT / "stage-cline-gpt-image-execution-feedback" / "references" / "gpt_image_execution_adapter_rules.md": (
+            "## 完整性硬 Gate", "所有声明使用的素材存在且可读", "批次代表页 Gate",
+            "## 批次隔离", "不得使用固定图片占比"
+        ),
+        ROOT / "_shared" / "page-brief-batch-execution-rules.md": (
+            "## C线执行适配器", "代表页 Gate", "每批使用独立 C线对话或等效隔离上下文"
+        ),
+        ROOT / "_shared" / "template-realization-evidence-rules.md": (
+            "模板只能证明其实际提供的能力", "空白主内容框不能证明"
         ),
     }
     for path, markers in contract_files.items():
@@ -482,6 +546,22 @@ def check_active_contract_text(report: Report) -> None:
         ", ".join(stale_c_entry),
     )
 
+    old_t_entry = "stage-tline-prompt-translation"
+    stale_t_entry: list[str] = []
+    for path in iter_active_text_files():
+        if path.suffix.lower() not in {".md", ".yaml", ".yml"}:
+            continue
+        try:
+            if old_t_entry in load_utf8(path):
+                stale_t_entry.append(str(path.relative_to(ROOT)))
+        except (OSError, UnicodeError, ValueError):
+            continue
+    report.check(
+        not stale_t_entry,
+        "contract:no_active_independent_t_entry",
+        ", ".join(stale_t_entry),
+    )
+
     old_default = re.compile(
         r"three[ -]platform|\u4e09\u5e73\u53f0|\u5373\u68a6|nanobanana|image\s*2[- ]first|image2[- ]first|image2 english|\bimage2\b",
         re.IGNORECASE,
@@ -495,21 +575,27 @@ def check_active_contract_text(report: Report) -> None:
             continue
     report.check(not stale, "contract:no_active_legacy_platform_mode", ", ".join(stale))
 
-    prompt_template = ROOT / "stage-tline-prompt-translation" / "templates" / "t_line_gpt_image_prompt.md"
+    prompt_template = ROOT / "stage-cline-gpt-image-execution-feedback" / "templates" / "c_line_feedback_card.md"
     try:
         prompt_text = load_utf8(prompt_template)
         required_fields = (
-            "目标能力: GPT Image",
-            "请求模型: gpt-image-2",
-            "实际执行模型:",
-            "中文执行提示词:",
-            "中文负面约束:",
-            "输出设置:",
-            "中文局部修改模板:",
-            "保留项:",
-            "仅修改项:",
-            "禁止修改项:",
-            "最小修改指令:",
+            "adapter_preflight:",
+            "concrete_canvas_size_present:",
+            "main_execution_plan_outer_template:",
+            "identity_present:",
+            "description_present:",
+            "evidence_reference_id_present:",
+            "main_execution_plan_main_visual_description_present:",
+            "declared_assets_exist_and_readable:",
+            "contradictions_absent:",
+            "representative_gate_passed_or_calibration_exception_valid:",
+            "blocking_evidence:",
+            "compiled_execution_contract:",
+            "preserve:",
+            "change_or_generate:",
+            "chinese_execution_prompt:",
+            "chinese_negative_constraints:",
+            "local_revision_boundary:",
         )
         legacy_fields = (
             "image2_en:",
@@ -522,11 +608,11 @@ def check_active_contract_text(report: Report) -> None:
         forbidden = [field for field in legacy_fields if field in prompt_text]
         report.check(
             not missing and not forbidden,
-            "contract:gpt_image_chinese_prompt_template",
+            "contract:c_adapter_prompt_template",
             f"missing={missing}, forbidden={forbidden}",
         )
     except (OSError, UnicodeError, ValueError) as exc:
-        report.check(False, "contract:gpt_image_chinese_prompt_template", str(exc))
+        report.check(False, "contract:c_adapter_prompt_template", str(exc))
 
 
 def check_encoding(report: Report) -> None:
@@ -565,7 +651,17 @@ def check_legacy_archive(report: Report) -> None:
     readme = legacy / "README.md"
     try:
         text = load_utf8(readme)
-        report.check(bool(text.strip()), "legacy:archive_readme", "README.md is empty")
+        forbidden_current_markers = (
+            "当前入口位于 `stage-tline-prompt-translation/`",
+            "当前 T线运行依赖",
+            "当前T线运行依赖",
+        )
+        stale = [marker for marker in forbidden_current_markers if marker in text]
+        report.check(
+            bool(text.strip()) and not stale,
+            "legacy:archive_readme",
+            "README.md is empty" if not text.strip() else f"stale current T markers: {stale}",
+        )
     except (OSError, UnicodeError, ValueError) as exc:
         report.check(False, "legacy:archive_readme", str(exc))
 
@@ -610,6 +706,12 @@ def check_checked_in_evidence(
 
 
 def main() -> int:
+    # CLI diagnostics and captured child output use one explicit encoding;
+    # inherited Windows code pages must not corrupt Chinese-path failures.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
+    utf8_env = dict(os.environ, PYTHONUTF8="1", PYTHONIOENCODING="utf-8")
     parser = argparse.ArgumentParser(description="Run the V2.7.1 offline development-baseline checks.")
     parser.add_argument(
         "--update-evidence",
@@ -620,14 +722,33 @@ def main() -> int:
 
     report = Report()
     check_script_syntax(report)
-    work_dir = ROOT / ".run_all_checks_tmp"
-    if work_dir.exists():
-        shutil.rmtree(work_dir)
+    diagrams = subprocess.run(
+        [sys.executable, "-B", str(SCRIPTS["workflow_diagrams"]), "--check"],
+        cwd=ROOT, env=utf8_env, capture_output=True, text=True, encoding="utf-8", errors="strict",
+    )
+    report.check(diagrams.returncode == 0, "diagrams:drawio_svg_readonly_sync",
+                 diagrams.stdout + diagrams.stderr)
+    interaction = subprocess.run(
+        [sys.executable, "-B", str(ROOT / "tests" / "test_interaction_gate_contract.py")],
+        cwd=ROOT, env=utf8_env, capture_output=True, text=True, encoding="utf-8", errors="strict",
+    )
+    report.check(interaction.returncode == 0, "interaction:gate_contract",
+                 interaction.stdout + interaction.stderr)
+    pagination_tests = subprocess.run(
+        [sys.executable, "-B", "-m", "unittest", "discover", "-s", str(ROOT / "tests"),
+         "-p", "test_pagination_contract.py"],
+        cwd=ROOT, env=utf8_env, capture_output=True, text=True, encoding="utf-8", errors="strict",
+    )
+    report.check(pagination_tests.returncode == 0, "pagination:deterministic_contract",
+                 pagination_tests.stdout + pagination_tests.stderr)
+    work_dir = ROOT / (".run_all_checks_tmp-" + str(uuid4()))
     work_dir.mkdir(parents=True, exist_ok=False)
     try:
         evidence, srt_files = check_algorithm_examples(report, work_dir)
     finally:
         if work_dir.exists():
+            if work_dir.resolve().parent != ROOT.resolve():
+                raise RuntimeError("refusing to clean a path outside the test workspace")
             shutil.rmtree(work_dir)
     check_skill_contracts(report)
     check_progressive_reading_contracts(report)

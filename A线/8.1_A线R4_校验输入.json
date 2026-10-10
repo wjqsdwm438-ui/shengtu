@@ -1,0 +1,1229 @@
+{
+  "schema": "course_visual_a_pagination/v1",
+  "plan_id": "A81-20260907-R2",
+  "plan_version": 4,
+  "source_evidence": {
+    "sources": [
+      {
+        "source_id": "src81",
+        "path": "E:\\shengtu\\智能网联\\8.1正文.md",
+        "version": "读取版本；源文件mtime 2026-09-06 11:16:18",
+        "version_date": "2026-09-06",
+        "order": 1
+      }
+    ],
+    "approved_body_spans": [
+      {
+        "source_id": "src81",
+        "line": 12,
+        "start_char": 1,
+        "end_char": 177,
+        "start_text": "上一节我们走进智能座舱，认识了车",
+        "end_text": "部分构成，又面临怎样的现实挑战。"
+      },
+      {
+        "source_id": "src81",
+        "line": 18,
+        "start_char": 1,
+        "end_char": 303,
+        "start_text": "信息交互，是指具备网联功能的汽车",
+        "end_text": "们先从最基础的“认知”层面切入。"
+      },
+      {
+        "source_id": "src81",
+        "line": 22,
+        "start_char": 1,
+        "end_char": 212,
+        "start_text": "车辆主要与五类外部对象交换信息。",
+        "end_text": "预警、弯道防撞等场景提供了可能。"
+      },
+      {
+        "source_id": "src81",
+        "line": 26,
+        "start_char": 1,
+        "end_char": 340,
+        "start_text": "实现信息交互的短距离无线通信，国",
+        "end_text": "智能网联汽车行稳致远的必由之路。"
+      },
+      {
+        "source_id": "src81",
+        "line": 30,
+        "start_char": 1,
+        "end_char": 243,
+        "start_text": "当每辆车都成为持续联网的数据节点",
+        "end_text": "的同时，守护好每一份流动的数据。"
+      },
+      {
+        "source_id": "src81",
+        "line": 34,
+        "start_char": 1,
+        "end_char": 169,
+        "start_text": "信息交互技术让智能网联汽车从“单",
+        "end_text": "感谢各位的聆听，我们下节课再见。"
+      }
+    ],
+    "annotation_spans": [
+      {
+        "source_id": "src81",
+        "line": 40,
+        "start_char": 1,
+        "end_char": 179,
+        "start_text": "\\*\\*重点：\\*\\*信息交互的",
+        "end_text": "安全与隐私保护的三维度安全体系。"
+      },
+      {
+        "source_id": "src81",
+        "line": 42,
+        "start_char": 1,
+        "end_char": 84,
+        "start_text": "\\*\\*难点：\\*\\*信息交互为",
+        "end_text": "全与用户隐私如何内嵌于系统设计。"
+      },
+      {
+        "source_id": "src81",
+        "line": 44,
+        "start_char": 1,
+        "end_char": 186,
+        "start_text": "\\*\\*建议配合的视觉素材：\\*",
+        "end_text": "）示意图。不必照搬特定来源配图。"
+      },
+      {
+        "source_id": "src81",
+        "line": 46,
+        "start_char": 1,
+        "end_char": 189,
+        "start_text": "\\*\\*思政主线：\\*\\*①数据",
+        "end_text": "我国标准体系自主创新的建设目标。"
+      }
+    ],
+    "approval": {
+      "status": "confirmed",
+      "record": "用户原请求处理8.1全文；现有记录保留引入L12/结尾L34为Non-A；2026-09-07明确批准本轮修改执行树。此记录只支持分析与既有正文范围，不批准R4新页界、代表页设计或生图。"
+    }
+  },
+  "pages": [
+    {
+      "page_id": "A81R2-P01",
+      "order": 1,
+      "owned_spans": [
+        {
+          "source_id": "src81",
+          "line": 18,
+          "start_char": 1,
+          "end_char": 135,
+          "start_text": "信息交互，是指具备网联功能的汽车",
+          "end_text": "、弯道盲区与路口死角的交通态势。"
+        }
+      ],
+      "context_refs": [],
+      "capacity_basis": {
+        "teaching_task": "能解释“特殊的环境感知传感器”是信息补充的比喻，并分清外部信息与本车直接探测。",
+        "required_text_and_labels": [
+          "在自身传感器探测的基础上",
+          "车载雷达与摄像头",
+          "视距、天气和遮挡限制",
+          "车载通信装置",
+          "外部节点",
+          "特殊的环境感知传感器"
+        ],
+        "approved_assets": [
+          {
+            "path": "E:\\shengtu\\智能网联\\版式x\\tu1\\空白.png",
+            "approval_record": "用户指定版式x；已确认保留课程识别、内部自主适配；这里只作外壳空间证据，生图参考用途另列审批。",
+            "usable_space_and_limits": "已查看1280×720扁平底板，标题区下方正文空间约x80—1200/y130—660；旧LKA题头须替换，不证明内构或像素锁定。"
+          }
+        ],
+        "asset_applicability_reason": "沿用版式x的题头、浅底与正文可用空间；内部结构由内容决定。R3样张与文字测量是有限历史证据，不再把440×480测试区当固定模板。",
+        "same_screen_reason": "比较时同一车辆与遮挡对象保持定位；完整定义无需同时铺满。标签随对应来源出现，最终仍能辨认探测与通信。",
+        "cross_page_reason": "下一页由机制转到技术框架，换页让具体交通空间与抽象分类不争夺同一视觉焦点。",
+        "visual_carrier_feasibility": "一个本车、一个外部信息源、一处遮挡与两种线义足以解释原文；道路不承担事故演示。每个状态只展示当前必要标签，保留外壳可用空间给遮挡关系，而非先把文字排满。",
+        "unverified_limits": "本轮为完整A教学媒体组织与承载条件分析，不是已验证成图。状态峰值42字符含页题与导航，仅作负荷提示，不证明可读性。实际字体、布局与成图交B/C；无配音/动画/学生实测。"
+      }
+    },
+    {
+      "page_id": "A81R4-P02A",
+      "order": 2,
+      "owned_spans": [
+        {
+          "source_id": "src81",
+          "line": 18,
+          "start_char": 136,
+          "end_char": 238,
+          "start_text": "在行业的技术框架中，智能网联汽车",
+          "end_text": "两条技术路径走向融合的关键环节。"
+        }
+      ],
+      "context_refs": [
+        {
+          "source_id": "src81",
+          "line": 18,
+          "start_char": 1,
+          "end_char": 135,
+          "start_text": "信息交互，是指具备网联功能的汽车",
+          "end_text": "、弯道盲区与路口死角的交通态势。"
+        }
+      ],
+      "capacity_basis": {
+        "teaching_task": "说出三大横向领域，并解释信息交互连接车内智能与外部世界的作用。",
+        "required_text_and_labels": [
+          "三大领域",
+          "车辆及设施",
+          "信息交互",
+          "基础支撑",
+          "智能化 +网联化"
+        ],
+        "approved_assets": [
+          {
+            "path": "E:\\shengtu\\智能网联\\版式x\\tu1\\空白.png",
+            "approval_record": "用户指定版式x；已确认保留课程识别、内部自主适配；这里只作外壳空间证据，生图参考用途另列审批。",
+            "usable_space_and_limits": "已查看1280×720扁平底板，标题区下方正文空间约x80—1200/y130—660；旧LKA题头须替换，不证明内构或像素锁定。"
+          }
+        ],
+        "asset_applicability_reason": "沿用版式x的题头、浅底与正文可用空间；内部结构由内容决定。R3样张与文字测量是有限历史证据，不再把440×480测试区当固定模板。",
+        "same_screen_reason": "三领域名称在建立并列关系时共同可见，信息交互的连接作用随讲解突出；不在本页同时建立网联化三级。",
+        "cross_page_reason": "回指P01的通信补充含义，不重讲其原文；下页更换分类依据，仍以信息交互作连续定位。",
+        "visual_carrier_feasibility": "三领域短名称与一条内外联系即可承载；此页完整任务包含分类定位和纽带作用，并非只有三个孤立标题。",
+        "unverified_limits": "本轮为完整A教学媒体组织与承载条件分析，不是已验证成图。状态峰值42字符含页题与导航，仅作负荷提示，不证明可读性。实际字体、布局与成图交B/C；无配音/动画/学生实测。"
+      }
+    },
+    {
+      "page_id": "A81R4-P02B",
+      "order": 3,
+      "owned_spans": [
+        {
+          "source_id": "src81",
+          "line": 18,
+          "start_char": 239,
+          "end_char": 303,
+          "start_text": "按网联化程度，信息交互由低到高又",
+          "end_text": "们先从最基础的“认知”层面切入。"
+        }
+      ],
+      "context_refs": [
+        {
+          "source_id": "src81",
+          "line": 18,
+          "start_char": 136,
+          "end_char": 238,
+          "start_text": "在行业的技术框架中，智能网联汽车",
+          "end_text": "两条技术路径走向融合的关键环节。"
+        }
+      ],
+      "capacity_basis": {
+        "teaching_task": "按从低到高辨认三个完整层级名称，并说清它们不是上一页三领域的对应项。",
+        "required_text_and_labels": [
+          "网联化程度",
+          "由低到高",
+          "网联辅助信息交互",
+          "网联协同感知",
+          "网联协同决策与控制"
+        ],
+        "approved_assets": [
+          {
+            "path": "E:\\shengtu\\智能网联\\版式x\\tu1\\空白.png",
+            "approval_record": "用户指定版式x；已确认保留课程识别、内部自主适配；这里只作外壳空间证据，生图参考用途另列审批。",
+            "usable_space_and_limits": "已查看1280×720扁平底板，标题区下方正文空间约x80—1200/y130—660；旧LKA题头须替换，不证明内构或像素锁定。"
+          }
+        ],
+        "asset_applicability_reason": "沿用版式x的题头、浅底与正文可用空间；内部结构由内容决定。R3样张与文字测量是有限历史证据，不再把440×480测试区当固定模板。",
+        "same_screen_reason": "三个全名在比较时共见；只回显上一页分类依据，不同屏摆六张逐一对齐的卡片。",
+        "cross_page_reason": "回指P02的分类依据用来防止误配，这是有目的的回显而非第二次归属或重复口播。下一页从程度转到实际连接对象。",
+        "visual_carrier_feasibility": "只有有序名称和依据区分，没有新增案例。23秒只是预演预算：名称建立15秒、辨别停留8秒，不为独立成页补写机制。",
+        "unverified_limits": "本轮为完整A教学媒体组织与承载条件分析，不是已验证成图。状态峰值54字符含页题与导航，仅作负荷提示，不证明可读性。实际字体、布局与成图交B/C；无配音/动画/学生实测。"
+      }
+    },
+    {
+      "page_id": "A81R4-P03A",
+      "order": 4,
+      "owned_spans": [
+        {
+          "source_id": "src81",
+          "line": 22,
+          "start_char": 1,
+          "end_char": 75,
+          "start_text": "车辆主要与五类外部对象交换信息。",
+          "end_text": "台、交通标识牌与隧道监控等信息；"
+        }
+      ],
+      "context_refs": [
+        {
+          "source_id": "src81",
+          "line": 22,
+          "start_char": 76,
+          "end_char": 84,
+          "start_text": "V2P（车与行人）",
+          "end_text": "V2P（车与行人）"
+        },
+        {
+          "source_id": "src81",
+          "line": 22,
+          "start_char": 98,
+          "end_char": 106,
+          "start_text": "V2R（车与道路）",
+          "end_text": "V2R（车与道路）"
+        },
+        {
+          "source_id": "src81",
+          "line": 22,
+          "start_char": 120,
+          "end_char": 128,
+          "start_text": "V2N（车与网络）",
+          "end_text": "V2N（车与网络）"
+        }
+      ],
+      "capacity_basis": {
+        "teaching_task": "先建立五类对象全貌，再能将V2V与V2I的信息归到正确对象。",
+        "required_text_and_labels": [
+          "V2V（车与车）",
+          "V2I（车与基础设施）",
+          "速度、行驶方向与紧急状态",
+          "红绿灯、公交站台、交通标识牌与隧道监控"
+        ],
+        "approved_assets": [
+          {
+            "path": "E:\\shengtu\\智能网联\\版式x\\tu1\\空白.png",
+            "approval_record": "用户指定版式x；已确认保留课程识别、内部自主适配；这里只作外壳空间证据，生图参考用途另列审批。",
+            "usable_space_and_limits": "已查看1280×720扁平底板，标题区下方正文空间约x80—1200/y130—660；旧LKA题头须替换，不证明内构或像素锁定。"
+          }
+        ],
+        "asset_applicability_reason": "沿用版式x的题头、浅底与正文可用空间；内部结构由内容决定。R3样张与文字测量是有限历史证据，不再把440×480测试区当固定模板。",
+        "same_screen_reason": "全貌时五个对象名共见，展开时只保留一组信息；总览与详情不承担同一时刻的全部负荷。",
+        "cross_page_reason": "前向视觉预览：本页引用P05后续正文中的V2P/V2R/V2N名称，只作五类导航，不新增或提前重读其旁白，不计正文覆盖。P05按原文接续详情；跨页保留相同对象名称次序。",
+        "visual_carrier_feasibility": "总体框架只有五个名称和本车；详情状态的最长新增项是V2I四项信息。各类说明轮换而不是累加，空间留给本车—对象—信息的对应。两页之间只换当前焦点，不让学生重建五类全貌。",
+        "unverified_limits": "本轮为完整A教学媒体组织与承载条件分析，不是已验证成图。状态峰值81字符含页题与导航，仅作负荷提示，不证明可读性。实际字体、布局与成图交B/C；无配音/动画/学生实测。"
+      }
+    },
+    {
+      "page_id": "A81R4-P03B",
+      "order": 5,
+      "owned_spans": [
+        {
+          "source_id": "src81",
+          "line": 22,
+          "start_char": 76,
+          "end_char": 154,
+          "start_text": "V2P（车与行人）交换车辆与行人",
+          "end_text": "导航定位、防盗与远程求助等内容。"
+        }
+      ],
+      "context_refs": [
+        {
+          "source_id": "src81",
+          "line": 22,
+          "start_char": 1,
+          "end_char": 75,
+          "start_text": "车辆主要与五类外部对象交换信息。",
+          "end_text": "台、交通标识牌与隧道监控等信息；"
+        }
+      ],
+      "capacity_basis": {
+        "teaching_task": "准确对应V2P/V2R/V2N的信息，并能按本稿区分V2I与V2R的列举口径。",
+        "required_text_and_labels": [
+          "V2P（车与行人）",
+          "V2R（车与道路）",
+          "V2N（车与网络）",
+          "车辆与行人的相对位置",
+          "路况、事故与路标信息",
+          "大数据分析结果、导航定位、防盗与远程求助"
+        ],
+        "approved_assets": [
+          {
+            "path": "E:\\shengtu\\智能网联\\版式x\\tu1\\空白.png",
+            "approval_record": "用户指定版式x；已确认保留课程识别、内部自主适配；这里只作外壳空间证据，生图参考用途另列审批。",
+            "usable_space_and_limits": "已查看1280×720扁平底板，标题区下方正文空间约x80—1200/y130—660；旧LKA题头须替换，不证明内构或像素锁定。"
+          }
+        ],
+        "asset_applicability_reason": "沿用版式x的题头、浅底与正文可用空间；内部结构由内容决定。R3样张与文字测量是有限历史证据，不再把440×480测试区当固定模板。",
+        "same_screen_reason": "当前对象全名与当前信息共见；其余类型只作为名称索引。需要复查时回看P04，不能在本页偷偷再次朗读前页内容。",
+        "cross_page_reason": "回指P04的车、设施名称和同一框架；正文从V2P接到V2R、V2N，原序不变。下一页从分类转入多方信息的综合作用。",
+        "visual_carrier_feasibility": "信息最长的V2N占一个局部说明区；其他四类没有附属清单。跨页分担减少一次需要追踪的详情，不减少原列举项，也不靠字号缩小维持一页。",
+        "unverified_limits": "本轮为完整A教学媒体组织与承载条件分析，不是已验证成图。状态峰值81字符含页题与导航，仅作负荷提示，不证明可读性。实际字体、布局与成图交B/C；无配音/动画/学生实测。"
+      }
+    },
+    {
+      "page_id": "A81R2-P04",
+      "order": 6,
+      "owned_spans": [
+        {
+          "source_id": "src81",
+          "line": 22,
+          "start_char": 155,
+          "end_char": 212,
+          "start_text": "五项交互叠加，使单车的局部感知拓",
+          "end_text": "预警、弯道防撞等场景提供了可能。"
+        }
+      ],
+      "context_refs": [
+        {
+          "source_id": "src81",
+          "line": 22,
+          "start_char": 1,
+          "end_char": 154,
+          "start_text": "车辆主要与五类外部对象交换信息。",
+          "end_text": "导航定位、防盗与远程求助等内容。"
+        },
+        {
+          "source_id": "src81",
+          "line": 18,
+          "start_char": 1,
+          "end_char": 135,
+          "start_text": "信息交互，是指具备网联功能的汽车",
+          "end_text": "、弯道盲区与路口死角的交通态势。"
+        }
+      ],
+      "capacity_basis": {
+        "teaching_task": "解释从单车局部感知到多方协同的增量，并保留“提供了可能”的应用限定。",
+        "required_text_and_labels": [
+          "单车的局部感知",
+          "车—路—人—云一体化的协同感知",
+          "交叉路口盲区预警",
+          "弯道防撞",
+          "提供了可能"
+        ],
+        "approved_assets": [
+          {
+            "path": "E:\\shengtu\\智能网联\\版式x\\tu1\\空白.png",
+            "approval_record": "用户指定版式x；已确认保留课程识别、内部自主适配；这里只作外壳空间证据，生图参考用途另列审批。",
+            "usable_space_and_limits": "已查看1280×720扁平底板，标题区下方正文空间约x80—1200/y130—660；旧LKA题头须替换，不证明内构或像素锁定。"
+          }
+        ],
+        "asset_applicability_reason": "沿用版式x的题头、浅底与正文可用空间；内部结构由内容决定。R3样张与文字测量是有限历史证据，不再把440×480测试区当固定模板。",
+        "same_screen_reason": "对照阶段保持局部感知与补充信息共见；用途与限定必须同时出现。",
+        "cross_page_reason": "回指前两页五类框架与P01的信息补充，新增的是多方综合与可能应用，避免原机制重复讲一遍。",
+        "visual_carrier_feasibility": "同一道路参照和有限来源线即可表现增量，不强制五条完整通道同时运动。删除前页详情清单，为共同交通空间留出解释面积。",
+        "unverified_limits": "本轮为完整A教学媒体组织与承载条件分析，不是已验证成图。状态峰值44字符含页题与导航，仅作负荷提示，不证明可读性。实际字体、布局与成图交B/C；无配音/动画/学生实测。"
+      }
+    },
+    {
+      "page_id": "A81R2-P05",
+      "order": 7,
+      "owned_spans": [
+        {
+          "source_id": "src81",
+          "line": 26,
+          "start_char": 1,
+          "end_char": 168,
+          "start_text": "实现信息交互的短距离无线通信，国",
+          "end_text": "具优势，已成为全球主流方向之一。"
+        }
+      ],
+      "context_refs": [],
+      "capacity_basis": {
+        "teaching_task": "对应DSRC与C-V2X的基础和原稿定性特点，既看到先发价值，也保留演进优势的限定。",
+        "required_text_and_labels": [
+          "DSRC（专用短程通信）",
+          "IEEE 802.11p",
+          "起步较早",
+          "技术相对成熟",
+          "LTE-V（即 C-V2X）",
+          "基于蜂窝网络演进",
+          "4G/5G",
+          "容量、可靠性以及与移动通信产业的协同",
+          "更具优势",
+          "全球主流方向之一"
+        ],
+        "approved_assets": [
+          {
+            "path": "E:\\shengtu\\智能网联\\版式x\\tu1\\空白.png",
+            "approval_record": "用户指定版式x；已确认保留课程识别、内部自主适配；这里只作外壳空间证据，生图参考用途另列审批。",
+            "usable_space_and_limits": "已查看1280×720扁平底板，标题区下方正文空间约x80—1200/y130—660；旧LKA题头须替换，不证明内构或像素锁定。"
+          }
+        ],
+        "asset_applicability_reason": "沿用版式x的题头、浅底与正文可用空间；内部结构由内容决定。R3样张与文字测量是有限历史证据，不再把440×480测试区当固定模板。",
+        "same_screen_reason": "需要比较的两条路线保持共同参照；“基础”与“特点”分步承担，不强求全部字段全时共见。",
+        "cross_page_reason": "下一页从技术对照转为为何同时接轨与自主，本页不放标准建设论证。",
+        "visual_carrier_feasibility": "对照结构可复用但不是模板强制两列。最长状态包括两条路线及限定特点，仍是本轮文字风险页；用信息层替换而非缩字号，B必须查看真实成图。",
+        "unverified_limits": "本轮为完整A教学媒体组织与承载条件分析，不是已验证成图。状态峰值83字符含页题与导航，仅作负荷提示，不证明可读性。实际字体、布局与成图交B/C；无配音/动画/学生实测。"
+      }
+    },
+    {
+      "page_id": "A81R4-P06A",
+      "order": 8,
+      "owned_spans": [
+        {
+          "source_id": "src81",
+          "line": 26,
+          "start_char": 169,
+          "end_char": 240,
+          "start_text": "我们既要客观认识国外先发方案的价",
+          "end_text": "命脉，关键核心技术无法依赖他人。"
+        }
+      ],
+      "context_refs": [
+        {
+          "source_id": "src81",
+          "line": 26,
+          "start_char": 1,
+          "end_char": 168,
+          "start_text": "实现信息交互的短距离无线通信，国",
+          "end_text": "具优势，已成为全球主流方向之一。"
+        }
+      ],
+      "capacity_basis": {
+        "teaching_task": "说明承认国外先发价值、参与国际接轨与掌握核心技术并不矛盾，并说出自主必要性的原稿理由。",
+        "required_text_and_labels": [
+          "客观认识国外先发方案的价值",
+          "积极参与国际标准的接轨",
+          "通信协议、频谱资源与安全架构",
+          "关键核心技术无法依赖他人"
+        ],
+        "approved_assets": [
+          {
+            "path": "E:\\shengtu\\智能网联\\版式x\\tu1\\空白.png",
+            "approval_record": "用户指定版式x；已确认保留课程识别、内部自主适配；这里只作外壳空间证据，生图参考用途另列审批。",
+            "usable_space_and_limits": "已查看1280×720扁平底板，标题区下方正文空间约x80—1200/y130—660；旧LKA题头须替换，不证明内构或像素锁定。"
+          }
+        ],
+        "asset_applicability_reason": "沿用版式x的题头、浅底与正文可用空间；内部结构由内容决定。R3样张与文字测量是有限历史证据，不再把440×480测试区当固定模板。",
+        "same_screen_reason": "归纳时保留接轨立场和核心技术理由；下一页的标准要求与研发行动暂不全部加进来。",
+        "cross_page_reason": "回指P07的先发技术价值作为理解背景；下一页回答如何落实。保留关键词承接，不要求学生背诵整段理由。",
+        "visual_carrier_feasibility": "将原九组必显项中的立场与理由放在本页，不同时容纳标准建设、行动和目标。三技术对象作为并列名词，不扩成三个专业原理图。",
+        "unverified_limits": "本轮为完整A教学媒体组织与承载条件分析，不是已验证成图。状态峰值52字符含页题与导航，仅作负荷提示，不证明可读性。实际字体、布局与成图交B/C；无配音/动画/学生实测。"
+      }
+    },
+    {
+      "page_id": "A81R4-P06B",
+      "order": 9,
+      "owned_spans": [
+        {
+          "source_id": "src81",
+          "line": 26,
+          "start_char": 241,
+          "end_char": 340,
+          "start_text": "我国明确提出分阶段建立“适应国情",
+          "end_text": "智能网联汽车行稳致远的必由之路。"
+        }
+      ],
+      "context_refs": [
+        {
+          "source_id": "src81",
+          "line": 26,
+          "start_char": 169,
+          "end_char": 240,
+          "start_text": "我们既要客观认识国外先发方案的价",
+          "end_text": "命脉，关键核心技术无法依赖他人。"
+        }
+      ],
+      "capacity_basis": {
+        "teaching_task": "把标准体系的双重要求、自主研发和技术主动权连成完整解释，避免把行动口号与理由割裂。",
+        "required_text_and_labels": [
+          "适应国情并与国际接轨",
+          "智能网联汽车标准体系",
+          "C-V2X",
+          "自主研发与标准引领",
+          "技术主动权"
+        ],
+        "approved_assets": [
+          {
+            "path": "E:\\shengtu\\智能网联\\版式x\\tu1\\空白.png",
+            "approval_record": "用户指定版式x；已确认保留课程识别、内部自主适配；这里只作外壳空间证据，生图参考用途另列审批。",
+            "usable_space_and_limits": "已查看1280×720扁平底板，标题区下方正文空间约x80—1200/y130—660；旧LKA题头须替换，不证明内构或像素锁定。"
+          }
+        ],
+        "asset_applicability_reason": "沿用版式x的题头、浅底与正文可用空间；内部结构由内容决定。R3样张与文字测量是有限历史证据，不再把440×480测试区当固定模板。",
+        "same_screen_reason": "当前页的建设要求、行动和目标在归纳状态共同可见，理由仅保留一条短回显，不复制上页所有条目。",
+        "cross_page_reason": "回指P08的理由而不重复朗读；这次回显用于跨页闭合论证，不算冗余正文。下一页转入数据责任，不能把安全架构等同全部数据保护方案。",
+        "visual_carrier_feasibility": "原172字论证分成72字理由和100字落实两段，各段有独立问题但通过理由回显闭合。本页仍需检查多关系与长限定文字，是代表页校准对象，不以短语数少冒称稳定。",
+        "unverified_limits": "本轮为完整A教学媒体组织与承载条件分析，不是已验证成图。状态峰值66字符含页题与导航，仅作负荷提示，不证明可读性。实际字体、布局与成图交B/C；无配音/动画/学生实测。"
+      }
+    },
+    {
+      "page_id": "A81R2-P07",
+      "order": 10,
+      "owned_spans": [
+        {
+          "source_id": "src81",
+          "line": 30,
+          "start_char": 1,
+          "end_char": 101,
+          "start_text": "当每辆车都成为持续联网的数据节点",
+          "end_text": "接威胁整车与整个交通体系的安全。"
+        }
+      ],
+      "context_refs": [],
+      "capacity_basis": {
+        "teaching_task": "能指出敏感数据、可能威胁与影响范围，理解安全要求不止保护个人信息。",
+        "required_text_and_labels": [
+          "信息安全",
+          "与感知、决策同等重要",
+          "位置、身份、行驶轨迹",
+          "窃取、干扰乃至篡改",
+          "整车与整个交通体系的安全"
+        ],
+        "approved_assets": [
+          {
+            "path": "E:\\shengtu\\智能网联\\版式x\\tu1\\空白.png",
+            "approval_record": "用户指定版式x；已确认保留课程识别、内部自主适配；这里只作外壳空间证据，生图参考用途另列审批。",
+            "usable_space_and_limits": "已查看1280×720扁平底板，标题区下方正文空间约x80—1200/y130—660；旧LKA题头须替换，不证明内构或像素锁定。"
+          }
+        ],
+        "asset_applicability_reason": "沿用版式x的题头、浅底与正文可用空间；内部结构由内容决定。R3样张与文字测量是有限历史证据，不再把440×480测试区当固定模板。",
+        "same_screen_reason": "风险归纳时数据、威胁与影响共同可见；不同时铺上下一页三维保护要求。",
+        "cross_page_reason": "下一页“因此”承接风险。保持数据对象的概念定位，不需要继承本页具体生成图。",
+        "visual_carrier_feasibility": "一个通用数据集合配威胁与影响层即可，避免三乘三连线网。逐步建立因果比一次显示所有解释更易定位。",
+        "unverified_limits": "本轮为完整A教学媒体组织与承载条件分析，不是已验证成图。状态峰值44字符含页题与导航，仅作负荷提示，不证明可读性。实际字体、布局与成图交B/C；无配音/动画/学生实测。"
+      }
+    },
+    {
+      "page_id": "A81R2-P08",
+      "order": 11,
+      "owned_spans": [
+        {
+          "source_id": "src81",
+          "line": 30,
+          "start_char": 102,
+          "end_char": 243,
+          "start_text": "因此，信息交互技术必须在数据存储",
+          "end_text": "的同时，守护好每一份流动的数据。"
+        }
+      ],
+      "context_refs": [
+        {
+          "source_id": "src81",
+          "line": 30,
+          "start_char": 1,
+          "end_char": 101,
+          "start_text": "当每辆车都成为持续联网的数据节点",
+          "end_text": "接威胁整车与整个交通体系的安全。"
+        }
+      ],
+      "capacity_basis": {
+        "teaching_task": "解释三个维度同步保护、隐私从设计起点内嵌，并分清5G连接支撑与安全保证。",
+        "required_text_and_labels": [
+          "数据存储、传输与应用",
+          "同步构建安全体系",
+          "把隐私保护内嵌于系统设计的起点",
+          "而非事后的补救措施",
+          "5G",
+          "低时延、高可靠连接",
+          "重要支撑"
+        ],
+        "approved_assets": [
+          {
+            "path": "E:\\shengtu\\智能网联\\版式x\\tu1\\空白.png",
+            "approval_record": "用户指定版式x；已确认保留课程识别、内部自主适配；这里只作外壳空间证据，生图参考用途另列审批。",
+            "usable_space_and_limits": "已查看1280×720扁平底板，标题区下方正文空间约x80—1200/y130—660；旧LKA题头须替换，不证明内构或像素锁定。"
+          }
+        ],
+        "asset_applicability_reason": "沿用版式x的题头、浅底与正文可用空间；内部结构由内容决定。R3样张与文字测量是有限历史证据，不再把440×480测试区当固定模板。",
+        "same_screen_reason": "三个维度在各状态中保持共同定位；5G出现时“重要支撑”必须同时出现，起点原则已经建立且保留定位。",
+        "cross_page_reason": "回指P10风险，但不复读原文。页末衔接Non-A结尾的总结和下节预告，不能把结尾删成一张新口号页。",
+        "visual_carrier_feasibility": "三维覆盖、起点原则、连接支撑分三个状态承担；图解只表现覆盖与支撑，不新增加密、认证或控制架构。必须项在序列完整出现，不全部固定写在终帧。",
+        "unverified_limits": "本轮为完整A教学媒体组织与承载条件分析，不是已验证成图。状态峰值51字符含页题与导航，仅作负荷提示，不证明可读性。实际字体、布局与成图交B/C；无配音/动画/学生实测。"
+      }
+    }
+  ],
+  "non_a_dispositions": [
+    {
+      "disposition_id": "N81-INTRO",
+      "owned_spans": [
+        {
+          "source_id": "src81",
+          "line": 12,
+          "start_char": 1,
+          "end_char": 177,
+          "start_text": "上一节我们走进智能座舱，认识了车",
+          "end_text": "部分构成，又面临怎样的现实挑战。"
+        }
+      ],
+      "reason": "沿用已确认引入Non-A，不删原稿",
+      "target": "教师出镜或已有非生成承载；具体制作未执行"
+    },
+    {
+      "disposition_id": "N81-END",
+      "owned_spans": [
+        {
+          "source_id": "src81",
+          "line": 34,
+          "start_char": 1,
+          "end_char": 169,
+          "start_text": "信息交互技术让智能网联汽车从“单",
+          "end_text": "感谢各位的聆听，我们下节课再见。"
+        }
+      ],
+      "reason": "沿用已确认结尾Non-A，保留总结与下节预告",
+      "target": "教师出镜或已有非生成承载；具体制作未执行"
+    }
+  ],
+  "split_merge_comparisons": [
+    {
+      "comparison_id": "CMP-R4-01",
+      "source_spans": [
+        {
+          "source_id": "src81",
+          "line": 18,
+          "start_char": 1,
+          "end_char": 135,
+          "start_text": "信息交互，是指具备网联功能的汽车",
+          "end_text": "、弯道盲区与路口死角的交通态势。"
+        },
+        {
+          "source_id": "src81",
+          "line": 18,
+          "start_char": 136,
+          "end_char": 238,
+          "start_text": "在行业的技术框架中，智能网联汽车",
+          "end_text": "两条技术路径走向融合的关键环节。"
+        },
+        {
+          "source_id": "src81",
+          "line": 18,
+          "start_char": 239,
+          "end_char": 303,
+          "start_text": "按网联化程度，信息交互由低到高又",
+          "end_text": "们先从最基础的“认知”层面切入。"
+        }
+      ],
+      "alternatives": [
+        {
+          "candidate_id": "CMP-R4-01-ALT1",
+          "proposed_page_spans": [
+            [
+              {
+                "source_id": "src81",
+                "line": 18,
+                "start_char": 1,
+                "end_char": 135,
+                "start_text": "信息交互，是指具备网联功能的汽车",
+                "end_text": "、弯道盲区与路口死角的交通态势。"
+              }
+            ],
+            [
+              {
+                "source_id": "src81",
+                "line": 18,
+                "start_char": 136,
+                "end_char": 303,
+                "start_text": "在行业的技术框架中，智能网联汽车",
+                "end_text": "们先从最基础的“认知”层面切入。"
+              }
+            ]
+          ],
+          "reason": "原两页：P02内先领域后层级，最后对照两轴；可以成立，但两种完整分类和纽带关系集中在同一页面，若不移除或缩小旧关系则仍有多焦点，移除则已形成明显的新视觉状态。"
+        },
+        {
+          "candidate_id": "CMP-R4-01-ALT2",
+          "proposed_page_spans": [
+            [
+              {
+                "source_id": "src81",
+                "line": 18,
+                "start_char": 1,
+                "end_char": 303,
+                "start_text": "信息交互，是指具备网联功能的汽车",
+                "end_text": "们先从最基础的“认知”层面切入。"
+              }
+            ]
+          ],
+          "reason": "全段一页：即使分步，也需从遮挡空间转抽象领域再转程度体系；长期共用页面身份不能减少认知转换。"
+        }
+      ],
+      "selected_page_ids": [
+        "A81R2-P01",
+        "A81R4-P02A",
+        "A81R4-P02B"
+      ],
+      "decision_reason": "选三页：机制独立；领域页完整处理并列定位与纽带；层级页用短时、有目的的依据辨别收束。不是因“三名称一页”，也不靠新增三级机制填页。原两页动态方案不是错误，但本版选择显式换页承认分类依据已经改变，降低回看定位成本。"
+    },
+    {
+      "comparison_id": "CMP-R4-02",
+      "source_spans": [
+        {
+          "source_id": "src81",
+          "line": 22,
+          "start_char": 1,
+          "end_char": 75,
+          "start_text": "车辆主要与五类外部对象交换信息。",
+          "end_text": "台、交通标识牌与隧道监控等信息；"
+        },
+        {
+          "source_id": "src81",
+          "line": 22,
+          "start_char": 76,
+          "end_char": 154,
+          "start_text": "V2P（车与行人）交换车辆与行人",
+          "end_text": "导航定位、防盗与远程求助等内容。"
+        },
+        {
+          "source_id": "src81",
+          "line": 22,
+          "start_char": 155,
+          "end_char": 212,
+          "start_text": "五项交互叠加，使单车的局部感知拓",
+          "end_text": "预警、弯道防撞等场景提供了可能。"
+        }
+      ],
+      "alternatives": [
+        {
+          "candidate_id": "CMP-R4-02-ALT1",
+          "proposed_page_spans": [
+            [
+              {
+                "source_id": "src81",
+                "line": 22,
+                "start_char": 1,
+                "end_char": 154,
+                "start_text": "车辆主要与五类外部对象交换信息。",
+                "end_text": "导航定位、防盗与远程求助等内容。"
+              }
+            ],
+            [
+              {
+                "source_id": "src81",
+                "line": 22,
+                "start_char": 155,
+                "end_char": 212,
+                "start_text": "五项交互叠加，使单车的局部感知拓",
+                "end_text": "预警、弯道防撞等场景提供了可能。"
+              }
+            ]
+          ],
+          "reason": "原两页＋页内替换：五类先总览，再轮换五组详情，最后另页综合；可保全部内容，但一个页面承担六次观察任务，约一分钟持续轮换，回看难定位；若维持旧全清单则风险更高。"
+        },
+        {
+          "candidate_id": "CMP-R4-02-ALT2",
+          "proposed_page_spans": [
+            [
+              {
+                "source_id": "src81",
+                "line": 22,
+                "start_char": 1,
+                "end_char": 39,
+                "start_text": "车辆主要与五类外部对象交换信息。",
+                "end_text": "）交换速度、行驶方向与紧急状态；"
+              }
+            ],
+            [
+              {
+                "source_id": "src81",
+                "line": 22,
+                "start_char": 40,
+                "end_char": 75,
+                "start_text": "V2I（车与基础设施）交换红绿灯",
+                "end_text": "台、交通标识牌与隧道监控等信息；"
+              }
+            ],
+            [
+              {
+                "source_id": "src81",
+                "line": 22,
+                "start_char": 76,
+                "end_char": 97,
+                "start_text": "V2P（车与行人）交换车辆与行人",
+                "end_text": "行人）交换车辆与行人的相对位置；"
+              }
+            ],
+            [
+              {
+                "source_id": "src81",
+                "line": 22,
+                "start_char": 98,
+                "end_char": 119,
+                "start_text": "V2R（车与道路）交换路况、事故",
+                "end_text": "道路）交换路况、事故与路标信息；"
+              }
+            ],
+            [
+              {
+                "source_id": "src81",
+                "line": 22,
+                "start_char": 120,
+                "end_char": 154,
+                "start_text": "V2N（车与网络）交换大数据分析",
+                "end_text": "导航定位、防盗与远程求助等内容。"
+              }
+            ],
+            [
+              {
+                "source_id": "src81",
+                "line": 22,
+                "start_char": 155,
+                "end_char": 212,
+                "start_text": "五项交互叠加，使单车的局部感知拓",
+                "end_text": "预警、弯道防撞等场景提供了可能。"
+              }
+            ]
+          ],
+          "reason": "五类逐页＋综合：每类容易读取，但失去整体关系定位，短内容页较多；换页本身不提供新解释。"
+        }
+      ],
+      "selected_page_ids": [
+        "A81R4-P03A",
+        "A81R4-P03B",
+        "A81R2-P04"
+      ],
+      "decision_reason": "选五类讲解两页＋综合一页。第一页先全貌再车/设施，第二页接人/道路/网络，分组仅按原序与连续观看负荷，不是新技术分类。五类名称导航保持而各信息组替换，最长的网络清单单独获得展示时间。综述不新增独立空页；综合页改变任务，说明信息增量与可能用途。"
+    },
+    {
+      "comparison_id": "CMP-R4-03",
+      "source_spans": [
+        {
+          "source_id": "src81",
+          "line": 26,
+          "start_char": 1,
+          "end_char": 168,
+          "start_text": "实现信息交互的短距离无线通信，国",
+          "end_text": "具优势，已成为全球主流方向之一。"
+        },
+        {
+          "source_id": "src81",
+          "line": 26,
+          "start_char": 169,
+          "end_char": 240,
+          "start_text": "我们既要客观认识国外先发方案的价",
+          "end_text": "命脉，关键核心技术无法依赖他人。"
+        },
+        {
+          "source_id": "src81",
+          "line": 26,
+          "start_char": 241,
+          "end_char": 340,
+          "start_text": "我国明确提出分阶段建立“适应国情",
+          "end_text": "智能网联汽车行稳致远的必由之路。"
+        }
+      ],
+      "alternatives": [
+        {
+          "candidate_id": "CMP-R4-03-ALT1",
+          "proposed_page_spans": [
+            [
+              {
+                "source_id": "src81",
+                "line": 26,
+                "start_char": 1,
+                "end_char": 168,
+                "start_text": "实现信息交互的短距离无线通信，国",
+                "end_text": "具优势，已成为全球主流方向之一。"
+              }
+            ],
+            [
+              {
+                "source_id": "src81",
+                "line": 26,
+                "start_char": 169,
+                "end_char": 340,
+                "start_text": "我们既要客观认识国外先发方案的价",
+                "end_text": "智能网联汽车行稳致远的必由之路。"
+              }
+            ]
+          ],
+          "reason": "原两页＋论证页分步：技术比较另页，后一页从接轨立场到关键对象、标准要求、自主行动和目标，保持全部信息会累积密度，逐层替换又需主动维持理由。"
+        },
+        {
+          "candidate_id": "CMP-R4-03-ALT2",
+          "proposed_page_spans": [
+            [
+              {
+                "source_id": "src81",
+                "line": 26,
+                "start_char": 1,
+                "end_char": 340,
+                "start_text": "实现信息交互的短距离无线通信，国",
+                "end_text": "智能网联汽车行稳致远的必由之路。"
+              }
+            ]
+          ],
+          "reason": "全段一页：对照技术与解释自主论证属于不同观察任务，不能用更多箭头或更小字解决。"
+        }
+      ],
+      "selected_page_ids": [
+        "A81R2-P05",
+        "A81R4-P06A",
+        "A81R4-P06B"
+      ],
+      "decision_reason": "选技术比较一页、理由一页、落实一页。后两页用“关键核心技术无法依赖他人”短回显承接，接轨与自主始终不是二选一。新增页分担论证层次，不增原文或政策细节。对照页保留，因为共同参照确实服务比较，说明不是所有长段都拆。"
+    },
+    {
+      "comparison_id": "CMP-R4-04",
+      "source_spans": [
+        {
+          "source_id": "src81",
+          "line": 30,
+          "start_char": 1,
+          "end_char": 101,
+          "start_text": "当每辆车都成为持续联网的数据节点",
+          "end_text": "接威胁整车与整个交通体系的安全。"
+        },
+        {
+          "source_id": "src81",
+          "line": 30,
+          "start_char": 102,
+          "end_char": 243,
+          "start_text": "因此，信息交互技术必须在数据存储",
+          "end_text": "的同时，守护好每一份流动的数据。"
+        }
+      ],
+      "alternatives": [
+        {
+          "candidate_id": "CMP-R4-04-ALT1",
+          "proposed_page_spans": [
+            [
+              {
+                "source_id": "src81",
+                "line": 30,
+                "start_char": 1,
+                "end_char": 243,
+                "start_text": "当每辆车都成为持续联网的数据节点",
+                "end_text": "的同时，守护好每一份流动的数据。"
+              }
+            ]
+          ],
+          "reason": "风险与保护合页并分步：可以共用数据对象，但要从数据—威胁—影响转换到三维覆盖—设计起点—5G支撑，两组三项并置容易误配。"
+        },
+        {
+          "candidate_id": "CMP-R4-04-ALT2",
+          "proposed_page_spans": [
+            [
+              {
+                "source_id": "src81",
+                "line": 30,
+                "start_char": 1,
+                "end_char": 101,
+                "start_text": "当每辆车都成为持续联网的数据节点",
+                "end_text": "接威胁整车与整个交通体系的安全。"
+              }
+            ],
+            [
+              {
+                "source_id": "src81",
+                "line": 30,
+                "start_char": 102,
+                "end_char": 162,
+                "start_text": "因此，信息交互技术必须在数据存储",
+                "end_text": "设计的起点，而非事后的补救措施。"
+              }
+            ],
+            [
+              {
+                "source_id": "src81",
+                "line": 30,
+                "start_char": 163,
+                "end_char": 243,
+                "start_text": "5G的低时延、高可靠连接为数据安",
+                "end_text": "的同时，守护好每一份流动的数据。"
+              }
+            ]
+          ],
+          "reason": "按完整句界将5G单独拆页：可减轻保护页负荷，但容易让连接支撑变成独立安全方案，削弱“保护仍需贯穿”的约束，需再次回显三维保护才不割裂。"
+        }
+      ],
+      "selected_page_ids": [
+        "A81R2-P07",
+        "A81R2-P08"
+      ],
+      "decision_reason": "维持风险页与保护页两页。保护页通过三个状态表达不同关系，5G保持从属支撑，不因有三个状态就拆三页。相邻合并并非绝对不可能，本版取舍基于误配风险与“因此”的清楚承接。"
+    }
+  ],
+  "internal_review": {
+    "plan_id": "A81-20260907-R2",
+    "plan_version": 4,
+    "status": "completed",
+    "reviewed_page_spans": [
+      {
+        "page_id": "A81R2-P01",
+        "owned_spans": [
+          {
+            "source_id": "src81",
+            "line": 18,
+            "start_char": 1,
+            "end_char": 135,
+            "start_text": "信息交互，是指具备网联功能的汽车",
+            "end_text": "、弯道盲区与路口死角的交通态势。"
+          }
+        ]
+      },
+      {
+        "page_id": "A81R4-P02A",
+        "owned_spans": [
+          {
+            "source_id": "src81",
+            "line": 18,
+            "start_char": 136,
+            "end_char": 238,
+            "start_text": "在行业的技术框架中，智能网联汽车",
+            "end_text": "两条技术路径走向融合的关键环节。"
+          }
+        ]
+      },
+      {
+        "page_id": "A81R4-P02B",
+        "owned_spans": [
+          {
+            "source_id": "src81",
+            "line": 18,
+            "start_char": 239,
+            "end_char": 303,
+            "start_text": "按网联化程度，信息交互由低到高又",
+            "end_text": "们先从最基础的“认知”层面切入。"
+          }
+        ]
+      },
+      {
+        "page_id": "A81R4-P03A",
+        "owned_spans": [
+          {
+            "source_id": "src81",
+            "line": 22,
+            "start_char": 1,
+            "end_char": 75,
+            "start_text": "车辆主要与五类外部对象交换信息。",
+            "end_text": "台、交通标识牌与隧道监控等信息；"
+          }
+        ]
+      },
+      {
+        "page_id": "A81R4-P03B",
+        "owned_spans": [
+          {
+            "source_id": "src81",
+            "line": 22,
+            "start_char": 76,
+            "end_char": 154,
+            "start_text": "V2P（车与行人）交换车辆与行人",
+            "end_text": "导航定位、防盗与远程求助等内容。"
+          }
+        ]
+      },
+      {
+        "page_id": "A81R2-P04",
+        "owned_spans": [
+          {
+            "source_id": "src81",
+            "line": 22,
+            "start_char": 155,
+            "end_char": 212,
+            "start_text": "五项交互叠加，使单车的局部感知拓",
+            "end_text": "预警、弯道防撞等场景提供了可能。"
+          }
+        ]
+      },
+      {
+        "page_id": "A81R2-P05",
+        "owned_spans": [
+          {
+            "source_id": "src81",
+            "line": 26,
+            "start_char": 1,
+            "end_char": 168,
+            "start_text": "实现信息交互的短距离无线通信，国",
+            "end_text": "具优势，已成为全球主流方向之一。"
+          }
+        ]
+      },
+      {
+        "page_id": "A81R4-P06A",
+        "owned_spans": [
+          {
+            "source_id": "src81",
+            "line": 26,
+            "start_char": 169,
+            "end_char": 240,
+            "start_text": "我们既要客观认识国外先发方案的价",
+            "end_text": "命脉，关键核心技术无法依赖他人。"
+          }
+        ]
+      },
+      {
+        "page_id": "A81R4-P06B",
+        "owned_spans": [
+          {
+            "source_id": "src81",
+            "line": 26,
+            "start_char": 241,
+            "end_char": 340,
+            "start_text": "我国明确提出分阶段建立“适应国情",
+            "end_text": "智能网联汽车行稳致远的必由之路。"
+          }
+        ]
+      },
+      {
+        "page_id": "A81R2-P07",
+        "owned_spans": [
+          {
+            "source_id": "src81",
+            "line": 30,
+            "start_char": 1,
+            "end_char": 101,
+            "start_text": "当每辆车都成为持续联网的数据节点",
+            "end_text": "接威胁整车与整个交通体系的安全。"
+          }
+        ]
+      },
+      {
+        "page_id": "A81R2-P08",
+        "owned_spans": [
+          {
+            "source_id": "src81",
+            "line": 30,
+            "start_char": 102,
+            "end_char": 243,
+            "start_text": "因此，信息交互技术必须在数据存储",
+            "end_text": "的同时，守护好每一份流动的数据。"
+          }
+        ]
+      }
+    ],
+    "checks": [
+      {
+        "item": "source_coverage",
+        "result": "pass",
+        "evidence_refs": [
+          "source:src81"
+        ]
+      },
+      {
+        "item": "source_order",
+        "result": "pass",
+        "evidence_refs": [
+          "source:src81"
+        ]
+      },
+      {
+        "item": "boundaries",
+        "result": "pass",
+        "evidence_refs": [
+          "comparison:CMP-R4-01",
+          "comparison:CMP-R4-02",
+          "comparison:CMP-R4-03",
+          "comparison:CMP-R4-04"
+        ]
+      },
+      {
+        "item": "capacity",
+        "result": "pass",
+        "evidence_refs": [
+          "page:A81R2-P01",
+          "page:A81R4-P02A",
+          "page:A81R4-P02B",
+          "page:A81R4-P03A",
+          "page:A81R4-P03B",
+          "page:A81R2-P04",
+          "page:A81R2-P05",
+          "page:A81R4-P06A",
+          "page:A81R4-P06B",
+          "page:A81R2-P07",
+          "page:A81R2-P08"
+        ]
+      },
+      {
+        "item": "split_merge",
+        "result": "pass",
+        "evidence_refs": [
+          "comparison:CMP-R4-01",
+          "comparison:CMP-R4-02",
+          "comparison:CMP-R4-03",
+          "comparison:CMP-R4-04"
+        ]
+      },
+      {
+        "item": "non_a_retention",
+        "result": "pass",
+        "evidence_refs": [
+          "non_a:N81-INTRO",
+          "non_a:N81-END"
+        ]
+      }
+    ],
+    "unresolved_issues": []
+  }
+}

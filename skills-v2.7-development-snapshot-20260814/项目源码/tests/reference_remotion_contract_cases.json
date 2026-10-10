@@ -9,8 +9,9 @@
         "with_text_requested": true
       },
       "expected": {
-        "page_type": "A16_既有母版套新内容型",
-        "candidate_policy": "reference_locked_single_candidate",
+        "legacy_page_type_used_for_design": false,
+        "plan_policy": "one_main_execution_plan",
+        "execution_type": "reference_locked_full_page",
         "output_target": "full_page_with_text",
         "text_generation_strategy": "带字",
         "reference_attachment_required": true,

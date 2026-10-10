@@ -1,69 +1,158 @@
 ---
 name: stage-bline-production-handoff
-description: V2.7 Stage B-line production handoff for course visuals. Use after A-line/A-review passes to produce standard two-candidate handoffs or one reference-locked A16 candidate, select and confirm reference-folder inputs, preserve exact text and template identity, and prepare T-line input without writing prompts directly.
+description: V2.7 Stage B-line visual-production design after A owns and internally reviews an explicit pagination plan. Realize one main visual plan, organize dynamic batches and representative calibration, and return pagination-impacting evidence to A without becoming a second pagination decision center.
 ---
 
-# Stage B-Line Production Handoff
+# Stage B-Line Executable Design Handoff
+
+## 交互 Gate：先判必要性，再提问
+
+- “核对/快速确认/逐项检查”默认是模型内部工作，不等于逐项向用户索批。提问前先核对当前指令、有效确认和本地证据；相同对象、版本、用途和范围没有变化时沿用，不换名称重问。
+- 只有存在会改变下一动作的用户专属决定或缺失授权才提问；必须说明具体未决项、已有结论、推荐方案、影响及被阻塞动作。不能说明回答将改变什么，不得阻塞。
+- 一次一个问题约束的是实质决策，不是把一个完整方案拆成机械确认链。先给出可审阅的具体方案；同一范围内的路由清单可随分页方案一并审阅，不另问“是否继续/是否进入下一线”。
+- “执行全流程/按规则自行执行到停止点”覆盖所请求范围内的分析与阶段推进；没有实质 Gate 时继续。正式文件写入仍核对目标和写入范围；范围已明确授权则告知后执行，未覆盖才询问。该授权不等于批准尚未展示的分页、设计、参考用途、生图或成品。
+- 有效分页、参考用途、设计变更、明确生图授权、代表页确认和最终定稿 Gate 均保留。用户拒绝重复回答不是同意待决方案；回查批准范围，删除重复问题，只保留真正未决的差异。
+- 阶段完成先报告结果；仅当授权已用尽或遇到实质 Gate 时停止。本节限定本文“立即停止/只问是否执行”的适用条件，不能用单步默认覆盖明确端到端授权。出现交互冲突时按需读 `_shared/interaction-gate-rules.md`。
+
+## 分页权责与状态分离
+
+- 默认A统一完成输入整理、教学分析、必要承载核验、明确分页和内部复核；取消默认独立S与固定独立A审。S仅为显式兼容输入工具，不先给A一套必须沿用的页界。
+- **范围批准是A分析准入条件，分页批准不是A分析前置条件。** 源文证据稳定保留，页界/页数由A依据全文关系与真实承载条件形成；旧候选和旧审核通过不自动继承。
+- A内部复核必须查页界必要性、相邻合并、合理替代、衔接及覆盖，不只查单元内部自洽；独立审者仅用户明确要求时执行，触发条件本轮不定义，不新增停止点。
+- B只落实具体视觉设计和生产组织；涉及页界、页数、正文归属或教学关系时提供证据交A局部修正，纯实现问题留B。原文和准入未变不重跑S，不默认重启整链，不把设计缺口交给用户补做。
+- 分页方案须有源路径/版本、逐字起止（均含）、精确定位、明确页序/页数、拆合比较与承载依据；源引用与页面身份解耦。正式页修订保留旧新映射及有效状态，详见 `_shared/pagination-authority-rules.md`。
 
 ## 渐进式读取
 
 ### 必读
-- 当前 `SKILL.md`、已通过的 A线冻结交接卡及 A审结果。
-- 输入字段完整时，不默认读取共享总控、预设库、模板或示例。
+- 当前 `SKILL.md`、A明确分页方案及对应页面简报、当前版本内部复核记录；不要求独立A审报告或独立S阶段。
+- 只有需要形成正式 B区时，读取 `templates/b_line_production_card.md`。
 
 ### 按需读取路由
 - 一次只允许由当前唯一未决问题触发一个来源；读取后先执行快速确认，再决定是否扩展下一项。
-- 四个 Gate、六项检查或退回条件仍有歧义：读 `references/production_handoff_rules.md` 的相关小节。
-- 需要为候选方案选择审美预设：只定位并读取 `_shared/page_preset_bank.md` 中与当前页面类型相符的条目，不全文扩展其他预设。
-- A线卡中确有参考图：读 `_shared/reference-image-inheritance-rules.md`；无参考图时不得读取。
-- 固定母版任务需要Remotion资产交接：读 `_shared/remotion-asset-handoff-rules.md`，但不读取或生成Remotion代码。
-- 只有用户或当前阶段明确要求 ALG-B01 证据时，读取相应 Algorithm Lite 规则或清单。
-- 只有需要生成正式生产卡时，读取 `templates/b_line_production_card.md`。
-- 两方案差异仍不真实时，读取一个直接匹配的成功或失败示例。
+- 实现依据、分批、骨架继承、代表页或退回边界有歧义：读取 `references/production_handoff_rules.md` 的对应小节。
+- A区声明了参考图或固定母版：读取 `_shared/reference-image-inheritance-rules.md`；无参考图时不得为了寻找灵感而扩大读取。
+- 固定母版任务需要 Remotion 资产交接：读取 `_shared/remotion-asset-handoff-rules.md`，但不读取或生成 Remotion 代码。
+- 需要审美预设时，只定位 `_shared/page_preset_bank.md` 中与当前教学关系直接相关的条目；预设只能辅助表达，不是实现证据。
+- 只有用户或当前阶段明确要求 ALG-B01 证据时，读取对应 Algorithm Lite 规则。
+- 只有当前判断仍不清楚时，读取一个直接匹配的成功示例或反例；不得批量读取示例替代项目证据。
 
 ### 快速确认
-先确认冻结项完整性、四 Gate 结果、两方案的真实差异维度和用户已确认的候选。以上信息足够时停止读取；缺失字段直接退回 A线，不通过读取更多预设猜测。
+先确认当前源引用、A分页版本及内部复核完整且未撤回、实现依据五项可填写、唯一主方案已收敛、批次四项依据成立、代表页及人工确认状态明确、骨架继承证明完整或明确不继承。若当前信息已足够，停止扩展读取；输入事实缺失则退回对应上游，不用更多预设猜测。
 
 ### 停止规则
-B线卡或退回报告完成后立即停止；一次授权只覆盖当前一个产物，不自动进入 T线，也不为“备用”目的提前读取提示词规则。
-
-## 本阶段的追问与写入纪律
-- 标准双方案只做差异比较并可给出模型建议，不得依据评分、风险或建议替用户选定首选；一次只询问用户是否选择当前某一个候选，得到回答前不得冻结或交给 T线。
-- 固定母版单方案也必须有用户对该方案的明确确认；“只有一个候选”不等于用户已经选择。
-- 信息不足时先读取本阶段可用的 A线卡、A审结果、已确认版式和参考材料；本地材料仍不能消除的信息差，才按依赖顺序一次追问一个问题。不得把两个决策写进同一问句或相邻上下段等待一次回答。
-- 写正式 B线卡或退回报告前，先说明本线准备生成什么、写到哪个文件、是否修改已有文件、T线需要接收什么，以及哪些分析或验证记录不属于正式交付；随后只问：`是否按上述产物与交接方案执行？`
-- 未获这一次明确授权不得写入。用户要求调整时，一次只追问一个修改方向。不得把“输入交接文件”理解为继续向上游文件追加，也不得复制上游全文、验证日志或后续 T线内容。
+单阶段授权下，B区、批次校准状态或退回报告完成后停止。端到端授权下可推进已满足输入条件的C线适配，但生成必须另有当前具体页面的明确授权；不因跨阶段名称重复索批。
 
 ## Responsibility
-B-line receives a passed A-line handoff and runs four gates and six checks. Standard tasks output `方案A_稳妥版` and `方案B_探索版`; an explicit fixed-master A16 task outputs one `方案A_参考锁定版`. It does not re-split source text, add course knowledge, overwrite frozen items, or write platform prompts.
+B线回答“在现有资产与生成能力下怎样稳定实现”。它接收A已明确分页并完成内部复核的方案，沿用可核验的教学与承载依据，不重新解释全部教学内容，不重新切分原文，不改写事实或教学关系。B线只形成一个 `main_execution_plan`，不得再创建稳妥版/探索版等多套候选，让下游或用户替 B线完成设计收敛。
+
+B线负责：
+- 沿用A分页时已经核对的获准资产与承载依据；查阅当前页具体实现仍需要的模板、参考素材和直接相关案例，不把首次承载判断推迟至本阶段；
+- 区分真实外壳、局部结构、内容资产和已观察成功能力；避免从空白外壳推导复杂内构图已经验证，不把证据限制写成禁止内容驱动设计；
+- 选择模板、内容容器、语义视觉载体、阅读顺序、参考图用途和一份主方案；
+- 根据实际生产机制动态组织批次，指定并校准代表页；
+- 对跨页局部骨架继承给出教学关系证明；
+- 把已确认方案追加到同一页面简报的 B区，交给 C线执行适配器。
+
+## 分页引用与反馈（不是第二轮分页）
+
+- B区的 `pagination_ref` 必须匹配A计划的 `plan_id`、`plan_version`、`page_id` 和 `owned_spans`，不得另行建立B页界。
+- 必要载体、模板空间或素材风险已在A分页时进入判断；B在其范围内细化具体容器、主视觉、精确位置与尺寸、文字实现和参考映射，不重复补一套教学理由字段。
+- 纯实现问题由B局部修正；涉及页界、页数、正文归属或教学关系时，`pagination_feedback` 记录问题、实际证据、受影响页及 `requested_owner: A`，由A完成修正后B再落实。
+- A只重查受影响页和必要相邻衔接；B同步新版本引用，不重启S→A→B，不把未完成的设计判断交给用户。
+- 数据校验规则见 `_shared/pagination-plan-contract.md`。反馈无问题时用空数组；待决反馈只影响相关下游，不据此重开独立A审或全课停止。
 
 ## Inputs
-A-line frozen handoff card and A-review pass/local补卡 completion. If A-review did not pass, return to A-line.
+必须具有：
+- A形成的页面编号、原始课程序号及独立源证据引用；旧S区可以只读引用，但不作为新分页批准；
+- A区的教学目标、教学关系、必须呈现项、图像任务与禁止偏移项；
+- 对应当前plan_id/plan_version及具体页界的A内部复核记录；旧a_review_status不能代替；
+- 当前决定使用的模板与参考的真实可访问路径。已声明使用的路径不存在或角色不清时停止；无适用模板/参考可明确写“无”及理由，不凭文件名想象内容，也不因库存无匹配案例阻塞设计或要求用户补模板。
 
-## Four Gates
-审美气质, 学习任务, 学生负荷, 媒介分工.
+## One Main Plan
+- 先核对并沿用匹配且已确认的设计节点产物：依次判断原样复用、仅换内容、必要局部调整，确实与 A语义不兼容才重新设计。成熟复用省重复实现，不省A的教学与分页判断；没有匹配案例时允许直接依据内容收敛设计，不强找模板或交给用户补模板。只补未决实现项，不重新发散；成熟表达和必要组合探索都只服务这一份主方案。
+- 原路径、版本/日期、用途和确认范围可核对时沿用；新增主要参考、改变继承方式或冻结结构只确认受影响决定。若无法保留 A语义先退 A，不能先画后改。待批或禁用 AE 不进入输入。
+- 每页只输出一份主执行方案。B线必须在自身阶段完成方案收敛，不把同义改写或互斥候选交给 C线。
+- 主方案包括可核验的外层母版身份与描述、内容容器、语义视觉载体、完整主视觉描述、阅读顺序、参考映射、文字实现方式、视觉空间理由、必须保留项、允许变化项和硬性禁止项。
+- 沿用A的页内先后/并现及跨页承接，用既有 `reading_order`、`text_realization_strategy`、`main_visual_description` 写清当前执行状态、全页其他状态去向及全部A必呈项的逐字映射；页、状态、镜头不自动一一对应。B `must_show_text_verbatim` 是当前图的准确可见文字子集，不是全页各状态同时出现的清单；C逐字编译该当前状态，不删改原文，也不把未执行状态默认为已生成。不能以“动画稍后再补”掩盖尚无明确文字或观察顺序的设计。
+- `visual_space_rationale` 用教学作用、信息关系、信息密度和可读性说明图像空间；禁止写固定图片占比或把比例区间当合规门槛。
+- B必须完整决定主视觉、核心关系、结构及文字安排，完整主方案可以待首轮校准，不必先有成功样张。精确坐标、对象大小、装饰、光影等若无实测依据，不作为已验证的稳定/像素承诺；必要的设计目标仍可清晰描述，非核心微观细节和效果不确定性写入 `open_for_calibration`。效果未验证与核心决策空白不同，后者不能交给C补设计。
 
-## Six Checks
-页面类型是否稳定, 审美气质是否明确, 信息承载是否可生产, 主视觉方向是否单一, 文字层级是否后期可控, 生成稳定性是否足够.
+## Realization Evidence
+每页必须填写五项，缺一不得交给 C线：
+1. `asset_used`：实际资产或案例的真实路径/ID；明确无外部资产时用 `[]`，并按下述显式组合说明理由，不虚造路径或成功案例；
+2. `what_it_proves`：该证据直接证明的可实现能力；
+3. `what_it_does_not_prove`：明确不能由它推出的设计结论；
+4. `highest_risk`：当前最大实现风险；
+5. `representative_calibration_required`：是否需要代表页校准及理由。
 
-## Candidate Rules
-- 方案A_稳妥版: more stable, readable, material-safe, lower model risk.
-- 方案B_探索版: visibly different structure or aesthetic exploration, but must not become poster-like, travel-promo-like, empty atmosphere, or pure style play.
-- A and B must differ in at least one real dimension: structure, material policy, composition, visual rhythm, main visual focus, or risk control.
-- Each scheme must include `difference_from_other_scheme`; do not use synonym rewrites as the difference.
-- Hard bans are 3-5 items only.
-- For `A16_既有母版套新内容型` with `production_mode: reference_locked`, use `candidate_policy: reference_locked_single_candidate`; do not create an exploration candidate.
-- Inventory the reference folder, select one primary layout reference and no more than two secondary references, explain rejected candidates, and obtain one user confirmation per reference set.
-- Carry a non-hash reference list containing reference ID, real path, file name, dimensions, template version, reference role, and user confirmation; also carry exact visible text, template identity, layer manifest, and flattened-PNG fallback Gate. Do not replace real paths with descriptive summaries.
+只有空白背景、标题框或内容容器时，证据只支持外壳、锚点或安全区域，不能证明复杂图表或具体内构图已经稳定实现。PNG参考是观察到的画面，不是参数可控模板；内容资产的事实作用也不等于布局或生成成功证据。缺少直接成功证据时，B仍完成内容驱动的唯一可执行主方案，并在 `what_it_does_not_prove`、`highest_risk`、`open_for_calibration` 诚实记录待验证条件，以代表页首轮校准检验；不得通过新增机械门槛伪造确定性或禁止设计本身。真正缺失且不可替代的必需素材按责任处理，而非一律要求补模板。
 
-## Output Contract
-Gate 未通过时先按本阶段写入纪律提议退回产物，获确认后输出退回依据，不读取生产卡模板。标准任务先提出两个方案供比较，用户明确选择后，正式交接记录该用户选择；正式参考锁定交接只输出一个 `方案A_参考锁定版`，也必须记录用户明确确认。没有用户选择或确认时不得形成面向 T线的正式交接。
+机器交接中的无外部资产分支使用原字段：`implementation_evidence.asset_used: []`，`main_execution_plan.outer_template.evidence_reference_id: no_external_asset`，选定参考为空；母版 `identity`/`description` 与实现证据明确无外部资产及理由，主视觉和唯一主方案仍完整。C相应 `template_identity.evidence_reference_id` 与 `master_asset_path` 均为 `no_external_asset`，`master_asset_exists_and_readable: no`，不声称读过外部文件；该token不是路径。选定参考/编译references/实际附件均空，未执行不虚造回执。不能以空路径或缺失文件触发此分支，也不能因此豁免代表页校准、生图授权或参考锁定任务的真实主参考。
 
-## Prohibitions
-Do not write GPT Image execution prompts or any historical-platform prompts. Do not bypass text Gate or reference inheritance. Do not erase A-line frozen items. Do not output pseudo-final prompts. 哈希不得作为正常候选、默认方案或备用方案，也不得计算、传递或用摘要/指纹变相替代；上游提出哈希时停止，只问是否改用非哈希方式。
+## Dynamic Batch Organization
+- 不按课程序号默认连续生产。原始课程序号必须保留，用于追溯和最终复原。
+- 不预设批次数量。B线根据全部待生产页面的实际特征形成一个或多个批次；必要时单页独立成批。
+- 同批页面必须在以下四方面都足够接近，并逐项给出证据：外层模板、教学关系、语义视觉载体、参考依赖/生成方式。
+- “同一章节”“同一课程”“看起来相似”“上一页效果好”均不能作为同批充分依据。
+- 每批指定一张 `representative_page`。代表页必须体现该批核心教学关系和典型信息密度，不得选择过度简单页或例外页。
+- 同批在同一个 C线对话连续执行，跨批隔离。`frozen_batch_core` 记录共同固定项，`within_batch_required_differences` 及各页 `allowed_to_change` 记录对象、数据、文字、图片等本页差异。更换内容不自动改结构；差异若改变四项共同机制则拆批或留 B调整。冻结后不得滚动吸收上一张生成结果。
+
+## Representative Calibration And Freeze
+- 批次初始状态为 `calibrating`。先仅生成代表页，其他成员为 `blocked_until_representative_confirmed`。实现依据中的“是否需要代表页校准”对代表页必须为 `yes`；非代表页只有在明确指向本批代表页时才可为 `no`。
+- 代表页必须获得人工明确确认。确认前不得扩批，也不得把代表页骨架称为已验证机制。
+- 代表页确认仅满足本批展开前提，由 B维护 `frozen_for_execution` 及共同基准，不由 C另写一版。它不代替其余成员列名各一次的首轮生图授权，不自动定稿或授权参考继承；共同依据/参考角色变化只重确认受影响批次。
+- 代表页失败时先判断失败归属：提示编译/素材注入等执行问题留在 C；模板、骨架、参考映射或可实现性错误退回 B调整结构；涉及页界、页数、正文归属或教学关系，附证据回A局部修正。不得把失败方案扩散到整批，也不因“此前未验证”禁止合理设计尝试。
+- 静态代表页只验证实际生成的状态及可观察结果，不能证明切换、运动、其他状态或跨状态阅读效果。未验证条件保留在既有实现证据与开放项，不因代表页通过自动升级。
+- 单张状态图通过不等于整页媒体或整个批次通过，也不释放尚未验证的状态。现有确认记录写清实际覆盖的状态/机制，未覆盖状态继续标未验证；输出文件可用页ID加状态后缀追溯，不改page_id或增加生产阶段。
+- “模型舒适区”只是通过本批校准检验的假设，不能作为分批理由或成功保证。
+
+## Cross-Page Skeleton Inheritance
+只有教学关系与语义视觉载体均相同，B线才可申请继承上一页或其他页面的局部骨架，并必须填写：
+- `source_page`；
+- `same_teaching_relation_reason`；
+- `inherited_parts`；
+- `required_changes`。
+
+任一项为空，或理由仅为“效果好、同章节、同课程、风格统一、保持连续”，均判定为 `no_inheritance`。继承只覆盖明确列出的局部骨架，不自动继承构图细节、生成图、错误或上下文。
+
+## Qualitative Visual Checks
+这是 B方案可行性检查，不是 C逐图实际验收或批后共同基准检查，不可声称已验证成图。不检查固定图片比例。提交前只确认：
+- 图像承担明确教学任务；
+- 主视觉焦点与学习目标一致；
+- 文字清晰且阅读顺序合理；
+- 教学关系能够被迅速识别；
+- 背景、装饰和参考元素不与核心内容争夺注意力；
+- 各实际状态必须呈现的信息及必要图解拥有足够空间，先后/并现和观察顺序明确，不要求全任务必呈项同图堆放。
+
+## Handoff To C-Line Adapter
+B线不写平台提示词。交接分为两个明确状态：
+- 代表页校准例外：实现依据和主方案完整、资产可用且无矛盾时，可在批次 `calibrating`、人工确认 `pending` 状态标记 `ready_for_representative_calibration`，仅满足 C线一次代表页首轮校准的交接前提，仍需该页明确生图授权；不得释放其他成员。
+- 正式扩批：代表页人工确认后，才把已冻结主方案标记为 `ready_for_C` 并交给 C线；实际执行仍须其余成员在首轮授权名单内。
+
+两种交接都必须包含真实资产路径、模板身份、参考角色、必须保留/允许变化项、开放项和技术输出规格。若字段为空（尤其母版身份/描述或主视觉描述为空）、资产不存在、设计互相矛盾，或非代表页所属批次尚未冻结，标记 `not_ready_for_C`。不得使用“由 C自行发挥”等文字把设计决策推给 C线。
+
+无固定母版/外部素材时明确“无”及理由，并完成主视觉与本次执行目标，不用空值冒充不适用。代表页例外允许“完整主方案已收敛、效果待验证”，不允许“主视觉/核心结构尚未决定”。当前状态的实际文字与保留边界必须明确；其他状态或更多图像不因状态说明获自动授权。
 
 ## Failure / Return
-If frozen fields are missing, reference inheritance is vague, text Gate unresolved, or ALG-B01 says production cannot preserve the A-line basis, output B-line gate report and return to A-line. Do not output pseudo-final prompts.
+- 原文定位、时间码、来源一致性或素材登记错误：回A输入整理，只修受影响证据，不改原稿。
+- 页界、页数、正文归属、教学目标/关系、必呈项或衔接错误/缺失：附具体实现证据交A局部修正并内部复核。
+- 模板、骨架、参考映射、分批或实现可行性错误：留在 B线修订。
+- 只有 C适配器编译、素材注入、透明度、尺寸或已冻结骨架内的局部生成偏差，才留在 C线修正。
+- 如修正需要改变模板、教学关系或核心骨架，C线必须停止整页重抽；教学/分页问题回A，模板/骨架实现问题回B。
 
-## Minimal Example
-示例只作为证据。固定母版单候选仍不明确时读 `examples/reference_locked_single_candidate_success.md`；标准两方案差异失败时只读一个匹配项。
+## Prohibitions
+- 不写 GPT Image 平台提示或任何历史平台提示。
+- 不创建双候选，不以评分替代设计判断，不让用户在未收敛方案之间承担 B线职责。
+- 不使用固定图片占比、固定批数或机械页面分类。
+- 不因上一页好看而继承骨架，不把一个空白模板解释为完整视觉系统。
+- 不覆盖源证据和A分页/教学决定，不复制上游正文或另造A摘要，不向输入原稿追加独立B/C产物。
+- 不计算、保存、传递或推荐哈希、摘要指纹；正常交接使用真实路径和非哈希引用清单。
+
+## Minimal Evidence Examples
+- 模板能力边界：`examples/template_evidence_boundary_success.md`
+- 动态分批与代表页：`examples/dynamic_batch_single_plan_success.md`
+- 固定母版主方案：`examples/reference_locked_main_plan_success.md`
+- 合法骨架继承：`examples/skeleton_inheritance_success.md`
+- 错误分批：`anti_examples/superficial_batching_failure.md`
+- 错误继承：`anti_examples/unsupported_skeleton_inheritance_failure.md`

@@ -1,0 +1,7 @@
+{
+  "char_count_no_space": 333,
+  "text_budget_level": "超过180",
+  "risk": "gate",
+  "recommendation": "user_gate_split_or_no_text_layout",
+  "final_decision": "recommendation_only_not_a_frozen_item"
+}

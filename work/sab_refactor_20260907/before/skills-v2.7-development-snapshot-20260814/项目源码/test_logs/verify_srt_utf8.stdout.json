@@ -1,0 +1,5 @@
+{
+  "contains_expected_chinese": true,
+  "contains_mojibake_marker": false,
+  "path": "test_logs/srt_sample/sample_short.srt_index.md"
+}

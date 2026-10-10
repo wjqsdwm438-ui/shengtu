@@ -1,0 +1,27 @@
+{
+  "check": "a_pagination_plan",
+  "pass": true,
+  "error_count": 0,
+  "errors": [],
+  "derived": {
+    "page_count": 11,
+    "mechanical_validation_only": true,
+    "pedagogical_quality_verified": false,
+    "source_versions_independently_verified": false,
+    "all_source_edits_detected": false,
+    "page_ids": [
+      "A81R2-P01",
+      "A81R4-P02A",
+      "A81R4-P02B",
+      "A81R4-P03A",
+      "A81R4-P03B",
+      "A81R2-P04",
+      "A81R2-P05",
+      "A81R4-P06A",
+      "A81R4-P06B",
+      "A81R2-P07",
+      "A81R2-P08"
+    ],
+    "non_a_count": 2
+  }
+}

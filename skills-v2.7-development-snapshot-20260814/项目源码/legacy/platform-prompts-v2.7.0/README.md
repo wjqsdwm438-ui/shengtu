@@ -5,7 +5,7 @@
 ## 状态
 - `legacy: true`
 - `deprecated: true`
-- 不属于 V2.7.1 当前 T线运行依赖。
+- 不属于 V2.7.1 当前运行依赖；独立 T线已经退出活动流程。
 - 当前 Skill 不得自动读取、默认引用或输出本目录材料。
 
 ## 目录
@@ -15,6 +15,6 @@
 - `anti_examples/`：旧反例与保护规则。
 
 ## 当前替代方案
-V2.7.1 使用 GPT Image 能力和请求模型 `gpt-image-2`，默认只输出一套中文执行提示词合同。当前入口位于 `stage-tline-prompt-translation/`，执行反馈入口位于 `stage-cline-gpt-image-execution-feedback/`。
+V2.7.1 使用 GPT Image 能力和请求模型 `gpt-image-2`，默认只由 `stage-cline-gpt-image-execution-feedback/` 的 C线执行适配器输出一套中文执行提示词合同。不存在当前独立 T线入口。
 
 不要直接修改本目录来改变当前行为；需要恢复历史规则时，应从原始 Git 标签创建独立分支，并重新经过范围、依赖、回滚和验证 Gate。

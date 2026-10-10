@@ -1,0 +1,50 @@
+{
+  "scope": "E:\\shengtu\\skills-v2.7-development-snapshot-20260814\\skills-v2.7-development-snapshot-20260814\\项目源码",
+  "commands": [
+    {
+      "name": "run_all_checks",
+      "arguments": [
+        "run_all_checks.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "unit_tests",
+      "arguments": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "pagination_example",
+      "arguments": [
+        "scripts/validate_pagination_plan.py",
+        "tests/pagination_plan_valid.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "workflow_svg_check",
+      "arguments": [
+        "scripts/export_workflow_diagrams.py",
+        "--check"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "files_compared": 130,
+  "comparison": "exact bytes and st_mtime_ns, plus complete directory names",
+  "changed_files": [],
+  "new_files": [],
+  "removed_files": [],
+  "new_directories": [],
+  "removed_directories": [],
+  "all_checks_passed": true,
+  "source_directory_unchanged": true
+}

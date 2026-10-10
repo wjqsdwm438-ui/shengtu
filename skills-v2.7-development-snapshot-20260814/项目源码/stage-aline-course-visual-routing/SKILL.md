@@ -1,102 +1,129 @@
 ---
 name: stage-aline-course-visual-routing
-description: V2.7 Stage A-line course visual page routing for Stage Activity Planning. Use after S-line routes a segment as S07_AI课程视觉页型, or when a user explicitly asks for V2.7 A线页面方向预判, A审, page type selection A01-A21, light_region_summary, text budget, reference inheritance preparation, user-readable page diagnosis, three option planning, or course visual handoff.
+description: V2.7 default A-line for course visual input preparation, source-faithful routing, whole-scope teaching analysis, necessary capacity checks, explicit pagination, and internal review. Use directly with course scripts, SRT, documents or existing evidence. A owns page boundaries and teaching semantics; B realizes visual design. Standalone S and independent A-review run only when explicitly requested.
 ---
 
-# Stage A-Line Course Visual Routing
+# Stage A-Line Input, Teaching Analysis And Pagination
+
+## 交互 Gate：先判必要性，再提问
+
+- “核对/快速确认/逐项检查”默认是模型内部工作，不等于逐项向用户索批。提问前先核对当前指令、有效确认和本地证据；相同对象、版本、用途和范围没有变化时沿用，不换名称重问。
+- 只有存在会改变下一动作的用户专属决定或缺失授权才提问；必须说明具体未决项、已有结论、推荐方案、影响及被阻塞动作。不能说明回答将改变什么，不得阻塞。
+- 一次一个问题约束的是实质决策，不是把一个完整方案拆成机械确认链。先给出可审阅的具体方案；同一范围内的路由清单可随分页方案一并审阅，不另问“是否继续/是否进入下一线”。
+- “执行全流程/按规则自行执行到停止点”覆盖所请求范围内的分析与阶段推进；没有实质 Gate 时继续。正式文件写入仍核对目标和写入范围；范围已明确授权则告知后执行，未覆盖才询问。该授权不等于批准尚未展示的分页、设计、参考用途、生图或成品。
+- 有效分页、参考用途、设计变更、明确生图授权、代表页确认和最终定稿 Gate 均保留。用户拒绝重复回答不是同意待决方案；回查批准范围，删除重复问题，只保留真正未决的差异。
+- 阶段完成先报告结果；仅当授权已用尽或遇到实质 Gate 时停止。本节限定本文“立即停止/只问是否执行”的适用条件，不能用单步默认覆盖明确端到端授权。出现交互冲突时按需读 `_shared/interaction-gate-rules.md`。
+
+## 默认入口与分页权责
+
+- 默认流程直接进入 A：输入整理、源定位、顺序/时间码、Non-A 路由、真实素材核对和有效范围沿用均由 A 承担。不要求独立 S、预先存在的 S07 页面简报或一套教学候选页作为准入条件。
+- **源证据与分页方案解耦。** 源记录保持原文及精确定位，不预建 `page_id`。旧 S 区、旧单元、旧 `page_id` 只作为历史源引用或比较基线；其 `confirmed` 不证明页界正确，也不把旧单元数、页数或教学分组自动沿用。A 完成全文分析和实际拆合比较，在方案收敛时建立新 `page_id`，再以当前整套页界映射闭合内部复核；有证据的原边界可以保留，不为证明重审而改变页数。
+- A 负责明确分页、每页正文归属、教学关系及必要承载核验；B 只落实具体视觉设计。B 发现页界、页数、正文归属或教学关系问题时给出证据，交 A 局部修正，不自行拆合、重编号或等到 B 才首次判断是否装得下。
+- 处理范围、Non-A 范围、A 正文范围、执行分页、设计和生图授权分别核对。已有同对象、同版本、同用途、同范围的有效决定继续有效；已授权的全文分析不要求用户先批准候选页数，也不要求用户补做教学或设计判断。
+- 分页建议必须给出源文件、精确定位、逐字起止（均含）、可核验正文以及覆盖/旧新映射证据。规则与统一结构分别见 `_shared/pagination-authority-rules.md`、`_shared/pagination-plan-contract.md`；源引用、Non-A 与分页方案保留在现有 A 分析产物，不强制新增独立档案。
 
 ## 渐进式读取
 
 ### 必读
-- 当前 `SKILL.md`、已经由用户确认的版式分类，以及已确认的 S07 片段卡；用户明确指定 A线时可使用其单页内容代替 S07 卡。
-- 先查看确认过的版式、母版、母版预览和参考图分类，再读取页面内容并做设计判断。不得自行改变上游已确认的类别或参考角色；分类尚未确认时，先返回当前唯一未决类别的单问题确认。
-- 不默认重读 S线、共享总控、全部页型表、模板或示例。
+- 当前 `SKILL.md`、授权范围内的全文、已有有效确认及实际需要的素材/源定位证据。先通读整体，不从旧候选逐页填卡替代全文教学分析。历史 S 区可直接作源引用，不要求重跑 S。
+- 核对正文、屏显文字、制作批注、素材需求与实际媒体的角色及来源。错误由 A 的输入整理职责局部修正；历史原文和证据保留，注明更正依据，不静默覆写或另编原稿。
+- 正式分页前读取 `_shared/pagination-plan-contract.md`；分页权责或旧页迁移有争议时读 `_shared/pagination-authority-rules.md`。不默认读取 S/B/C Skill、视觉页型全集或全部参考文件。
 
 ### 按需读取路由
-- 一次只允许由当前唯一未决问题触发一个来源；读取后先执行快速确认，再决定是否扩展下一项。
-- A01-A21 候选含义或相邻页型仍不明确：只读 `references/page_type_rules.md` 的相关条目。
-- 需要计算计划上屏文字或触发 180 字 Gate：读 `references/onscreen_text_rules.md`。
-- 内容关系可能被误写成固定版式：读 `references/layout_decoupling_rules.md`。
-- 已选择 A01 或正在判断“空背景”风险：读 `references/no_text_layout_skeleton_rules.md`。
-- 用户提供必须保留的真实素材：读 `references/material_retention_rules.md`。
-- 存在参考图：读 `_shared/reference-image-inheritance-rules.md`；没有参考图时不得读取。
-- 用户要求Remotion适配、透明前景或动画拆层：只读 `_shared/remotion-asset-handoff-rules.md` 的相关Gate。
-- 只有需要正式 A线交接卡或 A审报告时，分别读取对应 template。
-- examples/anti_examples 只在对应判断仍不稳定或已出现同类失败时读取一个直接匹配项；已经出现“推荐后直接冻结”时读取 `anti_examples/assistant_freezes_visual_direction_failure.md`。
+- 每次由具体未决问题读取必要来源，核对后再决定是否扩展；不一次加载全部设计资料，也不把内部证据核对变成逐项用户确认。
+- 内容关系容易被误写成固定布局时，读取 `references/layout_decoupling_rules.md`。
+- 必须呈现的教学文字、口播文字与可省略内容边界不清时，读取 `references/onscreen_text_rules.md`。
+- 真实照片、截图或证据素材的事实意义不清时，读取 `references/material_retention_rules.md`。
+- 分页所需的承载条件不足时，只读取获准模板的实际可用空间、已确认视觉限制、必要载体或相关真实素材；用于判断可读性与页界，不进行精细构图、尺寸分配或风格方案选择。已有可核对证据足够则沿用，不重新要求授权同一用途。
+- 只有需要正式交接时才读取 `templates/a_line_page_handoff_card.md`；只有用户明确要求独立复核时才读取 `templates/a_review_report.md`，不设置其他自动触发条件。
+- 已经出现 A 线越界决定版式、比例或多套视觉候选时，只读取 `anti_examples/assistant_freezes_visual_direction_failure.md`。
 
 ### 快速确认
-每次读取后立即确认：教学动作、必显文字、内容关系、主载体、Top1/Top2 页型及唯一未决 Gate。Top1 有直接证据且新增资料不会改变决定时停止读取。
+每次读取后内部核对：源范围及角色、全文教学目标与依赖、必须呈现项、必要承载证据、分页比较和尚未闭合的问题。证据足够即停止扩展读取；这不替代全套页界与正文覆盖复核。
 
 ### 停止规则
-A线交接或 Gate 结论完成后停止，不自动读取 B/T/C。页面不应进入 A线时立即退回 S线，不通过继续读取 A线资料来挽救错误路由。
+只在用户所请求范围完成、授权用尽或遇到实质 Gate 时停止。没有独立 S 或 A 审默认停止点；明确端到端授权下无未决实质 Gate 则推进 B。Non-A 内容由 A 保留路由与源证据，不转回独立 S，也不强行进入生图。
 
-## 单问题确认顺序
+## 职责
 
-- 本地版式和内容材料能够消除的信息差先通过只读检查消除；只有本地无法确定、且确实需要用户决定的事项才追问。
-- 按顺序分别确认：设计方向、母版角色、参考图继承范围、文字策略、最终方案。一次回复只允许出现一个待确认问题；当前项未确认，不得询问下一项或冻结后续字段。
-- 可以给出分析、三版方案和单一推荐，但推荐不等于用户选择。用户必须明确选定最终方案；不得把“继续”、索要下一步内容或未反对解释为确认。
-- 任何新出现的视觉选择都回到当前单问题确认；不得由执行助手以评分、风险或默认值替用户完成设计决定。
+A 线回答“全文怎样分成连贯、可读、可实现的教学页面，以及每页为什么这样表达”。在分页收敛后，每页保留教学语义合同：
 
-## 正式产物与交接
+1. `teaching_goal`：学习者看完应理解、区分或完成什么。
+2. `teaching_relation`：页面内容之间的真实关系，例如比较、步骤、因果、组成、映射、场景解释；必须用句子说明关系参与者和方向。示例是开放提示而非互斥枚举，可复合、可跨页；分类、组成、条件等关系可同时成立，不强塞一个标签。
+3. `must_show_items`：本页各状态必须准确呈现的文字、数据、专有名词、标签或真实素材；必呈不等于全时同屏。
+4. `image_pedagogical_task`：图像必须帮助学习者识别、对照、追踪、定位或理解什么；不用“更好看”代替教学任务。
+5. `forbidden_semantic_drift`：不能被省略、合并、反转、虚构或变成装饰的语义。
 
-写入正式产物前，先用自然语言说明：本线准备生成什么、准备写到哪个文件、是否会修改已有文件、下一线实际需要接收什么、哪些分析或验证记录不属于正式交付。说明后只问：`是否按上述产物与交接方案执行？`
+A 线不是精细视觉设计线，但不能因此放弃分页所需的实际承载判断。教学主次不等于视觉焦点位置，必要载体不等于具体构图；前者由 A 查证并纳入页界，后者由 B 落实。A 不生成多套审美候选让用户代做设计判断。
 
-只有用户明确确认后才写入；一次确认只授权一个已说明的产物。写完立即停止，不得顺带生成 B/T/C 内容、进入下一线，或向 S线输入文件追加 A线交付。用户要求调整时，一次只追问一个修改方向。
+## 页、页内状态与镜头分离
 
-## Responsibility
-A-line only handles content admitted by S-line as `S07_AI课程视觉页型`. It predicts page direction, explains the page problem in user-readable language, proposes three user-facing options, freezes a handoff card, and may run A-review. It does not write platform prompts and does not generate images.
+页面是正文归属与教学承接单位，页内状态是同页随教学先后实际显示的内容，镜头是取景、观察或运动的呈现安排；一页不必等于一张始终不变的图，也不等于一个镜头。A只明确语义上哪些对象必须并现、哪些可先后显现或跨页承接，不越权冻结B的构图、镜头参数或运动实现。
 
-## Inputs
-S-line S07 segment card, V2.7 page content, migrated V2.6 page card, user-confirmed A-line target, single reference image, or reference folder.
+总览—分述—回显可以同页分状态，也可以跨页；按关系理解、认知连续性、回指成本和真实承载比较，不预设总分必须合页/拆页，不把合理视觉回显一概当正文重复。不以固定页速、时长、字数或“每句一页”替代判断。
 
-## Internal Analysis Order
-S0 input recognition -> S1 material boundary -> S2 teaching action -> S3 page/density -> S4 content relation -> S5 on-screen text -> S6 visual carrier interface -> S7 foreground/background layer relation -> S8 risk blocking -> S9 key Gate -> S10 user-readable options -> S11 frozen handoff.
+在现有 `capacity_basis.same_screen_reason`、`cross_page_reason` 中写明必呈项的状态分配、先后/并现及必要跨页预览/回显；`context_refs` 只提供有原文依据的视觉上下文，不新增旁白或正文归属。`unverified_limits` 记录未实测的观察、切换或运动条件。旧静态记录不得自动重释为已验证动态设计，状态说明也不扩大生图授权。
 
-## User-Facing Output
-Default user-facing A-line output must use this structure instead of leading with A01-A21 codes:
+## 输入整理与 Non-A 路由（原 S 职责并入）
 
-1. `当前判断`: explain what kind of page this is, what the core teaching/visual task is, and what user constraints must be preserved.
-2. `主要问题`: directly name real page problems such as old courseware feel, inconsistent main color, fragmented modules, weak information rhythm, low visual hierarchy, reference/material conflict, text overload, or unclear focus.
-3. `三版方案`: output exactly these user-readable option names by default:
-   - `方案一：稳妥优化版`
-   - `方案二：精品升级版`
-   - `方案三：现代重排版`
-4. For each option, include `适合方向`, `核心思路`, `具体改法`, and `视觉结果`.
-5. End with `三版怎么选` and `我建议的优先选择`.
+- 直接接收 SRT、讲稿、DOCX/DOC、单页内容或混合素材，不要求用户重新清洗原稿、统一表格、拆图或重复誊写。保留原旁白、原顺序、源路径及逐字定位；输入切片只服务证据寻址，不是一套预分页。
+- 区分旁白正文、屏显文字、制作批注、素材需求和实际媒体；制作指令与批注不能混入旁白。DOCX 核对内嵌/浮动图的锚点及批注范围，不能只按解包序号配段落。DOC 解析不足先局部核对，必要时仅转换工作副本；未核验的排版、裁切、关联如实注明。
+- 时间证据仅在路由/生产确实依赖时补齐。SRT 保留字幕行和实际时间码，不逐句分页；无时间轴文档明确“不适用”及理由，不编造时长或强要音频。
+- 核对真实文件可读性、内容对应及来源后才记 `available`；文字需求没有文件记 `missing`，关联/内容未核对记 `unverified`。链接、缓存图和原媒体分开，素材可用不等于事实获外部证实或用途已获授权。
+- 保留 S01-S08 作为兼容路由值：教师出镜、教师出镜加课程辅助、真实视频、真实图片、软件/录屏、字幕/后期、AI课程视觉、待明确。通常的真实事件/现场表演/软件操作等以原素材或 Non-A 方式呈现；不能为了凑课程页而送入 AI 生成。确实需要关系解释的混合内容可分别记录路由，不把 Non-A 吞并为 A 正文。
+- Non-A 保留精确源范围、处理方式及其授权边界，已批准范围沿用；新歧义只影响对应内容。相邻路由分不清时按需读 `stage-sline-srt-media-routing/references/srt_media_routing_rules.md`，不因此启动独立 S 阶段。兼容字段 `enter_A_line` 只表示是否纳入课程视觉分页，不限制默认 A 的输入处理职责。
+- 对事实、数值与术语做原文忠实性和视觉表达一致性核对；不新增脚本外部真实性或实时专业审校关口，不以未做外部审校重写源文。
 
-三版方案与推荐仅用于帮助用户决定，不得在用户明确选择前生成 `S11 frozen handoff`、标记方案已冻结或授权进入 B线。
+## 现有 A 分析产物与共享页面简报
 
-Do not use A01-A21 type names as the primary user-facing expression unless the user asks for internal routing details.
+- 先在现有 A 分析产物中保留相互独立的源引用/Non-A 和分页方案，采用统一 `a_pagination_plan` 合同；不为接入新规则另造档案。源记录可引用历史 S 区，但不能据其 confirmed 自动继承旧页界。
+- A 分页方案收敛时才建立新 `page_id`，明确正文映射及必要跨页关系；用户审阅的应是有证据的整套分页方案，不是让用户先定页数。批准状态单独记录，不从字段非空或旧 `confirmed` 推导。
+- 页界保留时沿用同一共享简报及有效结论；页界变更时按旧新映射迁移受影响页面，保留历史原文和源证据，不直接原地重编号。新页不要求伪造一个 S 阶段或复制旧 S 摘要。
+- B/C 只维护所属分区；源归属、页界或教学关系疑问局部返 A，不在下游自行释义。正式结构见 `templates/a_line_page_handoff_card.md`。
 
-## Internal Page Types
-Use A01-A21 exactly for internal judgment, routing, logs, tests, handoff, and T-line translation support. Keep these fields in the handoff/log layer: `internal_page_type_top1`, `internal_page_type_top2`, `internal_routing_reason`, and `internal_risk_points`. Always explain why the internal top choice is selected, why the second choice is not primary, carrier method, main risk, and whether user Gate is needed.
+## 分析与确认顺序
 
-## Text Budget
-Count only planned on-screen text. <=60 low, 61-120 medium, 121-180 high but sample allowed, >180 enters original-keypoint-onscreen dynamic Gate. For uncompressible must-show text, split pages first.
+`输入区分与源核对 -> 全文目标/关系/主次/依赖 -> 必显信息与必要承载核验 -> 实际拆合比较 -> 明确分页 -> 全套内部复核 -> 具体方案审阅与获准交接`
 
-## A01/A02
-A01 is a no-text layout skeleton with visible title/body/image/info regions, frame, separator, safe margin, and visual focus. It is not empty background. A02 is pure atmosphere background for opener/transition/teacher background/light title only; never use it for formal multi-text course pages.
+- 先核对用户已有教学目标、设计说明等节点产物的来源、版本/日期和有效确认范围，沿用有依据的语义，只补缺项。只有教学意图证据不足、约束冲突或拟改已确认语义时才询问用户，一次只问一项。
+- 专业约束由当前具体内容触发，注明所约束的对象、标注/图例、条件和依赖页面；工程中的论证、空间等约束可共存，不按学科名排他套规则。串起“原文 → 教学目标 → 内容关系 → 必呈信息 → 图像任务”，来源未核实不得写已验证。
+- 先从全文确定目标、关系、主次、前后依赖，判断哪些对象必须并现对照，哪些可以页内先后显现或跨页承接；不先接受旧单元/旧页数再逐页补理由。成熟模板复用可以减少重复实现，不能免去本次教学与分页判断。
+- 分页前核验各实际状态的必显文字、术语/标签/图注负荷，获准模板实际空间与已有约束、真实素材可读性/不可裁切区域及必要图解。承载还包括学习者观察顺序、关系辨认和图解所需空间，不只是字号测量或正文放得下。记录来源和结论，不以固定字数、图文占比、输出分辨率或“有很多文字”替代具体承载证据；无匹配案例不阻塞A判断，也不要求用户补模板。
+- 对合理的拆分、相邻合并、保留原界及跨页承接方案做实际比较，记录范围、得失与取舍。不是形式上列几个空候选；也不要求每处都机械生成同样数量的方案。有证据支持的原界可以保留，但不能因旧方案已写入文件或页数熟悉而免比较。
+- 不询问配色、左右布局、图片大小、母版变体、参考图视觉继承或“稳妥/精品/现代”等视觉选项。
+- 结论允许为“当前证据不足”，但必须说清缺少的语义证据；不得以无证据的设计细节填补空缺。
 
-## Reference-Locked Series Page
-If the user provides a reference folder and asks to preserve its layout while replacing course content, choose `A16_既有母版套新内容型` as Top1 and A15 as the adjacent choice. A17 is Top1 only when layout redesign is allowed.
+## A 内部复核（正常组成，不是独立阶段）
 
-Freeze `reference_folder`, master package availability, template identity, template layer manifest, exact visible text, and `text_generation_strategy: 带字`. The primary deliverable is a single-canvas full page; do not redirect it to no-text skeleton or post-text composition without a user Gate.
+- 核对整套页界是否服务全文目标、教学关系和主次依赖，检查所有相邻页是否存在更合理的合并/拆分/正文调整，检查合理替代方案及未采纳理由；不能只检查每页卡片是否完整。
+- 核对同屏必要性、页内先后/并现、跨页连续性、各状态必显文字/标签/图注、必要图解与观察顺序的承载证据，避免关系被切断或无证据地堆入同图；区分无意义重复讲解与有教学作用的总分回显/视觉预览。
+- 从源正文逐段核对每页归属与 Non-A 范围，必须无遗漏、无未说明的重复、无越界、顺序可追溯；拆合时核对旧新映射，不能以引用旧九单元/旧候选全覆盖代替新方案真实覆盖。
+- 核对原文忠实性、必须呈现项、真实素材的语义作用和禁止偏移项；检查结论要有具体证据，不靠 `a_review_status`、旧 `confirmed` 或字段非空判通过。
+- 复核发现问题由 A 自行修正并再核对受影响边界及上下游依赖；只有用户专属意图、有效决定冲突或缺失授权才提出一个必要问题，不能把页界/设计判断转交用户补做。
 
-When PSD is unavailable, return the one-time flattened-PNG fallback Gate from `_shared/reference-image-inheritance-rules.md`. Do not claim pixel locking.
+## 禁止项
 
-## Must Output
-用户可读诊断或 Gate 只输出当前任务需要的字段，不读取模板。只有需要正式 A线交接卡时，才读取 `templates/a_line_page_handoff_card.md`，并包含 user-readable judgment, problem diagnosis, three options, selection advice, internal page type fields, title strategy, on-screen text, text budget, first/second visual focus, material policy, reference inheritance fields, frozen items, risk, Gate result, and `light_region_summary`。
+A 线不得输出或冻结：
 
-## Prohibitions
-Do not process S01-S06 material as A-line. Do not output exact PPT/Figma coordinates, `editable_layout_spec`, platform prompts, GPT Image instructions, or final sample claims. Do not turn content relation into fixed layout automatically. Do not make internal page type codes the default headline of the user-facing answer.
+- 视觉页型方案、精确布局、构图、容器数量或尺寸位置；但必须核验分页所需的必要载体与实际承载限制，不能把该职责一起禁止；
+- 图像占比、文字占比、固定图像建议区间或由输出分辨率推导的内容比例；
+- 多套视觉方案、审美推荐或以视觉效果为主的用户 Gate；
+- 模板选择、模板变体、局部骨架继承、生产批次、参考图的视觉映射方案；读取已获准模板空间与限制用于分页不等于选择或改造模板；
+- B 线生产卡、C 线执行提示、GPT Image 指令或可实现性的无证据承诺。
 
-## A-Review
-普通 A审结论不读取模板；只有需要正式审查报告时才读取 `templates/a_review_report.md`。A-review outputs only pass, local补卡, or return to A-line. It never outputs prompts.
+可以记录输出技术尺寸作为项目元数据，但不能用它推导图像或文字应占多少空间。
+
+## 仅按明确请求执行的独立复核
+
+正常 A 已包含上述内部复核，不再设置固定 A 审阶段、额外 Gate 或独立通过门槛；不定义自动触发独立复核的条件。只有用户明确要求独立复核时才使用 `templates/a_review_report.md`，按所请求范围核对整套分页、源映射、教学语义及必要承载证据。
+
+独立复核不评选审美方案、不重新授权已有效的决定，不把专业外部真实性/实时审校加入工作流。历史 `a_review_status` 只作记录，不能阻塞正常 A→B。问题归 A 的输入/分页/教学职责局部修正，不另启 S；报告不代写更正原稿或替代源证据。
+
+## 正式产物与修改返回
+
+写入正式产物前，说明将更新哪份现有 A 分析产物/共享页面简报、涉及哪些页及分区、源证据如何保留、B 实际接收哪个明确分页版本。
+
+已有授权明确覆盖当前文件、分区及写入范围时不重复询问；否则仅询问未获覆盖的写入。具体分页、参考用途、设计变更、生图、代表页与定稿授权保持原规则，用户可以随时介入。单阶段范围完成后停止；端到端授权按交互 Gate 继续，不在 A 区混写 B/C 内容。源文、时间码、素材、页界、正文归属和教学关系问题均在 A 对应职责局部修正，保留原文和旧版本证据。
 
 ## Failure / Return
-Return to S-line if the segment should not have entered A-line. Return to user Gate if page type, must-show text, reference role, material redraw permission, or over-180 text Gate is unresolved.
-
-PSD 不可用时，不得静默退化为扁平 PNG；必须先说明这一项限制，并只询问是否接受该降级。用户回答前不得继续冻结交接。
-
-## Minimal Example
-Examples are evidence-only. A01 判断不稳定时最多读取一个成功或失败示例，不得连读整个 examples/anti_examples 目录。
+需要 Non-A 的内容由 A 保留原路由与定位。先穷尽当前授权内的本地证据消除缺口，只有用户专属决定或缺失授权会改变下一步时才提问；不要求用户自行重新分页、补做设计或重复确认有效范围。未决问题只阻塞受影响内容，不默认整链重启。

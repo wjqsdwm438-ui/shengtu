@@ -1,0 +1,354 @@
+{
+  "plan_id": "A81-20260907-R2",
+  "plan_version": 3,
+  "page_count": 8,
+  "pagination_contract_pass": true,
+  "error_count": 0,
+  "source_unchanged": true,
+  "page_boundaries_unchanged": true,
+  "approved_png_count": 11,
+  "capacity_probe": [
+    {
+      "page_id": "A81R2-P01",
+      "text_group_count": 6,
+      "line_count": 6,
+      "measured_text_block_height": 232,
+      "remaining_height": 248,
+      "wrapped_groups": [
+        [
+          "在自身传感器探测的基础上"
+        ],
+        [
+          "车载雷达与摄像头"
+        ],
+        [
+          "视距、天气和遮挡限制"
+        ],
+        [
+          "车载通信装置"
+        ],
+        [
+          "外部节点"
+        ],
+        [
+          "特殊的环境感知传感器"
+        ]
+      ]
+    },
+    {
+      "page_id": "A81R2-P02",
+      "text_group_count": 10,
+      "line_count": 10,
+      "measured_text_block_height": 392,
+      "remaining_height": 88,
+      "wrapped_groups": [
+        [
+          "三大领域"
+        ],
+        [
+          "车辆及设施"
+        ],
+        [
+          "信息交互"
+        ],
+        [
+          "基础支撑"
+        ],
+        [
+          "智能化 +网联化"
+        ],
+        [
+          "网联化程度"
+        ],
+        [
+          "由低到高"
+        ],
+        [
+          "网联辅助信息交互"
+        ],
+        [
+          "网联协同感知"
+        ],
+        [
+          "网联协同决策与控制"
+        ]
+      ]
+    },
+    {
+      "page_id": "A81R2-P03",
+      "text_group_count": 10,
+      "line_count": 12,
+      "measured_text_block_height": 456,
+      "remaining_height": 24,
+      "wrapped_groups": [
+        [
+          "V2V（车与车）"
+        ],
+        [
+          "速度、行驶方向与紧急状态"
+        ],
+        [
+          "V2I（车与基础设施）"
+        ],
+        [
+          "红绿灯、公交站台、",
+          "交通标识牌与隧道监控"
+        ],
+        [
+          "V2P（车与行人）"
+        ],
+        [
+          "车辆与行人的相对位置"
+        ],
+        [
+          "V2R（车与道路）"
+        ],
+        [
+          "路况、事故与路标信息"
+        ],
+        [
+          "V2N（车与网络）"
+        ],
+        [
+          "大数据分析结果、导航定位、",
+          "防盗与远程求助"
+        ]
+      ]
+    },
+    {
+      "page_id": "A81R2-P04",
+      "text_group_count": 5,
+      "line_count": 5,
+      "measured_text_block_height": 192,
+      "remaining_height": 288,
+      "wrapped_groups": [
+        [
+          "单车的局部感知"
+        ],
+        [
+          "车—路—人—云一体化的协同感知"
+        ],
+        [
+          "交叉路口盲区预警"
+        ],
+        [
+          "弯道防撞"
+        ],
+        [
+          "提供了可能"
+        ]
+      ]
+    },
+    {
+      "page_id": "A81R2-P05",
+      "text_group_count": 10,
+      "line_count": 10,
+      "measured_text_block_height": 392,
+      "remaining_height": 88,
+      "wrapped_groups": [
+        [
+          "DSRC（专用短程通信）"
+        ],
+        [
+          "IEEE 802.11p"
+        ],
+        [
+          "起步较早"
+        ],
+        [
+          "技术相对成熟"
+        ],
+        [
+          "LTE-V（即 C-V2X）"
+        ],
+        [
+          "基于蜂窝网络演进"
+        ],
+        [
+          "4G/5G"
+        ],
+        [
+          "容量、可靠性以及与移动通信产业的协同"
+        ],
+        [
+          "更具优势"
+        ],
+        [
+          "全球主流方向之一"
+        ]
+      ]
+    },
+    {
+      "page_id": "A81R2-P06",
+      "text_group_count": 9,
+      "line_count": 9,
+      "measured_text_block_height": 352,
+      "remaining_height": 128,
+      "wrapped_groups": [
+        [
+          "客观认识国外先发方案的价值"
+        ],
+        [
+          "积极参与国际标准的接轨"
+        ],
+        [
+          "通信协议、频谱资源与安全架构"
+        ],
+        [
+          "关键核心技术无法依赖他人"
+        ],
+        [
+          "适应国情并与国际接轨"
+        ],
+        [
+          "智能网联汽车标准体系"
+        ],
+        [
+          "C-V2X"
+        ],
+        [
+          "自主研发与标准引领"
+        ],
+        [
+          "技术主动权"
+        ]
+      ]
+    },
+    {
+      "page_id": "A81R2-P07",
+      "text_group_count": 5,
+      "line_count": 5,
+      "measured_text_block_height": 192,
+      "remaining_height": 288,
+      "wrapped_groups": [
+        [
+          "信息安全"
+        ],
+        [
+          "与感知、决策同等重要"
+        ],
+        [
+          "位置、身份、行驶轨迹"
+        ],
+        [
+          "窃取、干扰乃至篡改"
+        ],
+        [
+          "整车与整个交通体系的安全"
+        ]
+      ]
+    },
+    {
+      "page_id": "A81R2-P08",
+      "text_group_count": 7,
+      "line_count": 7,
+      "measured_text_block_height": 272,
+      "remaining_height": 208,
+      "wrapped_groups": [
+        [
+          "数据存储、传输与应用"
+        ],
+        [
+          "同步构建安全体系"
+        ],
+        [
+          "把隐私保护内嵌于系统设计的起点"
+        ],
+        [
+          "而非事后的补救措施"
+        ],
+        [
+          "5G"
+        ],
+        [
+          "低时延、高可靠连接"
+        ],
+        [
+          "重要支撑"
+        ]
+      ]
+    }
+  ],
+  "inventory": [
+    {
+      "path": "E:\\shengtu\\智能网联\\版式x\\tu1\\空白.png",
+      "width": 1280,
+      "height": 720,
+      "mode": "P",
+      "observation": "上方为题头与细线，其下连续留白；约x80—1200、y130—660为正文可用包络。旧题头“车道保持辅助（LKA）”不是本课文字，不能照搬。"
+    },
+    {
+      "path": "E:\\shengtu\\智能网联\\版式x\\tu1\\幻灯片1.PNG",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "observation": "封面图，包含旧课题目、学校与任务号；不是正文承载样本，本课不追加封面页或继承身份信息。"
+    },
+    {
+      "path": "E:\\shengtu\\智能网联\\版式x\\tu1\\幻灯片3.PNG",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "observation": "照片约x57—592、y169—608；解释区约x616—1212、y170—608，容纳两项分类及解释。支持一个实体对象与比较文字共存，不证明所有两类都应拆卡。"
+    },
+    {
+      "path": "E:\\shengtu\\智能网联\\版式x\\tu1\\幻灯片4.PNG",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "observation": "左侧四个配图概念约x58—613、y130—660；右侧论述约x700—1220、y130—657，含结论、补充解释和两组区分。证明分类与论述可以共同占有正文，不把四宫格或L1/L2内容迁入本课。"
+    },
+    {
+      "path": "E:\\shengtu\\智能网联\\版式x\\tu1\\幻灯片5.PNG",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "observation": "左侧多模态解释、品牌项与补充标签，右侧中控实图，底部有总结条；展示多个命名项与一个实物的层次关系。品牌标志、车内功能不属于8.1必用素材。"
+    },
+    {
+      "path": "E:\\shengtu\\智能网联\\版式x\\tu1\\幻灯片6.PNG",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "observation": "左侧约x78—657、y189—625为说明与强调区域；右侧约x694—1203、y164—627为道路主图。主图中的车辆与探测标线在约478×423的内图范围可辨；不能拿此图证明V2X通信或复制LKA机理。"
+    },
+    {
+      "path": "E:\\shengtu\\智能网联\\版式x\\tu1\\幻灯片7.PNG",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "observation": "左侧约x83—613、y165—659容纳分类标题、四类短名和四条说明；右侧约x643—1200、y165—658为说明与实图。证明多个完整信息组在约半幅宽、近全正文高的区域可读，并非必须保留四条容器。"
+    },
+    {
+      "path": "E:\\shengtu\\智能网联\\版式x\\tu1\\幻灯片8.PNG",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "observation": "左侧四项阶段及解释约x75—662、y182—509，下面另有强调句；右侧约x694—1203、y174—636有车辆/道路主图。支持因果或步骤关系与一个空间对象同时呈现，不将四步AEB过程挪用为本课机制。"
+    },
+    {
+      "path": "E:\\shengtu\\智能网联\\版式x\\tu1\\幻灯片9.PNG",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "observation": "左侧约x80—561、y195—541为实景；右侧约x583—1228、y192—545为三组解释，底部另有总结。证明多项文字对应空间对象的可读性，不使用图中真实座舱显示作为本课事实证据。"
+    },
+    {
+      "path": "E:\\shengtu\\智能网联\\版式x\\tu1\\幻灯片10.PNG",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "observation": "主图约x85—624、y206—490；三个属性关系约x658—1181、y227—469；底部宽条约y532—614。属性标签与对应内容直接关联，不能把场景中的65 mph当本课数据。"
+    },
+    {
+      "path": "E:\\shengtu\\智能网联\\版式x\\tu1\\幻灯片13.PNG",
+      "width": 1280,
+      "height": 720,
+      "mode": "RGB",
+      "observation": "主图约x83—725、y190—657；右侧约x763—1208、y190—657包含完整长标题及多项短名。证明约440像素宽的命名区与较大主图可共存；不强制六块结构或泊车动作。"
+    }
+  ],
+  "mechanical_validation_only": true,
+  "pedagogical_quality_verified": false,
+  "limits": "字形测量只证明给定压力条件内的文字占用；视觉关系与实际样张观察见CAP01—CAP08，不等于已生成课程成图或独立审核通过。"
+}

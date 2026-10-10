@@ -1,0 +1,6 @@
+interface:
+  display_name: "V2.7 S线源材料与媒介分流"
+  short_description: "保留原文、时间码、事实与素材，完成语义分段和媒介路由。"
+  default_prompt: "使用 V2.7 S线合并脚本或 SRT 语义段，记录可追溯原文、时间码、事实与素材，判断媒介路由，并只填写共享页面简报的 S 区。"
+policy:
+  allow_implicit_invocation: false

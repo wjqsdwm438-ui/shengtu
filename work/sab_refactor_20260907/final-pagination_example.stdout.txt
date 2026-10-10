@@ -1,0 +1,18 @@
+{
+  "check": "a_pagination_plan",
+  "pass": true,
+  "error_count": 0,
+  "errors": [],
+  "derived": {
+    "page_count": 2,
+    "mechanical_validation_only": true,
+    "pedagogical_quality_verified": false,
+    "source_versions_independently_verified": false,
+    "all_source_edits_detected": false,
+    "page_ids": [
+      "KP-01",
+      "KP-02"
+    ],
+    "non_a_count": 1
+  }
+}

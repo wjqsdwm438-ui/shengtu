@@ -1,0 +1,267 @@
+{
+  "schema": "course_visual_a_pagination/v1",
+  "plan_id": "plan-synthetic",
+  "plan_version": 1,
+  "source_evidence": {
+    "sources": [
+      {
+        "source_id": "source-1",
+        "path": "pagination_source_synthetic.txt",
+        "version": "synthetic-v1",
+        "version_date": "2026-09-07",
+        "order": 1
+      }
+    ],
+    "approved_body_spans": [
+      {
+        "source_id": "source-1",
+        "line": 1,
+        "start_char": 1,
+        "end_char": 4,
+        "start_text": "甲",
+        "end_text": "丁"
+      },
+      {
+        "source_id": "source-1",
+        "line": 2,
+        "start_char": 1,
+        "end_char": 4,
+        "start_text": "戊",
+        "end_text": "辛"
+      },
+      {
+        "source_id": "source-1",
+        "line": 3,
+        "start_char": 1,
+        "end_char": 4,
+        "start_text": "壬",
+        "end_text": "丑"
+      }
+    ],
+    "annotation_spans": [
+      {
+        "source_id": "source-1",
+        "line": 4,
+        "start_char": 1,
+        "end_char": 4,
+        "start_text": "批",
+        "end_text": "归"
+      }
+    ],
+    "approval": {
+      "status": "confirmed",
+      "record": "synthetic approval; not a real lesson"
+    }
+  },
+  "pages": [
+    {
+      "page_id": "KP-01",
+      "order": 1,
+      "owned_spans": [
+        {
+          "source_id": "source-1",
+          "line": 1,
+          "start_char": 1,
+          "end_char": 4,
+          "start_text": "甲",
+          "end_text": "丁"
+        }
+      ],
+      "context_refs": [],
+      "capacity_basis": {
+        "teaching_task": "比较状态",
+        "required_text_and_labels": [
+          "状态标签"
+        ],
+        "approved_assets": [],
+        "asset_applicability_reason": "合成原文覆盖测试不涉及真实生产资产，故不适用。",
+        "same_screen_reason": "同页比较两个状态",
+        "cross_page_reason": "不同学习任务跨页",
+        "visual_carrier_feasibility": "成对关系可表达，尚未制作",
+        "unverified_limits": "未生图；不能证明真实模板承载或教学效果"
+      }
+    },
+    {
+      "page_id": "KP-02",
+      "order": 2,
+      "owned_spans": [
+        {
+          "source_id": "source-1",
+          "line": 2,
+          "start_char": 1,
+          "end_char": 4,
+          "start_text": "戊",
+          "end_text": "辛"
+        }
+      ],
+      "context_refs": [],
+      "capacity_basis": {
+        "teaching_task": "比较状态",
+        "required_text_and_labels": [
+          "状态标签"
+        ],
+        "approved_assets": [],
+        "asset_applicability_reason": "合成原文覆盖测试不涉及真实生产资产，故不适用。",
+        "same_screen_reason": "同页比较两个状态",
+        "cross_page_reason": "不同学习任务跨页",
+        "visual_carrier_feasibility": "成对关系可表达，尚未制作",
+        "unverified_limits": "未生图；不能证明真实模板承载或教学效果"
+      }
+    }
+  ],
+  "non_a_dispositions": [
+    {
+      "disposition_id": "non-a-1",
+      "owned_spans": [
+        {
+          "source_id": "source-1",
+          "line": 3,
+          "start_char": 1,
+          "end_char": 4,
+          "start_text": "壬",
+          "end_text": "丑"
+        }
+      ],
+      "reason": "保留原文，不需要新图",
+      "target": "existing_material"
+    }
+  ],
+  "split_merge_comparisons": [
+    {
+      "comparison_id": "compare-1",
+      "source_spans": [
+        {
+          "source_id": "source-1",
+          "line": 1,
+          "start_char": 1,
+          "end_char": 4,
+          "start_text": "甲",
+          "end_text": "丁"
+        },
+        {
+          "source_id": "source-1",
+          "line": 2,
+          "start_char": 1,
+          "end_char": 4,
+          "start_text": "戊",
+          "end_text": "辛"
+        }
+      ],
+      "alternatives": [
+        {
+          "candidate_id": "alternative",
+          "proposed_page_spans": [
+            [
+              {
+                "source_id": "source-1",
+                "line": 1,
+                "start_char": 1,
+                "end_char": 4,
+                "start_text": "甲",
+                "end_text": "丁"
+              },
+              {
+                "source_id": "source-1",
+                "line": 2,
+                "start_char": 1,
+                "end_char": 4,
+                "start_text": "戊",
+                "end_text": "辛"
+              }
+            ]
+          ],
+          "reason": "synthetic joint display; not a quality conclusion"
+        }
+      ],
+      "selected_page_ids": [
+        "KP-01",
+        "KP-02"
+      ],
+      "decision_reason": "测试记录，不声称教学合理"
+    }
+  ],
+  "internal_review": {
+    "plan_id": "plan-synthetic",
+    "plan_version": 1,
+    "status": "completed",
+    "reviewed_page_spans": [
+      {
+        "page_id": "KP-01",
+        "owned_spans": [
+          {
+            "source_id": "source-1",
+            "line": 1,
+            "start_char": 1,
+            "end_char": 4,
+            "start_text": "甲",
+            "end_text": "丁"
+          }
+        ]
+      },
+      {
+        "page_id": "KP-02",
+        "owned_spans": [
+          {
+            "source_id": "source-1",
+            "line": 2,
+            "start_char": 1,
+            "end_char": 4,
+            "start_text": "戊",
+            "end_text": "辛"
+          }
+        ]
+      }
+    ],
+    "checks": [
+      {
+        "item": "source_coverage",
+        "result": "pass",
+        "evidence_refs": [
+          "source:source-1",
+          "comparison:compare-1"
+        ]
+      },
+      {
+        "item": "source_order",
+        "result": "pass",
+        "evidence_refs": [
+          "source:source-1",
+          "comparison:compare-1"
+        ]
+      },
+      {
+        "item": "boundaries",
+        "result": "pass",
+        "evidence_refs": [
+          "source:source-1",
+          "comparison:compare-1"
+        ]
+      },
+      {
+        "item": "capacity",
+        "result": "pass",
+        "evidence_refs": [
+          "source:source-1",
+          "comparison:compare-1"
+        ]
+      },
+      {
+        "item": "split_merge",
+        "result": "pass",
+        "evidence_refs": [
+          "source:source-1",
+          "comparison:compare-1"
+        ]
+      },
+      {
+        "item": "non_a_retention",
+        "result": "pass",
+        "evidence_refs": [
+          "source:source-1",
+          "comparison:compare-1"
+        ]
+      }
+    ],
+    "unresolved_issues": []
+  }
+}

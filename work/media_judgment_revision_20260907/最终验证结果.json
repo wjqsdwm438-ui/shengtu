@@ -1,0 +1,125 @@
+{
+  "checked_at": "2026-09-07T06:51:23.103073+00:00",
+  "commands": [
+    {
+      "name": "all_checks",
+      "command": [
+        "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "run_all_checks.py"
+      ],
+      "returncode": 0,
+      "seconds": 1.953,
+      "stdout": "[PASS] syntax:srt\r\n[PASS] syntax:layout\r\n[PASS] syntax:budget\r\n[PASS] syntax:complexity\r\n[PASS] syntax:page_brief\r\n[PASS] syntax:pagination\r\n[PASS] syntax:workflow_diagrams\r\n[PASS] diagrams:drawio_svg_readonly_sync\r\n[PASS] interaction:gate_contract\r\n[PASS] pagination:deterministic_contract\r\n[PASS] example:text_budget_low\r\n[PASS] example:text_budget_medium\r\n[PASS] example:text_budget_high\r\n[PASS] example:text_budget_over_180\r\n[PASS] example:layout_skeleton_pass\r\n[PASS] example:layout_skeleton_fail\r\n[PASS] example:complexity_low\r\n[PASS] example:complexity_high\r\n[PASS] example:page_brief_contract_valid\r\n[PASS] example:page_brief_contract_representative_calibration\r\n[PASS] example:page_brief_contract_invalid\r\n[PASS] example:build_srt_index\r\n[PASS] example:srt_utf8_content\r\n[PASS] contract:five_skill_directories\r\n[PASS] contract:frontmatter:stage-sline-srt-media-routing\r\n[PASS] contract:openai_yaml:stage-sline-srt-media-routing\r\n[PASS] contract:frontmatter:stage-aline-course-visual-routing\r\n[PASS] contract:openai_yaml:stage-aline-course-visual-routing\r\n[PASS] contract:frontmatter:stage-bline-production-handoff\r\n[PASS] contract:openai_yaml:stage-bline-production-handoff\r\n[PASS] contract:frontmatter:stage-cline-gpt-image-execution-feedback\r\n[PASS] contract:openai_yaml:stage-cline-gpt-image-execution-feedback\r\n[PASS] contract:frontmatter:stage-algorithm-lite-companion\r\n[PASS] contract:openai_yaml:stage-algorithm-lite-companion\r\n[PASS] reading:shared_progressive_protocol\r\n[PASS] reading:progressive_entrypoint:stage-sline-srt-media-routing\r\n[PASS] reading:progressive_entrypoint:stage-aline-course-visual-routing\r\n[PASS] reading:progressive_entrypoint:stage-bline-production-handoff\r\n[PASS] reading:progressive_entrypoint:stage-cline-gpt-image-execution-feedback\r\n[PASS] reading:progressive_entrypoint:stage-algorithm-lite-companion\r\n[PASS] contract:reference_remotion_fixture\r\n[PASS] contract:reference_locked_full_page_case\r\n[PASS] contract:flattened_png_gate_case\r\n[PASS] contract:remotion_alpha_case\r\n[PASS] contract:remotion_split_gate_case\r\n[PASS] contract:reference_remotion_markers:_shared/reference-image-inheritance-rules.md\r\n[PASS] contract:reference_remotion_markers:_shared/remotion-asset-handoff-rules.md\r\n[PASS] contract:reference_remotion_markers:templates/b_line_production_card.md\r\n[PASS] contract:reference_remotion_markers:templates/c_line_feedback_card.md\r\n[PASS] contract:reference_remotion_markers:references/gpt_image_execution_adapter_rules.md\r\n[PASS] contract:reference_remotion_markers:_shared/page-brief-batch-execution-rules.md\r\n[PASS] contract:reference_remotion_markers:_shared/template-realization-evidence-rules.md\r\n[PASS] contract:no_hardcoded_legacy_root\r\n[PASS] contract:no_active_legacy_c_line_entry\r\n[PASS] contract:no_active_independent_t_entry\r\n[PASS] contract:no_active_legacy_platform_mode\r\n[PASS] contract:c_adapter_prompt_template\r\n[PASS] encoding:all_text_utf8_not_utf16\r\n[PASS] encoding:test_logs_utf8_no_bom_lf\r\n[PASS] legacy:platform_prompt_archive_exists\r\n[PASS] legacy:archive_readme\r\n[PASS] evidence:checked_in_matches_fresh_run\r\n\r\nPASSED: 62 check(s).\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "unittest",
+      "command": [
+        "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py"
+      ],
+      "returncode": 0,
+      "seconds": 8.047,
+      "stdout": "",
+      "stderr": ".........................................................\r\n----------------------------------------------------------------------\r\nRan 57 tests in 7.924s\r\n\r\nOK\r\n"
+    },
+    {
+      "name": "diagram_sync",
+      "command": [
+        "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "scripts/export_workflow_diagrams.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "seconds": 0.094,
+      "stdout": "PASS project-overview: 24 vertices, 15 edges; visible labels, topology, exact embedded source synchronized\r\nPASS business-flow: 39 vertices, 43 edges; visible labels, topology, exact embedded source synchronized\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "a81_pagination",
+      "command": [
+        "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "scripts/validate_pagination_plan.py",
+        "E:\\shengtu\\skills-v2.7-development-snapshot-20260814\\A线\\8.1_A线R4_校验输入.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.094,
+      "stdout": "{\r\n  \"check\": \"a_pagination_plan\",\r\n  \"pass\": true,\r\n  \"error_count\": 0,\r\n  \"errors\": [],\r\n  \"derived\": {\r\n    \"page_count\": 11,\r\n    \"mechanical_validation_only\": true,\r\n    \"pedagogical_quality_verified\": false,\r\n    \"source_versions_independently_verified\": false,\r\n    \"all_source_edits_detected\": false,\r\n    \"page_ids\": [\r\n      \"A81R2-P01\",\r\n      \"A81R4-P02A\",\r\n      \"A81R4-P02B\",\r\n      \"A81R4-P03A\",\r\n      \"A81R4-P03B\",\r\n      \"A81R2-P04\",\r\n      \"A81R2-P05\",\r\n      \"A81R4-P06A\",\r\n      \"A81R4-P06B\",\r\n      \"A81R2-P07\",\r\n      \"A81R2-P08\"\r\n    ],\r\n    \"non_a_count\": 2\r\n  }\r\n}\r\n",
+      "stderr": ""
+    }
+  ],
+  "readonly_check": {
+    "added": [],
+    "removed": [],
+    "byte_or_mtime_changed": [],
+    "passed": true
+  },
+  "original_source_unchanged_during_verification": true,
+  "utf8_failures": [],
+  "modified_code_files": [
+    "CHANGELOG.md",
+    "README.md",
+    "V2.7.1_VALIDATION.md",
+    "_shared\\algorithm-lite-rules.md",
+    "_shared\\course-visual-production-v2.7.md",
+    "_shared\\failure-diagnosis-rules.md",
+    "_shared\\page-brief-batch-execution-rules.md",
+    "_shared\\pagination-authority-rules.md",
+    "_shared\\pagination-plan-contract.md",
+    "_shared\\project-design-system.md",
+    "_shared\\reference-image-inheritance-rules.md",
+    "_shared\\task-run-manifest-rules.md",
+    "_shared\\template-realization-evidence-rules.md",
+    "_shared\\visual-sample-state-rules.md",
+    "run_all_checks.py",
+    "scripts\\export_workflow_diagrams.py",
+    "scripts\\validate_page_brief.py",
+    "scripts\\validate_pagination_plan.py",
+    "stage-algorithm-lite-companion\\SKILL.md",
+    "stage-algorithm-lite-companion\\references\\b01_feasibility_checklist.md",
+    "stage-aline-course-visual-routing\\SKILL.md",
+    "stage-aline-course-visual-routing\\references\\layout_decoupling_rules.md",
+    "stage-aline-course-visual-routing\\references\\onscreen_text_rules.md",
+    "stage-aline-course-visual-routing\\templates\\a_line_page_handoff_card.md",
+    "stage-aline-course-visual-routing\\templates\\a_review_report.md",
+    "stage-bline-production-handoff\\SKILL.md",
+    "stage-bline-production-handoff\\examples\\template_evidence_boundary_success.md",
+    "stage-bline-production-handoff\\references\\production_handoff_rules.md",
+    "stage-bline-production-handoff\\templates\\b_line_production_card.md",
+    "stage-cline-gpt-image-execution-feedback\\SKILL.md",
+    "stage-cline-gpt-image-execution-feedback\\references\\gpt_image_execution_adapter_rules.md",
+    "stage-cline-gpt-image-execution-feedback\\templates\\c_line_feedback_card.md",
+    "tests\\page_brief_contract_invalid.json",
+    "tests\\page_brief_contract_representative_calibration.json",
+    "tests\\page_brief_contract_valid.json",
+    "tests\\test_interaction_gate_contract.py",
+    "tests\\test_pagination_contract.py",
+    "tests\\test_runner_readonly.py",
+    "课程视觉生产工具V2.7_项目节点与流程-完整业务流程.drawio.svg",
+    "课程视觉生产工具V2.7_项目节点与流程-项目节点总览2.drawio.svg",
+    "课程视觉生产工具V2.7_项目节点与流程.drawio"
+  ],
+  "new_code_files": [],
+  "baseline_inventory_excluded_caches": [
+    "__pycache__\\run_all_checks.cpython-312.pyc",
+    "scripts\\__pycache__\\check_layout_skeleton.cpython-312.pyc",
+    "scripts\\__pycache__\\validate_page_brief.cpython-312.pyc",
+    "scripts\\__pycache__\\validate_pagination_plan.cpython-312.pyc"
+  ],
+  "image_calls": 0,
+  "image_output_files": [],
+  "image_status": "not_executed_awaiting_named_authorization",
+  "source_bytes": 6520,
+  "seconds": 15.391,
+  "passed": true
+}

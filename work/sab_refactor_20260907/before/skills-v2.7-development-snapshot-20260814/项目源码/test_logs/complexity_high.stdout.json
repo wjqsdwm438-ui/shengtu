@@ -1,0 +1,14 @@
+{
+  "risk_score": 100,
+  "risk_items": [
+    "on_screen_text_over_180_gate",
+    "too_many_images",
+    "too_many_info_layers",
+    "multi_reference_pollution_risk",
+    "reference_conflict",
+    "material_retention_constraints",
+    "high_text_generation_risk"
+  ],
+  "suggestion": "manual_confirm_or_return_A_line",
+  "final_decision": "recommendation_only_not_a_frozen_item"
+}

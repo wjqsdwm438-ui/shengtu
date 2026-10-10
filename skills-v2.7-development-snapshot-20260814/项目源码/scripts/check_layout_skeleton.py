@@ -1,12 +1,20 @@
 ﻿#!/usr/bin/env python3
-"""Validate A01 light_region_summary completeness for ALG-A02 evidence."""
+"""Validate qualitative layout-region completeness for B-line evidence."""
 from __future__ import annotations
 
 import argparse
 import json
 from pathlib import Path
 
-REQUIRED_FIELDS = ["title_area", "body_area", "image_area", "info_layer", "safe_margin", "visual_text_priority", "post_text_method"]
+REQUIRED_FIELDS = [
+    "title_area",
+    "body_area",
+    "visual_carrier_area",
+    "info_layer",
+    "safe_margin",
+    "visual_text_priority",
+    "post_text_method",
+]
 EMPTY_HINTS = ["empty background", "pure atmosphere", "only background", "空背景", "纯氛围", "只有背景"]
 
 
@@ -25,7 +33,7 @@ def is_present(value) -> bool:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Check A01 no-text layout skeleton light_region_summary.")
+    parser = argparse.ArgumentParser(description="Check B-line qualitative layout-region evidence.")
     parser.add_argument("input_json", type=Path)
     args = parser.parse_args()
     data = load_json(args.input_json)
@@ -35,11 +43,11 @@ def main() -> int:
     empty_background_risk = any(hint in combined for hint in EMPTY_HINTS)
     pass_check = not missing and not empty_background_risk
     result = {
-        "check": "A01_light_region_summary",
+        "check": "B_line_qualitative_layout_regions",
         "pass": pass_check,
         "missing_fields": missing,
         "empty_background_risk": empty_background_risk,
-        "suggestion": "pass" if pass_check else "return_to_A_line_or_manual_confirm",
+        "suggestion": "pass" if pass_check else "return_to_B_line_or_manual_confirm",
         "note": "This checks light_region_summary only; it does not restore editable_layout_spec.",
     }
     print(json.dumps(result, ensure_ascii=False, indent=2))

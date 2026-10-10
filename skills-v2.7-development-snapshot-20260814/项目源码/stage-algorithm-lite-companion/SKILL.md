@@ -1,6 +1,6 @@
 ﻿---
 name: stage-algorithm-lite-companion
-description: V2.7 Algorithm Lite companion for explicit testing and evidence logging. Use only when the user or a V2.7 stage explicitly asks to run deterministic ALG-S01, ALG-A02, or ALG-A03 checks, create test logs, validate SRT indexing, text budget, A01 light_region_summary, or page complexity risk without taking over S/A/B/T/C production decisions.
+description: V2.7 Algorithm Lite companion for explicit testing and evidence logging. Use only when the user or a V2.7 stage explicitly asks to run deterministic source-index, pagination, text-budget, layout, batch or C-adapter checks. It does not take over A/B/C decisions, replace A internal review, or restore independent S/A-review stages.
 ---
 
 # Stage Algorithm Lite Companion
@@ -35,20 +35,22 @@ This is a companion Skill, not a sixth production line. Use it only by explicit 
 
 ## Hard Boundaries
 - Do not override user explicit requirements or frozen items.
-- Do not write final S-line, A-line, B-line, T-line, or C-line deliverables.
+- Do not write final S-line, A-line, B-line, or C-line deliverables.
 - Do not generate prompts, images, PPTX, HTML, MP4, Remotion, MCP, or install dependencies.
 - Do not restore `editable_layout_spec`; validate `light_region_summary` only.
 - Do not call GPT Image output final, 定稿, or delivery.
+- Templates and validators implement shared contracts; numeric text bands, complexity scores and nonempty fields cannot create business thresholds, force pagination or new user Gates, or prove teaching/visual quality. Count the current actual display state, not all sequential states as one image; capacity also requires A/B judgment about diagrams and observation order. A static sample does not verify dynamic effects.
 
 ## Script Map
 - ALG-S01: run `scripts\build_srt_index.py` for SRT timeline and semi-manual routing index.
 - ALG-A02 text budget: run `scripts\check_text_budget.py`.
-- ALG-A02 A01 skeleton: run `scripts\check_layout_skeleton.py`.
+- ALG-A02 layout-region check: run `scripts\check_layout_skeleton.py`; regions describe required content space, never an image-percentage quota.
 - ALG-A03: run `scripts\score_page_complexity.py`.
-- ALG-B01 and ALG-C01: use references/templates only in first round; do not script them yet.
+- Page brief / batch / C-adapter contract: run `scripts\validate_page_brief.py` when a JSON contract is provided.
+- ALG-B01 and ALG-C01: use their reference checklists for human interpretation; deterministic contract fields are validated by `validate_page_brief.py`.
 
 ## Output Contract
 简短检查结果可直接报告，不读取模板。只有需要保存或交付正式证据日志时，才读取 `templates\algorithm_test_log.md`。正式日志必须包含 input path, script path, command summary, result summary, recommendation, and whether it is evidence-only。
 
 ## Return Rules
-Return to the calling stage when script output needs human interpretation. Ask the user only when the result would require changing frozen structure, entering a Gate, or deciding between split/no-text/post-edit paths.
+Return to the calling stage when script output needs business interpretation. A/B first resolve their own pagination/design decisions; ask the user only for a real missing authorization or user-owned decision after checking existing evidence. A numeric diagnostic or routine split/no-text/post-edit recommendation is not itself a user Gate.

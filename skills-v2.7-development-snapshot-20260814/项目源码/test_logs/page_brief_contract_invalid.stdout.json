@@ -1,0 +1,355 @@
+{
+  "check": "page_brief_contract",
+  "pass": false,
+  "error_count": 66,
+  "errors": [
+    {
+      "code": "workflow.stages",
+      "path": "$.workflow.stages",
+      "message": "stages must be exactly ['A', 'B', 'C_adapter', 'C_generate', 'assembly']; independent T is forbidden"
+    },
+    {
+      "code": "workflow.independent_t",
+      "path": "$.workflow.stages[4]",
+      "message": "independent T stage/call is forbidden; use C_adapter"
+    },
+    {
+      "code": "batch.dynamic",
+      "path": "$.workflow.batch_count_policy",
+      "message": "batch_count_policy must be 'derived_from_pages'"
+    },
+    {
+      "code": "batch.production_order",
+      "path": "$.workflow.production_order_policy",
+      "message": "production_order_policy must be 'by_batch'"
+    },
+    {
+      "code": "page.assembly_policy",
+      "path": "$.workflow.assembly_order_policy",
+      "message": "assembly_order_policy must be 'original_page_order'"
+    },
+    {
+      "code": "pagination.legacy_not_ready",
+      "path": "$.a_pagination_plan",
+      "message": "旧合同不就绪：旧 s_section/a_review_status 或9单元通过记录不能替代本轮 A 分页与内部复核。"
+    },
+    {
+      "code": "pagination.schema",
+      "path": "$.a_pagination_plan.schema",
+      "message": "must be 'course_visual_a_pagination/v1'"
+    },
+    {
+      "code": "pagination.field",
+      "path": "$.a_pagination_plan.plan_id",
+      "message": "must be a non-empty recorded string, not proof of quality"
+    },
+    {
+      "code": "pagination.version",
+      "path": "$.a_pagination_plan.plan_version",
+      "message": "must be a positive integer"
+    },
+    {
+      "code": "pagination.source_evidence",
+      "path": "$.a_pagination_plan.source_evidence",
+      "message": "independent source evidence object is required"
+    },
+    {
+      "code": "pagination.scope_approval",
+      "path": "$.a_pagination_plan.source_evidence.approval",
+      "message": "existing approved text scope/classification record required; not page or generation approval"
+    },
+    {
+      "code": "pagination.array",
+      "path": "$.a_pagination_plan.source_evidence.sources",
+      "message": "must be an array with at least one entry"
+    },
+    {
+      "code": "pagination.array",
+      "path": "$.a_pagination_plan.source_evidence.approved_body_spans",
+      "message": "must be an array with at least one entry"
+    },
+    {
+      "code": "pagination.array",
+      "path": "$.a_pagination_plan.source_evidence.annotation_spans",
+      "message": "must be an array"
+    },
+    {
+      "code": "pagination.array",
+      "path": "$.a_pagination_plan.pages",
+      "message": "must be an array with at least one entry"
+    },
+    {
+      "code": "pagination.array",
+      "path": "$.a_pagination_plan.non_a_dispositions",
+      "message": "must be an array"
+    },
+    {
+      "code": "pagination.array",
+      "path": "$.a_pagination_plan.split_merge_comparisons",
+      "message": "must be an array with at least one entry"
+    },
+    {
+      "code": "pagination.internal_review",
+      "path": "$.a_pagination_plan.internal_review",
+      "message": "current A internal review required; old S/A_review or nine-unit pass is not readiness"
+    },
+    {
+      "code": "pagination.review_version",
+      "path": "$.a_pagination_plan.internal_review",
+      "message": "review must name this plan and exact version"
+    },
+    {
+      "code": "pagination.review_boundaries",
+      "path": "$.a_pagination_plan.internal_review.reviewed_page_spans",
+      "message": "review must record the entire current final page-to-source mapping"
+    },
+    {
+      "code": "pagination.review_incomplete",
+      "path": "$.a_pagination_plan.internal_review",
+      "message": "completed internal review with no unresolved issues required"
+    },
+    {
+      "code": "pagination.array",
+      "path": "$.a_pagination_plan.internal_review.checks",
+      "message": "must be an array with at least one entry"
+    },
+    {
+      "code": "pagination.review_checks",
+      "path": "$.a_pagination_plan.internal_review.checks",
+      "message": "exactly one record for each of the six review items required"
+    },
+    {
+      "code": "batch.fixed_count",
+      "path": "$.workflow.batch_count",
+      "message": "batch count must be derived, not declared"
+    },
+    {
+      "code": "image.fixed_share",
+      "path": "$.page_briefs[0].page_brief.b_section.main_execution_plan.image_area_percentage",
+      "message": "fixed image-area share fields are forbidden"
+    },
+    {
+      "code": "image.fixed_share",
+      "path": "$.page_briefs[0].page_brief.c_section.compiled_execution_contract.chinese_execution_prompt",
+      "message": "mechanical image-area percentage rule is forbidden"
+    },
+    {
+      "code": "page.original_order",
+      "path": "$.page_briefs[0].page_brief.original_course_order",
+      "message": "original_course_order must be a positive integer"
+    },
+    {
+      "code": "pagination.page_mapping",
+      "path": "$.page_briefs[0].page_brief",
+      "message": "page is not present in the current A pagination plan"
+    },
+    {
+      "code": "pagination.feedback",
+      "path": "$.page_briefs[0].page_brief.b_section.pagination_feedback",
+      "message": "must be an array; use [] for no local feedback"
+    },
+    {
+      "code": "b.evidence_asset",
+      "path": "$.page_briefs[0].page_brief.b_section.implementation_evidence.asset_used[0]",
+      "message": "implementation evidence must be an object"
+    },
+    {
+      "code": "c.preflight_failed",
+      "path": "$.page_briefs[0].page_brief.c_section.adapter_preflight.source_evidence_complete",
+      "message": "source_evidence_complete must be 'yes'"
+    },
+    {
+      "code": "c.preflight_failed",
+      "path": "$.page_briefs[0].page_brief.c_section.adapter_preflight.A_internal_review_complete",
+      "message": "A_internal_review_complete must be 'yes'"
+    },
+    {
+      "code": "c.preflight_failed",
+      "path": "$.page_briefs[0].page_brief.c_section.adapter_preflight.a_pagination_plan_complete",
+      "message": "a_pagination_plan_complete must be 'yes'"
+    },
+    {
+      "code": "c.preflight_failed",
+      "path": "$.page_briefs[0].page_brief.c_section.adapter_preflight.unresolved_design_open_items_absent",
+      "message": "unresolved_design_open_items_absent must be 'yes'"
+    },
+    {
+      "code": "c.preflight_failed",
+      "path": "$.page_briefs[0].page_brief.c_section.adapter_preflight.placeholders_or_truncated_sentences_absent",
+      "message": "placeholders_or_truncated_sentences_absent must be 'yes'"
+    },
+    {
+      "code": "c.preflight_evidence",
+      "path": "$.page_briefs[0].page_brief.c_section.adapter_preflight.implementation_evidence",
+      "message": "implementation_evidence preflight must be an object"
+    },
+    {
+      "code": "c.preflight_calibration",
+      "path": "$.page_briefs[0].page_brief.c_section.adapter_preflight.source_batch_calibration",
+      "message": "source_batch_calibration preflight must be an object"
+    },
+    {
+      "code": "c.preflight_handoff",
+      "path": "$.page_briefs[0].page_brief.c_section.adapter_preflight.source_C_adapter_handoff",
+      "message": "source_C_adapter_handoff preflight must be an object"
+    },
+    {
+      "code": "c.preflight_failed",
+      "path": "$.page_briefs[0].page_brief.c_section.adapter_preflight.reference_mapping_matches_attachments",
+      "message": "reference_mapping_matches_attachments must be checked"
+    },
+    {
+      "code": "c.template_identity_field",
+      "path": "$.page_briefs[0].page_brief.c_section.compiled_execution_contract.template_identity.evidence_reference_id",
+      "message": "evidence_reference_id is required"
+    },
+    {
+      "code": "batch.representative_unconfirmed",
+      "path": "$.page_briefs[0].page_brief.b_section.batch_calibration",
+      "message": "release requires the representative calibration exception or a frozen, human-confirmed batch"
+    },
+    {
+      "code": "pagination.page_mapping",
+      "path": "$.page_briefs[1].page_brief",
+      "message": "page is not present in the current A pagination plan"
+    },
+    {
+      "code": "pagination.feedback",
+      "path": "$.page_briefs[1].page_brief.b_section.pagination_feedback",
+      "message": "must be an array; use [] for no local feedback"
+    },
+    {
+      "code": "b.evidence_asset",
+      "path": "$.page_briefs[1].page_brief.b_section.implementation_evidence.asset_used[0]",
+      "message": "implementation evidence must be an object"
+    },
+    {
+      "code": "c.preflight_failed",
+      "path": "$.page_briefs[1].page_brief.c_section.adapter_preflight.source_evidence_complete",
+      "message": "source_evidence_complete must be 'yes'"
+    },
+    {
+      "code": "c.preflight_failed",
+      "path": "$.page_briefs[1].page_brief.c_section.adapter_preflight.A_internal_review_complete",
+      "message": "A_internal_review_complete must be 'yes'"
+    },
+    {
+      "code": "c.preflight_failed",
+      "path": "$.page_briefs[1].page_brief.c_section.adapter_preflight.a_pagination_plan_complete",
+      "message": "a_pagination_plan_complete must be 'yes'"
+    },
+    {
+      "code": "c.preflight_failed",
+      "path": "$.page_briefs[1].page_brief.c_section.adapter_preflight.unresolved_design_open_items_absent",
+      "message": "unresolved_design_open_items_absent must be 'yes'"
+    },
+    {
+      "code": "c.preflight_failed",
+      "path": "$.page_briefs[1].page_brief.c_section.adapter_preflight.placeholders_or_truncated_sentences_absent",
+      "message": "placeholders_or_truncated_sentences_absent must be 'yes'"
+    },
+    {
+      "code": "c.preflight_evidence",
+      "path": "$.page_briefs[1].page_brief.c_section.adapter_preflight.implementation_evidence",
+      "message": "implementation_evidence preflight must be an object"
+    },
+    {
+      "code": "c.preflight_calibration",
+      "path": "$.page_briefs[1].page_brief.c_section.adapter_preflight.source_batch_calibration",
+      "message": "source_batch_calibration preflight must be an object"
+    },
+    {
+      "code": "c.preflight_handoff",
+      "path": "$.page_briefs[1].page_brief.c_section.adapter_preflight.source_C_adapter_handoff",
+      "message": "source_C_adapter_handoff preflight must be an object"
+    },
+    {
+      "code": "c.preflight_failed",
+      "path": "$.page_briefs[1].page_brief.c_section.adapter_preflight.reference_mapping_matches_attachments",
+      "message": "reference_mapping_matches_attachments must be checked"
+    },
+    {
+      "code": "c.template_identity_field",
+      "path": "$.page_briefs[1].page_brief.c_section.compiled_execution_contract.template_identity.evidence_reference_id",
+      "message": "evidence_reference_id is required"
+    },
+    {
+      "code": "c.template_identity_field",
+      "path": "$.page_briefs[1].page_brief.c_section.compiled_execution_contract.template_identity.master_asset_path",
+      "message": "master_asset_path is required"
+    },
+    {
+      "code": "c.required_field",
+      "path": "$.page_briefs[1].page_brief.c_section.compiled_execution_contract.template_identity.master_asset_path",
+      "message": "template_identity.master_asset_path is required"
+    },
+    {
+      "code": "c.required_field",
+      "path": "$.page_briefs[1].page_brief.c_section.compiled_execution_contract.change_or_generate.subject_and_content_boundary",
+      "message": "change_or_generate.subject_and_content_boundary is required"
+    },
+    {
+      "code": "c.required_field",
+      "path": "$.page_briefs[1].page_brief.c_section.compiled_execution_contract.technical_parameters.size",
+      "message": "technical_parameters.size is required"
+    },
+    {
+      "code": "c.compile_mismatch",
+      "path": "$.page_briefs[1].page_brief.c_section.compiled_execution_contract.page_task.teaching_relation",
+      "message": "compiled value must match the upstream page brief: 'sequence'"
+    },
+    {
+      "code": "c.asset_missing",
+      "path": "$.page_briefs[1].page_brief.c_section.compiled_execution_contract.references[0].path",
+      "message": "asset does not exist: tests\\missing-reference.png"
+    },
+    {
+      "code": "batch.incompatible_page",
+      "path": "$.page_briefs[1].page_brief",
+      "message": "page teaching_relation does not match its batch contract"
+    },
+    {
+      "code": "batch.representative_unconfirmed",
+      "path": "$.page_briefs[1].page_brief.b_section.batch_calibration",
+      "message": "release requires the representative calibration exception or a frozen, human-confirmed batch"
+    },
+    {
+      "code": "batch.representative_unconfirmed",
+      "path": "$.page_briefs['KP-02'].page_brief.c_section.release_ready",
+      "message": "non-representative page cannot be released before representative confirmation"
+    },
+    {
+      "code": "inheritance.teaching_relation",
+      "path": "$.page_briefs['KP-02'].page_brief.b_section.skeleton_inheritance",
+      "message": "source and target teaching_relation must be identical; visual similarity is insufficient"
+    },
+    {
+      "code": "pagination.page_set",
+      "path": "$.page_briefs",
+      "message": "A final pages and B/C page briefs must correspond exactly"
+    },
+    {
+      "code": "page.assembly_order",
+      "path": "$.assembly_order",
+      "message": "assembly_order must exactly follow original_course_order: ['KP-02']"
+    }
+  ],
+  "derived": {
+    "page_count": 2,
+    "batch_count": 1,
+    "assembly_order": [
+      "KP-02"
+    ],
+    "mechanical_validation_only": true,
+    "pedagogical_quality_verified": false,
+    "pagination": {
+      "page_count": 0,
+      "mechanical_validation_only": true,
+      "pedagogical_quality_verified": false,
+      "source_versions_independently_verified": false,
+      "all_source_edits_detected": false,
+      "page_ids": [],
+      "non_a_count": 0
+    }
+  }
+}

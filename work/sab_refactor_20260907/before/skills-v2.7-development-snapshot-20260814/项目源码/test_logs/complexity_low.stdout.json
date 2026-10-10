@@ -1,0 +1,6 @@
+{
+  "risk_score": 0,
+  "risk_items": [],
+  "suggestion": "pass_as_recommendation",
+  "final_decision": "recommendation_only_not_a_frozen_item"
+}

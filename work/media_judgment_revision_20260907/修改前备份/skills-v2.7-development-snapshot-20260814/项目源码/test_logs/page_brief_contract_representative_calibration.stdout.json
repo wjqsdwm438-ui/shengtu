@@ -1,0 +1,26 @@
+{
+  "check": "page_brief_contract",
+  "pass": true,
+  "error_count": 0,
+  "errors": [],
+  "derived": {
+    "page_count": 1,
+    "batch_count": 1,
+    "assembly_order": [
+      "KP-01"
+    ],
+    "mechanical_validation_only": true,
+    "pedagogical_quality_verified": false,
+    "pagination": {
+      "page_count": 1,
+      "mechanical_validation_only": true,
+      "pedagogical_quality_verified": false,
+      "source_versions_independently_verified": false,
+      "all_source_edits_detected": false,
+      "page_ids": [
+        "KP-01"
+      ],
+      "non_a_count": 1
+    }
+  }
+}

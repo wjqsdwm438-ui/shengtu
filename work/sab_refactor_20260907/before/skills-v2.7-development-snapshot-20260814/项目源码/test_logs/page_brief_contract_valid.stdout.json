@@ -1,0 +1,14 @@
+{
+  "check": "page_brief_contract",
+  "pass": true,
+  "error_count": 0,
+  "errors": [],
+  "derived": {
+    "page_count": 2,
+    "batch_count": 1,
+    "assembly_order": [
+      "KP-01",
+      "KP-02"
+    ]
+  }
+}

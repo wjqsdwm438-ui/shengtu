@@ -1,0 +1,35 @@
+{
+  "check": "a_pagination_plan",
+  "pass": true,
+  "error_count": 0,
+  "errors": [],
+  "derived": {
+    "page_count": 19,
+    "mechanical_validation_only": true,
+    "pedagogical_quality_verified": false,
+    "source_versions_independently_verified": false,
+    "all_source_edits_detected": false,
+    "page_ids": [
+      "GS-A01",
+      "GS-A02",
+      "GS-A03",
+      "GS-A04",
+      "GS-A05",
+      "GS-A06",
+      "GS-A07",
+      "GS-A08",
+      "GS-A09",
+      "GS-A10",
+      "GS-A11",
+      "GS-A12",
+      "GS-A13",
+      "GS-A14",
+      "GS-A15",
+      "GS-A16",
+      "GS-A17",
+      "GS-A18",
+      "GS-A19"
+    ],
+    "non_a_count": 3
+  }
+}

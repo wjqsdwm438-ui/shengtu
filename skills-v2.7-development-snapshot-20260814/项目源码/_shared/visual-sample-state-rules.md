@@ -24,6 +24,8 @@ remotion_asset_handoff_ready
 - Rejected samples may be used for failure diagnosis, not as style references unless the user says so.
 - A transparent foreground may only derive from `final_course_visual` after `transparent_foreground_pending_gate` is explicitly confirmed.
 - Optional split layers require a separate `split_layer_pending_gate` confirmation.
+- A batch representative-page confirmation only satisfies a prerequisite for expansion of that batch; each remaining page still needs explicit first-pass generation authorization. It does not move the page to `final_course_visual`, does not approve another batch, and does not authorize cross-batch skeleton inheritance.
+- These are production/approval states, not a new schema for within-page display states. Evaluate the actual generated display state against B's explicit state allocation and its exact visible text, not every must-show item in the whole teaching task at once. A static sample does not verify other states, transitions, motion, or cross-state reading; existing static records must not be silently reinterpreted as verified dynamic designs. State descriptions do not expand generation authorization or revision counts.
 
 ## Output Phrase
 Before confirmation use `视觉样张` or `带字成品候选`. After explicit confirmation, `正式课程视觉成品` is allowed for the confirmed `final_course_visual` only.

@@ -1,0 +1,30 @@
+{
+  "check": "a_pagination_plan + exact_must_show_source_match",
+  "passed": true,
+  "error_count": 0,
+  "derived": {
+    "page_count": 8,
+    "mechanical_validation_only": true,
+    "pedagogical_quality_verified": false,
+    "source_versions_independently_verified": false,
+    "all_source_edits_detected": false,
+    "page_ids": [
+      "A81R2-P01",
+      "A81R2-P02",
+      "A81R2-P03",
+      "A81R2-P04",
+      "A81R2-P05",
+      "A81R2-P06",
+      "A81R2-P07",
+      "A81R2-P08"
+    ],
+    "non_a_count": 2
+  },
+  "body_characters": 1444,
+  "a_characters": 1098,
+  "non_a_characters": 346,
+  "must_show_items": 62,
+  "mechanical_validation_only": true,
+  "pedagogical_quality_verified": false,
+  "source_unchanged": true
+}

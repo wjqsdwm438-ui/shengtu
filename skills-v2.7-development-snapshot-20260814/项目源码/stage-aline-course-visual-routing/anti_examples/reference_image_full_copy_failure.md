@@ -1,2 +1,5 @@
-﻿# Anti Example: Reference Full Copy
-The reference image was fully copied. Each reference must state inherited and forbidden items.
+# 反例：A 线把参考图视觉复制当作语义约束
+
+错误做法：A 线要求完整复制参考图的布局、背景、角色和光效，但没有说明参考图中哪些内容承载教学事实。
+
+正确做法：A 线只记录参考素材中必须准确保留的主体、标识、数据或语义，以及不能被重画或虚构的部分。视觉上继承什么、禁止继承什么，由 B 基于实现证据决定。

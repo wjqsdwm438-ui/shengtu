@@ -1,0 +1,6 @@
+_shared\failure-diagnosis-rules.md:46:修复后只复核受影响页及必要衔接。固定基准优先于对话惯性；被污染时只依据同一冻结基准恢复干净上下文，不借机改设计或扩大授权。实际回执未报告模型时写“未报告”，不能推断。既有局部文字修订上限与每次修订授权仍保留，禁止无限重试。
+_shared\pagination-plan-contract.md:23:  approval: {status: "confirmed", record: 既有有效处理范围/分类授权记录}
+_shared\pagination-plan-contract.md:57:- `approval` 只记录已有效的处理正文范围及批注分类，不意味着新 Non-A 制作路线、最终执行分页、生图、代表页、扩批或定稿已经批准。程序不能认证这条授权真实有效；实际 Gate 仍按上游授权记录和项目规则。
+stage-cline-gpt-image-execution-feedback\templates\c_line_feedback_card.md:127:  generation_authorization: pending/confirmed
+stage-cline-gpt-image-execution-feedback\templates\c_line_feedback_card.md:161:- `representative_result_confirmed` 只记录本批展开前提；`batch_first_pass_authorized_pages` 与 `execution_record.generation_authorization` 依据真实授权单独填写，不从代表页通过推导剩余页已授权、定稿或图像继承。共同基准只引用 B维护版。
+stage-cline-gpt-image-execution-feedback\templates\c_line_feedback_card.md:164:- `local_revision` 只写获授权的目标、保留项、仅修改项与禁止项；文字首轮后最多两次局部文字修订，不能以允许次数充当修订授权。共同依据错误按最早责任回 A/B，纯执行偏差留 C；修复后只复核相关页。

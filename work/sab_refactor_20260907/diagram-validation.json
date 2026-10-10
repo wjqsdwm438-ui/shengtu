@@ -1,0 +1,153 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "project-overview edge endpoints exist",
+      "result": "PASS"
+    },
+    {
+      "check": "project-overview default route",
+      "result": "PASS"
+    },
+    {
+      "check": "project-overview S absent from solid production edges",
+      "result": "PASS"
+    },
+    {
+      "check": "project-overview internal review rectangle nested in A",
+      "result": "PASS"
+    },
+    {
+      "check": "business-flow edge endpoints exist",
+      "result": "PASS"
+    },
+    {
+      "check": "business-flow default route",
+      "result": "PASS"
+    },
+    {
+      "check": "business-flow S absent from solid production edges",
+      "result": "PASS"
+    },
+    {
+      "check": "business-flow internal review rectangle nested in A",
+      "result": "PASS"
+    },
+    {
+      "check": "all protected C / batch / representative / generation authorization / assembly labels unchanged",
+      "result": "PASS"
+    },
+    {
+      "check": "all protected C edges preserve endpoints",
+      "result": "PASS"
+    },
+    {
+      "check": "all protected C decisions unchanged except authorized A/B responsibility clarification",
+      "result": "PASS"
+    },
+    {
+      "check": "C responsibility directly routes source / pagination / teaching issues to A and pure implementation to B",
+      "result": "PASS"
+    },
+    {
+      "check": "fl-e19 correctly scoped feedback",
+      "result": "PASS"
+    },
+    {
+      "check": "fl-b-implementation correctly scoped feedback",
+      "result": "PASS"
+    },
+    {
+      "check": "fl-a-internal-fix correctly scoped feedback",
+      "result": "PASS"
+    },
+    {
+      "check": "old standalone S routing nodes removed",
+      "result": "PASS"
+    },
+    {
+      "check": "old independent A review loop removed",
+      "result": "PASS"
+    },
+    {
+      "check": "project-overview exact expected rendered SVG / visible text / edge topology / embedded XML parity",
+      "result": "PASS"
+    },
+    {
+      "check": "project-overview validation is read-only",
+      "result": "PASS"
+    },
+    {
+      "check": "business-flow exact expected rendered SVG / visible text / edge topology / embedded XML parity",
+      "result": "PASS"
+    },
+    {
+      "check": "business-flow validation is read-only",
+      "result": "PASS"
+    },
+    {
+      "check": "stale visible text fixture actually changed",
+      "result": "PASS"
+    },
+    {
+      "check": "stale visible text rejected by check mode",
+      "result": "PASS"
+    },
+    {
+      "check": "stale rendered geometry fixture actually changed",
+      "result": "PASS"
+    },
+    {
+      "check": "stale rendered geometry rejected by check mode",
+      "result": "PASS"
+    },
+    {
+      "check": "stale edge metadata fixture actually changed",
+      "result": "PASS"
+    },
+    {
+      "check": "stale edge metadata rejected by check mode",
+      "result": "PASS"
+    }
+  ],
+  "protected_c_nodes": [
+    "fl-select",
+    "fl-tline",
+    "fl-tgate",
+    "fl-predict",
+    "fl-c-pregen-confirm",
+    "fl-gpt-image",
+    "fl-confirm",
+    "fl-delivery",
+    "fl-diagnose",
+    "fl-revision",
+    "fl-return"
+  ],
+  "protected_c_edges": [
+    "fl-e21",
+    "fl-e22",
+    "fl-e23",
+    "fl-e24",
+    "fl-e25",
+    "fl-e26",
+    "fl-e27",
+    "fl-e28",
+    "fl-e29",
+    "fl-e30",
+    "fl-e31",
+    "fl-e32",
+    "fl-e33",
+    "fl-e25b"
+  ],
+  "retired_nodes": {
+    "fl-sroute": "A necessary carrier analysis; standalone S route retired",
+    "fl-s08": "Existing approvals handled in A; standalone S admission Gate retired",
+    "fl-s07": "Evidence input handled directly by fl-recognize"
+  },
+  "rendering": "Standard-library SVG, not native diagrams.net export; exact current full XML embedded; offline PNG proof rendered from final SVG by preinstalled sharp/librsvg.",
+  "browser_validation": "Not performed: file URL prohibited by browser URL policy; no bypass attempted.",
+  "visual_evidence": [
+    "diagram-project-overview.png",
+    "diagram-business-flow.png"
+  ]
+}

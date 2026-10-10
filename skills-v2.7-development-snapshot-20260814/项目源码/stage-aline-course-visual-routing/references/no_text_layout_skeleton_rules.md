@@ -1,3 +1,5 @@
-﻿# No Text Layout Skeleton Rules
+# Legacy No-Text Skeleton Boundary
 
-A01 must include blank title reserve, body information area, image carrier area, case plate/card/info layer, border, separators, decorative lines, safe margins, and clear visual focus. No readable text, fake Chinese, garbled text, English letters, or placeholder words such as title/body.
+无字骨架的内部区域、容器、焦点和留白属于 B 线可实现设计，不属于 A 线教学语义合同。本文件仅用于识别旧产物，A 线不得据此冻结标题区、图像区、信息层或安全边距。
+
+对需要后期文字的页面，A 记录必须呈现的文字、文字之间的教学关系、不得被图像误导的语义，并在分页前依据获准空间和实际文字/标签/图注负荷核验必要承载条件。不能因为将来后期加字，就把可读性与页界判断推迟至 B。具体骨架结构和构图由 B 使用真实模板与样本落实；不合适的页界由 B 给证据交 A 修正。

@@ -1,6 +1,6 @@
 interface:
-  display_name: "V2.7 S线媒介分流"
-  short_description: "在进入 A线前合并字幕或脚本片段并完成媒介分流。"
-  default_prompt: "使用 V2.7 S线合并脚本或 SRT 语义段，判断每段是否进入 A线，并保留时间元数据。"
+  display_name: "V2.7 S兼容输入整理"
+  short_description: "仅按明确请求整理源证据与路由；默认由 A 承担，不预建教学页。"
+  default_prompt: "仅在用户明确请求 S或单独输入整理时使用本兼容入口，保留原文、定位、顺序、时间证据、输入角色、真实素材与 Non-A/A 路由范围，不创建 page_id、共享页面或教学候选分页。默认 A/全流程请求由 A 内部完成输入整理，沿用有效范围，不增设独立 S 停止点。"
 policy:
   allow_implicit_invocation: false

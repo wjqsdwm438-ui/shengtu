@@ -1,0 +1,9 @@
+{
+  "caption_count": 4,
+  "segment_count": 2,
+  "outputs": {
+    "timeline_jsonl": "test_logs/srt_sample/sample_short.timeline.jsonl",
+    "timeline_md": "test_logs/srt_sample/sample_short.timeline.md",
+    "srt_index_md": "test_logs/srt_sample/sample_short.srt_index.md"
+  }
+}

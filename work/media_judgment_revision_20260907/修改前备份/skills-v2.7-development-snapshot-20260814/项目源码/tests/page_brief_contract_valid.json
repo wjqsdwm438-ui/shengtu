@@ -1,0 +1,908 @@
+{
+  "workflow": {
+    "stages": [
+      "A",
+      "B",
+      "C_adapter",
+      "C_generate",
+      "assembly"
+    ],
+    "batch_count_policy": "derived_from_pages",
+    "production_order_policy": "by_batch",
+    "assembly_order_policy": "original_page_order"
+  },
+  "batches": [
+    {
+      "batch_id": "comparison-pages",
+      "outer_template": "layout_skeleton_pass.json",
+      "teaching_relation": "before_after_comparison",
+      "semantic_visual_carrier": "paired_comparison_panels",
+      "shared_reference_and_generation_basis": "template-only full-page generation",
+      "representative_page_id": "KP-01",
+      "representative_reason": "Covers the core relation and typical information density.",
+      "representative_status": "confirmed"
+    }
+  ],
+  "assembly_order": [
+    "KP-01",
+    "KP-02"
+  ],
+  "schema": "course_visual_page_brief/v2.7",
+  "page_briefs": [
+    {
+      "page_brief": {
+        "page_id": "KP-01",
+        "batch_id": "comparison-pages",
+        "a_section": {
+          "status": "confirmed",
+          "teaching_goal": {
+            "learner_outcome": "Compare two states accurately.",
+            "source_evidence": "fixture source"
+          },
+          "teaching_relation": {
+            "relation_kind": "before_after_comparison",
+            "participants": [
+              "Object A",
+              "Object B"
+            ],
+            "direction_or_logic": "Compare explicitly without swapping.",
+            "source_evidence": "fixture source"
+          },
+          "must_show_items": {
+            "exact_text": [
+              "Object A",
+              "Object B"
+            ],
+            "exact_numbers": [],
+            "exact_terms": [
+              "Object A",
+              "Object B"
+            ],
+            "required_real_materials": []
+          },
+          "image_pedagogical_task": {
+            "learner_should_see_or_compare": "Show the two states as a direct comparison.",
+            "task_reason": "The visual makes the teaching relation directly inspectable."
+          },
+          "forbidden_semantic_drift": [
+            "Do not swap the objects."
+          ],
+          "intentionally_not_decided_by_A": [
+            "template",
+            "layout_or_composition",
+            "image_or_text_ratio",
+            "visual_carrier",
+            "production_batch",
+            "generation_prompt"
+          ],
+          "unresolved_semantic_gate": {
+            "needed": "no",
+            "question": "not_applicable"
+          },
+          "evidence_notes": "fixture evidence",
+          "pagination_ref": {
+            "plan_id": "plan-synthetic",
+            "plan_version": 1,
+            "page_id": "KP-01",
+            "owned_spans": [
+              {
+                "source_id": "source-1",
+                "line": 1,
+                "start_char": 1,
+                "end_char": 4,
+                "start_text": "甲",
+                "end_text": "丁"
+              }
+            ]
+          }
+        },
+        "b_section": {
+          "implementation_evidence": {
+            "asset_used": [
+              {
+                "reference_id": "template-fixture",
+                "real_path": "layout_skeleton_pass.json",
+                "file_name": "layout_skeleton_pass.json",
+                "dimensions": "not_applicable_test_fixture",
+                "template_version": "test-fixture-1",
+                "reference_role": "layout_evidence",
+                "user_confirmation": "not_required"
+              }
+            ],
+            "what_it_proves": "The outer shell and safe content region are available.",
+            "what_it_does_not_prove": "Inner composition still requires representative calibration.",
+            "highest_risk": "The contrasted objects may be confused.",
+            "representative_calibration_required": "yes",
+            "calibration_reason": "The representative covers the batch relation and typical density.",
+            "calibration_covered_by_representative_page": "not_applicable"
+          },
+          "main_execution_plan": {
+            "plan_id": "plan-KP-01",
+            "outer_template": {
+              "identity": "layout_skeleton_pass.json",
+              "description": "Confirmed outer shell with a title anchor and safe content region.",
+              "evidence_reference_id": "template-fixture"
+            },
+            "content_container": "safe content region",
+            "semantic_visual_carrier": "paired_comparison_panels",
+            "main_visual_description": "Two explicit objects shown as a paired comparison.",
+            "reading_order": "title, left panel, right panel, conclusion",
+            "reference_mapping": "template-fixture is outer-shell evidence only",
+            "must_show_text_verbatim": [
+              "Object A",
+              "Object B"
+            ],
+            "must_preserve": [
+              "outer shell",
+              "teaching relation"
+            ],
+            "allowed_to_change": [
+              "objects",
+              "page text"
+            ],
+            "open_for_calibration": [],
+            "hard_bans": [
+              "do not swap the compared objects"
+            ],
+            "technical_output_spec": {
+              "dimensions": "1920x1080",
+              "file_format": "png",
+              "transparency_requirement": "opaque"
+            }
+          },
+          "skeleton_inheritance": {
+            "decision": "no_inheritance"
+          },
+          "batch_assignment": {
+            "batch_id": "comparison-pages",
+            "member_original_course_orders": [
+              1,
+              2
+            ],
+            "shared_outer_template_basis": "layout_skeleton_pass.json",
+            "shared_teaching_relation_basis": "before_after_comparison",
+            "shared_semantic_visual_carrier_basis": "paired_comparison_panels",
+            "shared_reference_and_generation_basis": "template-only full-page generation",
+            "within_batch_required_differences": [
+              "objects",
+              "page text"
+            ],
+            "representative_page": "KP-01",
+            "representative_selection_reason": "Covers the core relation and typical information density.",
+            "independent_C_context_required": "yes",
+            "include_other_batches_context": "no",
+            "include_previous_page_output_by_default": "no",
+            "final_assembly_order": "use_original_course_order"
+          },
+          "batch_calibration": {
+            "state": "frozen_for_execution",
+            "non_representative_pages": "released",
+            "human_confirmation": "confirmed",
+            "confirmation_record": "fixture confirmation",
+            "frozen_batch_core": [
+              "teaching relation",
+              "paired panels"
+            ]
+          },
+          "C_adapter_handoff": {
+            "readiness": "ready_for_C",
+            "selected_reference_paths": [],
+            "preserve_items": [
+              "outer shell",
+              "teaching relation"
+            ],
+            "change_items": [
+              "objects",
+              "page text"
+            ],
+            "unresolved_blockers": []
+          },
+          "pagination_ref": {
+            "plan_id": "plan-synthetic",
+            "plan_version": 1,
+            "page_id": "KP-01",
+            "owned_spans": [
+              {
+                "source_id": "source-1",
+                "line": 1,
+                "start_char": 1,
+                "end_char": 4,
+                "start_text": "甲",
+                "end_text": "丁"
+              }
+            ]
+          },
+          "pagination_feedback": []
+        },
+        "c_section": {
+          "adapter_preflight": {
+            "entry_mode": "single_page",
+            "a_section_complete": "yes",
+            "b_section_complete": "yes",
+            "main_execution_plan_present": "yes",
+            "concrete_canvas_size_present": "yes",
+            "main_execution_plan_outer_template": {
+              "identity_present": "yes",
+              "description_present": "yes",
+              "evidence_reference_id_present": "yes"
+            },
+            "main_execution_plan_main_visual_description_present": "yes",
+            "declared_assets_exist_and_readable": "yes",
+            "contradictions_absent": "yes",
+            "representative_gate_passed_or_calibration_exception_valid": "yes",
+            "result": "pass",
+            "blocking_evidence": [],
+            "implementation_evidence": {
+              "asset_used_complete": "yes",
+              "excluded_assets_and_reason_checked": "not_applicable",
+              "what_it_proves_present": "yes",
+              "what_it_does_not_prove_present": "yes",
+              "highest_risk_present": "yes",
+              "representative_calibration_required_present": "yes",
+              "calibration_reason_checked": "yes",
+              "calibration_covered_by_representative_page_checked": "yes"
+            },
+            "source_batch_calibration": {
+              "state": "frozen_for_execution",
+              "human_confirmation": "confirmed"
+            },
+            "source_C_adapter_handoff": {
+              "readiness": "ready_for_C",
+              "selected_reference_paths_match": "not_applicable",
+              "preserve_items_present": "yes",
+              "change_items_present": "yes",
+              "unresolved_blockers_empty": "yes"
+            },
+            "reference_mapping_matches_attachments": "not_applicable",
+            "unresolved_design_open_items_absent": "yes",
+            "placeholders_or_truncated_sentences_absent": "yes",
+            "a_pagination_plan_complete": "yes",
+            "source_evidence_complete": "yes",
+            "A_internal_review_complete": "yes"
+          },
+          "compiled_execution_contract": {
+            "target_capability": "GPT Image",
+            "requested_model": "gpt-image-2",
+            "template_identity": {
+              "template_id": "fixture",
+              "template_version": "1",
+              "master_asset_path": "layout_skeleton_pass.json",
+              "master_asset_exists_and_readable": "yes",
+              "evidence_reference_id": "template-fixture"
+            },
+            "page_task": {
+              "teaching_goal": "Compare two states accurately.",
+              "teaching_relation": "before_after_comparison",
+              "semantic_visual_carrier": "paired_comparison_panels"
+            },
+            "preserve": {
+              "master_and_core_skeleton": [
+                "outer shell"
+              ],
+              "must_show_text_verbatim": [
+                "Object A",
+                "Object B"
+              ]
+            },
+            "change_or_generate": {
+              "permitted_region": "content region",
+              "subject_and_content_boundary": "Paired comparison of two objects."
+            },
+            "references": [],
+            "technical_parameters": {
+              "size": "1920x1080",
+              "quality": "high",
+              "background": "opaque",
+              "format": "png"
+            },
+            "chinese_execution_prompt": "Keep the outer shell and generate a clear paired comparison.",
+            "chinese_negative_constraints": "Do not swap the compared objects.",
+            "local_revision_boundary": {
+              "preserve": [
+                "outer shell"
+              ],
+              "change_only": [
+                "objects"
+              ],
+              "forbid_change": [
+                "teaching relation"
+              ],
+              "minimum_instruction": "Only fix the named object."
+            }
+          },
+          "release_ready": true,
+          "skeleton_inheritance": {
+            "decision": "no_inheritance",
+            "source_page_id": "not_applicable",
+            "same_teaching_relation_reason": "not_applicable",
+            "same_semantic_carrier": "not_applicable",
+            "inherited_parts": "not_applicable",
+            "required_changes": "not_applicable",
+            "validation_note": "No inheritance requested by B.",
+            "evidence_complete": "not_applicable"
+          }
+        },
+        "original_course_order": 1
+      }
+    },
+    {
+      "page_brief": {
+        "page_id": "KP-02",
+        "batch_id": "comparison-pages",
+        "a_section": {
+          "status": "confirmed",
+          "teaching_goal": {
+            "learner_outcome": "Compare two states accurately.",
+            "source_evidence": "fixture source"
+          },
+          "teaching_relation": {
+            "relation_kind": "before_after_comparison",
+            "participants": [
+              "Object A",
+              "Object B"
+            ],
+            "direction_or_logic": "Compare explicitly without swapping.",
+            "source_evidence": "fixture source"
+          },
+          "must_show_items": {
+            "exact_text": [
+              "Object A",
+              "Object B"
+            ],
+            "exact_numbers": [],
+            "exact_terms": [
+              "Object A",
+              "Object B"
+            ],
+            "required_real_materials": []
+          },
+          "image_pedagogical_task": {
+            "learner_should_see_or_compare": "Show the two states as a direct comparison.",
+            "task_reason": "The visual makes the teaching relation directly inspectable."
+          },
+          "forbidden_semantic_drift": [
+            "Do not swap the objects."
+          ],
+          "intentionally_not_decided_by_A": [
+            "template",
+            "layout_or_composition",
+            "image_or_text_ratio",
+            "visual_carrier",
+            "production_batch",
+            "generation_prompt"
+          ],
+          "unresolved_semantic_gate": {
+            "needed": "no",
+            "question": "not_applicable"
+          },
+          "evidence_notes": "fixture evidence",
+          "pagination_ref": {
+            "plan_id": "plan-synthetic",
+            "plan_version": 1,
+            "page_id": "KP-02",
+            "owned_spans": [
+              {
+                "source_id": "source-1",
+                "line": 2,
+                "start_char": 1,
+                "end_char": 4,
+                "start_text": "戊",
+                "end_text": "辛"
+              }
+            ]
+          }
+        },
+        "b_section": {
+          "implementation_evidence": {
+            "asset_used": [
+              {
+                "reference_id": "template-fixture",
+                "real_path": "layout_skeleton_pass.json",
+                "file_name": "layout_skeleton_pass.json",
+                "dimensions": "not_applicable_test_fixture",
+                "template_version": "test-fixture-1",
+                "reference_role": "layout_evidence",
+                "user_confirmation": "not_required"
+              }
+            ],
+            "what_it_proves": "The outer shell and safe content region are available.",
+            "what_it_does_not_prove": "Inner composition still requires representative calibration.",
+            "highest_risk": "The contrasted objects may be confused.",
+            "representative_calibration_required": "no",
+            "calibration_reason": "The representative covers the batch relation and typical density.",
+            "calibration_covered_by_representative_page": "KP-01"
+          },
+          "main_execution_plan": {
+            "plan_id": "plan-KP-02",
+            "outer_template": {
+              "identity": "layout_skeleton_pass.json",
+              "description": "Confirmed outer shell with a title anchor and safe content region.",
+              "evidence_reference_id": "template-fixture"
+            },
+            "content_container": "safe content region",
+            "semantic_visual_carrier": "paired_comparison_panels",
+            "main_visual_description": "Two explicit objects shown as a paired comparison.",
+            "reading_order": "title, left panel, right panel, conclusion",
+            "reference_mapping": "template-fixture is outer-shell evidence only",
+            "must_show_text_verbatim": [
+              "Object A",
+              "Object B"
+            ],
+            "must_preserve": [
+              "outer shell",
+              "teaching relation"
+            ],
+            "allowed_to_change": [
+              "objects",
+              "page text"
+            ],
+            "open_for_calibration": [],
+            "hard_bans": [
+              "do not swap the compared objects"
+            ],
+            "technical_output_spec": {
+              "dimensions": "1920x1080",
+              "file_format": "png",
+              "transparency_requirement": "opaque"
+            }
+          },
+          "skeleton_inheritance": {
+            "decision": "inherit_local_skeleton",
+            "source_page": "KP-01",
+            "same_teaching_relation_reason": "Both pages teach the same explicit comparison relation.",
+            "inherited_parts": [
+              "paired panels",
+              "reading order"
+            ],
+            "required_changes": [
+              "objects",
+              "page text"
+            ]
+          },
+          "batch_assignment": {
+            "batch_id": "comparison-pages",
+            "member_original_course_orders": [
+              1,
+              2
+            ],
+            "shared_outer_template_basis": "layout_skeleton_pass.json",
+            "shared_teaching_relation_basis": "before_after_comparison",
+            "shared_semantic_visual_carrier_basis": "paired_comparison_panels",
+            "shared_reference_and_generation_basis": "template-only full-page generation",
+            "within_batch_required_differences": [
+              "objects",
+              "page text"
+            ],
+            "representative_page": "KP-01",
+            "representative_selection_reason": "Covers the core relation and typical information density.",
+            "independent_C_context_required": "yes",
+            "include_other_batches_context": "no",
+            "include_previous_page_output_by_default": "no",
+            "final_assembly_order": "use_original_course_order"
+          },
+          "batch_calibration": {
+            "state": "frozen_for_execution",
+            "non_representative_pages": "released",
+            "human_confirmation": "confirmed",
+            "confirmation_record": "fixture confirmation",
+            "frozen_batch_core": [
+              "teaching relation",
+              "paired panels"
+            ]
+          },
+          "C_adapter_handoff": {
+            "readiness": "ready_for_C",
+            "selected_reference_paths": [],
+            "preserve_items": [
+              "outer shell",
+              "teaching relation"
+            ],
+            "change_items": [
+              "objects",
+              "page text"
+            ],
+            "unresolved_blockers": []
+          },
+          "pagination_ref": {
+            "plan_id": "plan-synthetic",
+            "plan_version": 1,
+            "page_id": "KP-02",
+            "owned_spans": [
+              {
+                "source_id": "source-1",
+                "line": 2,
+                "start_char": 1,
+                "end_char": 4,
+                "start_text": "戊",
+                "end_text": "辛"
+              }
+            ]
+          },
+          "pagination_feedback": []
+        },
+        "c_section": {
+          "adapter_preflight": {
+            "entry_mode": "batch_expansion",
+            "a_section_complete": "yes",
+            "b_section_complete": "yes",
+            "main_execution_plan_present": "yes",
+            "concrete_canvas_size_present": "yes",
+            "main_execution_plan_outer_template": {
+              "identity_present": "yes",
+              "description_present": "yes",
+              "evidence_reference_id_present": "yes"
+            },
+            "main_execution_plan_main_visual_description_present": "yes",
+            "declared_assets_exist_and_readable": "yes",
+            "contradictions_absent": "yes",
+            "representative_gate_passed_or_calibration_exception_valid": "yes",
+            "result": "pass",
+            "blocking_evidence": [],
+            "implementation_evidence": {
+              "asset_used_complete": "yes",
+              "excluded_assets_and_reason_checked": "not_applicable",
+              "what_it_proves_present": "yes",
+              "what_it_does_not_prove_present": "yes",
+              "highest_risk_present": "yes",
+              "representative_calibration_required_present": "yes",
+              "calibration_reason_checked": "yes",
+              "calibration_covered_by_representative_page_checked": "yes"
+            },
+            "source_batch_calibration": {
+              "state": "frozen_for_execution",
+              "human_confirmation": "confirmed"
+            },
+            "source_C_adapter_handoff": {
+              "readiness": "ready_for_C",
+              "selected_reference_paths_match": "not_applicable",
+              "preserve_items_present": "yes",
+              "change_items_present": "yes",
+              "unresolved_blockers_empty": "yes"
+            },
+            "reference_mapping_matches_attachments": "not_applicable",
+            "unresolved_design_open_items_absent": "yes",
+            "placeholders_or_truncated_sentences_absent": "yes",
+            "a_pagination_plan_complete": "yes",
+            "source_evidence_complete": "yes",
+            "A_internal_review_complete": "yes"
+          },
+          "compiled_execution_contract": {
+            "target_capability": "GPT Image",
+            "requested_model": "gpt-image-2",
+            "template_identity": {
+              "template_id": "fixture",
+              "template_version": "1",
+              "master_asset_path": "layout_skeleton_pass.json",
+              "master_asset_exists_and_readable": "yes",
+              "evidence_reference_id": "template-fixture"
+            },
+            "page_task": {
+              "teaching_goal": "Compare two states accurately.",
+              "teaching_relation": "before_after_comparison",
+              "semantic_visual_carrier": "paired_comparison_panels"
+            },
+            "preserve": {
+              "master_and_core_skeleton": [
+                "outer shell"
+              ],
+              "must_show_text_verbatim": [
+                "Object A",
+                "Object B"
+              ]
+            },
+            "change_or_generate": {
+              "permitted_region": "content region",
+              "subject_and_content_boundary": "Paired comparison of two objects."
+            },
+            "references": [],
+            "technical_parameters": {
+              "size": "1920x1080",
+              "quality": "high",
+              "background": "opaque",
+              "format": "png"
+            },
+            "chinese_execution_prompt": "Keep the outer shell and generate a clear paired comparison.",
+            "chinese_negative_constraints": "Do not swap the compared objects.",
+            "local_revision_boundary": {
+              "preserve": [
+                "outer shell"
+              ],
+              "change_only": [
+                "objects"
+              ],
+              "forbid_change": [
+                "teaching relation"
+              ],
+              "minimum_instruction": "Only fix the named object."
+            }
+          },
+          "release_ready": true,
+          "skeleton_inheritance": {
+            "decision": "inherit_local_skeleton",
+            "source_page_id": "KP-01",
+            "same_teaching_relation_reason": "Both pages teach the same explicit comparison relation.",
+            "same_semantic_carrier": "paired_comparison_panels",
+            "inherited_parts": [
+              "paired panels",
+              "reading order"
+            ],
+            "required_changes": [
+              "objects",
+              "page text"
+            ],
+            "validation_note": "B inheritance evidence mirrored without reinterpretation.",
+            "evidence_complete": "yes"
+          }
+        },
+        "original_course_order": 2
+      }
+    }
+  ],
+  "a_pagination_plan": {
+    "schema": "course_visual_a_pagination/v1",
+    "plan_id": "plan-synthetic",
+    "plan_version": 1,
+    "source_evidence": {
+      "sources": [
+        {
+          "source_id": "source-1",
+          "path": "pagination_source_synthetic.txt",
+          "version": "synthetic-v1",
+          "version_date": "2026-09-07",
+          "order": 1
+        }
+      ],
+      "approved_body_spans": [
+        {
+          "source_id": "source-1",
+          "line": 1,
+          "start_char": 1,
+          "end_char": 4,
+          "start_text": "甲",
+          "end_text": "丁"
+        },
+        {
+          "source_id": "source-1",
+          "line": 2,
+          "start_char": 1,
+          "end_char": 4,
+          "start_text": "戊",
+          "end_text": "辛"
+        },
+        {
+          "source_id": "source-1",
+          "line": 3,
+          "start_char": 1,
+          "end_char": 4,
+          "start_text": "壬",
+          "end_text": "丑"
+        }
+      ],
+      "annotation_spans": [
+        {
+          "source_id": "source-1",
+          "line": 4,
+          "start_char": 1,
+          "end_char": 4,
+          "start_text": "批",
+          "end_text": "归"
+        }
+      ],
+      "approval": {
+        "status": "confirmed",
+        "record": "synthetic approval; not a real lesson"
+      }
+    },
+    "pages": [
+      {
+        "page_id": "KP-01",
+        "order": 1,
+        "owned_spans": [
+          {
+            "source_id": "source-1",
+            "line": 1,
+            "start_char": 1,
+            "end_char": 4,
+            "start_text": "甲",
+            "end_text": "丁"
+          }
+        ],
+        "context_refs": [],
+        "capacity_basis": {
+          "teaching_task": "比较状态",
+          "required_text_and_labels": [
+            "状态标签"
+          ],
+          "approved_assets": [],
+          "asset_applicability_reason": "合成原文覆盖测试不涉及真实生产资产，故不适用。",
+          "same_screen_reason": "同页比较两个状态",
+          "cross_page_reason": "不同学习任务跨页",
+          "visual_carrier_feasibility": "成对关系可表达，尚未制作",
+          "unverified_limits": "未生图；不能证明真实模板承载或教学效果"
+        }
+      },
+      {
+        "page_id": "KP-02",
+        "order": 2,
+        "owned_spans": [
+          {
+            "source_id": "source-1",
+            "line": 2,
+            "start_char": 1,
+            "end_char": 4,
+            "start_text": "戊",
+            "end_text": "辛"
+          }
+        ],
+        "context_refs": [],
+        "capacity_basis": {
+          "teaching_task": "比较状态",
+          "required_text_and_labels": [
+            "状态标签"
+          ],
+          "approved_assets": [],
+          "asset_applicability_reason": "合成原文覆盖测试不涉及真实生产资产，故不适用。",
+          "same_screen_reason": "同页比较两个状态",
+          "cross_page_reason": "不同学习任务跨页",
+          "visual_carrier_feasibility": "成对关系可表达，尚未制作",
+          "unverified_limits": "未生图；不能证明真实模板承载或教学效果"
+        }
+      }
+    ],
+    "non_a_dispositions": [
+      {
+        "disposition_id": "non-a-1",
+        "owned_spans": [
+          {
+            "source_id": "source-1",
+            "line": 3,
+            "start_char": 1,
+            "end_char": 4,
+            "start_text": "壬",
+            "end_text": "丑"
+          }
+        ],
+        "reason": "保留原文，不需要新图",
+        "target": "existing_material"
+      }
+    ],
+    "split_merge_comparisons": [
+      {
+        "comparison_id": "compare-1",
+        "source_spans": [
+          {
+            "source_id": "source-1",
+            "line": 1,
+            "start_char": 1,
+            "end_char": 4,
+            "start_text": "甲",
+            "end_text": "丁"
+          },
+          {
+            "source_id": "source-1",
+            "line": 2,
+            "start_char": 1,
+            "end_char": 4,
+            "start_text": "戊",
+            "end_text": "辛"
+          }
+        ],
+        "alternatives": [
+          {
+            "candidate_id": "alternative",
+            "proposed_page_spans": [
+              [
+                {
+                  "source_id": "source-1",
+                  "line": 1,
+                  "start_char": 1,
+                  "end_char": 4,
+                  "start_text": "甲",
+                  "end_text": "丁"
+                },
+                {
+                  "source_id": "source-1",
+                  "line": 2,
+                  "start_char": 1,
+                  "end_char": 4,
+                  "start_text": "戊",
+                  "end_text": "辛"
+                }
+              ]
+            ],
+            "reason": "synthetic joint display; not a quality conclusion"
+          }
+        ],
+        "selected_page_ids": [
+          "KP-01",
+          "KP-02"
+        ],
+        "decision_reason": "测试记录，不声称教学合理"
+      }
+    ],
+    "internal_review": {
+      "plan_id": "plan-synthetic",
+      "plan_version": 1,
+      "status": "completed",
+      "reviewed_page_spans": [
+        {
+          "page_id": "KP-01",
+          "owned_spans": [
+            {
+              "source_id": "source-1",
+              "line": 1,
+              "start_char": 1,
+              "end_char": 4,
+              "start_text": "甲",
+              "end_text": "丁"
+            }
+          ]
+        },
+        {
+          "page_id": "KP-02",
+          "owned_spans": [
+            {
+              "source_id": "source-1",
+              "line": 2,
+              "start_char": 1,
+              "end_char": 4,
+              "start_text": "戊",
+              "end_text": "辛"
+            }
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "item": "source_coverage",
+          "result": "pass",
+          "evidence_refs": [
+            "source:source-1",
+            "comparison:compare-1"
+          ]
+        },
+        {
+          "item": "source_order",
+          "result": "pass",
+          "evidence_refs": [
+            "source:source-1",
+            "comparison:compare-1"
+          ]
+        },
+        {
+          "item": "boundaries",
+          "result": "pass",
+          "evidence_refs": [
+            "source:source-1",
+            "comparison:compare-1"
+          ]
+        },
+        {
+          "item": "capacity",
+          "result": "pass",
+          "evidence_refs": [
+            "source:source-1",
+            "comparison:compare-1"
+          ]
+        },
+        {
+          "item": "split_merge",
+          "result": "pass",
+          "evidence_refs": [
+            "source:source-1",
+            "comparison:compare-1"
+          ]
+        },
+        {
+          "item": "non_a_retention",
+          "result": "pass",
+          "evidence_refs": [
+            "source:source-1",
+            "comparison:compare-1"
+          ]
+        }
+      ],
+      "unresolved_issues": []
+    }
+  }
+}

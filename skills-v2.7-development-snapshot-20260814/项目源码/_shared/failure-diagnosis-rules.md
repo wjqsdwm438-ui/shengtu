@@ -1,4 +1,4 @@
-﻿# Failure Diagnosis Rules
+# Failure Diagnosis Rules
 
 ## Failure Types
 - content_failure: core content not expressed.
@@ -14,6 +14,12 @@
 - text_generation_failure: exact visible text still fails after the allowed local revisions.
 - alpha_generation_failure: required real Alpha still fails after the allowed local revisions; opaque fallback is forbidden.
 - remotion_alignment_failure: transparent or split assets changed canvas, origin, scale, or position.
+- source_failure: source text, subtitle span, fact basis, or material input is wrong; return to A input preparation; do not rewrite the source without authorization.
+- teaching_semantics_failure: teaching goal, teaching relationship, must-show content, or semantic boundary is wrong; return to A-line.
+- design_feasibility_failure: template, core skeleton, reference mapping, batch assignment, or realization evidence is wrong; return to B-line.
+- adapter_validation_failure: required field is blank, referenced asset is missing, or the page brief contains a contradiction; C-line adapter stops without guessing.
+- batch_context_leak: another batch's image, failure, prompt, or history influenced current execution.
+- unjustified_skeleton_inheritance: local skeleton was reused without proving the same teaching relationship and semantic visual carrier.
 
 ## revision_contract
 ```yaml
@@ -27,4 +33,17 @@ needs_user_confirmation: yes/no
 ```
 
 ## Rule
-Diagnose before changing prompts. Local revision must preserve frozen A/B/T basis and only modify declared items. Do not turn a local fix into full redo unless user asks.
+Diagnose before changing prompts. Local revision must preserve the frozen A/B basis and only modify declared items. Prompt compilation, asset injection, transparency, size, or local generation deviation can remain in C-line only while the teaching relationship, template, and core skeleton stay unchanged. If a frozen basis must change, stop retrying: pagination/teaching changes return to A-line and template/core-skeleton realization changes to B-line; do not use repeated full-page redraws to hide an upstream design problem.
+
+Routing is determined by the earliest incorrect responsibility: source-evidence/material-mapping and pagination/teaching problems return to A-line; template/skeleton/reference/batch/feasibility problems return to B-line; adapter and same-structure local execution problems remain in C-line. There is no independent T-line return target.
+
+## 失败影响范围
+
+先确认失败对应哪个实际状态。当前状态应有的逐字文字缺漏属于实际失败；B明确分配到其他状态的文字没有同时出现，不应误判为整任务内容缺失。若状态分配本身空白/矛盾回B，涉及教学必呈、页界或正文归属回A；C不得为了“补齐全任务”擅自把所有文字塞进同图。完整主方案的效果尚未验证不是禁止设计的理由，校准失败可由B调整结构，必要时附证据回A分页。静态样张不证明切换或运动效果，未验证项仍如实保留。
+
+先定位最早错误责任，再决定是否继续：只有证据确认仅本页局部失败且共享依据无误，才可登记失败并继续其他已授权页；失败记录不是重新生成授权，不自动 v02。若共同图例、方向、模板或参考依据有误，或影响尚不清楚，先暂停可能依赖同一错误的页面，回 A/B/C 对应责任，不默认全课重启；不依赖该错误且已授权的页无需牵连。
+
+修复后只复核受影响页及必要衔接。固定基准优先于对话惯性；被污染时只依据同一冻结基准恢复干净上下文，不借机改设计或扩大授权。实际回执未报告模型时写“未报告”，不能推断。既有局部文字修订上限与每次修订授权仍保留，禁止无限重试。
+
+## 分页异议的局部责任
+原文/准入不变时不重跑S。A统一负责源证据与页界、页数、正文归属、教学关系及衔接，B只修分页语义不变的具体实现；B提出跨页拆合必须提供新旧原文边界和实现证据，由A局部修正并内部复核。用户不满意先定位对象，不自动重启S→A→B。只失效依赖该差异的结论；详见 `pagination-authority-rules.md`。A内部维护源定位，不恢复S独立阶段，不重新索取整课有效准入批准。

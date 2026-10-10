@@ -1,3 +1,13 @@
-﻿# On-Screen Text Rules
+# A-Line Must-Show Text Rules
 
-Count only planned visible text. Voiceover and do-not-show content do not count. Keep teaching sentences when they carry meaning; do not compress all teaching language into labels. Over 180 characters enters dynamic Gate: original text -> key points -> planned on-screen text. Compress or split before sample generation.
+A 线区分三类文字：
+
+- `must_show_text`：省略或改写会造成教学、事实或专业含义损失的文字，必须逐字保留。
+- `voiceover_only`：由口播承担，不需要画面重复的内容。
+- `optional_supporting_text`：可由 B/C 根据可读性取舍，但不得改变 A 线冻结的教学关系。
+
+A 必须在明确分页前核验各实际状态中必显文字、术语、标签和图注的负荷，结合已获准模板可用空间、真实素材限制、必要图解、观察顺序、同屏必要性和跨页依赖比较拆合方案；不能留到 B 才首次判断是否能承载，也不能只测字号或文字装入情况。
+
+`must_show_text` 表示教学任务中必须准确呈现，不表示全时同屏。A在既有 `same_screen_reason`、`cross_page_reason` 写清必须并现和可先后显现的项，B用 `reading_order` 落实当前状态及对应逐字文字。总分预览/回显可以服务理解，不计为新旁白或正文二次归属；其必要性由具体关系与承载判断，不强制合页/拆页。旧记录未注明状态时不得自动宣称已完成动态设计，未实测条件如实记录。
+
+字符数可以作为信息负荷的描述证据，但不能设固定字数上限、固定文字区间、固定页速/时长、图文占比或由分辨率反推内容比例。不能通过压缩专有名词、数据或教学句解决过载。需要改页界时由 A 局部修正分页和源映射，不返回独立 S，也不让用户补做设计判断。具体排版、字号和尺寸留 B。

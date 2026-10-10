@@ -1,6 +1,6 @@
 ﻿# Page Preset Bank
 
-Use this as a small first-version bank of page carriers. It reduces blank-page invention but does not override A-line page type judgment.
+Use this only as a small vocabulary of possible semantic carriers. It may help B-line describe an evidence-backed solution, but it is not a page classification system, batch taxonomy, automatic routing table, or proof that a layout is realizable.
 
 ## Presets
 - course-main-visual-with-text-layer: for long-stay course visual pages with one main visual and controlled text layer.
@@ -8,8 +8,8 @@ Use this as a small first-version bank of page carriers. It reduces blank-page i
 - case-collage-controlled: for case comparison with image evidence, annotations, and non-PPT rhythm.
 - teaching-excerpt-units: for several teaching judgments with grouped text units and supporting visuals.
 - conclusion-anchor: for core judgment or summary anchor pages.
-- no-text-layout-skeleton: for A01 structured blank layout with title/body/image/info regions.
-- reference-locked-full-page-with-text: for A16 tasks that use a confirmed reference set, one complete canvas, exact visible text, and strong visual locking.
+- structured-layout-regions: for a page that needs explicit title/body/visual-carrier/information/safe-area responsibilities; it does not prescribe their size or ratio.
+- reference-locked-full-page-with-text: for tasks that use a confirmed reference set, one complete canvas, exact visible text, and strong visual locking; no legacy A01–A21 label is required.
 
 ## Rule
-B-line should reuse a preset when suitable. If no preset fits, create a candidate and mark it `待沉淀`, not as a new global default.
+B-line may use one of these names only after the page's teaching relationship, semantic visual carrier, real template capability, and reference evidence support it. A matching name does not authorize skeleton inheritance or placement reuse. Do not assign fixed image percentages, create a new preset merely to complete a form, or promote a representative-page result to a global default. Unmatched pages may be described directly in natural language.

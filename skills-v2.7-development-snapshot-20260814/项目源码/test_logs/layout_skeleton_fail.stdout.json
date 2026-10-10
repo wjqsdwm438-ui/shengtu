@@ -1,5 +1,5 @@
 {
-  "check": "A01_light_region_summary",
+  "check": "B_line_qualitative_layout_regions",
   "pass": false,
   "missing_fields": [
     "title_area",
@@ -10,6 +10,6 @@
     "post_text_method"
   ],
   "empty_background_risk": true,
-  "suggestion": "return_to_A_line_or_manual_confirm",
+  "suggestion": "return_to_B_line_or_manual_confirm",
   "note": "This checks light_region_summary only; it does not restore editable_layout_spec."
 }

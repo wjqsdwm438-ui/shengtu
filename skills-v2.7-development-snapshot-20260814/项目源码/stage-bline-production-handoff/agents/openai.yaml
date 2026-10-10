@@ -1,6 +1,6 @@
 interface:
-  display_name: "V2.7 B线生产交接"
-  short_description: "生成稳妥版与探索版生产交接卡。"
-  default_prompt: "使用 V2.7 B线生成方案A_稳妥版和方案B_探索版生产交接卡。"
+  display_name: "V2.7 B线可执行设计"
+  short_description: "承接A明确分页，落实视觉设计、批次与代表页校准。"
+  default_prompt: "使用 V2.7 B线承接A明确分页及内部复核，在当前页界内落实唯一视觉主方案和生产批次；涉及分页的新承载问题附证据回A，代表页授权与确认规则不变。"
 policy:
   allow_implicit_invocation: false
